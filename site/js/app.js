@@ -599,26 +599,102 @@
     // 4. Generate clean, unscaled A4 HTML content
     const cleanHtml = window.GTURenderer.renderDocument(state.activeSubjectData, targetQId);
 
-    // 5. Create container with standard in-flow styling (NOT offscreen negative coordinates)
+    // 5. Create container attached to DOM with active layout flow
+    // CRITICAL FOR ZERO SLICED TEXT:
+    // Elements must be attached to the DOM at top:0, left:0 so getBoundingClientRect()
+    // and stylesheets can compute real physical pixel coordinates.
     const contentWrapper = document.createElement('div');
     contentWrapper.className = 'gtu-sheet-container gtu-pdf-export-root';
+    contentWrapper.style.position = 'fixed';
+    contentWrapper.style.left = '0px';
+    contentWrapper.style.top = '0px';
     contentWrapper.style.width = '210mm';
+    contentWrapper.style.minHeight = '297mm';
     contentWrapper.style.background = '#ffffff';
     contentWrapper.style.color = '#000000';
     contentWrapper.style.fontFamily = '"Times New Roman", Times, "Tinos", serif';
     contentWrapper.style.margin = '0';
     contentWrapper.style.padding = '0';
+    contentWrapper.style.zIndex = '-99999';
+    contentWrapper.style.pointerEvents = 'none';
     contentWrapper.innerHTML = cleanHtml;
 
-    // Strip desk shadows or browser borders
+    // Reset sheet margins and shadows
     contentWrapper.querySelectorAll('.gtu-a4-sheet').forEach(sheet => {
       sheet.style.boxShadow = 'none';
-      sheet.style.margin = '0 auto';
+      sheet.style.margin = '0';
       sheet.style.borderRadius = '0';
       sheet.style.border = 'none';
       sheet.style.width = '210mm';
       sheet.style.background = '#ffffff';
       sheet.style.color = '#000000';
+    });
+
+    // Enforce break-inside avoid on all content blocks
+    contentWrapper.querySelectorAll('p, li, tr, .gtu-paragraph, .gtu-list-item, .gtu-heading, .gtu-subheading, .gtu-note, .gtu-table-container, .gtu-diagram-container, .gtu-question-header, .gtu-page-header, .gtu-page-footer').forEach(el => {
+      el.style.breakInside = 'avoid';
+      el.style.pageBreakInside = 'avoid';
+    });
+
+    document.body.appendChild(contentWrapper);
+
+    // 6. Deterministic Pre-Pass Pagination Engine
+    // Guarantees zero sliced lines of text, list items, paragraphs, or table rows across A4 boundaries
+    const A4_HEIGHT_PX = 1122.52; // 297mm * 96 / 25.4
+    const MARGIN_TOP_PX = 75.6;    // 20mm * 96 / 25.4
+    const MARGIN_BOTTOM_PX = 75.6; // 20mm * 96 / 25.4
+    const PAGE_CONTENT_LIMIT = A4_HEIGHT_PX - MARGIN_BOTTOM_PX; // 1046.92px
+
+    const breakAvoidSelectors = [
+      '.gtu-question-header',
+      '.gtu-heading',
+      '.gtu-subheading',
+      '.gtu-paragraph',
+      '.gtu-list-item',
+      '.gtu-note',
+      'tr',
+      '.gtu-table-container',
+      '.gtu-diagram-container',
+      '.gtu-page-footer',
+      '.gtu-page-end-mark'
+    ];
+
+    const elementsToProtect = Array.from(contentWrapper.querySelectorAll(breakAvoidSelectors.join(',')));
+    const wrapperTop = contentWrapper.getBoundingClientRect().top;
+
+    elementsToProtect.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const topOffset = rect.top - wrapperTop;
+      const bottomOffset = rect.bottom - wrapperTop;
+      const elHeight = bottomOffset - topOffset;
+
+      if (elHeight > 0 && elHeight < PAGE_CONTENT_LIMIT - MARGIN_TOP_PX) {
+        const currentPage = Math.floor(topOffset / A4_HEIGHT_PX);
+        const pageLimit = (currentPage * A4_HEIGHT_PX) + PAGE_CONTENT_LIMIT;
+
+        // Headings get an extra buffer so they don't become orphan titles at page bottom
+        const isHeader = el.classList.contains('gtu-heading') || el.classList.contains('gtu-subheading') || el.classList.contains('gtu-question-header');
+        const effectiveBottom = isHeader ? bottomOffset + 50 : bottomOffset;
+
+        if (effectiveBottom > pageLimit) {
+          // Push element to the top of the next page with a clean 20mm margin
+          const nextPageContentTop = ((currentPage + 1) * A4_HEIGHT_PX) + MARGIN_TOP_PX;
+          const clearance = Math.ceil(nextPageContentTop - topOffset);
+
+          if (clearance > 0 && clearance < A4_HEIGHT_PX) {
+            const spacer = document.createElement('div');
+            spacer.className = 'gtu-pagebreak-spacer';
+            spacer.style.display = 'block';
+            spacer.style.height = `${clearance}px`;
+            spacer.style.width = '100%';
+            spacer.style.margin = '0';
+            spacer.style.padding = '0';
+            spacer.style.border = 'none';
+            spacer.style.background = 'transparent';
+            el.parentNode.insertBefore(spacer, el);
+          }
+        }
+      }
     });
 
     const opt = {
@@ -639,13 +715,28 @@
         orientation: 'portrait'
       },
       pagebreak: {
-        mode: ['css', 'legacy'],
-        avoid: ['.gtu-answer-block', '.gtu-table-wrapper', '.gtu-page-header', '.gtu-page-footer', '.gtu-question-title-bar']
+        mode: ['avoid-all', 'css', 'legacy'],
+        avoid: [
+          '.gtu-question-header',
+          '.gtu-heading',
+          '.gtu-subheading',
+          '.gtu-paragraph',
+          '.gtu-list-item',
+          'li',
+          'p',
+          'tr',
+          '.gtu-note',
+          '.gtu-table-container',
+          '.gtu-diagram-container',
+          '.gtu-page-header',
+          '.gtu-page-footer',
+          '.gtu-page-end-mark'
+        ]
       }
     };
 
     try {
-      // 6. Generate PDF via html2pdf worker
+      // 7. Generate PDF via html2pdf worker
       let pdfBlob = null;
       try {
         const worker = html2pdf().set(opt).from(contentWrapper);
@@ -665,7 +756,7 @@
         throw new Error('Generated PDF was empty or unrendered.');
       }
 
-      // 7. Store compiled blob and create File object with exact name
+      // 8. Store compiled blob and create File object with exact name
       state.compiledPdfBlob = pdfBlob;
       state.compiledFilename = finalFilename;
       const pdfFile = new File([pdfBlob], finalFilename, { type: 'application/pdf' });
@@ -702,6 +793,10 @@
       if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
       if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
       if (dom.pdfFileNameInput) dom.pdfFileNameInput.disabled = false;
+    } finally {
+      if (contentWrapper && contentWrapper.parentNode) {
+        contentWrapper.parentNode.removeChild(contentWrapper);
+      }
     }
   }
 

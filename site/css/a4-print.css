@@ -316,6 +316,8 @@
   line-height: 1.5;
   margin: 0 0 6pt 0;
   text-align: justify;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 /* Keep heading paired with next paragraph */
