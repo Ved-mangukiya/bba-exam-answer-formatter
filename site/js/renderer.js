@@ -113,7 +113,14 @@
         // bullet = non-orderable remarks
         const listStyle = (block.listStyle || 'decimal').toLowerCase();
         const tag = listStyle === 'bullet' ? 'ul' : 'ol';
-        const listClass = `gtu-list list-${listStyle}`;
+
+        // Detect if items already contain embedded numbers to prevent double-numbering
+        const hasEmbeddedPrefix = (block.items || []).some(item => {
+          const t = typeof item === 'string' ? item : item.text;
+          return /^\s*(?:\d+\.|\([a-z]\)|[ivx]+\.)\s+/i.test(t || '');
+        });
+
+        const listClass = `gtu-list list-${listStyle}${hasEmbeddedPrefix ? ' list-prefix-embedded' : ''}`;
 
         const itemsHtml = (block.items || []).map(item => {
           const itemText = typeof item === 'string' ? item : item.text;

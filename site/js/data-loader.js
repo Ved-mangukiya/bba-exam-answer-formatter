@@ -1,121 +1,12 @@
 /**
  * data-loader.js — Subject data fetcher & JSON drag-and-drop importer
+ * Only loads genuine syllabus JSON files provided by the user.
  */
 
 (function (window) {
   'use strict';
 
-  // Fallback sample data for Business Statistics (guarantees file:// protocol offline compatibility)
-  const SAMPLE_BUSINESS_STATISTICS = {
-    "semester": 1,
-    "subject": "Business Statistics and Logic",
-    "faculty": ["Prof. Karan Kachhadiya", "Prof. Birju Patil"],
-    "questions": [
-      {
-        "id": "bstat-u1-q1",
-        "questionNumber": "Q.1",
-        "questionText": "Explain the meaning and definition of Statistics. Also explain its functions, scope and limitations.",
-        "marks": 7,
-        "unit": "Unit 1",
-        "type": "detail",
-        "answer": [
-          {
-            "blockType": "heading",
-            "text": "Meaning and Definition of Statistics"
-          },
-          {
-            "blockType": "paragraph",
-            "text": "Statistics is the branch of applied mathematics that deals with the collection, organization, analysis, interpretation and presentation of numerical data.",
-            "spans": [
-              { "start": 0, "end": 10, "style": "underline" }
-            ]
-          },
-          {
-            "blockType": "subheading",
-            "text": "Definition (Horace Secrist)"
-          },
-          {
-            "blockType": "paragraph",
-            "text": "Statistics may be defined as the aggregate of facts affected to a marked extent by multiplicity of causes, numerically expressed, collected in a systematic manner for a predetermined purpose.",
-            "spans": [
-              { "start": 0, "end": 10, "style": "italic" }
-            ]
-          },
-          {
-            "blockType": "heading",
-            "text": "Functions of Statistics"
-          },
-          {
-            "blockType": "list",
-            "listStyle": "roman",
-            "items": [
-              { "text": "Presents facts in a definite form.", "spans": [] },
-              { "text": "Simplifies complex data into an understandable form.", "spans": [] },
-              { "text": "Helps in formulating and testing hypotheses.", "spans": [{ "start": 20, "end": 30, "style": "underline" }] },
-              { "text": "Helps in forecasting future trends." }
-            ]
-          },
-          {
-            "blockType": "heading",
-            "text": "Scope of Statistics"
-          },
-          {
-            "blockType": "paragraph",
-            "text": "The scope of Statistics extends to almost every field including economics, business, medicine and social sciences."
-          },
-          {
-            "blockType": "heading",
-            "text": "Limitations of Statistics"
-          },
-          {
-            "blockType": "list",
-            "listStyle": "decimal",
-            "items": [
-              { "text": "Statistics does not deal with individual items, only aggregates." },
-              { "text": "It cannot study qualitative characteristics directly." },
-              { "text": "Statistical results are true only on average, not for every case." }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "bstat-u1-q2",
-        "questionNumber": "Q.2",
-        "questionText": "Define Statistics.",
-        "marks": 2,
-        "unit": "Unit 1",
-        "type": "short",
-        "answer": [
-          {
-            "blockType": "paragraph",
-            "text": "Statistics is the science of collecting, organizing, analyzing and interpreting numerical data.",
-            "spans": [
-              { "start": 0, "end": 10, "style": "underline" }
-            ]
-          }
-        ]
-      }
-    ]
-  };
-
   const DEFAULT_SUBJECTS = [
-    {
-      slug: "business-statistics-and-logic",
-      code: "BSL",
-      aliases: ["bsl", "business-statistics", "bstat"],
-      name: "Business Statistics and Logic",
-      faculty: ["Prof. Karan Kachhadiya", "Prof. Birju Patil"],
-      icon: "📊",
-      description: "Descriptive statistics, probability, hypothesis testing, and quantitative reasoning.",
-      dataFiles: [
-        "../data/sem-1/business-statistics-and-logic/sample-question.json",
-        "data/sem-1/business-statistics-and-logic/sample-question.json",
-        "../data/sem-1/business-statistics/sample-question.json",
-        "data/sem-1/business-statistics/sample-question.json",
-        "../data/sem-1/bsl/sample-question.json",
-        "data/sem-1/bsl/sample-question.json"
-      ]
-    },
     {
       slug: "principles-and-practices-of-management",
       code: "PPM",
@@ -125,13 +16,19 @@
       icon: "🏛️",
       description: "Planning, organizing, staffing, directing, and controlling modern organizations.",
       dataFiles: [
-        "../data/sem-1/principles-and-practices-of-management/sample-question.json",
-        "data/sem-1/principles-and-practices-of-management/sample-question.json",
-        "../data/sem-1/ppm/sample-question.json",
-        "data/sem-1/ppm/sample-question.json",
-        "../data/sem-1/principles-of-management/sample-question.json",
-        "data/sem-1/principles-of-management/sample-question.json"
+        "../data/sem-1/principles-and-practices-of-management/ppm-sem1.json",
+        "data/sem-1/principles-and-practices-of-management/ppm-sem1.json"
       ]
+    },
+    {
+      slug: "business-statistics-and-logic",
+      code: "BSL",
+      aliases: ["bsl", "business-statistics", "bstat"],
+      name: "Business Statistics and Logic",
+      faculty: ["SSASIT Statistics Faculty"],
+      icon: "📊",
+      description: "Descriptive statistics, probability, hypothesis testing, and quantitative reasoning.",
+      dataFiles: []
     },
     {
       slug: "financial-accounting",
@@ -140,7 +37,7 @@
       faculty: ["SSASIT Accounting Faculty"],
       icon: "📒",
       description: "Double-entry bookkeeping, trial balance, final accounts, and accounting standards.",
-      dataFiles: ["../data/sem-1/financial-accounting/sample-question.json", "data/sem-1/financial-accounting/sample-question.json"]
+      dataFiles: []
     },
     {
       slug: "general-communicative-english",
@@ -149,7 +46,7 @@
       faculty: ["SSASIT Humanities Faculty"],
       icon: "✍️",
       description: "Business communication, grammar, vocabulary, report writing, and presentations.",
-      dataFiles: ["../data/sem-1/general-communicative-english/sample-question.json", "data/sem-1/general-communicative-english/sample-question.json"]
+      dataFiles: []
     },
     {
       slug: "indian-knowledge-systems",
@@ -158,7 +55,7 @@
       faculty: ["SSASIT IKS Faculty"],
       icon: "📜",
       description: "Vedic science, traditional Indian management, philosophical systems, and ethics.",
-      dataFiles: ["../data/sem-1/indian-knowledge-systems/sample-question.json", "data/sem-1/indian-knowledge-systems/sample-question.json"]
+      dataFiles: []
     },
     {
       slug: "esg-for-sustainability",
@@ -167,15 +64,12 @@
       faculty: ["SSASIT ESG Faculty"],
       icon: "🌱",
       description: "Environmental governance, social responsibility, carbon footprint, and corporate ethics.",
-      dataFiles: ["../data/sem-1/esg-for-sustainability/sample-question.json", "data/sem-1/esg-for-sustainability/sample-question.json"]
+      dataFiles: []
     }
   ];
 
   // In-memory cache of subject data
   const subjectCache = new Map();
-  subjectCache.set("business-statistics-and-logic", SAMPLE_BUSINESS_STATISTICS);
-  subjectCache.set("business-statistics", SAMPLE_BUSINESS_STATISTICS);
-  subjectCache.set("bsl", SAMPLE_BUSINESS_STATISTICS);
 
   async function fetchJson(path) {
     try {
@@ -239,12 +133,6 @@
       }
     }
 
-    // Default fallback for Business Statistics and Logic (BSL)
-    if (slug === 'business-statistics-and-logic' || slug === 'business-statistics' || slug === 'bsl' || slug === 'bstat') {
-      subjectCache.set(slug, SAMPLE_BUSINESS_STATISTICS);
-      return SAMPLE_BUSINESS_STATISTICS;
-    }
-
     return null;
   }
 
@@ -269,8 +157,7 @@
   window.GTUDataLoader = {
     getSubjects,
     getSubjectData,
-    registerCustomData,
-    SAMPLE_BUSINESS_STATISTICS
+    registerCustomData
   };
 
 })(window);

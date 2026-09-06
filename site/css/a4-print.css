@@ -13,7 +13,7 @@
    -------------------------------------------------------------------------- */
 @page {
   size: A4 portrait;
-  margin: 0;
+  margin: 20mm 15mm 20mm 20mm;
 }
 
 :root {
@@ -280,6 +280,13 @@
   list-style-type: disc;
 }
 
+/* For items with numbers already in the text (e.g. "1. Goal...") */
+.gtu-list.list-prefix-embedded {
+  list-style-type: none !important;
+  padding-left: 20pt;
+  text-indent: -20pt;
+}
+
 .gtu-list-item {
   font-size: 12pt;
   margin-bottom: 4.5pt;
@@ -395,64 +402,112 @@
 }
 
 /* --------------------------------------------------------------------------
+@page {
+  size: A4 portrait;
+  margin: 20mm 15mm 20mm 20mm;
+}
+
+/* --------------------------------------------------------------------------
    10. Print Mode (@media print)
-   Strict zero-bleed, deterministic A4 output
+   Strict zero-bleed, deterministic A4 output with no viewport/scrollbar artifacts
    -------------------------------------------------------------------------- */
 @media print {
+  /* Complete reset of document root */
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
   html, body {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    display: block !important;
     margin: 0 !important;
     padding: 0 !important;
     background: #ffffff !important;
     color: #000000 !important;
     font-family: var(--gtu-font) !important;
-    width: 210mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  /* Hide all UI elements, navbars, sidebars, buttons */
+  /* Hide ALL UI elements, navbars, sidebars, buttons, toolbars */
   .no-print,
   .app-sidebar,
   .app-header,
-  .app-toolbar,
+  .workspace-toolbar,
   .json-dropzone,
   .modal-overlay,
-  .zoom-controls {
+  .toast-container,
+  input[type="file"],
+  .show-margin-guides .gtu-a4-sheet::before,
+  .show-margin-guides .gtu-a4-sheet::after {
     display: none !important;
   }
 
-  /* Reset sheet positioning for real printing */
-  .gtu-sheet-container {
-    width: 210mm !important;
+  /* Reset layout structure so browser prints purely content without viewport bounds or scrollbars */
+  .app-layout,
+  .workspace-container,
+  .desk-canvas,
+  .a4-viewport-scaler {
+    display: block !important;
+    position: static !important;
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important; /* CRITICAL: Never scale in print */
+  }
+
+  /* Content Sheet Container */
+  .gtu-sheet-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
     box-shadow: none !important;
   }
 
   .gtu-a4-sheet {
-    width: 210mm !important;
+    width: 100% !important;
+    min-height: 0 !important;
     margin: 0 !important;
+    padding: 0 !important; /* Managed by @page margin */
     box-shadow: none !important;
+    border: none !important;
     border-radius: 0 !important;
     background: #ffffff !important;
-    box-sizing: border-box !important;
-    padding: calc(var(--margin-top) + var(--safety-pad))
-             calc(var(--margin-right) + var(--safety-pad))
-             calc(var(--margin-bottom) + var(--safety-pad))
-             calc(var(--margin-left) + var(--safety-pad)) !important;
-    /* Force exact page break between multi-page sheet representations */
-    page-break-after: always;
-    break-after: page;
+    color: #000000 !important;
   }
 
-  .gtu-a4-sheet:last-child {
-    page-break-after: auto;
-    break-after: auto;
+  /* Question formatting in print */
+  .gtu-question-wrapper {
+    break-inside: auto !important;
+    margin-bottom: 24pt !important;
   }
 
   /* Break safety guarantees */
   .gtu-question-header,
   .gtu-heading,
-  .gtu-subheading,
+  .gtu-subheading {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
   .gtu-table-container,
   .gtu-diagram-container,
   .gtu-list-item {
@@ -460,11 +515,9 @@
     page-break-inside: avoid !important;
   }
 
-  .gtu-heading,
-  .gtu-subheading,
-  .gtu-question-header {
-    break-after: avoid !important;
-    page-break-after: avoid !important;
+  .gtu-question-separator {
+    border-bottom: 0.5pt dashed #999 !important;
+    margin: 18pt 0 !important;
   }
 
   /* Ensure ink contrast */

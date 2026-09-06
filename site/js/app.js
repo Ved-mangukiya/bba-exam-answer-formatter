@@ -8,7 +8,7 @@
   // Application State
   const state = {
     subjects: [],
-    activeSubjectSlug: 'business-statistics-and-logic',
+    activeSubjectSlug: 'principles-and-practices-of-management',
     activeSubjectData: null,
     activeUnitFilter: 'ALL',
     activeQuestionId: null, // null means "Full Subject View"
@@ -77,7 +77,7 @@
 
     dom.subjectList.innerHTML = state.subjects.map(sub => {
       const isActive = sub.slug === state.activeSubjectSlug || (sub.aliases && sub.aliases.includes(state.activeSubjectSlug));
-      const hasFiles = (Array.isArray(sub.dataFiles) && sub.dataFiles.length > 0) || (sub.code === 'BSL');
+      const hasFiles = Array.isArray(sub.dataFiles) && sub.dataFiles.length > 0;
       const isReady = hasFiles;
       const statusClass = isReady ? 'status-active' : 'status-pending';
       const statusText = isReady ? 'Ready' : 'Drop JSON';
@@ -319,25 +319,36 @@
 
     const prevQuestionId = state.activeQuestionId;
 
-    if (questionOnly && state.activeQuestionId) {
-      // Print active question
-      window.print();
+    if (questionOnly) {
+      if (!state.activeQuestionId && state.activeSubjectData.questions && state.activeSubjectData.questions.length > 0) {
+        state.activeQuestionId = state.activeSubjectData.questions[0].id;
+        renderA4Sheet();
+        renderQuestionList();
+      }
     } else {
       // Print full subject sheet
       state.activeQuestionId = null;
       renderA4Sheet();
       renderQuestionList();
-
-      setTimeout(() => {
-        window.print();
-        // Restore previous selection if any
-        if (prevQuestionId) {
-          state.activeQuestionId = prevQuestionId;
-          renderA4Sheet();
-          renderQuestionList();
-        }
-      }, 150);
     }
+
+    // Reset scaler transform immediately before printing
+    if (dom.a4Scaler) {
+      dom.a4Scaler.style.transform = 'none';
+    }
+
+    setTimeout(() => {
+      window.print();
+      // Restore previous question view if full sheet was printed temporarily
+      if (!questionOnly && prevQuestionId) {
+        state.activeQuestionId = prevQuestionId;
+        renderA4Sheet();
+        renderQuestionList();
+      }
+      if (dom.a4Scaler) {
+        dom.a4Scaler.style.transform = `scale(${state.zoomLevel})`;
+      }
+    }, 120);
   }
 
   function handleFileUpload(file) {
@@ -472,6 +483,18 @@
 
     window.addEventListener('resize', () => {
       if (state.zoomLevel < 0.6) fitToWidth();
+    });
+
+    window.addEventListener('beforeprint', () => {
+      if (dom.a4Scaler) {
+        dom.a4Scaler.style.transform = 'none';
+      }
+    });
+
+    window.addEventListener('afterprint', () => {
+      if (dom.a4Scaler) {
+        dom.a4Scaler.style.transform = `scale(${state.zoomLevel})`;
+      }
     });
   }
 

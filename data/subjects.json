@@ -2,38 +2,25 @@
   "semester": 1,
   "subjects": [
     {
-      "slug": "business-statistics-and-logic",
-      "code": "BSL",
-      "name": "Business Statistics and Logic",
-      "faculty": [
-        "Prof. Karan Kachhadiya",
-        "Prof. Birju Patil"
-      ],
-      "dataFiles": [
-        "../data/sem-1/business-statistics-and-logic/sample-question.json",
-        "data/sem-1/business-statistics-and-logic/sample-question.json",
-        "../data/sem-1/business-statistics/sample-question.json",
-        "data/sem-1/business-statistics/sample-question.json",
-        "../data/sem-1/bsl/sample-question.json",
-        "data/sem-1/bsl/sample-question.json"
-      ]
-    },
-    {
       "slug": "principles-and-practices-of-management",
       "code": "PPM",
       "name": "Principles and Practices of Management",
       "faculty": [
-        "SSASIT Management Faculty",
-        "Prof. Aniket Shah"
+        "SSASIT Management Faculty"
       ],
       "dataFiles": [
-        "../data/sem-1/principles-and-practices-of-management/sample-question.json",
-        "data/sem-1/principles-and-practices-of-management/sample-question.json",
-        "../data/sem-1/ppm/sample-question.json",
-        "data/sem-1/ppm/sample-question.json",
-        "../data/sem-1/principles-and-practices-of-management/ppm-unit-1.json",
-        "data/sem-1/principles-and-practices-of-management/ppm-unit-1.json"
+        "../data/sem-1/principles-and-practices-of-management/ppm-sem1.json",
+        "data/sem-1/principles-and-practices-of-management/ppm-sem1.json"
       ]
+    },
+    {
+      "slug": "business-statistics-and-logic",
+      "code": "BSL",
+      "name": "Business Statistics and Logic",
+      "faculty": [
+        "SSASIT Statistics Faculty"
+      ],
+      "dataFiles": []
     },
     {
       "slug": "financial-accounting",
@@ -42,10 +29,7 @@
       "faculty": [
         "SSASIT Accounting Faculty"
       ],
-      "dataFiles": [
-        "../data/sem-1/financial-accounting/sample-question.json",
-        "data/sem-1/financial-accounting/sample-question.json"
-      ]
+      "dataFiles": []
     },
     {
       "slug": "general-communicative-english",
@@ -54,10 +38,7 @@
       "faculty": [
         "SSASIT Humanities Faculty"
       ],
-      "dataFiles": [
-        "../data/sem-1/general-communicative-english/sample-question.json",
-        "data/sem-1/general-communicative-english/sample-question.json"
-      ]
+      "dataFiles": []
     },
     {
       "slug": "indian-knowledge-systems",
@@ -66,10 +47,7 @@
       "faculty": [
         "SSASIT IKS Faculty"
       ],
-      "dataFiles": [
-        "../data/sem-1/indian-knowledge-systems/sample-question.json",
-        "data/sem-1/indian-knowledge-systems/sample-question.json"
-      ]
+      "dataFiles": []
     },
     {
       "slug": "esg-for-sustainability",
@@ -78,10 +56,7 @@
       "faculty": [
         "SSASIT ESG Faculty"
       ],
-      "dataFiles": [
-        "../data/sem-1/esg-for-sustainability/sample-question.json",
-        "data/sem-1/esg-for-sustainability/sample-question.json"
-      ]
+      "dataFiles": []
     }
   ]
 }
