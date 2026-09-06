@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SubjectQuestionBank",
+  "description": "One file per subject per semester. Encodes RULES.md formatting into data so the website never has to guess formatting.",
+  "type": "object",
+  "required": ["semester", "subject", "faculty", "questions"],
+  "properties": {
+    "semester": { "type": "integer", "example": 1 },
+    "subject": { "type": "string", "example": "Business Statistics and Logic" },
+    "faculty": { "type": "array", "items": { "type": "string" } },
+    "unit": { "type": "string", "description": "Optional: unit name if file is split per-unit" },
+    "questions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/question" }
+    }
+  },
+  "definitions": {
+    "question": {
+      "type": "object",
+      "required": ["id", "questionNumber", "questionText", "marks", "answer"],
+      "properties": {
+        "id": { "type": "string", "description": "Unique slug, e.g. bstat-u1-q1" },
+        "questionNumber": { "type": "string", "example": "Q.1" },
+        "questionText": { "type": "string" },
+        "marks": { "type": "integer", "example": 7 },
+        "unit": { "type": "string", "example": "Unit 1" },
+        "type": {
+          "type": "string",
+          "enum": ["short", "detail", "practical"],
+          "description": "short = definition/1-2 line, detail = theory, practical = numerical/sum"
+        },
+        "answer": {
+          "type": "array",
+          "description": "Ordered list of content blocks that make up the answer.",
+          "items": { "$ref": "#/definitions/contentBlock" }
+        }
+      }
+    },
+    "contentBlock": {
+      "type": "object",
+      "description": "A single renderable unit of an answer: heading, paragraph, list, table, or diagram.",
+      "required": ["blockType"],
+      "properties": {
+        "blockType": {
+          "type": "string",
+          "enum": ["heading", "subheading", "paragraph", "list", "table", "diagram", "note"]
+        },
+
+        "text": {
+          "type": "string",
+          "description": "Used for heading, subheading, paragraph, note blockTypes. Inline formatting spans go in 'spans'."
+        },
+
+        "spans": {
+          "type": "array",
+          "description": "Optional inline formatting overrides applied on top of 'text', by character offset. If omitted, plain text per RULES.md defaults for that blockType.",
+          "items": {
+            "type": "object",
+            "required": ["start", "end", "style"],
+            "properties": {
+              "start": { "type": "integer" },
+              "end": { "type": "integer" },
+              "style": {
+                "type": "string",
+                "enum": ["bold", "italic", "underline"]
+              }
+            }
+          }
+        },
+
+        "listStyle": {
+          "type": "string",
+          "enum": ["decimal", "roman", "alpha", "bullet"],
+          "default": "decimal",
+          "description": "Only used when blockType = list. decimal=1,2,3 for sequential/steps. roman=i,ii,iii for classifications/enumerated lists. alpha=(a),(b),(c) for compulsory sub-parts. bullet only for non-orderable remarks (must be explicit)."
+        },
+        "items": {
+          "type": "array",
+          "description": "Only used when blockType = list. Each item can itself have spans for underline/bold/italic.",
+          "items": {
+            "type": "object",
+            "required": ["text"],
+            "properties": {
+              "text": { "type": "string" },
+              "spans": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["start", "end", "style"],
+                  "properties": {
+                    "start": { "type": "integer" },
+                    "end": { "type": "integer" },
+                    "style": { "type": "string", "enum": ["bold", "italic", "underline"] }
+                  }
+                }
+              }
+            }
+          }
+        },
+
+        "tableCaption": { "type": "string", "description": "Only for blockType = table" },
+        "tableHeaders": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Only for blockType = table"
+        },
+        "tableRows": {
+          "type": "array",
+          "items": { "type": "array", "items": { "type": "string" } },
+          "description": "Only for blockType = table"
+        },
+
+        "diagramTitle": { "type": "string", "description": "Only for blockType = diagram" },
+        "diagramCaption": { "type": "string", "description": "Only for blockType = diagram" },
+        "diagramSvgOrUrl": {
+          "type": "string",
+          "description": "Only for blockType = diagram. Either inline SVG markup or a relative path to an image asset."
+        }
+      }
+    }
+  }
+}

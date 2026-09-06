@@ -1,0 +1,53 @@
+{
+  "semester": 1,
+  "subject": "Principles and Practices of Management",
+  "faculty": ["Prof. Aniket Shah"],
+  "questions": [
+    {
+      "id": "ppm-u1-q1",
+      "questionNumber": "Q.1",
+      "questionText": "Define Management. Discuss the nature and importance of Management in modern business.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Meaning and Concept of Management"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Management is the process of planning, organizing, actuating and controlling an organization's operations in order to achieve coordination of human and material resources.",
+          "spans": [
+            { "start": 0, "end": 10, "style": "underline" }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Classic Definition"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Management is the art of getting things done through and with people in formally organized groups.",
+          "spans": [
+            { "start": 0, "end": 10, "style": "italic" }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Key Functions of Management"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            { "text": "Planning: Deciding in advance what to do and how to do it." },
+            { "text": "Organizing: Establishing intentional structure of roles." },
+            { "text": "Directing: Guiding and supervising personnel." },
+            { "text": "Controlling: Measuring performance against objectives." }
+          ]
+        }
+      ]
+    }
+  ]
+}

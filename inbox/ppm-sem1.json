@@ -1,0 +1,2742 @@
+{
+  "semester": 1,
+  "subject": "Principles and Practices of Management (PPM)",
+  "faculty": [],
+  "unit": "Unit 1 & Unit 2",
+  "questions": [
+    {
+      "id": "ppm-u1-q1",
+      "questionNumber": "Q.1",
+      "questionText": "Define Management. State any two features of management.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "According to Peter Drucker, \"Management is a multi-purpose organ that manages a business and manages managers and manages workers and work.\"",
+          "spans": [
+            {
+              "start": 13,
+              "end": 26,
+              "style": "underline"
+            },
+            {
+              "start": 29,
+              "end": 39,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Goal-Oriented Process: Management is undertaken specifically to achieve predetermined organizational goals.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 75,
+                  "end": 109,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Continuous Process: Management is an ongoing cycle of planning, organizing, staffing, directing, and controlling that continues for the life of the enterprise.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 21,
+                  "style": "underline"
+                },
+                {
+                  "start": 57,
+                  "end": 65,
+                  "style": "underline"
+                },
+                {
+                  "start": 67,
+                  "end": 77,
+                  "style": "underline"
+                },
+                {
+                  "start": 79,
+                  "end": 87,
+                  "style": "underline"
+                },
+                {
+                  "start": 89,
+                  "end": 98,
+                  "style": "underline"
+                },
+                {
+                  "start": 104,
+                  "end": 115,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q2",
+      "questionNumber": "Q.2",
+      "questionText": "State any two importance of management in an organization.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Achieving Group Goals: Management coordinates individual efforts and channels them towards organizational objectives.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 94,
+                  "end": 119,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Optimum Resource Utilization: It ensures efficient use of physical, financial, and human resources, minimizing wastage and lowering operational costs.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 31,
+                  "style": "underline"
+                },
+                {
+                  "start": 61,
+                  "end": 69,
+                  "style": "underline"
+                },
+                {
+                  "start": 71,
+                  "end": 80,
+                  "style": "underline"
+                },
+                {
+                  "start": 86,
+                  "end": 101,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q3",
+      "questionNumber": "Q.3",
+      "questionText": "What are the functional areas of management? Name any four functional areas.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Functional areas are specialized departments within a business where managers apply core principles to run daily operations.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Production & Operations Management: Handles raw material sourcing, manufacturing processes, and quality checks.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 37,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Marketing Management: Focuses on product planning, pricing, advertising, and distribution channels.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 24,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Financial Management: Deals with capital procurement, operational budgeting, cash flows, and investments.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 25,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Human Resource Management (HRM): Oversees workforce recruitment, training, compensation, and performance appraisals.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 29,
+                  "style": "underline"
+                },
+                {
+                  "start": 31,
+                  "end": 34,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q4",
+      "questionNumber": "Q.4",
+      "questionText": "Who is a Manager? State any two roles performed by a manager.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "A manager is an individual who is responsible for directing, coordinating, and controlling the work of others to achieve specific organizational targets.",
+          "spans": [
+            {
+              "start": 2,
+              "end": 9,
+              "style": "underline"
+            },
+            {
+              "start": 130,
+              "end": 152,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Leader Role (Interpersonal): Motivating subordinates, guiding their development, and building team spirit.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 14,
+                  "style": "underline"
+                },
+                {
+                  "start": 16,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Spokesperson Role (Informational): Communicating official company plans, achievements, and policies to external stakeholders.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 21,
+                  "style": "underline"
+                },
+                {
+                  "start": 23,
+                  "end": 36,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q5",
+      "questionNumber": "Q.5",
+      "questionText": "What are the different levels of management? Name the three levels of management.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Top-Level Management: Board of Directors, CEO, President; focuses on long-term strategy and policies.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 23,
+                  "style": "underline"
+                },
+                {
+                  "start": 72,
+                  "end": 90,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Middle-Level Management: Department Heads, Branch Managers; translates strategic goals into operational plans.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 27,
+                  "style": "underline"
+                },
+                {
+                  "start": 75,
+                  "end": 90,
+                  "style": "underline"
+                },
+                {
+                  "start": 96,
+                  "end": 113,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Lower-Level / Supervisory Management: Supervisors, Foremen, Superintendents; directly oversees frontline workers.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 41,
+                  "style": "underline"
+                },
+                {
+                  "start": 100,
+                  "end": 117,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q6",
+      "questionNumber": "Q.6",
+      "questionText": "What is meant by Management as a Profession? State any two characteristics of a profession.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Management is considered a profession because it involves a specialized, intellectual body of knowledge that requires academic training and is applied to serve others for compensation.",
+          "spans": [
+            {
+              "start": 60,
+              "end": 71,
+              "style": "underline"
+            },
+            {
+              "start": 118,
+              "end": 135,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Well-defined Body of Knowledge: It is built on systematic, structured theory and principles that can be acquired through formal study.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 33,
+                  "style": "underline"
+                },
+                {
+                  "start": 124,
+                  "end": 136,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Professional Association: A professional association establishes standards, although entry is not restricted by licensing laws.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 28,
+                  "style": "underline"
+                },
+                {
+                  "start": 32,
+                  "end": 56,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q7",
+      "questionNumber": "Q.7",
+      "questionText": "Why is Management considered both a Science and an Art? Give one reason for each.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Management as a Science: It is based on a systematic body of knowledge, generalized principles, and cause-and-effect relationships.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 26,
+                  "style": "underline"
+                },
+                {
+                  "start": 45,
+                  "end": 73,
+                  "style": "underline"
+                },
+                {
+                  "start": 75,
+                  "end": 97,
+                  "style": "underline"
+                },
+                {
+                  "start": 103,
+                  "end": 133,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Management as an Art: Applying management principles requires personal skills, creativity, intuition, and continuous practice.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 66,
+                  "end": 81,
+                  "style": "underline"
+                },
+                {
+                  "start": 83,
+                  "end": 93,
+                  "style": "underline"
+                },
+                {
+                  "start": 95,
+                  "end": 104,
+                  "style": "underline"
+                },
+                {
+                  "start": 110,
+                  "end": 129,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q8",
+      "questionNumber": "Q.8",
+      "questionText": "Define Management and explain the nature and features of management in detail.",
+      "marks": 6,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Definition of Management"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "According to Henry Fayol: \"To manage is to forecast and to plan, to organize, to command, to coordinate, and to control.\"",
+          "spans": [
+            {
+              "start": 13,
+              "end": 24,
+              "style": "underline"
+            },
+            {
+              "start": 43,
+              "end": 51,
+              "style": "underline"
+            },
+            {
+              "start": 59,
+              "end": 63,
+              "style": "underline"
+            },
+            {
+              "start": 68,
+              "end": 76,
+              "style": "underline"
+            },
+            {
+              "start": 81,
+              "end": 88,
+              "style": "underline"
+            },
+            {
+              "start": 93,
+              "end": 103,
+              "style": "underline"
+            },
+            {
+              "start": 112,
+              "end": 119,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "In simple terms, management is the dynamic process of planning, organizing, staffing, directing, and controlling human, financial, physical, and technological resources to achieve goals efficiently and effectively.",
+          "spans": [
+            {
+              "start": 17,
+              "end": 27,
+              "style": "underline"
+            },
+            {
+              "start": 54,
+              "end": 62,
+              "style": "underline"
+            },
+            {
+              "start": 64,
+              "end": 74,
+              "style": "underline"
+            },
+            {
+              "start": 76,
+              "end": 84,
+              "style": "underline"
+            },
+            {
+              "start": 86,
+              "end": 95,
+              "style": "underline"
+            },
+            {
+              "start": 101,
+              "end": 112,
+              "style": "underline"
+            },
+            {
+              "start": 186,
+              "end": 197,
+              "style": "underline"
+            },
+            {
+              "start": 202,
+              "end": 213,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Nature and Features of Management"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Goal-Oriented Process: Management coordinates resources to achieve specific, predetermined targets.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 80,
+                  "end": 101,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. All-Pervasive (Universal): Management is required in all types of organizations and at all levels.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 28,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "3. Multidimensional: Management involves managing work, managing people, and managing operations.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 19,
+                  "style": "underline"
+                },
+                {
+                  "start": 41,
+                  "end": 54,
+                  "style": "underline"
+                },
+                {
+                  "start": 56,
+                  "end": 71,
+                  "style": "underline"
+                },
+                {
+                  "start": 77,
+                  "end": 96,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "4. Continuous Cycle: Management is an ongoing activity involving planning, organizing, staffing, directing, controlling, and the next planning cycle.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 19,
+                  "style": "underline"
+                },
+                {
+                  "start": 65,
+                  "end": 73,
+                  "style": "underline"
+                },
+                {
+                  "start": 75,
+                  "end": 85,
+                  "style": "underline"
+                },
+                {
+                  "start": 87,
+                  "end": 95,
+                  "style": "underline"
+                },
+                {
+                  "start": 97,
+                  "end": 106,
+                  "style": "underline"
+                },
+                {
+                  "start": 108,
+                  "end": 119,
+                  "style": "underline"
+                },
+                {
+                  "start": 134,
+                  "end": 142,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "5. Group Activity: Management aligns individual strengths into a coordinated, collective team effort.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "6. Dynamic Function: Management adapts its strategies to changes in technology, policies, competitors, and the business environment.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "7. Intangible Force: Management cannot be seen physically, but its presence is felt through smooth workflow, coordination, morale, and target completion.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q9",
+      "questionNumber": "Q.9",
+      "questionText": "Explain the various functions of management. Discuss how planning, organizing, staffing, directing and controlling contribute to achieving organizational objectives.",
+      "marks": 6,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Functions of Management"
+        },
+        {
+          "blockType": "diagram",
+          "diagramTitle": "Functions of Management",
+          "diagramCaption": "Sequential relationship among the five major functions of management.",
+          "diagramSvgOrUrl": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 150\"><rect x=\"10\" y=\"45\" width=\"150\" height=\"55\" fill=\"none\" stroke=\"black\"/><text x=\"85\" y=\"78\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"20\">Planning</text><text x=\"175\" y=\"78\" font-size=\"24\">→</text><rect x=\"195\" y=\"45\" width=\"150\" height=\"55\" fill=\"none\" stroke=\"black\"/><text x=\"270\" y=\"78\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"20\">Organizing</text><text x=\"360\" y=\"78\" font-size=\"24\">→</text><rect x=\"380\" y=\"45\" width=\"150\" height=\"55\" fill=\"none\" stroke=\"black\"/><text x=\"455\" y=\"78\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"20\">Staffing</text><text x=\"545\" y=\"78\" font-size=\"24\">→</text><rect x=\"565\" y=\"45\" width=\"150\" height=\"55\" fill=\"none\" stroke=\"black\"/><text x=\"640\" y=\"78\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"20\">Directing</text><text x=\"730\" y=\"78\" font-size=\"24\">→</text><rect x=\"750\" y=\"45\" width=\"140\" height=\"55\" fill=\"none\" stroke=\"black\"/><text x=\"820\" y=\"78\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"20\">Controlling</text></svg>"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Planning: Deciding in advance what to do, how to do it, when, and who will do it. It establishes goals and action plans and reduces trial-and-error operations.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 11,
+                  "style": "underline"
+                },
+                {
+                  "start": 100,
+                  "end": 105,
+                  "style": "underline"
+                },
+                {
+                  "start": 110,
+                  "end": 122,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Organizing: Identifying activities, dividing work, grouping tasks into departments, and delegating authority. It prevents duplication of work and resource waste.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 13,
+                  "style": "underline"
+                },
+                {
+                  "start": 91,
+                  "end": 111,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "3. Staffing: Finding, hiring, training, and retaining the right personnel for the right positions. It ensures skilled people are placed in critical positions.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 11,
+                  "style": "underline"
+                },
+                {
+                  "start": 58,
+                  "end": 73,
+                  "style": "underline"
+                },
+                {
+                  "start": 82,
+                  "end": 97,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "4. Directing: Guiding, supervising, motivating, leading, and communicating with employees. It turns plans into actual output.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 12,
+                  "style": "underline"
+                },
+                {
+                  "start": 36,
+                  "end": 46,
+                  "style": "underline"
+                },
+                {
+                  "start": 48,
+                  "end": 55,
+                  "style": "underline"
+                },
+                {
+                  "start": 61,
+                  "end": 74,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "5. Controlling: Comparing actual performance against preset standards, identifying deviations, and taking corrective action. It keeps operations aligned with plans.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 14,
+                  "style": "underline"
+                },
+                {
+                  "start": 26,
+                  "end": 44,
+                  "style": "underline"
+                },
+                {
+                  "start": 53,
+                  "end": 69,
+                  "style": "underline"
+                },
+                {
+                  "start": 106,
+                  "end": 123,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q10",
+      "questionNumber": "Q.10",
+      "questionText": "Differentiate between Management and Administration. Also explain the importance of management in an organization.",
+      "marks": 6,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Management vs. Administration"
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Management vs. Administration",
+          "tableHeaders": [
+            "Basis of Distinction",
+            "Administration (Thinking Function)",
+            "Management (Doing Function)"
+          ],
+          "tableRows": [
+            [
+              "1. Level of Authority",
+              "Top-level (Board of Directors, CEO, owners).",
+              "Middle and Lower-level (Department Heads, Supervisors)."
+            ],
+            [
+              "2. Primary Function",
+              "Determinative function: formulates vision, corporate policy, and long-range strategies.",
+              "Executive function: implements plans and directs daily operations."
+            ],
+            [
+              "3. Nature of Work",
+              "Focuses on what is to be done and when it should be completed.",
+              "Focuses on how tasks should be executed to achieve goals."
+            ],
+            [
+              "4. Core Focus",
+              "Long-term organizational survival, public responsibility, and structural policy.",
+              "Short-term to medium-term operational efficiency and departmental performance."
+            ],
+            [
+              "5. Required Skills",
+              "High conceptual and administrative skills.",
+              "High human and technical skills."
+            ],
+            [
+              "6. Suitability",
+              "Mostly found in government offices, educational boards, and corporate structures.",
+              "Found in commercial business enterprises and operational environments."
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Importance of Management in an Organization"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Improves Operational Efficiency: Maximizes productivity while minimizing resource wastage and administrative costs.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 34,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Builds a Dynamic Organization: Helps the firm adapt to changing economic conditions, technological advancements, and government regulations.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 33,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Achieves Personal & Organizational Harmony: Directs personal employee aspirations to align with corporate objectives.",
+              "spans": [
+                {
+                  "start": 14,
+                  "end": 47,
+                  "style": "underline"
+                },
+                {
+                  "start": 101,
+                  "end": 121,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Ensures Long-Term Growth: Effective management guides expansion, diversification, and social welfare projects.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 28,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q11",
+      "questionNumber": "Q.11",
+      "questionText": "Management is both a Science and an Art as well as a Profession. Discuss this statement with suitable examples.",
+      "marks": 6,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Management as a Science"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Management is a science because it is a systematic body of knowledge based on logical observations, established principles, and cause-and-effect relationships. It is an inexact or social science because it deals with human behavior.",
+          "spans": [
+            {
+              "start": 40,
+              "end": 68,
+              "style": "underline"
+            },
+            {
+              "start": 128,
+              "end": 158,
+              "style": "underline"
+            },
+            {
+              "start": 180,
+              "end": 194,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: The Principle of Division of Work states that dividing labor increases productivity. This can be observed in a manufacturing line such as a Tata Motors plant.",
+          "spans": [
+            {
+              "start": 13,
+              "end": 42,
+              "style": "underline"
+            },
+            {
+              "start": 55,
+              "end": 69,
+              "style": "underline"
+            },
+            {
+              "start": 70,
+              "end": 92,
+              "style": "underline"
+            },
+            {
+              "start": 149,
+              "end": 160,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Management as an Art"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Management is an art because the application of theoretical knowledge requires intuition, experience, creativity, and practice.",
+          "spans": [
+            {
+              "start": 79,
+              "end": 88,
+              "style": "underline"
+            },
+            {
+              "start": 90,
+              "end": 100,
+              "style": "underline"
+            },
+            {
+              "start": 102,
+              "end": 112,
+              "style": "underline"
+            },
+            {
+              "start": 118,
+              "end": 126,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: A manager may apply leadership theory creatively, using empathy and personal style to resolve a labor dispute.",
+          "spans": [
+            {
+              "start": 29,
+              "end": 46,
+              "style": "underline"
+            },
+            {
+              "start": 65,
+              "end": 72,
+              "style": "underline"
+            },
+            {
+              "start": 77,
+              "end": 91,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Management as a Profession"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Management is a profession because it is based on specialized training, intellectual study, and ethical guidelines. Modern corporate firms increasingly hire managers for their specialized education.",
+          "spans": [
+            {
+              "start": 50,
+              "end": 70,
+              "style": "underline"
+            },
+            {
+              "start": 72,
+              "end": 90,
+              "style": "underline"
+            },
+            {
+              "start": 96,
+              "end": 114,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: Firms such as Reliance or Google hire trained professionals, such as Sundar Pichai, who possess formal business education and professional standards.",
+          "spans": [
+            {
+              "start": 23,
+              "end": 31,
+              "style": "underline"
+            },
+            {
+              "start": 35,
+              "end": 41,
+              "style": "underline"
+            },
+            {
+              "start": 78,
+              "end": 91,
+              "style": "underline"
+            },
+            {
+              "start": 105,
+              "end": 130,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u1-q12",
+      "questionNumber": "Q.12",
+      "questionText": "Explain the different levels of management and discuss the managerial skills required at each level. Also describe the major roles of a manager.",
+      "marks": 6,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Levels of Management and Managerial Skills"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Top Management: CEOs, MDs, and Board of Directors establish overall corporate goals, missions, and long-term policies. They require conceptual skills to analyze complex situations, forecast market trends, and make strategic decisions.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 17,
+                  "style": "underline"
+                },
+                {
+                  "start": 102,
+                  "end": 120,
+                  "style": "underline"
+                },
+                {
+                  "start": 135,
+                  "end": 152,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Middle Management: Department Heads and Regional Managers implement strategic goals and coordinate departmental performance. They require human or interpersonal skills to build relationships, motivate employees, and resolve conflicts.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 20,
+                  "style": "underline"
+                },
+                {
+                  "start": 71,
+                  "end": 86,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "3. Lower Management: Supervisors, Foremen, and Office Superintendents direct frontline operations and maintain standards. They require technical skills for specific tools, machinery, and daily methods.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 19,
+                  "style": "underline"
+                },
+                {
+                  "start": 77,
+                  "end": 97,
+                  "style": "underline"
+                },
+                {
+                  "start": 135,
+                  "end": 151,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Major Roles of a Manager"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Henry Mintzberg classified managerial roles into three primary categories.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 15,
+              "style": "underline"
+            },
+            {
+              "start": 27,
+              "end": 43,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "1. Interpersonal Roles"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Figurehead: Performs social and ceremonial duties.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 13,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Leader: Motivates, inspires, and directs employees.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Liaison: Coordinates activities with external stakeholders and other departments.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 12,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "2. Informational Roles"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Monitor: Seeks and processes operational and market information.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Disseminator: Shares valuable information with employees internally.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 16,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Spokesperson: Represents and speaks on behalf of the company to the public and media.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "3. Decisional Roles"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Entrepreneur: Initiates innovative changes and new projects.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 15,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Disturbance Handler: Resolves operational crises, strikes, and disputes.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 23,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Resource Allocator: Distributes budgets, equipment, and manpower.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 23,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Negotiator: Represents the firm in critical business contracts.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q1",
+      "questionNumber": "Q.13",
+      "questionText": "What is Planning? State its meaning and definition.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Planning is the mental process of deciding what is to be done, how, when, and by whom before taking action.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "According to M.E. Harley, \"Planning is deciding in advance what is to be done. It involves the selection of objectives, policies, procedures and programs from alternatives.\"",
+          "spans": [
+            {
+              "start": 13,
+              "end": 24,
+              "style": "underline"
+            },
+            {
+              "start": 27,
+              "end": 35,
+              "style": "underline"
+            },
+            {
+              "start": 108,
+              "end": 118,
+              "style": "underline"
+            },
+            {
+              "start": 120,
+              "end": 128,
+              "style": "underline"
+            },
+            {
+              "start": 130,
+              "end": 140,
+              "style": "underline"
+            },
+            {
+              "start": 145,
+              "end": 153,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q2",
+      "questionNumber": "Q.14",
+      "questionText": "What is Management by Objectives (MBO)?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Management by Objectives (MBO) is a collaborative management system where managers and employees work together to define organizational goals, establish specific and measurable individual objectives, monitor progress, and evaluate performance based on results.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 30,
+              "style": "underline"
+            },
+            {
+              "start": 121,
+              "end": 141,
+              "style": "underline"
+            },
+            {
+              "start": 166,
+              "end": 176,
+              "style": "underline"
+            },
+            {
+              "start": 200,
+              "end": 216,
+              "style": "underline"
+            },
+            {
+              "start": 222,
+              "end": 242,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q3",
+      "questionNumber": "Q.15",
+      "questionText": "What is Decision-Making? State any two characteristics of decision-making.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Decision-making is the cognitive, systematic process of evaluating alternative solutions and choosing the best course of action to solve a problem.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 15,
+              "style": "underline"
+            },
+            {
+              "start": 23,
+              "end": 32,
+              "style": "underline"
+            },
+            {
+              "start": 34,
+              "end": 52,
+              "style": "underline"
+            },
+            {
+              "start": 67,
+              "end": 88,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Selective Process: It requires choosing from two or more available alternatives.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 20,
+                  "style": "underline"
+                },
+                {
+                  "start": 70,
+                  "end": 82,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Cognitive Process: It is an intellectual activity requiring knowledge, logical analysis, reasoning, and judgment.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 21,
+                  "style": "underline"
+                },
+                {
+                  "start": 75,
+                  "end": 91,
+                  "style": "underline"
+                },
+                {
+                  "start": 93,
+                  "end": 102,
+                  "style": "underline"
+                },
+                {
+                  "start": 108,
+                  "end": 116,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q4",
+      "questionNumber": "Q.16",
+      "questionText": "What is the span of Management?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Span of Management (Span of Control) refers to the exact number of immediate subordinates that a manager can effectively supervise. According to Louis Allen, it refers to the \"number of people that a manager can supervise.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 18,
+              "style": "underline"
+            },
+            {
+              "start": 20,
+              "end": 35,
+              "style": "underline"
+            },
+            {
+              "start": 67,
+              "end": 89,
+              "style": "underline"
+            },
+            {
+              "start": 145,
+              "end": 156,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "It determines whether the organizational structure is tall (narrow span) or flat (wide span).",
+          "spans": [
+            {
+              "start": 54,
+              "end": 58,
+              "style": "underline"
+            },
+            {
+              "start": 60,
+              "end": 71,
+              "style": "underline"
+            },
+            {
+              "start": 76,
+              "end": 80,
+              "style": "underline"
+            },
+            {
+              "start": 82,
+              "end": 91,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q5",
+      "questionNumber": "Q.17",
+      "questionText": "What is an Organization Chart?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "An Organization Chart is a visual diagram that represents the internal structure of an enterprise. It displays corporate positions, roles, lines of authority, and reporting relationships, making it clear who is accountable to whom.",
+          "spans": [
+            {
+              "start": 3,
+              "end": 21,
+              "style": "underline"
+            },
+            {
+              "start": 62,
+              "end": 80,
+              "style": "underline"
+            },
+            {
+              "start": 139,
+              "end": 157,
+              "style": "underline"
+            },
+            {
+              "start": 163,
+              "end": 186,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q6",
+      "questionNumber": "Q.18",
+      "questionText": "What is Informal Organization? State any two characteristics.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "An Informal Organization is a spontaneous network of social and personal relationships that develops naturally among employees working in a formal environment.",
+          "spans": [
+            {
+              "start": 3,
+              "end": 24,
+              "style": "underline"
+            },
+            {
+              "start": 30,
+              "end": 41,
+              "style": "underline"
+            },
+            {
+              "start": 53,
+              "end": 86,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Spontaneous Origin: It is not planned or designed by management; it arises from natural face-to-face interactions among coworkers.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 21,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Grapevine Communication: It does not follow formal channels of communication; information spreads rapidly in multiple directions.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 27,
+                  "style": "underline"
+                },
+                {
+                  "start": 48,
+                  "end": 80,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q7",
+      "questionNumber": "Q.19",
+      "questionText": "What is Staffing? State its importance.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Staffing is the managerial function of identifying, recruiting, selecting, training, placing, and retaining qualified personnel in various organizational positions.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "underline"
+            },
+            {
+              "start": 52,
+              "end": 62,
+              "style": "underline"
+            },
+            {
+              "start": 64,
+              "end": 73,
+              "style": "underline"
+            },
+            {
+              "start": 75,
+              "end": 83,
+              "style": "underline"
+            },
+            {
+              "start": 108,
+              "end": 127,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Its importance is to ensure \"the right person is in the right job at the right time,\" maximizing productivity and preventing costly operational disruptions.",
+          "spans": [
+            {
+              "start": 33,
+              "end": 45,
+              "style": "underline"
+            },
+            {
+              "start": 56,
+              "end": 65,
+              "style": "underline"
+            },
+            {
+              "start": 73,
+              "end": 83,
+              "style": "underline"
+            },
+            {
+              "start": 86,
+              "end": 109,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q8",
+      "questionNumber": "Q.20",
+      "questionText": "Explain the steps involved in the Planning Process. Also discuss the importance of planning.",
+      "marks": 6,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Planning Process"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Establishment of Verifiable Objectives: Define specific, measurable, and realistic goals for the organization and its departments.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 41,
+                  "style": "underline"
+                },
+                {
+                  "start": 50,
+                  "end": 58,
+                  "style": "underline"
+                },
+                {
+                  "start": 60,
+                  "end": 70,
+                  "style": "underline"
+                },
+                {
+                  "start": 76,
+                  "end": 91,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Developing Planning Premises: Establish logical assumptions and forecasts about future business conditions.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 31,
+                  "style": "underline"
+                },
+                {
+                  "start": 51,
+                  "end": 62,
+                  "style": "underline"
+                },
+                {
+                  "start": 67,
+                  "end": 76,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "3. Determining Alternative Courses of Action: Generate all possible strategies or methods to achieve the objectives.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 44,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "4. Evaluating and Selecting the Best Alternative: Compare alternatives based on costs, risks, feasibility, and benefits.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 48,
+                  "style": "underline"
+                },
+                {
+                  "start": 80,
+                  "end": 85,
+                  "style": "underline"
+                },
+                {
+                  "start": 87,
+                  "end": 92,
+                  "style": "underline"
+                },
+                {
+                  "start": 94,
+                  "end": 105,
+                  "style": "underline"
+                },
+                {
+                  "start": 111,
+                  "end": 119,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "5. Formulating Derivative (Supporting) Plans: Create secondary plans such as departmental schedules, purchase policies, and budgets.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 44,
+                  "style": "underline"
+                },
+                {
+                  "start": 77,
+                  "end": 99,
+                  "style": "underline"
+                },
+                {
+                  "start": 101,
+                  "end": 118,
+                  "style": "underline"
+                },
+                {
+                  "start": 124,
+                  "end": 131,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "6. Securing Employee Cooperation: Involve employees to collect feedback, build commitment, and reduce resistance to change.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 32,
+                  "style": "underline"
+                },
+                {
+                  "start": 63,
+                  "end": 71,
+                  "style": "underline"
+                },
+                {
+                  "start": 79,
+                  "end": 89,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "7. Review and Follow-up (Control): Monitor execution, measure progress against targets, and take corrective action.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 33,
+                  "style": "underline"
+                },
+                {
+                  "start": 97,
+                  "end": 114,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Importance of Planning"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Provides Clear Direction: Gives a clear sense of purpose and aligns employee efforts.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Minimizes Risk & Uncertainty: Anticipating future challenges helps managers prepare strategies.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 32,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Ensures Coordination: Promotes teamwork and prevents conflicts between departments.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 25,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Leads to Economy: Maximizes resource utilization and lowers operational costs.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 20,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "v. Facilitates Controlling: Establishes performance targets against which actual progress is measured.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 26,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q9",
+      "questionNumber": "Q.21",
+      "questionText": "Explain the Decision-Making Process and discuss the guidelines for making effective decisions.",
+      "marks": 6,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Decision-Making Process"
+        },
+        {
+          "blockType": "diagram",
+          "diagramTitle": "Decision-Making Process",
+          "diagramCaption": "Sequential steps from defining a problem to follow-up and evaluation.",
+          "diagramSvgOrUrl": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 250\"><rect x=\"20\" y=\"20\" width=\"170\" height=\"50\" fill=\"none\" stroke=\"black\"/><text x=\"105\" y=\"51\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"18\">Define Problem</text><rect x=\"215\" y=\"20\" width=\"190\" height=\"50\" fill=\"none\" stroke=\"black\"/><text x=\"310\" y=\"51\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"18\">Collect Information</text><rect x=\"430\" y=\"20\" width=\"210\" height=\"50\" fill=\"none\" stroke=\"black\"/><text x=\"535\" y=\"51\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"18\">Identify Alternatives</text><rect x=\"665\" y=\"20\" width=\"210\" height=\"50\" fill=\"none\" stroke=\"black\"/><text x=\"770\" y=\"51\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"18\">Weigh Alternatives</text><path d=\"M770 70 V125 H535\" fill=\"none\" stroke=\"black\"/><polygon points=\"535,125 547,119 547,131\"/><rect x=\"330\" y=\"105\" width=\"210\" height=\"50\" fill=\"none\" stroke=\"black\"/><text x=\"435\" y=\"136\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"18\">Select Best Option</text><path d=\"M330 155 V205 H120\" fill=\"none\" stroke=\"black\"/><polygon points=\"120,205 132,199 132,211\"/><rect x=\"20\" y=\"180\" width=\"200\" height=\"50\" fill=\"none\" stroke=\"black\"/><text x=\"120\" y=\"211\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"18\">Implement Decision</text><path d=\"M220 205 H430\" fill=\"none\" stroke=\"black\"/><polygon points=\"430,205 418,199 418,211\"/><rect x=\"430\" y=\"180\" width=\"200\" height=\"50\" fill=\"none\" stroke=\"black\"/><text x=\"530\" y=\"211\" text-anchor=\"middle\" font-family=\"Times New Roman\" font-size=\"18\">Follow-up</text></svg>"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Defining the Problem: Clearly identify the root issue that requires a decision.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 23,
+                  "style": "underline"
+                },
+                {
+                  "start": 46,
+                  "end": 56,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Collecting Information: Gather relevant internal records and external sources such as customer feedback.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 25,
+                  "style": "underline"
+                },
+                {
+                  "start": 43,
+                  "end": 59,
+                  "style": "underline"
+                },
+                {
+                  "start": 64,
+                  "end": 80,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "3. Identifying Alternatives: Generate a wide range of potential solutions.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "4. Weighing Alternatives: Evaluate each option based on costs, benefits, risks, and resource requirements.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 24,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "5. Selecting the Best Alternative: Select the solution offering the highest benefit with the lowest risk.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 33,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "6. Planning and Execution: Convert the decision into action by assigning roles, budgets, and deadlines.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 25,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "7. Follow-up and Evaluation: Monitor results after execution to verify whether the original problem was resolved.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Guidelines for Effective Decisions"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Define the Problem Clearly: Treat root causes rather than symptoms.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Recognize Obstacles and Constraints: Consider time, budget, legal requirements, and other practical limits.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 39,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Gather Accurate Data: Base decisions on verified facts rather than emotions.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 25,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Develop Multiple Alternatives: Avoid settling on the first option and explore creative solutions.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 33,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "v. Manage Cognitive Biases: Avoid confirmation bias and anchoring bias.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 26,
+                  "style": "underline"
+                },
+                {
+                  "start": 34,
+                  "end": 51,
+                  "style": "underline"
+                },
+                {
+                  "start": 56,
+                  "end": 70,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "vi. Leverage Technology: Use analytical tools and decision support systems to process data accurately.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 23,
+                  "style": "underline"
+                },
+                {
+                  "start": 50,
+                  "end": 74,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q10",
+      "questionNumber": "Q.22",
+      "questionText": "Explain the Organizing Process and discuss its need, importance and principles.",
+      "marks": 6,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Organizing Process"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Determination of Objectives: Identify the strategic goals that the organizational structure must support.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 30,
+                  "style": "underline"
+                },
+                {
+                  "start": 45,
+                  "end": 60,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Enumeration of Activities (Division): List and divide total required work into smaller, manageable tasks.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 39,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "3. Grouping of Activities (Departmentation): Group similar tasks into functional departments such as Marketing, Finance, and HR.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 43,
+                  "style": "underline"
+                },
+                {
+                  "start": 101,
+                  "end": 110,
+                  "style": "underline"
+                },
+                {
+                  "start": 112,
+                  "end": 119,
+                  "style": "underline"
+                },
+                {
+                  "start": 125,
+                  "end": 127,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "4. Allocation of Responsibility: Assign specific jobs to qualified individuals and define roles.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 31,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "5. Delegation of Sufficient Authority: Grant employees authority needed to perform responsibilities and establish reporting lines.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 37,
+                  "style": "underline"
+                },
+                {
+                  "start": 114,
+                  "end": 129,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "6. Coordination: Establish communication channels to integrate departmental efforts and prevent conflicts.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 15,
+                  "style": "underline"
+                },
+                {
+                  "start": 27,
+                  "end": 49,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Need and Importance of Organizing"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Facilitates Administration: Defines clear reporting structures and reduces confusion.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Promotes Specialization: Repeated performance of a task builds expertise and raises work quality.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Optimum Resource Utilization: Ensures physical, financial, and human assets are used with minimal waste.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 33,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Encourages Innovation: Clear roles allow employees to exercise initiative and develop creative ideas.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 25,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "v. Ensures Business Continuity: Delegation helps train future managers and supports long-term growth.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 30,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Fundamental Principles of Organizing"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Principle of Unity of Objective: All departmental activities must align with corporate goals.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 34,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Principle of Division of Labor: Work should be divided into specialized tasks.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 34,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Principle of Unity of Command: An employee should receive orders from only one supervisor.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 34,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Principle of Span of Management: A manager should oversee a manageable number of subordinates.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 35,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q11",
+      "questionNumber": "Q.23",
+      "questionText": "Explain the different types of Organizational Structures - Line, Line and Staff, Functional, Project, Matrix and Virtual Organization.",
+      "marks": 6,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Types of Organizational Structures"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Line Organization: The oldest and simplest structure. Authority flows vertically downward in a direct line from top management to workers. Pros: simple, quick decisions, fixed accountability. Cons: lack of specialization and overburdened key managers.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 20,
+                  "style": "underline"
+                },
+                {
+                  "start": 57,
+                  "end": 66,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Line and Staff Organization: Technical staff specialists assist line managers with advice, while line managers retain decision-making authority. Pros: specialist advice with clear control. Cons: line-staff conflicts and high administrative cost.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 31,
+                  "style": "underline"
+                },
+                {
+                  "start": 43,
+                  "end": 60,
+                  "style": "underline"
+                },
+                {
+                  "start": 68,
+                  "end": 81,
+                  "style": "underline"
+                },
+                {
+                  "start": 101,
+                  "end": 114,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Functional Organization: Employees are grouped according to business functions such as Marketing, Finance, and Production. Pros: specialized expertise. Cons: departmental focus can make coordination difficult.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 28,
+                  "style": "underline"
+                },
+                {
+                  "start": 92,
+                  "end": 101,
+                  "style": "underline"
+                },
+                {
+                  "start": 103,
+                  "end": 110,
+                  "style": "underline"
+                },
+                {
+                  "start": 116,
+                  "end": 126,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Project Organization: A temporary structure created for a specific project. Specialists from various departments are pooled under a Project Manager. Pros: direct project focus. Cons: job insecurity after project completion and resource duplication.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 136,
+                  "end": 151,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "v. Matrix Organization: Combines functional and project structures. Employees report to both a functional manager and a project manager. Pros: flexible resource sharing. Cons: dual reporting can create conflict and confusion.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 22,
+                  "style": "underline"
+                },
+                {
+                  "start": 95,
+                  "end": 113,
+                  "style": "underline"
+                },
+                {
+                  "start": 120,
+                  "end": 135,
+                  "style": "underline"
+                },
+                {
+                  "start": 176,
+                  "end": 190,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "vi. Virtual Organization: A dynamic network of entities connected through technology to share skills and knowledge, allowing people to work together without being physically present. Pros: flexibility, fewer geographic barriers, low overhead. Cons: technology dependence and difficulty building team culture.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 74,
+                  "end": 84,
+                  "style": "underline"
+                },
+                {
+                  "start": 189,
+                  "end": 200,
+                  "style": "underline"
+                },
+                {
+                  "start": 249,
+                  "end": 259,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppm-u2-q12",
+      "questionNumber": "Q.24",
+      "questionText": "Explain Staffing and discuss its nature, importance and process.",
+      "marks": 6,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Meaning and Nature of Staffing"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Staffing is the management function that focuses on recruiting, selecting, training, and retaining the right people in the right jobs. It is dynamic, continuous, and essential at all levels of management.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "underline"
+            },
+            {
+              "start": 52,
+              "end": 62,
+              "style": "underline"
+            },
+            {
+              "start": 64,
+              "end": 73,
+              "style": "underline"
+            },
+            {
+              "start": 75,
+              "end": 83,
+              "style": "underline"
+            },
+            {
+              "start": 89,
+              "end": 98,
+              "style": "underline"
+            },
+            {
+              "start": 103,
+              "end": 115,
+              "style": "underline"
+            },
+            {
+              "start": 123,
+              "end": 133,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Importance of Staffing"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "i. Placing Right Talent in Right Jobs: Ensures vacancies are filled by qualified professionals, improving productivity.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 37,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "ii. Improves Employee Morale: Fair selection, systematic training, and proper compensation boost employee satisfaction.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 28,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iii. Optimum Use of Resources: Prevents high recruitment costs, high employee turnover, and operational disruptions.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "iv. Business Growth: Developing talented staff prepares the organization to expand operations.",
+              "spans": [
+                {
+                  "start": 4,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Staffing Process"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "1. Manpower Planning: Estimate the number and types of employees needed in future periods.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 20,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "2. Recruitment: Attract qualified applicants for open positions.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "3. Selection: Evaluate candidates through tests and interviews and choose the most suitable individual.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 12,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "4. Orientation and Placement: Introduce selected candidates to the organization and assign roles.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 28,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "5. Training and Development: Provide continuous training to improve skills and performance.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "6. Performance Appraisal: Review employee performance against established standards.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 24,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "7. Promotion and Transfer: Manage career growth through promotions, transfers, and succession planning.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 25,
+                  "style": "underline"
+                },
+                {
+                  "start": 83,
+                  "end": 102,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "8. Remuneration: Establish a fair salary and compensation structure to retain employees.",
+              "spans": [
+                {
+                  "start": 3,
+                  "end": 15,
+                  "style": "underline"
+                },
+                {
+                  "start": 45,
+                  "end": 57,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+/* ==========================================================================
+   GTU / SSASIT A4 Print & Answer Sheet Stylesheet
+   Strict adherence to RULES.md (Master Formatting Rulebook v1.0)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Page Physics & @page declaration
+   RULES.md §1:
+   - Paper size: A4 (210mm x 297mm), portrait, single column.
+   - Margins: 20mm top, 20mm bottom, 20mm left, 15mm right (binding margin).
+   - Safety padding: min 4mm inside margin box.
+   - Print CSS must use @page { size: A4 portrait; margin: 0; }
+   -------------------------------------------------------------------------- */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+:root {
+  --a4-width: 210mm;
+  --a4-min-height: 297mm;
+  --margin-top: 20mm;
+  --margin-bottom: 20mm;
+  --margin-left: 20mm;
+  --margin-right: 15mm;
+  --safety-pad: 4mm;
+  --gtu-font: "Times New Roman", Times, "Tinos", "Nimbus Roman No9 L", serif;
+  --gtu-ink: #000000;
+  --gtu-paper: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   2. Typography Base
+   RULES.md §2:
+   - Font: Times New Roman throughout answer sheets
+   - Line spacing: 1.5 for body text, 1.15 for bullet/numbered points
+   - Paragraph/Answer spacing: 6pt blank line after each answer block
+   -------------------------------------------------------------------------- */
+.gtu-sheet-container {
+  font-family: var(--gtu-font);
+  color: var(--gtu-ink);
+  background-color: var(--gtu-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Simulated A4 sheet on screen */
+.gtu-a4-sheet {
+  width: var(--a4-width);
+  min-height: var(--a4-min-height);
+  background: var(--gtu-paper);
+  color: var(--gtu-ink);
+  font-family: var(--gtu-font);
+  box-sizing: border-box;
+  padding: calc(var(--margin-top) + var(--safety-pad))
+           calc(var(--margin-right) + var(--safety-pad))
+           calc(var(--margin-bottom) + var(--safety-pad))
+           calc(var(--margin-left) + var(--safety-pad));
+  position: relative;
+  margin: 0 auto 32px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 1px;
+}
+
+/* Optional Margin Guides for visual inspection (Toggleable in UI) */
+.show-margin-guides .gtu-a4-sheet::before {
+  content: "";
+  position: absolute;
+  top: var(--margin-top);
+  left: var(--margin-left);
+  right: var(--margin-right);
+  bottom: var(--margin-bottom);
+  border: 1px dashed rgba(220, 38, 38, 0.45);
+  pointer-events: none;
+}
+
+.show-margin-guides .gtu-a4-sheet::after {
+  content: "Binding Margin: 20mm (Left) | Right: 15mm | Top/Bottom: 20mm";
+  position: absolute;
+  bottom: 4mm;
+  left: var(--margin-left);
+  font-size: 8pt;
+  color: #dc2626;
+  font-family: sans-serif;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   3. Document Header (Subject & Exam Title)
+   RULES.md §2:
+   - Subject title: 16pt, Bold, Centered
+   -------------------------------------------------------------------------- */
+.gtu-page-header {
+  text-align: center;
+  margin-bottom: 18pt;
+  padding-bottom: 10pt;
+  border-bottom: 1.5pt solid var(--gtu-ink);
+}
+
+.gtu-subject-title {
+  font-size: 16pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  margin: 0 0 4pt 0;
+  line-height: 1.25;
+}
+
+.gtu-header-meta {
+  font-size: 10.5pt;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4pt;
+}
+
+/* --------------------------------------------------------------------------
+   4. Question Block & Marks Indicator
+   RULES.md §2 & §4:
+   - Question number + text: 13pt, Bold
+   - Marks indicator: 11pt, Bold, Right-aligned next to question
+   -------------------------------------------------------------------------- */
+.gtu-question-wrapper {
+  margin-bottom: 16pt;
+  /* Prevent question heading from getting cut at bottom */
+  break-inside: auto;
+}
+
+.gtu-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16pt;
+  margin-bottom: 8pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.gtu-question-title {
+  font-size: 13pt;
+  font-weight: bold;
+  line-height: 1.35;
+  margin: 0;
+  flex: 1;
+}
+
+.gtu-question-number {
+  font-weight: bold;
+  margin-right: 6pt;
+}
+
+.gtu-marks-badge {
+  font-size: 11pt;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: right;
+  padding-top: 1pt;
+}
+
+/* --------------------------------------------------------------------------
+   5. Answer Content Elements
+   RULES.md §2 & §3:
+   - Unit/Section heading: 13pt, Bold, Underlined
+   - Sub-heading: 12pt, Bold
+   - Body/normal text: 12pt, Regular, line spacing 1.5
+   - Numbered points: line spacing 1.15
+   - Definition/formula/technical term: 12pt, Underlined
+   - Emphasis word: 12pt, Italic
+   - Spacing: blank-line-equivalent (≈6pt) after each answer block
+   -------------------------------------------------------------------------- */
+.gtu-answer-body {
+  font-size: 12pt;
+  line-height: 1.5;
+  margin-top: 6pt;
+}
+
+/* Headings inside answer */
+.gtu-heading {
+  font-size: 13pt;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 2.5pt;
+  margin-top: 12pt;
+  margin-bottom: 5pt;
+  line-height: 1.3;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.gtu-subheading {
+  font-size: 12pt;
+  font-weight: bold;
+  margin-top: 10pt;
+  margin-bottom: 4pt;
+  line-height: 1.3;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Normal Paragraph */
+.gtu-paragraph {
+  font-size: 12pt;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0 0 6pt 0;
+  text-align: justify;
+}
+
+/* Keep heading paired with next paragraph */
+.gtu-heading + .gtu-paragraph,
+.gtu-subheading + .gtu-paragraph,
+.gtu-heading + .gtu-list,
+.gtu-subheading + .gtu-list {
+  break-before: avoid;
+  page-break-before: avoid;
+}
+
+/* Note block */
+.gtu-note {
+  font-size: 11pt;
+  line-height: 1.4;
+  margin: 6pt 0;
+  padding-left: 12pt;
+  border-left: 2pt solid #444;
+}
+
+.gtu-note-label {
+  font-weight: bold;
+}
+
+/* Inline typography rules (RULES.md §3) */
+.u-underline {
+  text-decoration: underline;
+  text-underline-offset: 2pt;
+}
+
+.u-italic {
+  font-style: italic;
+}
+
+.u-bold {
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   6. Numbered & Bullet Lists
+   RULES.md §4:
+   - Line spacing: 1.15
+   - decimal: 1., 2., 3. (steps/process)
+   - roman: i., ii., iii. (classifications/enumerations)
+   - alpha: (a), (b), (c) (compulsory sub-parts)
+   - bullet: only for un-orderable supporting remarks
+   -------------------------------------------------------------------------- */
+.gtu-list {
+  margin: 4pt 0 8pt 0;
+  padding-left: 24pt;
+  line-height: 1.15;
+}
+
+.gtu-list.list-decimal {
+  list-style-type: decimal;
+}
+
+.gtu-list.list-roman {
+  list-style-type: lower-roman;
+}
+
+.gtu-list.list-alpha {
+  list-style-type: lower-alpha;
+}
+
+.gtu-list.list-bullet {
+  list-style-type: disc;
+}
+
+.gtu-list-item {
+  font-size: 12pt;
+  margin-bottom: 4.5pt;
+  line-height: 1.15;
+  text-align: justify;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* --------------------------------------------------------------------------
+   7. Tables
+   RULES.md §5:
+   - Bold header row
+   - 11pt text
+   - Caption above: "Table: <title>" in bold
+   - Page break inside avoided
+   -------------------------------------------------------------------------- */
+.gtu-table-container {
+  margin: 10pt 0 12pt 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.gtu-table-caption {
+  font-size: 11pt;
+  font-weight: bold;
+  margin-bottom: 4pt;
+  text-align: left;
+}
+
+.gtu-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11pt;
+  line-height: 1.25;
+}
+
+.gtu-table th,
+.gtu-table td {
+  border: 1pt solid var(--gtu-ink);
+  padding: 5pt 7pt;
+  vertical-align: top;
+}
+
+.gtu-table th {
+  font-weight: bold;
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   8. Diagrams
+   RULES.md §5:
+   - Heading above: exactly "Diagram: <title>" (bold, underlined)
+   - Boxed with thin 0.5pt border
+   - Kept on one page (break-inside avoided)
+   - Caption below: 10.5pt, italic, centered
+   -------------------------------------------------------------------------- */
+.gtu-diagram-container {
+  margin: 12pt 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.gtu-diagram-title {
+  font-size: 12pt;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 2pt;
+  margin-bottom: 5pt;
+}
+
+.gtu-diagram-box {
+  border: 0.5pt solid var(--gtu-ink);
+  padding: 10pt;
+  text-align: center;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gtu-diagram-box svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gtu-diagram-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gtu-diagram-caption {
+  font-size: 10.5pt;
+  font-style: italic;
+  text-align: center;
+  margin-top: 5pt;
+}
+
+/* --------------------------------------------------------------------------
+   9. Post-Answer Spacing & Separators
+   RULES.md §2:
+   - Blank line equivalent (≈6pt) after each answer block
+   - Visual separator between questions
+   -------------------------------------------------------------------------- */
+.gtu-question-separator {
+  height: 12pt;
+  margin: 14pt 0 16pt 0;
+  border-bottom: 0.75pt dashed #999;
+}
+
+/* --------------------------------------------------------------------------
+   10. Print Mode (@media print)
+   Strict zero-bleed, deterministic A4 output
+   -------------------------------------------------------------------------- */
+@media print {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: var(--gtu-font) !important;
+    width: 210mm !important;
+  }
+
+  /* Hide all UI elements, navbars, sidebars, buttons */
+  .no-print,
+  .app-sidebar,
+  .app-header,
+  .app-toolbar,
+  .json-dropzone,
+  .modal-overlay,
+  .zoom-controls {
+    display: none !important;
+  }
+
+  /* Reset sheet positioning for real printing */
+  .gtu-sheet-container {
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .gtu-a4-sheet {
+    width: 210mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    padding: calc(var(--margin-top) + var(--safety-pad))
+             calc(var(--margin-right) + var(--safety-pad))
+             calc(var(--margin-bottom) + var(--safety-pad))
+             calc(var(--margin-left) + var(--safety-pad)) !important;
+    /* Force exact page break between multi-page sheet representations */
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .gtu-a4-sheet:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* Break safety guarantees */
+  .gtu-question-header,
+  .gtu-heading,
+  .gtu-subheading,
+  .gtu-table-container,
+  .gtu-diagram-container,
+  .gtu-list-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .gtu-heading,
+  .gtu-subheading,
+  .gtu-question-header {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Ensure ink contrast */
+  .gtu-table th {
+    background-color: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

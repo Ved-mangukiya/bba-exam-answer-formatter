@@ -1,0 +1,23 @@
+{
+  "name": "bba-exam-answer-formatter",
+  "version": "1.0.0",
+  "description": "Print-ready, GTU/SSASIT-style formatted answer sheets for BBA exams — JSON-driven, A4-safe, zero page-bleed.",
+  "main": "site/index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000",
+    "site": "npx serve site -l 3000",
+    "organize": "node scripts/organizer.js",
+    "watch-inbox": "node scripts/organizer.js --watch"
+  },
+  "keywords": [
+    "gtu",
+    "ssasit",
+    "bba",
+    "exam-formatter",
+    "a4-print",
+    "print-ready"
+  ],
+  "author": "",
+  "license": "ISC"
+}

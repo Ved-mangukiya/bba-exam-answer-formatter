@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBA Exam Answer Formatter — GTU / SSASIT Print-Ready Engine</title>
+  <meta name="description" content="A static web engine that turns NotebookLM and Gemini-sourced exam answers into print-ready A4 answer sheets with zero page-bleed, strict typography, and GTU/SSASIT house style.">
+
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets: Print Physics + Modern Desk Workspace -->
+  <link rel="stylesheet" href="css/a4-print.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+  <!-- Top Application Bar (Screen Only) -->
+  <header class="app-header no-print" id="mainHeader">
+    <div class="brand-section">
+      <div class="brand-logo">BBA</div>
+      <div class="brand-title-group">
+        <h1>
+          Answer Formatter
+          <span class="brand-badge">RULES.md v1.0</span>
+        </h1>
+        <div class="brand-subtitle">GTU / SSASIT House Style • Semester 1</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Direct Print Triggers -->
+      <button class="btn btn-secondary" id="btnPrintQuestion" title="Print currently selected question">
+        🖨️ Print Question
+      </button>
+      <button class="btn btn-primary" id="btnPrintSubject" title="Print full subject answer sheet consecutively">
+        📄 Print Subject Sheet
+      </button>
+
+      <div style="width: 1px; height: 24px; background: var(--border-subtle); margin: 0 4px;"></div>
+
+      <!-- Theme & Guides -->
+      <button class="btn-icon" id="btnToggleGuides" title="Toggle 20mm/15mm Binding Margin Guides">
+        📐
+      </button>
+      <button class="btn-icon" id="btnThemeToggle" title="Toggle Light/Dark Workspace Theme">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- Application Body Layout -->
+  <main class="app-layout">
+
+    <!-- Left Sidebar: Subject Navigator & Question Directory -->
+    <aside class="app-sidebar no-print" id="appSidebar">
+      <!-- Navigation Tabs -->
+      <div class="sidebar-tabs">
+        <button class="sidebar-tab active" id="tabSubjects">Subjects (6)</button>
+        <button class="sidebar-tab" id="tabQuestions">Questions</button>
+      </div>
+
+      <!-- Subjects Panel -->
+      <div class="sidebar-content" id="sidebarSubjectsPanel">
+        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">
+          Semester 1 Curriculum
+        </div>
+        <div class="subject-list-group" id="subjectList">
+          <!-- Populated dynamically via app.js -->
+        </div>
+
+        <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+          <button class="btn btn-secondary" id="btnUploadJson" style="width: 100%; justify-content: center;">
+            📤 Import Custom JSON
+          </button>
+        </div>
+      </div>
+
+      <!-- Questions Panel -->
+      <div class="sidebar-content" id="sidebarQuestionsPanel" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">
+            Filter By Unit
+          </span>
+          <button class="btn-icon" id="btnFullSubjectView" title="View all questions" style="padding: 4px 8px; font-size: 11px;">
+            Show All
+          </button>
+        </div>
+
+        <div class="unit-filters" id="unitFilters">
+          <!-- Populated dynamically via app.js -->
+        </div>
+
+        <div class="question-list-group" id="questionList">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- Center Main Workspace & Desk Canvas -->
+    <section class="workspace-container" id="workspaceContainer">
+      <!-- Workspace Toolbar -->
+      <div class="workspace-toolbar no-print">
+        <div class="toolbar-left">
+          <span class="toolbar-label">Active:</span>
+          <span style="font-weight: 600; font-size: 13px;" id="activeSubjectTitle">Business Statistics and Logic</span>
+          <span style="color: var(--text-muted); margin: 0 4px;">•</span>
+          <span style="font-size: 12px; color: var(--text-secondary);" id="currentViewModeLabel">Full Subject Sheet</span>
+        </div>
+
+        <div class="toolbar-right">
+          <!-- Zoom Controls -->
+          <button class="btn-icon" id="btnZoomOut" title="Zoom Out (-)">−</button>
+          <span class="zoom-badge" id="zoomLevelBadge">100%</span>
+          <button class="btn-icon" id="btnZoomIn" title="Zoom In (+)">+</button>
+          <button class="btn-icon" id="btnZoomReset" title="Reset Zoom">1:1</button>
+          <button class="btn btn-secondary" id="btnZoomFit" style="padding: 4px 10px; font-size: 11px;">Fit Width</button>
+        </div>
+      </div>
+
+      <!-- Simulated A4 Desk Surface -->
+      <div class="desk-canvas" id="deskCanvas">
+        <div class="a4-viewport-scaler" id="a4Scaler">
+          <!-- A4 Output Sheet Container -->
+          <div class="gtu-sheet-container" id="a4Container">
+            <!-- Rendered by GTURenderer -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Hidden File Input for JSON Drop / Upload -->
+  <input type="file" id="dropzoneInput" accept=".json,application/json" style="display: none;">
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/renderer.js"></script>
+  <script src="js/data-loader.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
