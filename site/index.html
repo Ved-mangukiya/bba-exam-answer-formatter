@@ -38,17 +38,14 @@
     </div>
 
     <div class="header-actions">
-      <!-- Direct Print Triggers (Desktop) -->
-      <button class="btn btn-secondary desktop-only-action" id="btnPrintQuestion" title="Print currently selected question">
-        🖨️ Print Question
-      </button>
-      <button class="btn btn-primary desktop-only-action" id="btnPrintSubject" title="Print full subject answer sheet consecutively">
-        📄 Print Subject Sheet
+      <!-- One-Click Direct PDF Download (Desktop) -->
+      <button class="btn btn-primary desktop-only-action" id="btnOpenPdfModal" title="Download Print-Ready A4 PDF">
+        📥 Download A4 PDF
       </button>
 
-      <!-- Mobile Direct Print Action -->
-      <button class="btn-icon mobile-only-action" id="btnMobilePrint" title="Print Current Document">
-        🖨️
+      <!-- Mobile Direct PDF Download Action -->
+      <button class="btn-icon mobile-only-action" id="btnMobileDownload" title="Download A4 PDF">
+        📥
       </button>
 
       <div class="header-divider" style="width: 1px; height: 24px; background: var(--border-subtle); margin: 0 4px;"></div>
@@ -170,10 +167,88 @@
   <!-- Hidden File Input for JSON Drop / Upload -->
   <input type="file" id="dropzoneInput" accept=".json,application/json" style="display: none;">
 
+  <!-- PDF Export Confirmation & Options Modal -->
+  <div class="modal-backdrop no-print" id="pdfModalBackdrop" style="display: none;">
+    <div class="modal-dialog" role="dialog" aria-labelledby="pdfModalTitle" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-icon">📄</span>
+          <h3 class="modal-title" id="pdfModalTitle">Download A4 PDF</h3>
+        </div>
+        <button class="modal-close-btn" id="btnPdfModalClose" aria-label="Close dialog">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Filename Customization -->
+        <div class="form-group">
+          <label class="form-label" for="pdfFileNameInput">Document File Name</label>
+          <div class="input-with-extension">
+            <input type="text" id="pdfFileNameInput" class="form-input" placeholder="e.g. PPM_GTU_Exam_Answers">
+            <span class="input-extension-badge">.pdf</span>
+          </div>
+          <span class="form-hint">Direct download to your device with zero print dialogs.</span>
+        </div>
+
+        <!-- Scope Selection -->
+        <div class="form-group">
+          <label class="form-label">Content to Include</label>
+          <div class="radio-card-group">
+            <label class="radio-card" id="labelScopeFull">
+              <input type="radio" name="pdfScope" id="radioScopeFull" value="full" checked>
+              <div class="radio-card-content">
+                <span class="radio-card-title">Full Subject Document</span>
+                <span class="radio-card-desc" id="pdfFullSubjectCount">All questions consecutively in A4 pages</span>
+              </div>
+            </label>
+
+            <label class="radio-card" id="labelScopeSingle">
+              <input type="radio" name="pdfScope" id="radioScopeSingle" value="single">
+              <div class="radio-card-content">
+                <span class="radio-card-title">Selected Question Only</span>
+                <span class="radio-card-desc" id="pdfSingleQuestionDesc">Only the currently active question</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Format Info Grid -->
+        <div class="pdf-info-grid">
+          <div class="pdf-info-card">
+            <span class="info-card-label">Format</span>
+            <span class="info-card-value">A4 Portrait</span>
+          </div>
+          <div class="pdf-info-card">
+            <span class="info-card-label">Standard</span>
+            <span class="info-card-value">GTU / SSASIT</span>
+          </div>
+          <div class="pdf-info-card">
+            <span class="info-card-label">Estimated Length</span>
+            <span class="info-card-value" id="pdfEstimatedPages">~3–6 Pages</span>
+          </div>
+        </div>
+
+        <!-- Progress Spinner (Shown during PDF generation) -->
+        <div class="pdf-progress-bar" id="pdfProgressBar" style="display: none;">
+          <div class="progress-spinner"></div>
+          <div class="progress-status" id="pdfProgressStatus">Compiling high-resolution A4 pages...</div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnPdfModalCancel">Cancel</button>
+        <button class="btn btn-primary" id="btnPdfModalDownload">
+          <span id="btnDownloadIcon">⬇️</span>
+          <span id="btnDownloadLabel">Download PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notifications -->
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- Application Logic Scripts -->
+  <script src="js/vendor/html2pdf.bundle.min.js"></script>
   <script src="js/renderer.js"></script>
   <script src="js/data-loader.js"></script>
   <script src="js/app.js"></script>

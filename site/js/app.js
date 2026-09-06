@@ -40,8 +40,8 @@
       btnZoomFit: document.getElementById('btnZoomFit'),
       btnToggleGuides: document.getElementById('btnToggleGuides'),
       btnThemeToggle: document.getElementById('btnThemeToggle'),
-      btnPrintQuestion: document.getElementById('btnPrintQuestion'),
-      btnPrintSubject: document.getElementById('btnPrintSubject'),
+      btnOpenPdfModal: document.getElementById('btnOpenPdfModal'),
+      btnMobileDownload: document.getElementById('btnMobileDownload'),
       btnFullSubjectView: document.getElementById('btnFullSubjectView'),
       dropzoneInput: document.getElementById('dropzoneInput'),
       btnUploadJson: document.getElementById('btnUploadJson'),
@@ -52,8 +52,21 @@
       toastContainer: document.getElementById('toastContainer'),
       mobileBottomNav: document.getElementById('mobileBottomNav'),
       mobileNavItems: document.querySelectorAll('.mobile-nav-item'),
-      btnMobilePrint: document.getElementById('btnMobilePrint'),
-      btnMobileBackToQuestions: document.getElementById('btnMobileBackToQuestions')
+      btnMobileBackToQuestions: document.getElementById('btnMobileBackToQuestions'),
+      pdfModalBackdrop: document.getElementById('pdfModalBackdrop'),
+      btnPdfModalClose: document.getElementById('btnPdfModalClose'),
+      btnPdfModalCancel: document.getElementById('btnPdfModalCancel'),
+      btnPdfModalDownload: document.getElementById('btnPdfModalDownload'),
+      pdfFileNameInput: document.getElementById('pdfFileNameInput'),
+      radioScopeFull: document.getElementById('radioScopeFull'),
+      radioScopeSingle: document.getElementById('radioScopeSingle'),
+      pdfFullSubjectCount: document.getElementById('pdfFullSubjectCount'),
+      pdfSingleQuestionDesc: document.getElementById('pdfSingleQuestionDesc'),
+      pdfEstimatedPages: document.getElementById('pdfEstimatedPages'),
+      pdfProgressBar: document.getElementById('pdfProgressBar'),
+      pdfProgressStatus: document.getElementById('pdfProgressStatus'),
+      btnDownloadIcon: document.getElementById('btnDownloadIcon'),
+      btnDownloadLabel: document.getElementById('btnDownloadLabel')
     };
   }
 
@@ -330,44 +343,163 @@
     }
   }
 
-  function printDocument(questionOnly = false) {
+  function openPdfModal(forceSingle = false) {
     if (!state.activeSubjectData) {
-      showToast('No document loaded to print', 'error');
+      showToast('No document loaded to export', 'error');
       return;
     }
 
-    const prevQuestionId = state.activeQuestionId;
+    // Default Sanitized Filename
+    const rawSubject = state.activeSubjectData.subject || state.activeSubjectSlug || 'BBA_Exam';
+    const cleanName = rawSubject.replace(/[^a-zA-Z0-9_-]/g, '_').replace(/_+/g, '_');
+    const code = state.activeSubjectData.subjectCode || '';
+    const defaultName = code ? `${code}_${cleanName}_Answers` : `${cleanName}_Answers`;
 
-    if (questionOnly) {
-      if (!state.activeQuestionId && state.activeSubjectData.questions && state.activeSubjectData.questions.length > 0) {
-        state.activeQuestionId = state.activeSubjectData.questions[0].id;
-        renderA4Sheet();
-        renderQuestionList();
+    if (dom.pdfFileNameInput) {
+      dom.pdfFileNameInput.value = defaultName;
+    }
+
+    const qCount = state.activeSubjectData.questions ? state.activeSubjectData.questions.length : 0;
+    if (dom.pdfFullSubjectCount) {
+      dom.pdfFullSubjectCount.textContent = `All ${qCount} questions consecutively in A4 pages`;
+    }
+
+    if (dom.radioScopeSingle && dom.pdfSingleQuestionDesc) {
+      if (state.activeQuestionId) {
+        const q = state.activeSubjectData.questions.find(x => x.id === state.activeQuestionId);
+        dom.radioScopeSingle.disabled = false;
+        if (forceSingle) {
+          dom.radioScopeSingle.checked = true;
+        }
+        dom.pdfSingleQuestionDesc.textContent = q ? `${q.questionNumber || 'Q'}: ${q.questionText.slice(0, 45)}...` : 'Selected question';
+      } else {
+        dom.radioScopeFull.checked = true;
+        dom.radioScopeSingle.disabled = true;
+        dom.pdfSingleQuestionDesc.textContent = 'No single question selected (viewing full sheet)';
       }
+    }
+
+    updateEstimatedPageCount();
+
+    if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
+    if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = false;
+    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Download PDF';
+    if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
+
+    if (dom.pdfModalBackdrop) {
+      dom.pdfModalBackdrop.style.display = 'flex';
+      setTimeout(() => {
+        if (dom.pdfFileNameInput) dom.pdfFileNameInput.focus();
+      }, 50);
+    }
+  }
+
+  function closePdfModal() {
+    if (dom.pdfModalBackdrop) {
+      dom.pdfModalBackdrop.style.display = 'none';
+    }
+  }
+
+  function updateEstimatedPageCount() {
+    if (!dom.pdfEstimatedPages || !state.activeSubjectData) return;
+    const isSingle = dom.radioScopeSingle && dom.radioScopeSingle.checked;
+    if (isSingle) {
+      dom.pdfEstimatedPages.textContent = '1 Page';
     } else {
-      // Print full subject sheet
-      state.activeQuestionId = null;
-      renderA4Sheet();
-      renderQuestionList();
+      const qCount = state.activeSubjectData.questions ? state.activeSubjectData.questions.length : 0;
+      const estPages = Math.max(1, Math.ceil(qCount / 4.5));
+      dom.pdfEstimatedPages.textContent = `~${estPages} Pages`;
+    }
+  }
+
+  async function downloadDirectPdf() {
+    if (!state.activeSubjectData) {
+      showToast('No document loaded to export', 'error');
+      return;
     }
 
-    // Reset scaler transform immediately before printing
-    if (dom.a4Scaler) {
-      dom.a4Scaler.style.transform = 'none';
+    if (typeof html2pdf === 'undefined') {
+      showToast('PDF generator library loading, please try again in a moment', 'error');
+      return;
     }
 
-    setTimeout(() => {
-      window.print();
-      // Restore previous question view if full sheet was printed temporarily
-      if (!questionOnly && prevQuestionId) {
-        state.activeQuestionId = prevQuestionId;
-        renderA4Sheet();
-        renderQuestionList();
+    let filename = dom.pdfFileNameInput ? dom.pdfFileNameInput.value.trim() : '';
+    if (!filename) filename = 'BBA_Exam_Answers';
+    if (!filename.toLowerCase().endsWith('.pdf')) {
+      filename += '.pdf';
+    }
+
+    const isSingle = dom.radioScopeSingle && dom.radioScopeSingle.checked;
+    const targetQId = isSingle ? state.activeQuestionId : null;
+
+    if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = true;
+    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Compiling PDF...';
+    if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⏳';
+    if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'flex';
+    if (dom.pdfProgressStatus) dom.pdfProgressStatus.textContent = 'Rendering vector A4 pages...';
+
+    const cleanHtml = window.GTURenderer.renderDocument(state.activeSubjectData, targetQId);
+
+    const printStage = document.createElement('div');
+    printStage.className = 'gtu-sheet-container';
+    printStage.style.position = 'fixed';
+    printStage.style.left = '-9999px';
+    printStage.style.top = '0';
+    printStage.style.width = '210mm';
+    printStage.style.background = '#ffffff';
+    printStage.style.color = '#000000';
+    printStage.style.fontFamily = '"Times New Roman", Times, serif';
+    printStage.style.zIndex = '-9999';
+    printStage.innerHTML = cleanHtml;
+
+    printStage.querySelectorAll('.gtu-a4-sheet').forEach(sheet => {
+      sheet.style.boxShadow = 'none';
+      sheet.style.margin = '0 auto';
+      sheet.style.borderRadius = '0';
+      sheet.style.border = 'none';
+    });
+
+    document.body.appendChild(printStage);
+
+    const opt = {
+      margin: 0,
+      filename: filename,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        letterRendering: true,
+        backgroundColor: '#ffffff',
+        scrollY: 0,
+        scrollX: 0
+      },
+      jsPDF: {
+        unit: 'mm',
+        format: 'a4',
+        orientation: 'portrait'
+      },
+      pagebreak: {
+        mode: ['css', 'legacy'],
+        avoid: ['.gtu-answer-block', '.gtu-table-wrapper', '.gtu-page-header', '.gtu-question-title-bar']
       }
-      if (dom.a4Scaler) {
-        dom.a4Scaler.style.transform = `scale(${state.zoomLevel})`;
+    };
+
+    try {
+      await html2pdf().set(opt).from(printStage).save();
+      showToast(`Downloaded: ${filename}`);
+      closePdfModal();
+    } catch (err) {
+      console.error('PDF export error:', err);
+      showToast(`Download error: ${err.message}`, 'error');
+      if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = false;
+      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Retry Download';
+      if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
+      if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
+    } finally {
+      if (printStage.parentNode) {
+        printStage.parentNode.removeChild(printStage);
       }
-    }, 120);
+    }
   }
 
   function handleFileUpload(file) {
@@ -441,9 +573,6 @@
     if (dom.btnToggleGuides) dom.btnToggleGuides.addEventListener('click', toggleMarginGuides);
     if (dom.btnThemeToggle) dom.btnThemeToggle.addEventListener('click', toggleTheme);
 
-    // Print Buttons
-    if (dom.btnPrintQuestion) dom.btnPrintQuestion.addEventListener('click', () => printDocument(true));
-    if (dom.btnPrintSubject) dom.btnPrintSubject.addEventListener('click', () => printDocument(false));
     if (dom.btnFullSubjectView) {
       dom.btnFullSubjectView.addEventListener('click', () => {
         state.activeQuestionId = null;
@@ -488,10 +617,32 @@
       });
     }
 
-    if (dom.btnMobilePrint) {
-      dom.btnMobilePrint.addEventListener('click', () => {
-        printDocument(state.activeQuestionId !== null);
+    // Direct PDF Export Modal Triggers
+    if (dom.btnOpenPdfModal) {
+      dom.btnOpenPdfModal.addEventListener('click', () => openPdfModal());
+    }
+    if (dom.btnMobileDownload) {
+      dom.btnMobileDownload.addEventListener('click', () => openPdfModal());
+    }
+    if (dom.btnPdfModalClose) {
+      dom.btnPdfModalClose.addEventListener('click', closePdfModal);
+    }
+    if (dom.btnPdfModalCancel) {
+      dom.btnPdfModalCancel.addEventListener('click', closePdfModal);
+    }
+    if (dom.pdfModalBackdrop) {
+      dom.pdfModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === dom.pdfModalBackdrop) closePdfModal();
       });
+    }
+    if (dom.btnPdfModalDownload) {
+      dom.btnPdfModalDownload.addEventListener('click', downloadDirectPdf);
+    }
+    if (dom.radioScopeFull) {
+      dom.radioScopeFull.addEventListener('change', updateEstimatedPageCount);
+    }
+    if (dom.radioScopeSingle) {
+      dom.radioScopeSingle.addEventListener('change', updateEstimatedPageCount);
     }
 
     // Global file input
@@ -515,11 +666,13 @@
       }
     });
 
-    // Keyboard shortcuts
+    // Keyboard shortcuts (Ctrl+P opens PDF confirmation modal, Escape closes it)
     window.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
         e.preventDefault();
-        printDocument(false);
+        openPdfModal();
+      } else if (e.key === 'Escape') {
+        closePdfModal();
       }
     });
 
