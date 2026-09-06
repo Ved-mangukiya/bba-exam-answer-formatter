@@ -500,6 +500,7 @@
     }
 
     showToast(`Downloaded: ${finalFilename}`);
+    closePdfModal();
 
     setTimeout(() => {
       if (downloadLink.parentNode) downloadLink.parentNode.removeChild(downloadLink);
@@ -627,39 +628,13 @@
 
       const sizeMb = (pdfBlob.size / (1024 * 1024)).toFixed(1);
 
-      // 8. Auto-trigger initial download using layout-visible anchor
-      const autoLink = document.createElement('a');
-      autoLink.href = state.compiledPdfUrl;
-      autoLink.download = finalFilename;
-      autoLink.rel = 'noopener';
-      autoLink.setAttribute('download', finalFilename);
-      autoLink.style.position = 'fixed';
-      autoLink.style.top = '0';
-      autoLink.style.left = '0';
-      autoLink.style.width = '2px';
-      autoLink.style.height = '2px';
-      autoLink.style.opacity = '0.01';
-      autoLink.style.pointerEvents = 'none';
-      autoLink.style.zIndex = '-99999';
-      document.body.appendChild(autoLink);
-
-      try {
-        autoLink.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
-      } catch (e) {
-        autoLink.click();
-      }
-
-      setTimeout(() => {
-        if (autoLink.parentNode) autoLink.parentNode.removeChild(autoLink);
-      }, 20000);
-
-      // 9. Update modal to high-visibility ready state
+      // 8. Update modal to high-visibility ready state (User clicks Save to download the real PDF)
       if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
       if (dom.pdfReadyBox) dom.pdfReadyBox.style.display = 'flex';
       if (dom.pdfReadyFilename) dom.pdfReadyFilename.textContent = finalFilename;
       if (dom.pdfReadyMeta) dom.pdfReadyMeta.textContent = `A4 Vector Print Document • ${sizeMb} MB • GTU / SSASIT`;
 
-      // Update button to green 1-click Save
+      // Update button to green 1-click Save with active user gesture
       if (dom.btnPdfModalDownload) {
         dom.btnPdfModalDownload.disabled = false;
         dom.btnPdfModalDownload.className = 'btn btn-success';
@@ -668,9 +643,9 @@
       if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = `Save ${finalFilename}`;
 
       if (dom.btnPdfOpenTab) dom.btnPdfOpenTab.style.display = 'inline-flex';
-      if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Done / Close';
+      if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Cancel';
 
-      showToast(`PDF compiled (${sizeMb} MB). Download started!`);
+      showToast(`PDF compiled (${sizeMb} MB)! Click Save to download.`);
     } catch (err) {
       console.error('PDF export error:', err);
       showToast(`Download error: ${err.message}`, 'error');
