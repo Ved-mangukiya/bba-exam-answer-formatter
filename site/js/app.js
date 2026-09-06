@@ -299,6 +299,11 @@
     const html = window.GTURenderer.renderDocument(state.activeSubjectData, state.activeQuestionId);
     dom.a4Container.innerHTML = html;
 
+    if (dom.deskCanvas) {
+      dom.deskCanvas.scrollTop = 0;
+    }
+
+    applyZoomToScaler();
     updateViewLabels();
   }
 
@@ -315,11 +320,35 @@
     }
   }
 
+  function applyZoomToScaler() {
+    if (!dom.a4Scaler || !dom.a4Container) return;
+
+    const zoomVal = state.zoomLevel;
+
+    // Use native CSS zoom when supported (Chromium / Chrome / Edge, Safari 16.4+, Firefox 126+)
+    // CSS zoom directly recalculates layout dimensions, eliminating ghost scrollbars and blank voids!
+    if (CSS.supports && CSS.supports('zoom', '1')) {
+      dom.a4Scaler.style.zoom = zoomVal;
+      dom.a4Scaler.style.transform = 'none';
+      dom.a4Scaler.style.width = 'auto';
+      dom.a4Scaler.style.height = 'auto';
+      dom.a4Scaler.style.margin = '0 auto';
+    } else {
+      // Fallback for older engines: scale + explicitly clamp layout footprint
+      dom.a4Scaler.style.transform = `scale(${zoomVal})`;
+      dom.a4Scaler.style.transformOrigin = 'top center';
+
+      const unscaledH = dom.a4Container.offsetHeight || dom.a4Container.scrollHeight;
+      const unscaledW = dom.a4Container.offsetWidth || 794;
+
+      dom.a4Scaler.style.height = `${Math.ceil(unscaledH * zoomVal)}px`;
+      dom.a4Scaler.style.width = `${Math.ceil(unscaledW * zoomVal)}px`;
+    }
+  }
+
   function setZoom(newZoom) {
     state.zoomLevel = Math.max(0.25, Math.min(2.5, parseFloat(newZoom.toFixed(2))));
-    if (dom.a4Scaler) {
-      dom.a4Scaler.style.transform = `scale(${state.zoomLevel})`;
-    }
+    applyZoomToScaler();
     if (dom.zoomLevelBadge) {
       dom.zoomLevelBadge.textContent = `${Math.round(state.zoomLevel * 100)}%`;
     }
@@ -880,14 +909,25 @@
     window.addEventListener('beforeprint', () => {
       if (dom.a4Scaler) {
         dom.a4Scaler.style.transform = 'none';
+        dom.a4Scaler.style.zoom = '1';
+        dom.a4Scaler.style.width = 'auto';
+        dom.a4Scaler.style.height = 'auto';
       }
     });
 
     window.addEventListener('afterprint', () => {
-      if (dom.a4Scaler) {
-        dom.a4Scaler.style.transform = `scale(${state.zoomLevel})`;
-      }
+      applyZoomToScaler();
     });
+  }
+
+  let scalerResizeObserver = null;
+  function initScalerObserver() {
+    if (window.ResizeObserver && dom.a4Container) {
+      scalerResizeObserver = new ResizeObserver(() => {
+        applyZoomToScaler();
+      });
+      scalerResizeObserver.observe(dom.a4Container);
+    }
   }
 
   function switchMobileView(viewName) {
@@ -918,6 +958,7 @@
     initDomRefs();
     applyTheme();
     attachEventListeners();
+    initScalerObserver();
     loadInitialData();
 
     // Auto-fit on mobile if loaded directly

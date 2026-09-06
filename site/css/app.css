@@ -603,17 +603,24 @@ body {
 /* Realistic A4 Desk Canvas */
 .desk-canvas {
   flex: 1;
-  overflow: auto;
-  padding: 40px;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 28px 20px 24px 20px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   background: radial-gradient(circle at 50% 20%, #151d2f 0%, var(--bg-primary) 70%);
+  -webkit-overflow-scrolling: touch;
 }
 
 .a4-viewport-scaler {
   transform-origin: top center;
-  transition: transform 0.15s ease-out;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -1678,12 +1685,14 @@ body.theme-light .mobile-nav-item.active .mobile-nav-indicator {
 
   /* Simulated A4 Desk Surface for Mobile Viewport */
   .desk-canvas {
-    padding: 12px 6px calc(var(--mobile-bottom-nav-height) + var(--safe-bottom) + 20px) 6px;
+    padding: 12px 6px calc(var(--mobile-bottom-nav-height) + var(--safe-bottom) + 14px) 6px;
     overflow-x: auto;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    align-items: flex-start;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   /* Nothing OS Frosted Glass Bottom Navigation Dock */

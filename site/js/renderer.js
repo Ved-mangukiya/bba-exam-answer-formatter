@@ -329,13 +329,24 @@
       return qHtml + separator;
     }).join('');
 
+    const isSingle = Boolean(activeQuestionId);
+    const sheetClass = isSingle ? 'gtu-a4-sheet gtu-single-question-sheet' : 'gtu-a4-sheet';
+    const endMarkHtml = `
+      <div class="gtu-page-end-mark" title="End of Examination Answers">
+        <span class="page-end-line"></span>
+        <span class="page-end-text">✦ End of Document ✦</span>
+        <span class="page-end-line"></span>
+      </div>
+    `;
+
     return `
-      <div class="gtu-a4-sheet">
+      <div class="${sheetClass}">
         ${headerHtml}
         <div class="gtu-content-flow">
           ${questionsHtml}
         </div>
         ${footerHtml}
+        ${endMarkHtml}
       </div>
     `;
   }

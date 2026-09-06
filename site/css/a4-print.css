@@ -58,9 +58,38 @@
            calc(var(--margin-bottom) + var(--safety-pad))
            calc(var(--margin-left) + var(--safety-pad));
   position: relative;
-  margin: 0 auto 32px auto;
+  margin: 0 auto 16px auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.15);
   border-radius: 1px;
+}
+
+/* Single Question View on Screen: Natural comfortable height, avoids huge empty voids */
+.gtu-single-question-sheet {
+  min-height: 380px;
+}
+
+/* Document Termination Mark — Clear visual end of page indicator */
+.gtu-page-end-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24pt;
+  padding-top: 10pt;
+  color: #6b7280;
+  font-size: 8.5pt;
+  font-family: var(--gtu-font);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.gtu-page-end-mark .page-end-line {
+  flex: 1;
+  max-width: 100px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
 }
 
 /* Optional Margin Guides for visual inspection (Toggleable in UI) */
@@ -520,6 +549,7 @@
   .modal-overlay,
   .toast-container,
   input[type="file"],
+  .gtu-page-end-mark,
   .show-margin-guides .gtu-a4-sheet::before,
   .show-margin-guides .gtu-a4-sheet::after {
     display: none !important;
