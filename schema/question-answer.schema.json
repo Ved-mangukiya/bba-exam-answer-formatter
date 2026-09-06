@@ -6,9 +6,38 @@
   "required": ["semester", "subject", "faculty", "questions"],
   "properties": {
     "semester": { "type": "integer", "example": 1 },
+    "course": { "type": "string", "example": "Bachelor of Business Administration (BBA)" },
+    "college": { "type": "string", "example": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)" },
+    "university": { "type": "string", "example": "Gujarat Technological University (GTU)" },
     "subject": { "type": "string", "example": "Business Statistics and Logic" },
+    "subjectCode": { "type": "string", "example": "BSL" },
     "faculty": { "type": "array", "items": { "type": "string" } },
     "unit": { "type": "string", "description": "Optional: unit name if file is split per-unit" },
+    "header": {
+      "type": "object",
+      "description": "Standardized document header information",
+      "properties": {
+        "college": { "type": "string" },
+        "university": { "type": "string" },
+        "course": { "type": "string" },
+        "semester": { "type": "integer" },
+        "subject": { "type": "string" },
+        "subjectCode": { "type": "string" },
+        "faculty": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "description": "Standardized document footer information",
+      "properties": {
+        "college": { "type": "string" },
+        "university": { "type": "string" },
+        "course": { "type": "string" },
+        "subject": { "type": "string" },
+        "subjectCode": { "type": "string" },
+        "faculty": { "type": "array", "items": { "type": "string" } }
+      }
+    },
     "questions": {
       "type": "array",
       "items": { "$ref": "#/definitions/question" }

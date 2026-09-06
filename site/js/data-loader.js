@@ -12,7 +12,7 @@
       code: "PPM",
       aliases: ["ppm", "principles-of-management"],
       name: "Principles and Practices of Management",
-      faculty: ["SSASIT Management Faculty"],
+      faculty: ["Prof. Nisha Tollawala", "Prof. Karan Kachhadiya"],
       icon: "🏛️",
       description: "Planning, organizing, staffing, directing, and controlling modern organizations.",
       dataFiles: [
@@ -25,7 +25,7 @@
       code: "BSL",
       aliases: ["bsl", "business-statistics", "bstat"],
       name: "Business Statistics and Logic",
-      faculty: ["SSASIT Statistics Faculty"],
+      faculty: ["Prof. Karan Kachhadiya", "Prof. Birju Patil"],
       icon: "📊",
       description: "Descriptive statistics, probability, hypothesis testing, and quantitative reasoning.",
       dataFiles: []
@@ -33,38 +33,56 @@
     {
       slug: "financial-accounting",
       code: "FA",
+      aliases: ["fa", "financial-accounting", "accounting"],
       name: "Financial Accounting",
-      faculty: ["SSASIT Accounting Faculty"],
+      faculty: ["Dr. Lalit Tank", "Prof. Krishna Gandhi"],
       icon: "📒",
       description: "Double-entry bookkeeping, trial balance, final accounts, and accounting standards.",
-      dataFiles: []
+      dataFiles: [
+        "../data/sem-1/financial-accounting/fa-sem1.json",
+        "data/sem-1/financial-accounting/fa-sem1.json",
+        "../data/sem-1/financial-accounting/fa.json",
+        "data/sem-1/financial-accounting/fa.json"
+      ]
     },
     {
       slug: "general-communicative-english",
       code: "GCE",
       name: "General and Communicative English",
-      faculty: ["SSASIT Humanities Faculty"],
+      faculty: ["Prof. Hetal S. Ballar", "Prof. Nisha Tollawala"],
       icon: "✍️",
       description: "Business communication, grammar, vocabulary, report writing, and presentations.",
-      dataFiles: []
+      dataFiles: [
+        "../data/sem-1/general-communicative-english/gce-sem1.json",
+        "data/sem-1/general-communicative-english/gce-sem1.json"
+      ]
     },
     {
       slug: "indian-knowledge-systems",
       code: "IKS",
       name: "Indian Knowledge Systems",
-      faculty: ["SSASIT IKS Faculty"],
+      faculty: ["Prof. Jyoti Tank"],
       icon: "📜",
       description: "Vedic science, traditional Indian management, philosophical systems, and ethics.",
-      dataFiles: []
+      dataFiles: [
+        "../data/sem-1/indian-knowledge-systems/iks-sem1.json",
+        "data/sem-1/indian-knowledge-systems/iks-sem1.json",
+        "../data/sem-1/indian-knowledge-systems/iks.json",
+        "data/sem-1/indian-knowledge-systems/iks.json"
+      ]
     },
     {
-      slug: "esg-for-sustainability",
-      code: "ESG",
+      slug: "fundamentals-of-esg-for-sustainability",
+      code: "FES",
+      aliases: ["fes", "esg-for-sustainability", "esg"],
       name: "Fundamentals of ESG for Sustainability",
-      faculty: ["SSASIT ESG Faculty"],
+      faculty: ["Prof. Priya Khoot"],
       icon: "🌱",
       description: "Environmental governance, social responsibility, carbon footprint, and corporate ethics.",
-      dataFiles: []
+      dataFiles: [
+        "../data/sem-1/fundamentals-of-esg-for-sustainability/fes-sem1.json",
+        "data/sem-1/fundamentals-of-esg-for-sustainability/fes-sem1.json"
+      ]
     }
   ];
 
@@ -88,7 +106,11 @@
       // Merge manifest with default metadata (icons, descriptions)
       return DEFAULT_SUBJECTS.map(def => {
         const found = manifest.subjects.find(s => s.slug === def.slug || (def.aliases && def.aliases.includes(s.slug)));
-        return found ? { ...def, ...found } : def;
+        if (!found) return def;
+        const dataFiles = (found.dataFiles && found.dataFiles.length > 0)
+          ? Array.from(new Set([...(def.dataFiles || []), ...found.dataFiles]))
+          : (def.dataFiles || []);
+        return { ...def, ...found, dataFiles };
       });
     }
     return DEFAULT_SUBJECTS;

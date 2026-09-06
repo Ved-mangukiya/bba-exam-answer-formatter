@@ -93,9 +93,39 @@
    -------------------------------------------------------------------------- */
 .gtu-page-header {
   text-align: center;
-  margin-bottom: 18pt;
-  padding-bottom: 10pt;
+  margin-bottom: 16pt;
+  padding-bottom: 8pt;
   border-bottom: 1.5pt solid var(--gtu-ink);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.gtu-header-institution {
+  margin-bottom: 4pt;
+}
+
+.gtu-header-college {
+  font-size: 11.5pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  line-height: 1.3;
+  color: #111827;
+}
+
+.gtu-header-affiliation {
+  font-size: 9.5pt;
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 1pt;
+}
+
+.gtu-header-separator-line {
+  height: 0.75pt;
+  background: #000000;
+  margin: 5pt auto 7pt auto;
+  width: 92%;
+  opacity: 0.35;
 }
 
 .gtu-subject-title {
@@ -107,12 +137,58 @@
   line-height: 1.25;
 }
 
+.gtu-subject-code {
+  font-size: 14pt;
+  font-weight: bold;
+  letter-spacing: 0.5pt;
+}
+
 .gtu-header-meta {
-  font-size: 10.5pt;
-  font-style: italic;
+  font-size: 10pt;
   display: flex;
   justify-content: space-between;
-  margin-top: 4pt;
+  align-items: center;
+  margin-top: 5pt;
+  padding-top: 4pt;
+  border-top: 0.5pt solid #e5e7eb;
+}
+
+.gtu-meta-exam {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.gtu-meta-faculty {
+  color: #111827;
+}
+
+/* --------------------------------------------------------------------------
+   Document Footer (College, Subject, Faculty Signoff)
+   -------------------------------------------------------------------------- */
+.gtu-page-footer {
+  margin-top: 24pt;
+  padding-top: 6pt;
+  border-top: 1pt solid var(--gtu-ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9pt;
+  color: #374151;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.gtu-footer-subject {
+  font-weight: bold;
+}
+
+.gtu-footer-center {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.gtu-footer-faculty {
+  color: #111827;
 }
 
 /* --------------------------------------------------------------------------
@@ -518,6 +594,13 @@
   .gtu-question-separator {
     border-bottom: 0.5pt dashed #999 !important;
     margin: 18pt 0 !important;
+  }
+
+  /* Header and Footer break safety */
+  .gtu-page-header,
+  .gtu-page-footer {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   /* Ensure ink contrast */

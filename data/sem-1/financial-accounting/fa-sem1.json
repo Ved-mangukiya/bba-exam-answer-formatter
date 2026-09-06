@@ -1,0 +1,3080 @@
+{
+  "semester": 1,
+  "subject": "Financial Accounting",
+  "faculty": [
+    "Dr. Lalit Tank",
+    "Prof. Krishna Gandhi"
+  ],
+  "questions": [
+    {
+      "id": "fa-u1-q1",
+      "questionNumber": "Q1",
+      "questionText": "Define accounting.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "According to the American Accounting Association (AAA), \"Accounting is the process of identifying, measuring and communicating economic information to permit informed judgments and decisions by users of the information.\"",
+          "spans": [
+            {
+              "start": 17,
+              "end": 55,
+              "style": "italic"
+            },
+            {
+              "start": 58,
+              "end": 68,
+              "style": "underline"
+            },
+            {
+              "start": 87,
+              "end": 142,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "It is considered an art because it requires specialized skill and judgment in recording and presenting data, and a science because it is based on universally accepted principles like the Double Entry System.",
+              "spans": [
+                {
+                  "start": 20,
+                  "end": 23,
+                  "style": "underline"
+                },
+                {
+                  "start": 115,
+                  "end": 122,
+                  "style": "underline"
+                },
+                {
+                  "start": 189,
+                  "end": 208,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "It operates as a continuous activity throughout the life of an enterprise to provide continuous updates to stakeholders.",
+              "spans": [
+                {
+                  "start": 17,
+                  "end": 36,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q2",
+      "questionNumber": "Q2",
+      "questionText": "What is GAAP?",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "GAAP (Generally Accepted Accounting Principles) refers to the common set of accounting rules, standards, principles, and procedures that companies must follow when preparing their financial statements to ensure uniform and accurate reporting.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 47,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Ensures Consistency & Comparability: GAAP enables users (lenders, investors) to compare financial statements of different companies as well as multiple years of the same business without confusion.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 35,
+                  "style": "bold"
+                },
+                {
+                  "start": 8,
+                  "end": 35,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Reduces Fraud & Simplifies Auditing: Standard rules prevent financial manipulation and provide a clear benchmark for auditors to verify the 'true and fair view' of the accounts.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 35,
+                  "style": "bold"
+                },
+                {
+                  "start": 141,
+                  "end": 159,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q3",
+      "questionNumber": "Q3",
+      "questionText": "Define the terms Drawings and Creditor.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "subheading",
+          "text": "The Lead Definitions:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Drawings refer to cash, goods, or other assets withdrawn by the owner from the business for personal or household use.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "A Creditor is a person or entity to whom the business owes money for purchasing goods or receiving services on credit.",
+              "spans": [
+                {
+                  "start": 2,
+                  "end": 10,
+                  "style": "bold"
+                },
+                {
+                  "start": 2,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Drawings Impact: Directly reduces the owner's Capital in the books and is debited to the Drawings account under the Business Entity Concept.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 46,
+                  "end": 53,
+                  "style": "underline"
+                },
+                {
+                  "start": 116,
+                  "end": 138,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Creditors Impact: Classified under Current Liabilities (if payable within one year) and represents the short-term obligations of the business.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 35,
+                  "end": 54,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q4",
+      "questionNumber": "Q4",
+      "questionText": "Explain the golden rules of debit and credit.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "In accounting, every transaction has two effects (a debit and a credit) under the Double Entry System, which are recorded according to standard rules of debit and credit based on account type.",
+          "spans": [
+            {
+              "start": 52,
+              "end": 57,
+              "style": "underline"
+            },
+            {
+              "start": 64,
+              "end": 70,
+              "style": "underline"
+            },
+            {
+              "start": 82,
+              "end": 101,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements (The Golden Rules):"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Personal Account (Related to Persons/Firms): Debit the Receiver, Credit the Giver.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 44,
+                  "style": "bold"
+                },
+                {
+                  "start": 45,
+                  "end": 63,
+                  "style": "underline"
+                },
+                {
+                  "start": 65,
+                  "end": 81,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Real Account (Related to Assets/Properties): Debit What Comes In, Credit What Goes Out.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 44,
+                  "style": "bold"
+                },
+                {
+                  "start": 45,
+                  "end": 64,
+                  "style": "underline"
+                },
+                {
+                  "start": 66,
+                  "end": 86,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Nominal Account (Expenses/Incomes/Losses/Gains): Debit All Expenses & Losses, Credit All Incomes & Gains.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 48,
+                  "style": "bold"
+                },
+                {
+                  "start": 49,
+                  "end": 76,
+                  "style": "underline"
+                },
+                {
+                  "start": 78,
+                  "end": 104,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q5",
+      "questionNumber": "Q5",
+      "questionText": "Distinguish between Tangible Assets and Intangible Assets with examples.",
+      "marks": 3,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Distinction between Tangible Assets and Intangible Assets",
+          "tableHeaders": [
+            "Basis of Distinction",
+            "Tangible Assets",
+            "Intangible Assets"
+          ],
+          "tableRows": [
+            [
+              "1. Physical Existence",
+              "Assets that have a physical existence and can be seen, touched, and felt.",
+              "Assets that have no physical existence and cannot be seen or touched."
+            ],
+            [
+              "2. Examples",
+              "Land, Building, Plant, Machinery, Furniture, and Vehicles.",
+              "Goodwill, Patents, Trademarks, Copyrights, and Software Licenses."
+            ],
+            [
+              "3. Value Diminution",
+              "Loss of value over time is charged as Depreciation due to wear and tear.",
+              "Loss of value is systematically written off as Amortization."
+            ],
+            [
+              "4. Collateral Security",
+              "Can be easily pledged as collateral security to banks for raising loans.",
+              "Cannot be pledged as physical collateral, though they hold immense monetary value."
+            ],
+            [
+              "5. Account Classification",
+              "Classified as Tangible Real Accounts in the ledger.",
+              "Classified as Intangible Real Accounts in the ledger."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q6",
+      "questionNumber": "Q6",
+      "questionText": "Distinguish between Trade Discounts and Cash Discounts.",
+      "marks": 3,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Distinction between Trade Discount and Cash Discount",
+          "tableHeaders": [
+            "Basis of Distinction",
+            "Trade Discount",
+            "Cash Discount"
+          ],
+          "tableRows": [
+            [
+              "1. Meaning",
+              "A reduction allowed by the seller from the list price at the time of purchase/sale.",
+              "A deduction allowed from the net invoice price to encourage prompt payment."
+            ],
+            [
+              "2. Book Entry",
+              "It is not recorded in the books of accounts; purchases/sales are recorded at net value.",
+              "It is recorded in the books of accounts under Discount Allowed or Received."
+            ],
+            [
+              "3. Purpose",
+              "Given to encourage bulk buying and increase sales volume.",
+              "Given to encourage early or prompt payment from debtors."
+            ],
+            [
+              "4. Deduction Order",
+              "Deducted first from the catalog/list price of the goods.",
+              "Calculated and deducted after the trade discount has been subtracted from the list price."
+            ],
+            [
+              "5. Allowed to",
+              "Allowed to all retailers, wholesalers, or bulk buyers in the normal course of trade.",
+              "Allowed only to customers who pay within the specified discount period."
+            ],
+            [
+              "6. Nature of Account",
+              "No ledger account is opened because it does not affect ledger balances.",
+              "Ledger accounts are opened (Discount Allowed is an Expense; Discount Received is an Income)."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q7",
+      "questionNumber": "Q7",
+      "questionText": "Define the Accounting Equation.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Accounting Equation is a mathematical expression showing that the total assets of a business are always equal to the sum of its capital and liabilities, representing the double-entry balance of claims against the business resources.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 23,
+              "style": "underline"
+            },
+            {
+              "start": 71,
+              "end": 83,
+              "style": "underline"
+            },
+            {
+              "start": 133,
+              "end": 154,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Mathematical Formula: Assets = Capital + Liabilities (or A = C + L).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 22,
+                  "end": 52,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Balancing Effect: Every transaction affects at least two accounts in a way that keeps the equation balanced. For example, introducing cash increases both Cash (Asset) and Capital (Owner's Equity).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q8",
+      "questionNumber": "Q1",
+      "questionText": "Explain the process of accounting in detail.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Accounting Process, also known as the Accounting Cycle, is a systematic and continuous sequence of steps followed by an enterprise to identify, record, classify, summarize, interpret, and communicate financial transactions. This cycle ensures that business performance is captured accurately and compliant with financial standards.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 22,
+              "style": "underline"
+            },
+            {
+              "start": 42,
+              "end": 58,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "STEPS IN THE ACCOUNTING CYCLE"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Identifying Transactions: The first step is identifying economic events that have a financial impact on the business. Under the Money Measurement Concept, only transactions that can be measured in monetary terms are recorded.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 25,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 128,
+                  "end": 154,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Recording in Journal (Journalizing): Identified transactions are recorded chronologically in the Journal (Book of Original Entry) or specialized Subsidiary Books using the rules of debit and credit.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 36,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 35,
+                  "style": "underline"
+                },
+                {
+                  "start": 97,
+                  "end": 127,
+                  "style": "underline"
+                },
+                {
+                  "start": 144,
+                  "end": 160,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Posting to Ledger: Transactions are transferred account-wise to the Ledger (Book of Final Entry). This classifies and groups similar transactions together under specific heads (e.g. Rent, Sales).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                },
+                {
+                  "start": 68,
+                  "end": 95,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Preparing Trial Balance: A statement listing all debit and credit ledger balances is prepared to verify the arithmetical accuracy of the accounts. Total debits must equal total credits.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "underline"
+                },
+                {
+                  "start": 108,
+                  "end": 129,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Adjusting Entries: End-of-period adjustments are passed to recognize outstanding expenses, prepaid items, accrued incomes, and depreciation. This satisfies the Matching Concept and Accrual Concept.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                },
+                {
+                  "start": 161,
+                  "end": 177,
+                  "style": "underline"
+                },
+                {
+                  "start": 182,
+                  "end": 197,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Preparing Financial Statements: These include the Trading Account (disclosing Gross Profit), Profit & Loss Account (disclosing Net Profit), and the Balance Sheet (depicting assets, liabilities, and capital on a specific date).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 31,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "underline"
+                },
+                {
+                  "start": 50,
+                  "end": 65,
+                  "style": "underline"
+                },
+                {
+                  "start": 78,
+                  "end": 90,
+                  "style": "underline"
+                },
+                {
+                  "start": 93,
+                  "end": 114,
+                  "style": "underline"
+                },
+                {
+                  "start": 127,
+                  "end": 137,
+                  "style": "underline"
+                },
+                {
+                  "start": 148,
+                  "end": 161,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Closing Entries: Temporary nominal accounts (revenue and expenses) are closed by transferring their balances to the Capital Account, resetting their balances to zero for the next accounting period.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "underline"
+                },
+                {
+                  "start": 116,
+                  "end": 131,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Compliance Note: Corporate entities in India must compile and report financial statements annually in compliance with Schedule III of the Companies Act, 2013 and the notified Indian Accounting Standards (Ind AS).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            },
+            {
+              "start": 118,
+              "end": 160,
+              "style": "underline"
+            },
+            {
+              "start": 178,
+              "end": 213,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q9",
+      "questionNumber": "Q2",
+      "questionText": "What is the meaning of accounting? Explain the different users of accounting information.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Accounting is known as the language of business because it processes complex transaction data into readable financial reports. These reports are used by various stakeholders who are classified into distinct internal and external categories to make informed judgments.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "underline"
+            },
+            {
+              "start": 27,
+              "end": 47,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "CLASSIFICATION OF USERS OF ACCOUNTING INFORMATION"
+        },
+        {
+          "blockType": "subheading",
+          "text": "i. Internal Users (Persons within the business organization who actively manage and run operations):"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Management: Uses financial data and internal cost reports for planning, budgeting, cost control, and making strategic decisions regarding product lines or expansion.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Owners/Shareholders: Analyze profitability, safety of capital, and dividend payout potential to monitor how their investments are managed.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Employees & Trade Unions: Review profits to assess job security, salary increments, bonuses, and leverage during wage negotiations.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 25,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "ii. External Users (Outside individuals or agencies who have a direct or indirect financial interest):"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Investors: Evaluate profitability and solvency ratios (such as ROI and Debt-Equity) to make buy, hold, or sell decisions on shares.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Creditors & Suppliers: Assess the repayment capacity and short-term liquidity of the business before supplying raw materials or goods on credit.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Banks & Financial Institutions: Study cash flows, debt-paying capacity, and financial position before sanctioning loans and determining interest rates.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 31,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Government & Tax Authorities: Use records to assess corporate tax liabilities (Income Tax, GST) and ensure statutory and regulatory compliance.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 29,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 28,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Customers: Check supplier stability to ensure a continuous and reliable supply of goods, particularly under long-term commercial contracts.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Researchers & Financial Analysts: Study industry trends, economic growth, and perform comparative company analyses.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 32,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Public: Assess corporate social responsibility (CSR) initiatives, employment generation, and ecological contributions.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 7,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-q10",
+      "questionNumber": "Q3",
+      "questionText": "Write short notes on: (i) Going concern concept, (ii) Accounting Period Concept, (iii) Money Measurement Concept, and (iv) Matching Concept.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Accounting Concepts are the basic assumptions and conditions upon which accounting is built. They form the core theoretical framework of GAAP and ensure that financial reporting remains objective, uniform, and reliable.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 19,
+              "style": "underline"
+            },
+            {
+              "start": 138,
+              "end": 142,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "DETAILED ACCOUNTING CONCEPTS"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Going Concern Concept: This assumption presumes that the business will continue to operate indefinitely in the future and has neither the intention nor the necessity to close down or wind up its operations. Consequently, long-term assets are recorded at their historical cost rather than liquidation or market value, and their cost is systematically written off as Depreciation over their useful economic life.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "underline"
+                },
+                {
+                  "start": 263,
+                  "end": 278,
+                  "style": "underline"
+                },
+                {
+                  "start": 361,
+                  "end": 373,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Accounting Period Concept: While the going concern concept assumes indefinite life, users need periodic reports to make timely decisions. Thus, the life of the enterprise is divided into specific, equal intervals known as accounting periods (typically one year, such as the financial year from 1st April to 31st March in India). This facilitates comparison of profits and financial positions across years.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 25,
+                  "style": "underline"
+                },
+                {
+                  "start": 224,
+                  "end": 242,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Money Measurement Concept: This concept dictates that only those business transactions and events that can be expressed in monetary terms are recorded in the books of accounts. Quantitative data is recorded, while important qualitative aspects (such as manager competency, employee honesty, or customer goodwill) are omitted because they cannot be objectively measured in money.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 25,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Matching Concept: This principle states that the expenses incurred during a particular accounting period must be matched with the revenues earned during that same period. To calculate the accurate profit or loss, all expenses associated with earning the period's revenue must be charged in that year, irrespective of when the cash is paid. This concept is the basis of accrual accounting, including outstanding and prepaid adjustments.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "underline"
+                },
+                {
+                  "start": 367,
+                  "end": 385,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Compliance Note: Adherence to these concepts is mandated by the Institute of Chartered Accountants of India (ICAI) and the Ministry of Corporate Affairs when notifying Indian Accounting Standards.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            },
+            {
+              "start": 64,
+              "end": 115,
+              "style": "underline"
+            },
+            {
+              "start": 170,
+              "end": 197,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-p1",
+      "questionNumber": "P1",
+      "questionText": "Classify the following accounts into Real, Nominal, or Personal Accounts.",
+      "marks": 5,
+      "unit": "Unit 1",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Classification of Accounts into Real, Nominal, or Personal Accounts",
+          "tableHeaders": [
+            "Account Name",
+            "Classification Type",
+            "Reason / Applicable Rule"
+          ],
+          "tableRows": [
+            [
+              "Cash Account",
+              "Real Account",
+              "Represents physical cash owned by the business (Asset). Rule: Debit what comes in, Credit what goes out."
+            ],
+            [
+              "Bank Account",
+              "Personal Account (Artificial)",
+              "Represents a bank/financial institution created by law. Rule: Debit the receiver, Credit the giver."
+            ],
+            [
+              "Capital Account",
+              "Personal Account (Natural)",
+              "Represents the owner's investment in the business. Rule: Credit the giver (owner)."
+            ],
+            [
+              "Drawings Account",
+              "Personal Account (Natural)",
+              "Represents withdrawals by the owner for personal use. Rule: Debit the receiver."
+            ],
+            [
+              "Salary Account",
+              "Nominal Account",
+              "Represents an operating expense of the business. Rule: Debit all expenses and losses."
+            ],
+            [
+              "Commission Received A/c",
+              "Nominal Account",
+              "Represents an income earned by the business. Rule: Credit all incomes and gains."
+            ],
+            [
+              "Outstanding Salary A/c",
+              "Personal Account (Representative)",
+              "Represents a liability owed to employees. Rule: Credit the giver."
+            ],
+            [
+              "Furniture Account",
+              "Real Account (Tangible)",
+              "Represents a physical fixed asset owned. Rule: Debit what comes in, Credit what goes out."
+            ],
+            [
+              "Goodwill Account",
+              "Real Account (Intangible)",
+              "Represents an intangible asset that has value but no physical body."
+            ],
+            [
+              "Prepaid Rent Account",
+              "Personal Account (Representative)",
+              "Represents rent paid in advance (Right to receive service/benefit)."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-p2",
+      "questionNumber": "P2",
+      "questionText": "Pass Journal Entries for the following transactions in the books of Rahul Traders.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Journal Entries in the books of Rahul Traders",
+          "tableHeaders": [
+            "Date/No.",
+            "Particulars",
+            "L.F.",
+            "Debit (₹)",
+            "Credit (₹)"
+          ],
+          "tableRows": [
+            [
+              "1",
+              "Cash A/c ...Dr.\nTo Capital A/c\n(Being cash introduced as capital by the owner)",
+              "",
+              "1,00,000",
+              "1,00,000"
+            ],
+            [
+              "2",
+              "Purchases A/c ...Dr.\nTo Cash A/c\n(Being goods purchased for cash)",
+              "",
+              "20,000",
+              "20,000"
+            ],
+            [
+              "3",
+              "Purchases A/c ...Dr.\nTo Raj A/c\n(Being goods purchased from Raj on credit)",
+              "",
+              "30,000",
+              "30,000"
+            ],
+            [
+              "4",
+              "Cash A/c ...Dr.\nTo Sales A/c\n(Being goods sold for cash)",
+              "",
+              "25,000",
+              "25,000"
+            ],
+            [
+              "5",
+              "Amit A/c ...Dr.\nTo Sales A/c\n(Being goods sold to Amit on credit)",
+              "",
+              "40,000",
+              "40,000"
+            ],
+            [
+              "6",
+              "Furniture A/c ...Dr.\nTo Cash A/c\n(Being furniture purchased for cash - Asset Purchase)",
+              "",
+              "15,000",
+              "15,000"
+            ],
+            [
+              "7",
+              "Salary A/c ...Dr.\nTo Cash A/c\n(Being salary paid to staff in cash)",
+              "",
+              "8,000",
+              "8,000"
+            ],
+            [
+              "8",
+              "Rent A/c ...Dr.\nTo Cash A/c\n(Being rent paid in cash)",
+              "",
+              "6,000",
+              "6,000"
+            ],
+            [
+              "9",
+              "Drawings A/c ...Dr.\nTo Cash A/c\n(Being cash withdrawn by owner for personal use)",
+              "",
+              "5,000",
+              "5,000"
+            ],
+            [
+              "10",
+              "Raj A/c ...Dr.\nTo Purchase Returns A/c\n(Being defective goods returned to Raj)",
+              "",
+              "3,000",
+              "3,000"
+            ],
+            [
+              "11",
+              "Raj A/c ...Dr.\nTo Cash A/c\nTo Discount Received A/c\n(Being Raj's account settled with 5% cash discount)",
+              "",
+              "27,000",
+              "25,650\n1,350"
+            ],
+            [
+              "12",
+              "Salary A/c ...Dr.\nTo Outstanding Salary A/c\n(Being salary outstanding at year end)",
+              "",
+              "5,000",
+              "5,000"
+            ],
+            [
+              "13",
+              "Prepaid Insurance A/c ...Dr.\nTo Insurance A/c\n(Being insurance paid in advance)",
+              "",
+              "2,000",
+              "2,000"
+            ],
+            [
+              "14",
+              "Depreciation A/c ...Dr.\nTo Furniture A/c\n(Being depreciation charged on furniture)",
+              "",
+              "2,000",
+              "2,000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-p3",
+      "questionNumber": "P3",
+      "questionText": "Practical Solved Problem: Subsidiary Books & Cash Book",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "subheading",
+          "text": "Part A: Double Column Cash Book (M/s ABC Traders - August 2026)"
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Double Column Cash Book",
+          "tableHeaders": [
+            "Date",
+            "Receipts - Particulars",
+            "Cash (₹)",
+            "Bank (₹)",
+            "Date",
+            "Payments - Particulars",
+            "Cash (₹)",
+            "Bank (₹)"
+          ],
+          "tableRows": [
+            [
+              "Aug 1",
+              "To Balance b/d",
+              "40,000",
+              "60,000",
+              "Aug 3",
+              "By Purchases A/c",
+              "15,000",
+              ""
+            ],
+            [
+              "Aug 5",
+              "To Sales A/c",
+              "20,000",
+              "",
+              "Aug 7",
+              "By Bank A/c (C)",
+              "25,000",
+              ""
+            ],
+            [
+              "Aug 7",
+              "To Cash A/c (C)",
+              "",
+              "25,000",
+              "Aug 10",
+              "By Purchases (Cheque)",
+              "",
+              "18,000"
+            ],
+            [
+              "Aug 12",
+              "To Rahul A/c (Cheque)",
+              "",
+              "12,000",
+              "Aug 15",
+              "By Salary (Cheque)",
+              "",
+              "8,000"
+            ],
+            [
+              "Aug 18",
+              "To Bank A/c (C)",
+              "10,000",
+              "",
+              "Aug 18",
+              "By Cash A/c (C)",
+              "",
+              "10,000"
+            ],
+            [
+              "Aug 22",
+              "To Amit A/c",
+              "7,000",
+              "",
+              "Aug 20",
+              "By Rent A/c",
+              "5,000",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              "Aug 25",
+              "By Drawings (Bank)",
+              "",
+              "4,000"
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              "Aug 28",
+              "By Electricity (Cheque)",
+              "",
+              "3,000"
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              "Aug 31",
+              "By Balance c/d",
+              "32,000",
+              "64,000"
+            ],
+            [
+              "Total",
+              "",
+              "77,000",
+              "97,000",
+              "Total",
+              "",
+              "77,000",
+              "97,000"
+            ]
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Part B: Solved Purchase Book (M/s. Narain & Co. - Delhi, Feb 2020)"
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Purchase Book",
+          "tableHeaders": [
+            "Date",
+            "Particulars (Supplier Name & Goods Description)",
+            "Invoice No.",
+            "L.F.",
+            "Details (₹)",
+            "Total Amount (₹)"
+          ],
+          "tableRows": [
+            [
+              "Feb 1",
+              "M/s. Brown & Co., Kolkata\n5 gross Pencils @ ₹1,200/gross = ₹6,000\n2 dozen Registers @ ₹500/dozen = ₹1,000\nLess: Trade Discount @ 10% (₹700)",
+              "",
+              "",
+              "6,000\n1,000\n(700)",
+              "6,300"
+            ],
+            [
+              "Feb 4",
+              "The Paper Co., Delhi\n8 Reams White Paper @ ₹500/ream = ₹4,000\n10 Reams Ruled Paper @ ₹600/ream = ₹6,000\nLess: Trade Discount @ 10% (₹1,000)",
+              "",
+              "",
+              "4,000\n6,000\n(1,000)",
+              "9,000"
+            ],
+            [
+              "Feb 5",
+              "M/s. Verma Bros., Delhi\n80 Reynolds Pens @ ₹5/pen",
+              "",
+              "",
+              "400",
+              "400"
+            ],
+            [
+              "Feb 29",
+              "Purchases A/c ... Debit Total",
+              "",
+              "",
+              "",
+              "15,700"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u1-p4",
+      "questionNumber": "P4",
+      "questionText": "Solved Trial Balance: Rahul Traders (As on 31st March 2026)",
+      "marks": 5,
+      "unit": "Unit 1",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Trial Balance of Rahul Traders (As on 31st March 2026)",
+          "tableHeaders": [
+            "Sr. No.",
+            "Particulars / Ledger Account Name",
+            "L.F.",
+            "Debit Balance (₹)",
+            "Credit Balance (₹)"
+          ],
+          "tableRows": [
+            [
+              "1",
+              "Capital Account",
+              "",
+              "",
+              "1,00,000"
+            ],
+            [
+              "2",
+              "Cash Account",
+              "",
+              "20,000",
+              ""
+            ],
+            [
+              "3",
+              "Purchases Account",
+              "",
+              "60,000",
+              ""
+            ],
+            [
+              "4",
+              "Sales Account",
+              "",
+              "",
+              "1,20,000"
+            ],
+            [
+              "5",
+              "Rent Account (Expense)",
+              "",
+              "10,000",
+              ""
+            ],
+            [
+              "6",
+              "Salaries Account",
+              "",
+              "15,000",
+              ""
+            ],
+            [
+              "7",
+              "Furniture Account (Asset)",
+              "",
+              "25,000",
+              ""
+            ],
+            [
+              "8",
+              "Debtors",
+              "",
+              "40,000",
+              ""
+            ],
+            [
+              "9",
+              "Creditors",
+              "",
+              "",
+              "30,000"
+            ],
+            [
+              "10",
+              "Drawings Account",
+              "",
+              "10,000",
+              ""
+            ],
+            [
+              "11",
+              "Bank Loan (Long-term)",
+              "",
+              "",
+              "30,000"
+            ],
+            [
+              "12",
+              "Commission Received Account",
+              "",
+              "",
+              "10,000"
+            ],
+            [
+              "Total",
+              "",
+              "",
+              "1,80,000",
+              "1,80,000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q1",
+      "questionNumber": "Q1",
+      "questionText": "Define Trend Analysis and Horizontal Analysis.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "subheading",
+          "text": "The Lead Definitions:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Trend Analysis is a technique of studying operational results and financial position over a series of years by calculating percentage relationships of each item to its value in a carefully selected base year.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Horizontal Analysis (Comparative Statement Analysis) is a study of financial statement components for two or more accounting periods side-by-side to identify absolute and percentage changes over time.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "underline"
+                },
+                {
+                  "start": 21,
+                  "end": 51,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Trend Utility: Helps in spotting long-term growth or decline patterns, predicting future performance, and checking preliminary statement accuracy.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Horizontal Utility: Essential for Time Series Analysis, comparing current performance with preceding years to identify absolute change (C = B - A) and percentage change (C / A * 100).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 35,
+                  "end": 55,
+                  "style": "underline"
+                },
+                {
+                  "start": 137,
+                  "end": 146,
+                  "style": "underline"
+                },
+                {
+                  "start": 172,
+                  "end": 183,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q2",
+      "questionNumber": "Q2",
+      "questionText": "Give the formula for calculated values of the following: (i) Stock Turnover, (ii) Debtors Turnover, (iii) Liquid Ratio, and (iv) Proprietary Ratio.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Ratios are arithmetical expressions of the relationship between related accounting items, categorized under Liquidity, Solvency, Turnover, and Profitability.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 6,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements (The Formulas):"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Stock (Inventory) Turnover Ratio = Cost of Goods Sold (COGS) / Average Inventory (expressed in 'Times'). Where Average Inventory = (Opening + Closing Stock) / 2.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 32,
+                  "style": "bold"
+                },
+                {
+                  "start": 35,
+                  "end": 80,
+                  "style": "underline"
+                },
+                {
+                  "start": 112,
+                  "end": 162,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Debtors Turnover (Trade Receivables) Ratio = Net Credit Sales / Average Trade Receivables (expressed in 'Times'). Where Receivables = Debtors + Bills Receivable.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 42,
+                  "style": "bold"
+                },
+                {
+                  "start": 45,
+                  "end": 89,
+                  "style": "underline"
+                },
+                {
+                  "start": 121,
+                  "end": 162,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Liquid Ratio (Quick Ratio) = Liquid Assets / Current Liabilities (expressed as a Pure Ratio, e.g. 1:1). Where Liquid Assets = Current Assets - (Stock + Prepaid Expenses).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 29,
+                  "end": 63,
+                  "style": "underline"
+                },
+                {
+                  "start": 110,
+                  "end": 170,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Proprietary Ratio = Shareholders' Funds / Total Assets (expressed as a Pure Ratio or Percentage). Where Shareholders' Funds = Share Capital + Reserves & Surplus.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 20,
+                  "end": 54,
+                  "style": "underline"
+                },
+                {
+                  "start": 104,
+                  "end": 161,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q3",
+      "questionNumber": "Q3",
+      "questionText": "Define the terms Provision and Current Assets.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "subheading",
+          "text": "The Lead Definitions:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "A Provision is an amount set aside by debiting the Profit & Loss Account to cover a known liability or potential loss whose exact amount cannot be determined with mathematical certainty.",
+              "spans": [
+                {
+                  "start": 2,
+                  "end": 11,
+                  "style": "bold"
+                },
+                {
+                  "start": 2,
+                  "end": 11,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Current Assets are cash and other resources expected to be converted to cash, sold, or consumed within 12 months or one operating cycle.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Provision Example: Provision for Doubtful Debts is created under the Convention of Conservatism to anticipate bad debts and avoid overstating profits.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 19,
+                  "end": 47,
+                  "style": "underline"
+                },
+                {
+                  "start": 69,
+                  "end": 95,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Current Assets Example: Includes Cash, Bank balance, Sundry Debtors, Stock, and Prepaid Rent, which are used to evaluate short-term solvency in the Current Ratio.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "bold"
+                },
+                {
+                  "start": 148,
+                  "end": 161,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q4",
+      "questionNumber": "Q4",
+      "questionText": "Explain the accounting meaning and dual effects of: (a) Closing Stock, (b) Outstanding Expenses, (c) Prepaid Expenses, (d) Accrued Income, (e) Income Received in Advance, and (f) Depreciation.",
+      "marks": 3,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Accounting Meaning and Dual Effects of Year-End Adjustments",
+          "tableHeaders": [
+            "Adjustment Item",
+            "Accounting Meaning",
+            "Dual Accounting Effects (Adjusting Entries)"
+          ],
+          "tableRows": [
+            [
+              "Closing Stock",
+              "Unsold goods available with the business at the end of the accounting period.",
+              "1. Credited to the Trading Account.\n2. Shown under Current Assets in the Balance Sheet."
+            ],
+            [
+              "Outstanding Expenses",
+              "Expenses incurred during the current period but not yet paid (e.g. unpaid salary).",
+              "1. Debited to the respective Expense A/c in the Profit & Loss Account.\n2. Shown under Current Liabilities in the Balance Sheet."
+            ],
+            [
+              "Prepaid Expenses",
+              "Expenses paid in advance for which benefits will be received in the next period.",
+              "1. Deducted from the respective Expense in the P&L Account.\n2. Shown under Current Assets in the Balance Sheet."
+            ],
+            [
+              "Accrued Income",
+              "Income earned during the current period but not yet received (e.g. interest earned).",
+              "1. Credited to the respective Income A/c in the P&L Account.\n2. Shown under Current Assets in the Balance Sheet."
+            ],
+            [
+              "Income in Advance",
+              "Income received before it is earned (liability to provide future services).",
+              "1. Deducted from the respective Income in the P&L Account.\n2. Shown under Current Liabilities in the Balance Sheet."
+            ],
+            [
+              "Depreciation",
+              "Gradual decrease in the value of a fixed asset due to wear, tear, or time.",
+              "1. Debited as an Expense to the Profit & Loss Account.\n2. Deducted from the respective Fixed Asset in the Balance Sheet."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q5",
+      "questionNumber": "Q5",
+      "questionText": "Define Comparative Financial Statements.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Comparative Financial Statements are statements that display financial data for multiple periods side-by-side in parallel columns to facilitate horizontal comparison and analyze absolute and percentage changes over time.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 32,
+              "style": "underline"
+            },
+            {
+              "start": 145,
+              "end": 166,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "It is applied to the two major financial statements: the Comparative Income Statement (P&L) and the Comparative Balance Sheet.",
+              "spans": [
+                {
+                  "start": 57,
+                  "end": 86,
+                  "style": "underline"
+                },
+                {
+                  "start": 101,
+                  "end": 126,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "It reveals the direction and speed of trends in performance indicators, allowing managers to identify areas of concern or operational efficiency.",
+              "spans": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q6",
+      "questionNumber": "Q6",
+      "questionText": "State the formulas for calculating Absolute Change and Percentage Change in comparative analysis.",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "In horizontal comparative analysis, changes in individual financial line items are measured in both nominal (absolute) and relative (percentage) terms in relation to a designated base year.",
+          "spans": [
+            {
+              "start": 3,
+              "end": 34,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements (The Formulas):"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Absolute Change Formula: Absolute Change (C) = Current Year Value (B) - Previous Year Value (A). A positive result indicates an increase (+), and a negative result indicates a decrease (-).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 25,
+                  "end": 96,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Percentage Change Formula: Percentage Change (D) = (Absolute Change (C) / Previous Year Value (A)) * 100. This converts the absolute change into a relative growth rate for uniform comparison.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 27,
+                  "end": 104,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q7",
+      "questionNumber": "Q1",
+      "questionText": "What is Financial Statement Analysis? Explain the tools of financial statement analysis.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Financial Statement Analysis (FSA) is the systematic process of examining, dividing, and classifying raw financial data from Profit & Loss accounts and Balance Sheets into simple and valuable elements, establishing relationships between inter-related factors, and interpreting them to assess a firm's profitability, liquidity, and solvency.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 28,
+              "style": "underline"
+            },
+            {
+              "start": 30,
+              "end": 33,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "FOUR CORE TOOLS OF FINANCIAL STATEMENT ANALYSIS"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Comparative Statements (Horizontal Analysis): Involves a comparative study of individual items across two or more years. Figures are listed side-by-side, absolute changes are computed (C = B - A), and percentage changes are derived. It identifies the direction and speed of performance trends.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 45,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "underline"
+                },
+                {
+                  "start": 24,
+                  "end": 43,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Common Size Statements (Vertical Analysis): Converts individual financial statement items into percentages of a common base (Net Sales for the Income Statement; Total Assets or Total Liabilities for the Balance Sheet). It allows analysts to compare firms of different sizes within the same industry (Cross-Sectional Analysis).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 42,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "underline"
+                },
+                {
+                  "start": 24,
+                  "end": 41,
+                  "style": "underline"
+                },
+                {
+                  "start": 305,
+                  "end": 329,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Trend Analysis: A long-run technique where multiple years of data are compiled, a normal base year is selected and set to 100, and subsequent years are expressed as percentages of that base. It reveals fundamental long-term shifts in business patterns.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Ratio Analysis: Establishes meaningful arithmetical relationships between interdependent financial items. It is highly valued for measuring operating efficiency, short-term liquidity, long-term solvency, and profitability.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q8",
+      "questionNumber": "Q2",
+      "questionText": "Define Ratio Analysis. Explain its Pros and Cons in detail.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Ratio Analysis is a technique of analyzing and interpreting figures appearing in financial statements by establishing and examining significant arithmetical relationships between related accounting items to evaluate the firm's efficiency.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 14,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "PROS & CONS OF RATIO ANALYSIS"
+        },
+        {
+          "blockType": "subheading",
+          "text": "i. Advantages (Pros) of Ratio Analysis:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Simplifies Accounting Data: Condenses detailed and complicated figures into brief, easy-to-understand ratios.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Assesses Operating Efficiency: Evaluates performance by testing liquidity (Current/Quick), long-term solvency (Debt-Equity), and profitability.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Assists in Forecasting & Planning: Trend patterns of key ratios act as a predictive guide for future budgeting and forecasting.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 34,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Facilitates Comparison: Enables both Inter-firm comparison (with competitors) and Intra-firm comparison (between units/periods).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "underline"
+                },
+                {
+                  "start": 37,
+                  "end": 58,
+                  "style": "underline"
+                },
+                {
+                  "start": 82,
+                  "end": 103,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Identifies Weak Areas: Flags unfavorable ratio trends, directing management to target weak operational factors.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "ii. Limitations (Cons) of Ratio Analysis:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Reliability Constraints: Ratios are derived from financial statements; if the source data is incorrect or biased, the computed ratios will be misleading.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Ignores Qualitative Factors: Only considers quantitative monetary factors, omitting crucial qualitative aspects like staff skills or labor disputes.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "No Single Standard: There are no universally agreed-upon standard ratios to definitively judge whether a performance is favorable or unfavorable.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Ignores Price Level Changes: Comparability is distorted over time because accounting variables do not adjust for inflation and money-value changes.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Vulnerable to Window Dressing: Financial statements can be manipulated to show a better-than-actual position, leading to distorted ratios.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 14,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Suffers from Personal Bias: Accounting estimates (like depreciation methods or inventory values) involve personal judgments, which infect ratio reliability.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-q9",
+      "questionNumber": "Q3",
+      "questionText": "Differentiate between Horizontal Analysis and Vertical Analysis with suitable examples.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Distinction between Horizontal Analysis and Vertical Analysis",
+          "tableHeaders": [
+            "Basis of Distinction",
+            "Horizontal Analysis (Comparative)",
+            "Vertical Analysis (Common Size)"
+          ],
+          "tableRows": [
+            [
+              "1. Number of Periods",
+              "Requires financial statements of two or more accounting periods.",
+              "Requires financial statement of only one accounting period."
+            ],
+            [
+              "2. Item Comparison",
+              "Deals with the same accounting item across different time periods.",
+              "Deals with different accounting items in the same period."
+            ],
+            [
+              "3. Form of Information",
+              "Provides information in both absolute values and percentage terms.",
+              "Provides information strictly in percentage terms relative to a common base."
+            ],
+            [
+              "4. Primary Analysis Use",
+              "Generally used for Time Series Analysis to study growth/decline trends.",
+              "Generally used for Cross-Sectional Analysis to compare firms of different sizes."
+            ],
+            [
+              "5. Alternate Names",
+              "Commonly referred to as Comparative Statements or Trend Analysis.",
+              "Commonly referred to as Common Size Statements."
+            ],
+            [
+              "6. Illustrative Example",
+              "Comparing Net Sales of BCR Co. Ltd. between 2015-16 (60 Lakh) and 2016-17 (75 Lakh) to show a 25% increase.",
+              "Expressing Cost of Goods Sold of BCR Co. Ltd. in 2015-16 as 73.1% of its Total Revenue (taken as 100%)."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-p1",
+      "questionNumber": "P1",
+      "questionText": "Solved Comparative Statement of Profit and Loss (BCR Co. Ltd. - 2015-16 vs 2016-17)",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Comparative Statement of Profit and Loss of BCR Co. Ltd.",
+          "tableHeaders": [
+            "Particulars",
+            "2015-16 (₹)",
+            "2016-17 (₹)",
+            "Absolute Change (₹)",
+            "Percentage Change (%)"
+          ],
+          "tableRows": [
+            [
+              "I. Revenue from Operations",
+              "60,00,000",
+              "75,00,000",
+              "+15,00,000",
+              "+25.00%"
+            ],
+            [
+              "II. Add: Other Incomes",
+              "1,50,000",
+              "1,20,000",
+              "(30,000)",
+              "-20.00%"
+            ],
+            [
+              "III. Total Revenue (I + II)",
+              "61,50,000",
+              "76,20,000",
+              "+14,70,000",
+              "+23.90%"
+            ],
+            [
+              "IV. Less: Operating Expenses",
+              "44,00,000",
+              "50,60,000",
+              "+6,60,000",
+              "+15.00%"
+            ],
+            [
+              "V. Profit before Tax (III - IV)",
+              "17,50,000",
+              "25,60,000",
+              "+8,10,000",
+              "+46.29%"
+            ],
+            [
+              "VI. Less: Income Tax (35% vs 40%)",
+              "6,12,500",
+              "10,24,000",
+              "+4,11,500",
+              "+67.18%"
+            ],
+            [
+              "VII. Net Profit after Tax (V - VI)",
+              "11,37,500",
+              "15,36,000",
+              "+3,98,500",
+              "+35.03%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-p2",
+      "questionNumber": "P2",
+      "questionText": "Solved Comparative Balance Sheet (J. Limited - March 31, 2016 vs March 31, 2017)",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Comparative Balance Sheet of J. Limited",
+          "tableHeaders": [
+            "Particulars / Balance Sheet Components",
+            "31st Mar 2016 (₹)",
+            "31st Mar 2017 (₹)",
+            "Absolute Change (₹)",
+            "Percentage Change (%)"
+          ],
+          "tableRows": [
+            [
+              "I. EQUITY AND LIABILITIES",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "1. Shareholders' Funds: (a) Share Capital",
+              "15,00,000",
+              "20,00,000",
+              "+5,00,000",
+              "+33.33%"
+            ],
+            [
+              "(b) Reserves and Surplus",
+              "4,00,000",
+              "3,00,000",
+              "(1,00,000)",
+              "-25.00%"
+            ],
+            [
+              "2. Non-Current Liabilities: Long-term Borrowings",
+              "6,00,000",
+              "9,00,000",
+              "+3,00,000",
+              "+50.00%"
+            ],
+            [
+              "3. Current Liabilities: Trade Payables",
+              "2,00,000",
+              "3,00,000",
+              "+1,00,000",
+              "+50.00%"
+            ],
+            [
+              "TOTAL EQUITY AND LIABILITIES",
+              "27,00,000",
+              "35,00,000",
+              "+8,00,000",
+              "+29.63%"
+            ],
+            [
+              "II. ASSETS",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "1. Non-Current Assets: Fixed Tangible Assets",
+              "15,00,000",
+              "20,00,000",
+              "+5,00,000",
+              "+33.33%"
+            ],
+            [
+              "Intangible Assets (Goodwill, Patents)",
+              "6,00,000",
+              "9,00,000",
+              "+3,00,000",
+              "+50.00%"
+            ],
+            [
+              "2. Current Assets: (a) Inventories (Stock)",
+              "4,00,000",
+              "3,00,000",
+              "(1,00,000)",
+              "-25.00%"
+            ],
+            [
+              "(b) Cash and Cash Equivalents",
+              "2,00,000",
+              "3,00,000",
+              "+1,00,000",
+              "+50.00%"
+            ],
+            [
+              "TOTAL ASSETS",
+              "27,00,000",
+              "35,00,000",
+              "+8,00,000",
+              "+29.63%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-p3",
+      "questionNumber": "P3",
+      "questionText": "Solved Common Size Income Statement (2015-16 vs 2016-17)",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Common Size Income Statement",
+          "tableHeaders": [
+            "Particulars / Income Statement Items",
+            "Absolute 2015-16 (₹)",
+            "Absolute 2016-17 (₹)",
+            "% of Net Sales 2015-16",
+            "% of Net Sales 2016-17"
+          ],
+          "tableRows": [
+            [
+              "Revenue from Operations (Net Sales)",
+              "25,00,000",
+              "18,00,000",
+              "100.00%",
+              "100.00%"
+            ],
+            [
+              "Less: Cost of Goods Sold (including Wages)",
+              "12,00,000",
+              "10,00,000",
+              "48.00%",
+              "55.56%"
+            ],
+            [
+              "Gross Profit",
+              "13,00,000",
+              "8,00,000",
+              "52.00%",
+              "44.44%"
+            ],
+            [
+              "Less: Operating Expenses (including Dep.)",
+              "1,20,000",
+              "80,00,0",
+              "4.80%",
+              "4.44%"
+            ],
+            [
+              "Operating Income",
+              "11,80,000",
+              "7,20,000",
+              "47.20%",
+              "40.00%"
+            ],
+            [
+              "Less: Non-Operating Expenses",
+              "15,000",
+              "12,000",
+              "0.60%",
+              "0.67%"
+            ],
+            [
+              "Net Profit before Tax",
+              "11,65,000",
+              "7,08,000",
+              "46.60%",
+              "39.33%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-p4",
+      "questionNumber": "P4",
+      "questionText": "Solved Trend Analysis: Samir Auto Ltd (Base Year: 2010 = 100)",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Trend Analysis of Samir Auto Ltd",
+          "tableHeaders": [
+            "Year",
+            "Sales (in Thousands)",
+            "Sales Trend Percentage (%)",
+            "Profit After Tax (PAT) (₹)",
+            "PAT Trend Percentage (%)"
+          ],
+          "tableRows": [
+            [
+              "2010",
+              "1,000",
+              "100.00%",
+              "150",
+              "100.00%"
+            ],
+            [
+              "2011",
+              "1,200",
+              "120.00%",
+              "185",
+              "123.33%"
+            ],
+            [
+              "2012",
+              "1,500",
+              "150.00%",
+              "210",
+              "140.00%"
+            ],
+            [
+              "2013",
+              "2,000",
+              "200.00%",
+              "220",
+              "146.67%"
+            ],
+            [
+              "2014",
+              "2,900",
+              "290.00%",
+              "240",
+              "160.00%"
+            ]
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Expert Interpretation: Sales have increased significantly and continuously, reaching 290% in 2014 compared to the base year. Profit After Tax has also increased, but only to 160% in 2014. This critical divergence indicates that while the market footprint expanded, the net profit margin did not grow proportionally, likely due to rising operating costs or a high proportion of fixed overheads.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 22,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fa-u2-p5",
+      "questionNumber": "P5",
+      "questionText": "Solved Comprehensive Ratio Analysis Combined Problem",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "PRACTICAL PROBLEM: Following is the financial information extracted from the books of a company as on March 31, 2017: Calculate (i) Current Ratio, (ii) Liquid Ratio, (iii) Debt-Equity Ratio, (iv) Interest Coverage Ratio, (v) Inventory Turnover Ratio, and (vi) Return on Investment.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 18,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Financial Information Extracted as on March 31, 2017",
+          "tableHeaders": [
+            "Account Head / Parameter Name",
+            "Value (₹)",
+            "Account Head / Parameter Name",
+            "Value (₹)"
+          ],
+          "tableRows": [
+            [
+              "Total Current Assets",
+              "1,60,000",
+              "Current Liabilities",
+              "1,00,000"
+            ],
+            [
+              "Closing Inventory (Stock)",
+              "1,00,000",
+              "Shareholders' Funds (Equity)",
+              "4,00,000"
+            ],
+            [
+              "13% Debentures (Long-term)",
+              "3,00,000",
+              "Net Profit Before Tax (NPBT)",
+              "3,51,000"
+            ],
+            [
+              "Cost of Revenue from Operations",
+              "5,00,000",
+              "Prepaid Rent (Current Asset)",
+              "8,00,000"
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "STEP-BY-STEP DETAILED FORMULAE & SOLUTIONS"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Current Ratio: Measures short-term liquidity. Formula: Current Assets / Current Liabilities. Solution: 1,60,000 / 1,00,000 = 1.60:1 (Standard benchmark: 2:1. Indicates moderate liquidity).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "underline"
+                },
+                {
+                  "start": 46,
+                  "end": 54,
+                  "style": "bold"
+                },
+                {
+                  "start": 55,
+                  "end": 90,
+                  "style": "underline"
+                },
+                {
+                  "start": 92,
+                  "end": 101,
+                  "style": "bold"
+                },
+                {
+                  "start": 102,
+                  "end": 131,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Liquid Ratio / Quick Ratio: Measures immediate liquidity. Formula: Liquid Assets / Current Liabilities. Solution: Liquid Assets = Current Assets - Inventory = 1,60,000 - 1,00,000 = 60,000. Ratio: 60,000 / 1,00,000 = 0.60:1 (Standard benchmark: 1:1. Indicates potential cash tightness).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "underline"
+                },
+                {
+                  "start": 58,
+                  "end": 66,
+                  "style": "bold"
+                },
+                {
+                  "start": 67,
+                  "end": 101,
+                  "style": "underline"
+                },
+                {
+                  "start": 103,
+                  "end": 112,
+                  "style": "bold"
+                },
+                {
+                  "start": 113,
+                  "end": 188,
+                  "style": "underline"
+                },
+                {
+                  "start": 190,
+                  "end": 196,
+                  "style": "bold"
+                },
+                {
+                  "start": 197,
+                  "end": 223,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Debt-Equity Ratio: Measures long-term solvency proportions. Formula: Long-term Debt / Shareholders' Funds. Solution: Debt = 13% Debentures = 3,00,000; Equity = 4,00,000. Ratio: 3,00,000 / 4,00,000 = 0.75:1 (Indicates that 75% of owner investment is financed by long-term debt).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                },
+                {
+                  "start": 60,
+                  "end": 68,
+                  "style": "bold"
+                },
+                {
+                  "start": 69,
+                  "end": 104,
+                  "style": "underline"
+                },
+                {
+                  "start": 106,
+                  "end": 115,
+                  "style": "bold"
+                },
+                {
+                  "start": 116,
+                  "end": 170,
+                  "style": "underline"
+                },
+                {
+                  "start": 172,
+                  "end": 178,
+                  "style": "bold"
+                },
+                {
+                  "start": 179,
+                  "end": 207,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Interest Coverage Ratio: Measures ability to meet periodic debt interest charges. Formula: Net Profit before Interest & Tax (NPBIT) / Interest on Long-term Debt. Solution: Interest = 13% of 3,00,000 = 39,000. NPBIT = Net Profit before Tax + Interest = ₹3,51,000 + ₹39,000 = 3,90,000. Ratio: 3,90,000 / 39,000 = 10.00 times (Very strong coverage; highly favorable for lenders).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "underline"
+                },
+                {
+                  "start": 82,
+                  "end": 90,
+                  "style": "bold"
+                },
+                {
+                  "start": 91,
+                  "end": 162,
+                  "style": "underline"
+                },
+                {
+                  "start": 164,
+                  "end": 173,
+                  "style": "bold"
+                },
+                {
+                  "start": 174,
+                  "end": 286,
+                  "style": "underline"
+                },
+                {
+                  "start": 288,
+                  "end": 294,
+                  "style": "bold"
+                },
+                {
+                  "start": 295,
+                  "end": 326,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Inventory Turnover Ratio: Measures efficiency of stock utilization and replacement speed. Formula: Cost of Revenue from Operations (COGS) / Average Inventory. Solution: Inventory = 1,00,000 (taken as Average in absence of opening stock). COGS = 5,00,000. Ratio: 5,00,000 / 1,00,000 = 5.00 times (Stock is replaced 5 times a year).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 25,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 91,
+                  "end": 99,
+                  "style": "bold"
+                },
+                {
+                  "start": 100,
+                  "end": 159,
+                  "style": "underline"
+                },
+                {
+                  "start": 161,
+                  "end": 170,
+                  "style": "bold"
+                },
+                {
+                  "start": 171,
+                  "end": 256,
+                  "style": "underline"
+                },
+                {
+                  "start": 258,
+                  "end": 264,
+                  "style": "bold"
+                },
+                {
+                  "start": 265,
+                  "end": 296,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Return on Investment (ROI): Measures overall efficiency of capital utilized. Formula: (Net Profit before Interest & Tax (NPBIT) / Capital Employed) * 100. Solution: Capital Employed (Liabilities Approach) = Shareholders' Funds + Non-current Liabilities = 4,00,000 (Equity) + 3,00,000 (Debentures) = 7,00,000. NPBIT = 3,90,000. Ratio: (3,90,000 / 7,00,000) * 100 = 55.71% (Excellent profitability relative to the capital employed).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "underline"
+                },
+                {
+                  "start": 77,
+                  "end": 85,
+                  "style": "bold"
+                },
+                {
+                  "start": 86,
+                  "end": 156,
+                  "style": "underline"
+                },
+                {
+                  "start": 158,
+                  "end": 167,
+                  "style": "bold"
+                },
+                {
+                  "start": 168,
+                  "end": 328,
+                  "style": "underline"
+                },
+                {
+                  "start": 330,
+                  "end": 336,
+                  "style": "bold"
+                },
+                {
+                  "start": 337,
+                  "end": 372,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "course": "Bachelor of Business Administration (BBA)",
+  "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+  "university": "Gujarat Technological University (GTU)",
+  "subjectCode": "FA",
+  "header": {
+    "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+    "university": "Gujarat Technological University (GTU)",
+    "course": "Bachelor of Business Administration (BBA)",
+    "semester": 1,
+    "subject": "Financial Accounting",
+    "subjectCode": "FA",
+    "faculty": [
+      "Dr. Lalit Tank",
+      "Prof. Krishna Gandhi"
+    ]
+  },
+  "footer": {
+    "college": "SSASIT",
+    "university": "GTU",
+    "course": "BBA Sem-1",
+    "subject": "Financial Accounting",
+    "subjectCode": "FA",
+    "faculty": [
+      "Dr. Lalit Tank",
+      "Prof. Krishna Gandhi"
+    ]
+  }
+}

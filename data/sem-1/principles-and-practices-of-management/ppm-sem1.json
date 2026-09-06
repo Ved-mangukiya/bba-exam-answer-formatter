@@ -1,8 +1,38 @@
 {
   "semester": 1,
-  "subject": "Principles and Practices of Management (PPM)",
-  "faculty": [],
+  "course": "Bachelor of Business Administration (BBA)",
+  "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+  "university": "Gujarat Technological University (GTU)",
+  "subject": "Principles and Practices of Management",
+  "subjectCode": "PPM",
+  "faculty": [
+    "Prof. Nisha Tollawala",
+    "Prof. Karan Kachhadiya"
+  ],
   "unit": "Unit 1 & Unit 2",
+  "header": {
+    "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+    "university": "Gujarat Technological University (GTU)",
+    "course": "Bachelor of Business Administration (BBA)",
+    "semester": 1,
+    "subject": "Principles and Practices of Management",
+    "subjectCode": "PPM",
+    "faculty": [
+      "Prof. Nisha Tollawala",
+      "Prof. Karan Kachhadiya"
+    ]
+  },
+  "footer": {
+    "college": "SSASIT",
+    "university": "GTU",
+    "course": "BBA Sem-1",
+    "subject": "Principles and Practices of Management",
+    "subjectCode": "PPM",
+    "faculty": [
+      "Prof. Nisha Tollawala",
+      "Prof. Karan Kachhadiya"
+    ]
+  },
   "questions": [
     {
       "id": "ppm-u1-q1",

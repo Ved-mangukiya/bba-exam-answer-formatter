@@ -1,0 +1,2177 @@
+{
+  "semester": 1,
+  "subject": "Communication Skills / English",
+  "faculty": [
+    "Prof. Hetal S. Ballar",
+    "Prof. Nisha Tollawala"
+  ],
+  "questions": [
+    {
+      "id": "eng-u1-q1",
+      "questionNumber": "Q.1",
+      "questionText": "Tenses",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "A tense is a form of the verb that allows one to express time. The tense of the verb indicates when an event existed or when a person performed an action. The three primary categories of tenses are:",
+          "spans": [
+            {
+              "start": 2,
+              "end": 7,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Present Tense (e.g., He writes a letter)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Past Tense (e.g., He wrote a letter)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Future Tense (e.g., He will write a letter)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 12,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 12,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q2",
+      "questionNumber": "Q.2",
+      "questionText": "Adverb Clause",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "An adverbial clause is a subordinate (dependent) clause that performs the function of an adverb in a sentence. It modifies a verb, an adjective, or another adverb, indicating parameters such as time, reason/cause, place, condition, purpose, concession, or result.",
+          "spans": [
+            {
+              "start": 3,
+              "end": 19,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: \"Since it was raining heavily, I could not attend my friend's wedding.\" (Adverbial clause of reason)",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            },
+            {
+              "start": 10,
+              "end": 38,
+              "style": "italic"
+            },
+            {
+              "start": 81,
+              "end": 108,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q3",
+      "questionNumber": "Q.3",
+      "questionText": "Calm before the storm",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Meaning: A peaceful, quiet period immediately preceding a time of intense activity, turmoil, trouble, or argument.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: \"The office was quiet this morning, but it was just the calm before the storm preceding the annual product launch.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            },
+            {
+              "start": 65,
+              "end": 86,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q4",
+      "questionNumber": "Q.4",
+      "questionText": "A piece of cake",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Meaning: A task, job, or activity that is very easy or effortless to accomplish.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: \"After months of rigorous preparation, the final exam turned out to be a piece of cake.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            },
+            {
+              "start": 80,
+              "end": 95,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q5",
+      "questionNumber": "Q.5",
+      "questionText": "To feel under the weather",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Meaning: To feel slightly unwell, sick, fatigued, or in low spirits.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: \"I will not be able to attend college today as I am feeling a bit under the weather.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            },
+            {
+              "start": 74,
+              "end": 91,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q6",
+      "questionNumber": "Q.6",
+      "questionText": "Giving someone the cold shoulder",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Meaning: Intentionally ignoring, snubbing, or being unfriendly toward someone.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: \"Ever since their argument yesterday, Priya has been giving Rohan the cold shoulder.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            },
+            {
+              "start": 75,
+              "end": 92,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q7",
+      "questionNumber": "Q.7",
+      "questionText": "Phrasal Verb",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "A phrasal verb is a multi-word verb formed by combining a base verb with a preposition or an adverb (or both), which together yield an idiomatic meaning distinct from the literal meaning of the individual words. They add vitality, force, and communicative dynamism to speech and writing.",
+          "spans": [
+            {
+              "start": 2,
+              "end": 14,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Examples: Hit upon (to discover an idea by chance), Break down (to stop functioning), Look after (to take care of).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 9,
+              "style": "bold"
+            },
+            {
+              "start": 10,
+              "end": 18,
+              "style": "underline"
+            },
+            {
+              "start": 52,
+              "end": 62,
+              "style": "underline"
+            },
+            {
+              "start": 86,
+              "end": 96,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q8",
+      "questionNumber": "Q.8",
+      "questionText": "Sentence Structure",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Sentence structure refers to the grammatical architecture and arrangement of words, phrases, and clauses (subjects, verbs, objects/complements) in a sentence. It governs how independent and dependent clauses are organized (as simple, compound, complex, or compound-complex) to create coherent meaning.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 18,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q9",
+      "questionNumber": "Q.9",
+      "questionText": "What are sentences? Describe types of sentences with examples.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Definition"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "A sentence is a grammatically complete unit of language composed of a group of words that expresses a complete thought, idea, statement, question, or command. Structurally, it consists of a Subject (what the sentence is about) and a Predicate (what is asserted about the subject).",
+          "spans": [
+            {
+              "start": 2,
+              "end": 10,
+              "style": "underline"
+            },
+            {
+              "start": 193,
+              "end": 200,
+              "style": "underline"
+            },
+            {
+              "start": 237,
+              "end": 246,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Classification Based on Sense (Functional Meaning)"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Assertive or Declarative Sentence: Makes a positive assertion, conveys information, or states a fact. Example: \"Cassius does his work on time.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Negative Sentence: Makes a negative assertion using negating words like not, never, or no. Example: \"Catherine does not do her work on time.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Interrogative Sentence: Poses a direct question and ends with a question mark (?). Example: \"Does Brutus do his work on time?\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Imperative Sentence: Expresses a command, request, instruction, order, or entreaty. The subject \"you\" is frequently implied. Example: \"Antony, do your work on time.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Exclamatory Sentence: Expresses strong feelings, surprise, wonder, or sudden emotion, ending with an exclamation mark (!). Example: \"You too, Brutus! Then Caesar must die!\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Classification Based on Structural Form"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Simple Sentence: Contains only one independent clause (a single subject and finite predicate). Example: \"India won the match.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Compound Sentence: Contains two or more independent clauses joined by coordinating conjunctions (e.g., and, but, or, yet, so) or a semicolon. Example: \"We tried hard, but we could not win the match.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Complex Sentence: Contains one main (independent) clause and at least one subordinate (dependent) clause joined by subordinating conjunctions (e.g., although, because, since, while, if). Example: \"Although we tried hard, we could not win the match.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q10",
+      "questionNumber": "Q.10",
+      "questionText": "What are tenses? How many types of tenses are there? Explain with examples.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Definition"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "A tense is the form taken by a verb to indicate the specific timeframe (past, present, or future) in which an action or state occurs, continues, or is completed.",
+          "spans": [
+            {
+              "start": 2,
+              "end": 7,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Classification and Structure"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "English divides time into three primary tenses, each having four aspects (Simple/Indefinite, Continuous/Progressive, Perfect, and Perfect Continuous), resulting in twelve core tense structures:",
+          "spans": []
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Table: Twelve Core Tense Structures and Aspects",
+          "tableHeaders": [
+            "Tense Aspect",
+            "Present Tense",
+            "Past Tense",
+            "Future Tense"
+          ],
+          "tableRows": [
+            [
+              "Simple / Indefinite",
+              "Base form / V1 (+ s/es) | Ex: She writes a letter.",
+              "Past form (V2) | Ex: She wrote a letter.",
+              "Will/Shall + Base verb | Ex: She will write a letter."
+            ],
+            [
+              "Continuous / Progressive",
+              "Is/Am/Are + Verb-ing | Ex: She is writing a letter.",
+              "Was/Were + Verb-ing | Ex: She was writing a letter.",
+              "Will/Shall be + Verb-ing | Ex: She will be writing a letter."
+            ],
+            [
+              "Perfect",
+              "Has/Have + Past Participle (V3) | Ex: She has written a letter.",
+              "Had + Past Participle (V3) | Ex: She had written a letter.",
+              "Will/Shall have + Past Participle (V3) | Ex: She will have written a letter."
+            ],
+            [
+              "Perfect Continuous",
+              "Has/Have been + Verb-ing | Ex: She has been writing.",
+              "Had been + Verb-ing | Ex: She had been writing.",
+              "Will/Shall have been + Verb-ing | Ex: She will have been writing."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q11",
+      "questionNumber": "Q.11",
+      "questionText": "Differentiate between Direct and Indirect Speech with examples.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "subheading",
+          "text": "Direct Speech"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Direct speech quotes the speaker's exact, actual words enclosed within quotation marks (\"...\") without altering grammatical structure. A comma separates the reporting verb from the reported statement.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: Preethi said, \"I cook pasta.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Indirect (Reported) Speech"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Indirect speech reports the essence or message of what was spoken without quoting the speaker verbatim. Quotation marks are omitted, a conjunction (e.g., that, whether, if) is typically introduced, and grammatical shifts occur in pronouns, tenses, and adverbs of time and place.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 15,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: Preethi said that she cooked pasta.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Core Transformation Rules"
+        },
+        {
+          "blockType": "subheading",
+          "text": "Tense Shifts (Backshifting when reporting verb is in the past)"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Simple Present -> Simple Past (cooks -> cooked)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                },
+                {
+                  "start": 18,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Present Continuous -> Past Continuous (is cooking -> was cooking)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "underline"
+                },
+                {
+                  "start": 22,
+                  "end": 37,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Present Perfect -> Past Perfect (has cooked -> had cooked)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "underline"
+                },
+                {
+                  "start": 19,
+                  "end": 31,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Simple Past -> Past Perfect (cooked -> had cooked)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "underline"
+                },
+                {
+                  "start": 15,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Modals: will -> would, can -> could",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 7,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Adverbial Shifts (Time and Place)"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Today -> That day",
+              "spans": []
+            },
+            {
+              "text": "Tomorrow -> The next day / following day",
+              "spans": []
+            },
+            {
+              "text": "Yesterday -> The previous day",
+              "spans": []
+            },
+            {
+              "text": "Here -> There, Now -> Then, This/These -> That/Those",
+              "spans": []
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Pronoun Adjustments"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "First/second person personal pronouns (I, my, our, you) shift based on the speaker and listener (he, she, they, their).",
+          "spans": []
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q12",
+      "questionNumber": "Q.12",
+      "questionText": "Explain \"Active and Passive Voice\" in detail.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "subheading",
+          "text": "Active Voice"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "A sentence is in the active voice when the grammatical subject is the doer/agent performing the action of the verb. Active voice emphasizes the performer and creates direct, vigorous phrasing.",
+          "spans": [
+            {
+              "start": 21,
+              "end": 33,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Structure: Subject (Doer) + Verb + Object (Receiver)",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: \"Geeta wrote a letter.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Passive Voice"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "A sentence is in the passive voice when the grammatical subject is the recipient/receiver of the action. The emphasis shifts from the doer to the action itself or the recipient. The original agent is either placed at the end preceded by the preposition \"by\" or omitted entirely when unknown or obvious.",
+          "spans": [
+            {
+              "start": 21,
+              "end": 34,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Structure: Object as Subject + Form of \"to be\" + Past Participle (V3) + [by + Agent]",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: \"A letter was written by Geeta.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Tense-wise Passive Transformation Rules"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Simple Present: is/am/are + V3 (e.g., A letter is written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Present Continuous: is/am/are + being + V3 (e.g., A letter is being written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Present Perfect: has/have + been + V3 (e.g., A letter has been written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Simple Past: was/were + V3 (e.g., A letter was written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 12,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Past Continuous: was/were + being + V3 (e.g., A letter was being written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Past Perfect: had been + V3 (e.g., A letter had been written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 12,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Simple Future: will/shall + be + V3 (e.g., A letter will be written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Future Perfect: will/shall + have been + V3 (e.g., A letter will have been written)",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-q13",
+      "questionNumber": "Q.13",
+      "questionText": "\"Punctuation marks are the traffic signals of Language; they tell us to slow down, notice this, take a detour, and stop\" — Discuss this statement.",
+      "marks": 7,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Contextual View"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Just as traffic signals govern the flow of vehicular traffic, prevent collisions, and ensure smooth transit, punctuation marks direct the visual and cognitive flow of written text. Without them, written sentences become chaotic, ambiguous, and difficult to navigate.",
+          "spans": [
+            {
+              "start": 110,
+              "end": 127,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Functional Parallels"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "The Full Stop (.): Red Light / \"Stop\" — Denotes a complete halt. It marks the termination of a declarative or imperative thought, giving the reader time to assimilate the completed message before proceeding.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 37,
+                  "style": "bold"
+                },
+                {
+                  "start": 4,
+                  "end": 13,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "The Comma (,): Yellow Light / \"Slow Down\" — Indicates a brief pause, delineating list items, introductory phrases, or non-essential parenthetical clauses to maintain clarity.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 41,
+                  "style": "bold"
+                },
+                {
+                  "start": 4,
+                  "end": 9,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "The Semicolon (;) and Colon (:): Yield / \"Take a Detour\" — A semicolon bridges two closely related independent clauses without a conjunction, signalling a transition rather than a full stop. A colon acts as an arrow pointing forward to an elaboration, list, or quote.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 56,
+                  "style": "bold"
+                },
+                {
+                  "start": 4,
+                  "end": 13,
+                  "style": "underline"
+                },
+                {
+                  "start": 22,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Dashes (—) and Parentheses (( )): Diversion / \"Scenic Route\" — Signal an aside, an interruption, or explanatory supplementary data inserted within the primary narrative.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 60,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                },
+                {
+                  "start": 15,
+                  "end": 26,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Question (?) & Exclamation (!) Marks: Warning / Landmark Signs — Indicate rising intonation, doubt, high urgency, or intense emotion, preventing monotonic misinterpretations.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 62,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Conclusion: Effective punctuation brings rhythm, cadence, tonal precision, and unambiguous clarity to professional and communicative writing.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 11,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q14",
+      "questionNumber": "Q.14",
+      "questionText": "What is Listening? How is it different from hearing?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Listening is an active, conscious cognitive process that involves receiving sound, interpreting its meaning, evaluating the message, and responding. In contrast, hearing is merely an involuntary, passive physiological process wherein the ears detect acoustic vibrations without requiring mental effort or comprehension.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 9,
+              "style": "underline"
+            },
+            {
+              "start": 162,
+              "end": 169,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q15",
+      "questionNumber": "Q.15",
+      "questionText": "What is Feedback in Listening?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Feedback is the verbal or non-verbal response provided by the listener to the speaker. It confirms whether the message has been accurately decoded, understood, and assimilated (e.g., nodding, asking clarifying questions, eye contact, paraphrasing).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q16",
+      "questionNumber": "Q.16",
+      "questionText": "What is meant by Listening for Global Information?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Listening for global information (or macro-listening) means listening to comprehend the broad overarching theme, context, overall message, or central argument of a discourse, rather than focusing on specific individual facts or statistical details.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 32,
+              "style": "underline"
+            },
+            {
+              "start": 37,
+              "end": 52,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q17",
+      "questionNumber": "Q.17",
+      "questionText": "What is meant by Listening for Specific Information?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Listening for specific information is a targeted, selective listening technique where the listener scans the audio message exclusively to extract precise items of interest (such as a flight departure time, a numerical figure, a person's name, or a location), filtering out redundant background talk.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 34,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q18",
+      "questionNumber": "Q.18",
+      "questionText": "What is Listening for Gist?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Listening for gist involves attending to an audio discourse to extract the general summary, key purpose, or main idea without getting distracted by supporting minutiae, unknown vocabulary, or minor details.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 18,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q19",
+      "questionNumber": "Q.19",
+      "questionText": "What is meant by Deduction of Meaning while listening?",
+      "marks": 2,
+      "unit": "Unit 2",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Deduction of meaning is the cognitive ability to infer the definitions of unfamiliar words, unstated implications, or subtle emotional undertones by analyzing contextual clues, tone, speaker inflection, and surrounding background information.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 20,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q20",
+      "questionNumber": "Q.20",
+      "questionText": "Explain the distinction between Hearing and Listening. Discuss the importance of effective listening in communication.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Distinction Between Hearing and Listening"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Nature: Hearing is a passive, involuntary physiological mechanism of sound perception; listening is an active, intentional psychological process.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 7,
+                  "style": "bold"
+                },
+                {
+                  "start": 8,
+                  "end": 15,
+                  "style": "underline"
+                },
+                {
+                  "start": 87,
+                  "end": 96,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Effort Required: Hearing occurs automatically whenever auditory faculties are healthy; listening requires conscious attention, cognitive focus, and emotional involvement.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 17,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 87,
+                  "end": 96,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Comprehension: Hearing involves simply registering waves of sound without processing; listening encompasses receiving, decoding, interpreting, evaluating, and retaining meaning.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 15,
+                  "end": 22,
+                  "style": "underline"
+                },
+                {
+                  "start": 86,
+                  "end": 95,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Example: Hearing street traffic noise while working at your desk versus actively listening to your manager explain instructions for a project deadline.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Importance of Effective Listening in Communication"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Prevents Misunderstandings: Mitigates errors, reduces workplace conflicts, and minimizes time wasted rectifying miscommunicated directives.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Fosters Interpersonal Relationships: Demonstrates empathy, respect, and mutual trust, building rapport between colleagues, clients, and partners.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 36,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 35,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Facilitates Better Decision-Making: Equips managers and professionals with complete, accurate data before finalizing strategic choices.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 35,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 34,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Boosts Organizational Productivity: Clear listening ensures tasks are executed right the first time, optimizing operational turnaround.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 35,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 34,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q21",
+      "questionNumber": "Q.21",
+      "questionText": "Explain the different stages of the Listening Process with suitable examples.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The listening process comprises five continuous sequential stages:",
+          "spans": []
+        },
+        {
+          "blockType": "diagram",
+          "diagramTitle": "Stages of the Listening Process",
+          "diagramCaption": "Sequential stages from receiving audio input to responding.",
+          "diagramSvgOrUrl": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 780 120\" width=\"100%\" height=\"100%\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"8\"/><g transform=\"translate(15, 35)\" font-family=\"system-ui, -apple-system, sans-serif\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\"><rect x=\"0\" y=\"0\" width=\"125\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"62\" y=\"24\" fill=\"#0f172a\">1. Receiving</text><text x=\"62\" y=\"39\" fill=\"#64748b\" font-size=\"10\">(Hearing)</text><path d=\"M 125 25 L 150 25\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arr)\"/><rect x=\"155\" y=\"0\" width=\"125\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"217\" y=\"24\" fill=\"#0f172a\">2. Understanding</text><text x=\"217\" y=\"39\" fill=\"#64748b\" font-size=\"10\">(Decoding)</text><path d=\"M 280 25 L 305 25\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arr)\"/><rect x=\"310\" y=\"0\" width=\"125\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"372\" y=\"24\" fill=\"#0f172a\">3. Remembering</text><text x=\"372\" y=\"39\" fill=\"#64748b\" font-size=\"10\">(Retaining)</text><path d=\"M 435 25 L 460 25\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arr)\"/><rect x=\"465\" y=\"0\" width=\"125\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"527\" y=\"24\" fill=\"#0f172a\">4. Evaluating</text><text x=\"527\" y=\"39\" fill=\"#64748b\" font-size=\"10\">(Critical Analysis)</text><path d=\"M 590 25 L 615 25\" stroke=\"#2563eb\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arr)\"/><rect x=\"620\" y=\"0\" width=\"125\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"682\" y=\"24\" fill=\"#0f172a\">5. Responding</text><text x=\"682\" y=\"39\" fill=\"#64748b\" font-size=\"10\">(Feedback)</text></g><defs><marker id=\"arr\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 9 5 L 0 9 z\" fill=\"#2563eb\"/></marker></defs></svg>"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Receiving (Hearing): The physiological intake of verbal sound waves and non-verbal cues (gestures, expressions). Example: Sitting in a meeting room and hearing your colleague present the quarterly sales statistics.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Understanding (Decoding): Processing and interpreting the received words, decoding grammar and semantic context into sensible ideas. Example: Recognizing that a \"15% dip in conversion\" means the sales target was missed due to lower lead conversion.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 25,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Remembering (Retaining): Filtering and storing the key concepts within short-term or long-term memory for future reference. Example: Jotting down the three core reasons cited for the decline in sales revenue.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Evaluating (Critical Analysis): Analyzing the credibility, logic, bias, and context of the speaker's arguments before forming an opinion. Example: Weighing whether the sales drop was actually caused by external market factors or weak marketing campaigns.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 31,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Responding (Feedback): Providing observable verbal or non-verbal feedback during or after the communication to indicate comprehension. Example: Nodding in acknowledgment and asking, \"What measures will the team implement to bridge this 15% gap next month?\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q22",
+      "questionNumber": "Q.22",
+      "questionText": "Explain how listening skills can be developed. Discuss listening for gist, identifying main points, and deducing meaning.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Strategies to Develop Listening Skills"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Minimize Barriers: Eliminate physical distractions (environmental noise, mobile devices) and psychological barriers (prejudices, mental fatigue, premature evaluation).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Practice Active Engagement: Maintain natural eye contact, practice open body language, and take structured shorthand notes.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Cultivate Patience: Refrain from interrupting the speaker midway; let them finish their thought before replying.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Key Analytical Listening Sub-skills"
+        },
+        {
+          "blockType": "subheading",
+          "text": "Listening for Gist"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Objective: Getting the macro-summary or primary intent of the talk.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Practice: Instead of fixating on every unknown word, focus on recurring keywords, voice modulation, and general discourse markers.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 9,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Identifying Main Points"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Objective: Separating central themes from peripheral anecdotes or examples.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Practice: Pay close attention to structural transitions and signposts such as \"First and foremost,\" \"The critical issue is,\" or \"In conclusion.\"",
+          "spans": [
+            {
+              "start": 0,
+              "end": 9,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Deducing Meaning"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Objective: Unraveling implicit meanings, idioms, or unfamiliar vocabulary through contextual clues.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Practice: Assess paralinguistic features (pitch, emphasis, cadence) and the broader scenario to deduce unsaid sentiments and connotations.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 9,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q23",
+      "questionNumber": "Q.23",
+      "questionText": "Explain the different purposes/types of listening: listening for specific information and listening for global information.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Listening for Specific Information (Bottom-Up / Intensive Listening)"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Concept: This approach focuses on searching for precise, targeted facts, names, dates, figures, or instructions.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Process: The listener discards extraneous details and remains alert for designated trigger words or cues.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Practical Scenarios"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Listening to an airport announcement for your specific boarding gate and flight number.",
+              "spans": []
+            },
+            {
+              "text": "Listening to a lecture solely to write down the formula or test schedule date.",
+              "spans": []
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Technique: Requires high concentration, selective filtering, and immediate note-taking.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Listening for Global Information (Top-Down / Extensive Listening)"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Concept: Focuses on understanding the comprehensive message, broad context, argument, and atmosphere of an entire interaction.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Process: The listener synthesizes the complete message using contextual background knowledge and general language comprehension rather than tracking every word.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Practical Scenarios"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Listening to a philosophical keynote speech or panel discussion on global economics.",
+              "spans": []
+            },
+            {
+              "text": "Watching a documentary to understand how supply chain distribution functions worldwide.",
+              "spans": []
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Technique: Emphasizes holistic synthesis, identifying overall structure, and grasping the speaker's point of view.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u2-q24",
+      "questionNumber": "Q.24",
+      "questionText": "Explain the techniques of listening to different forms of communication, such as a conversation, speech, and lecture. Also discuss the role of feedback in effective listening.",
+      "marks": 7,
+      "unit": "Unit 2",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Techniques for Different Forms of Communication"
+        },
+        {
+          "blockType": "subheading",
+          "text": "Conversations (Interactive / Dialogic Listening)"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Involves rapid alternating roles between listener and speaker.",
+              "spans": []
+            },
+            {
+              "text": "Requires empathetic listening, observing non-verbal body language, and giving prompt verbal affirmations (\"I see,\" \"Right\").",
+              "spans": []
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Speeches (Rhetorical / Evaluative Listening)"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Typically a one-way communication delivered to an audience.",
+              "spans": []
+            },
+            {
+              "text": "Requires critical listening to evaluate rhetorical devices, persuasiveness, logical consistency, speaker bias, and emotional appeals (pathos, logos, ethos).",
+              "spans": [
+                {
+                  "start": 128,
+                  "end": 134,
+                  "style": "italic"
+                },
+                {
+                  "start": 136,
+                  "end": 141,
+                  "style": "italic"
+                },
+                {
+                  "start": 143,
+                  "end": 148,
+                  "style": "italic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Lectures (Academic / Informational Listening)"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Structured educational communication heavy with conceptual information.",
+              "spans": []
+            },
+            {
+              "text": "Involves using note-taking systems (such as the Cornell method, mapping, or outline format), identifying topic changes, and tracking signpost words (\"Moreover,\" \"Hence,\" \"To summarize\").",
+              "spans": []
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Role of Feedback in Effective Listening"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Validates Communication Loop: Communication is incomplete without feedback; it confirms whether the intended meaning matched the decoded meaning.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Non-Verbal Feedback: Posture, head nods, facial expressions, and eye contact signal to the speaker that the listener is engaged.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Verbal Feedback: Summarizing, asking clarifying questions, and paraphrasing (\"So what you mean is...\") resolve ambiguities early and keep discussions constructive.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u3-q25",
+      "questionNumber": "Q.25",
+      "questionText": "Skimming",
+      "marks": 2,
+      "unit": "Unit 3",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Skimming is a rapid reading technique where the reader quickly glances over a text to grasp the central idea, general overview, or gist without reading every single word or analyzing supporting details.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: Glancing through newspaper headlines and opening lines to see what happened in the morning.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u3-q26",
+      "questionNumber": "Q.26",
+      "questionText": "Scanning",
+      "marks": 2,
+      "unit": "Unit 3",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Scanning is a targeted reading technique used to locate a specific piece of information (such as a date, name, statistic, code, or phone number) within a large volume of text, while disregarding unrelated paragraphs.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Example: Searching through an index, railway schedule, or dictionary for a single entry.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u3-q27",
+      "questionNumber": "Q.27",
+      "questionText": "Write the difference between skimming and scanning.",
+      "marks": 7,
+      "unit": "Unit 3",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Table: Comparison between Skimming and Scanning",
+          "tableHeaders": [
+            "Parameter",
+            "Skimming",
+            "Scanning"
+          ],
+          "tableRows": [
+            [
+              "Primary Objective",
+              "To gain a general overview, overall theme, or gist of the text.",
+              "To find a specific piece of isolated information or a specific fact."
+            ],
+            [
+              "Reading Technique",
+              "Reads headings, subheadings, topic sentences, and concluding paragraphs rapidly.",
+              "Moves eyes quickly across lines searching specifically for keywords, numbers, or symbols."
+            ],
+            [
+              "Depth of Comprehension",
+              "Broad, shallow understanding of the entire topic.",
+              "Zero focus on general meaning; focuses solely on locating the target data."
+            ],
+            [
+              "Speed",
+              "Very fast (significantly faster than normal reading).",
+              "Extremely rapid; reading stops as soon as the target information is found."
+            ],
+            [
+              "Material Types",
+              "Articles, chapters, book introductions, executive summaries.",
+              "Dictionaries, phone directories, flight schedules, reference lists."
+            ],
+            [
+              "Typical Example",
+              "Quickly glancing through a business proposal to see if it covers marketing strategies.",
+              "Searching an attendance sheet to check if your roll number is present."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u3-q28",
+      "questionNumber": "Q.28",
+      "questionText": "What is reading? Write different types of reading.",
+      "marks": 7,
+      "unit": "Unit 3",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Definition of Reading"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Reading is an active, multifaceted cognitive process of decoding written or printed symbols into words to construct meaning, comprehend concepts, and assimilate ideas. It requires a combination of word recognition, semantic interpretation, contextual inference, and critical evaluation.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 7,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Different Types of Reading"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "bullet",
+          "items": [
+            {
+              "text": "Skimming: Fast reading designed to identify the general theme, gist, or broad layout of a passage without analyzing details (e.g., reading through a magazine article's headings).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Scanning: Searching through a text with a clear, predetermined objective to spot a specific piece of data, such as a date, name, or figure (e.g., locating an entry in an index).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Intensive Reading: Slow, close, highly focused reading aimed at deep comprehension of every sentence, grammatical construction, and technical argument (e.g., analyzing a legal contract, business case study, or academic research paper).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Extensive Reading: Reading longer texts fluently for overall pleasure, general knowledge, or broad language exposure without worrying about every unknown word (e.g., reading novels, biographies, or travel magazines).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Silent Reading: Reading internally without producing vocal sound. It maximizes reading speed, aids cognitive concentration, and is the standard mode for personal and professional study.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Oral / Loud Reading: Vocalizing written text aloud. It helps develop pronunciation, voice modulation, rhythm, and public speaking abilities, and is common in early language learning or formal presentations.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "course": "Bachelor of Business Administration (BBA)",
+  "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+  "university": "Gujarat Technological University (GTU)",
+  "subjectCode": "GCE",
+  "header": {
+    "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+    "university": "Gujarat Technological University (GTU)",
+    "course": "Bachelor of Business Administration (BBA)",
+    "semester": 1,
+    "subject": "Communication Skills / English",
+    "subjectCode": "GCE",
+    "faculty": [
+      "Prof. Hetal S. Ballar",
+      "Prof. Nisha Tollawala"
+    ]
+  },
+  "footer": {
+    "college": "SSASIT",
+    "university": "GTU",
+    "course": "BBA Sem-1",
+    "subject": "Communication Skills / English",
+    "subjectCode": "GCE",
+    "faculty": [
+      "Prof. Hetal S. Ballar",
+      "Prof. Nisha Tollawala"
+    ]
+  }
+}

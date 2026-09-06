@@ -21,14 +21,14 @@ Transform raw Q&A (NotebookLM exports converted to structured JSON) into GTU / S
 
 ## 3. Semester 1 Subject Registry
 
-| Slug | Subject Name | Folder Path |
-|---|---|---|
-| `business-statistics-and-logic` | Business Statistics and Logic (BSL) | `data/sem-1/business-statistics-and-logic/` |
-| `principles-and-practices-of-management` | Principles and Practices of Management (PPM) | `data/sem-1/principles-and-practices-of-management/` |
-| `financial-accounting` | Financial Accounting (FA) | `data/sem-1/financial-accounting/` |
-| `general-communicative-english` | General and Communicative English (GCE) | `data/sem-1/general-communicative-english/` |
-| `indian-knowledge-systems` | Indian Knowledge Systems (IKS) | `data/sem-1/indian-knowledge-systems/` |
-| `esg-for-sustainability` | Fundamentals of ESG for Sustainability (ESG) | `data/sem-1/esg-for-sustainability/` |
+| Slug | Subject Name | Code | Faculty | Folder Path |
+|---|---|---|---|---|
+| `principles-and-practices-of-management` | Principles and Practices of Management | PPM | Prof. Nisha Tollawala, Prof. Karan Kachhadiya | `data/sem-1/principles-and-practices-of-management/` |
+| `business-statistics-and-logic` | Business Statistics and Logic | BSL | Prof. Karan Kachhadiya, Prof. Birju Patil | `data/sem-1/business-statistics-and-logic/` |
+| `financial-accounting` | Financial Accounting | FA | Dr. Lalit Tank, Prof. Krishna Gandhi | `data/sem-1/financial-accounting/` |
+| `general-communicative-english` | General and Communicative English | GCE | Prof. Hetal S. Ballar, Prof. Nisha Tollawala | `data/sem-1/general-communicative-english/` |
+| `indian-knowledge-systems` | Indian Knowledge Systems | IKS | Prof. Jyoti Tank | `data/sem-1/indian-knowledge-systems/` |
+| `fundamentals-of-esg-for-sustainability` | Fundamentals of ESG for Sustainability | FES | Prof. Priya Khoot | `data/sem-1/fundamentals-of-esg-for-sustainability/` |
 
 ## 4. Extensibility
 The directory architecture extends to Semesters 2–6 by adding `data/sem-<N>/<subject-slug>/` without requiring breaking architectural changes.

@@ -19,57 +19,59 @@ const SUBJECT_MAP = [
   {
     slug: 'business-statistics-and-logic',
     code: 'BSL',
+    faculty: ['Prof. Karan Kachhadiya', 'Prof. Birju Patil'],
     keywords: ['statistic', 'bsl', 'bstat', 'statistics and logic']
   },
   {
     slug: 'principles-and-practices-of-management',
     code: 'PPM',
+    faculty: ['Prof. Nisha Tollawala', 'Prof. Karan Kachhadiya'],
     keywords: ['principles', 'management', 'ppm', 'practices of management']
   },
   {
     slug: 'financial-accounting',
     code: 'FA',
+    faculty: ['Dr. Lalit Tank', 'Prof. Krishna Gandhi'],
     keywords: ['accounting', 'financial accounting', 'fa']
   },
   {
     slug: 'general-communicative-english',
     code: 'GCE',
+    faculty: ['Prof. Hetal S. Ballar', 'Prof. Nisha Tollawala'],
     keywords: ['english', 'communicative english', 'gce']
   },
   {
     slug: 'indian-knowledge-systems',
     code: 'IKS',
+    faculty: ['Prof. Jyoti Tank'],
     keywords: ['indian knowledge', 'iks', 'vedic']
   },
   {
-    slug: 'esg-for-sustainability',
-    code: 'ESG',
-    keywords: ['esg', 'sustainability', 'environmental']
+    slug: 'fundamentals-of-esg-for-sustainability',
+    code: 'FES',
+    faculty: ['Prof. Priya Khoot'],
+    keywords: ['fes', 'fundamentals of esg', 'esg', 'sustainability', 'environmental']
   }
 ];
 
-function identifySubjectSlug(jsonData) {
+function identifySubject(jsonData) {
   const subjectName = (jsonData.subject || '').toLowerCase();
   const subjectCode = (jsonData.code || '').toLowerCase();
 
   for (const s of SUBJECT_MAP) {
-    if (s.code.toLowerCase() === subjectCode) return s.slug;
+    if (s.code.toLowerCase() === subjectCode) return s;
     for (const kw of s.keywords) {
       if (subjectName.includes(kw) || subjectCode.includes(kw)) {
-        return s.slug;
+        return s;
       }
     }
   }
 
   // Fallback slug generation
-  if (jsonData.subject) {
-    return jsonData.subject
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '');
-  }
-
-  return 'unclassified';
+  const slug = jsonData.subject
+    ? jsonData.subject.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    : 'unclassified';
+  return { slug, code: slug.substring(0, 4).toUpperCase(), keywords: [] };
 }
 
 function updateSubjectsManifest(sem, slug, relativeFilePath, facultyList) {
@@ -79,7 +81,7 @@ function updateSubjectsManifest(sem, slug, relativeFilePath, facultyList) {
     const raw = fs.readFileSync(SUBJECTS_JSON_PATH, 'utf8');
     const manifest = JSON.parse(raw);
 
-    let subjectEntry = manifest.subjects.find(s => s.slug === slug);
+    let subjectEntry = manifest.subjects.find(s => s.slug === slug || (s.aliases && s.aliases.includes(slug)));
     if (!subjectEntry) {
       subjectEntry = {
         slug: slug,
@@ -135,16 +137,55 @@ function organizeFile(filename) {
       }
 
       const sem = jsonData.semester || 1;
-      const slug = identifySubjectSlug(jsonData);
+      const matched = identifySubject(jsonData);
+      const slug = matched.slug;
       const targetDir = path.join(DATA_DIR, `sem-${sem}`, slug);
 
       if (!fs.existsSync(targetDir)) {
         fs.mkdirSync(targetDir, { recursive: true });
       }
 
-      const targetPath = path.join(targetDir, filename);
-      fs.copyFileSync(filePath, targetPath);
-      console.log(`[SUCCESS] Placed -> data/sem-${sem}/${slug}/${filename}`);
+      // Standardize filename: generic names like answers.json become <code.toLowerCase()>-sem<sem>.json
+      let finalFilename = filename;
+      const baseLower = path.basename(filename, '.json').toLowerCase();
+      if (['answers', 'questions', 'data', 'content', 'export', 'notebooklm', matched.code.toLowerCase()].includes(baseLower)) {
+        finalFilename = `${matched.code.toLowerCase()}-sem${sem}.json`;
+      }
+
+      // Ensure standardized metadata, header, and footer structure
+      jsonData.semester = sem;
+      jsonData.course = jsonData.course || 'Bachelor of Business Administration (BBA)';
+      jsonData.college = jsonData.college || 'Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)';
+      jsonData.university = jsonData.university || 'Gujarat Technological University (GTU)';
+      jsonData.subjectCode = jsonData.subjectCode || matched.code;
+      if (!Array.isArray(jsonData.faculty) || jsonData.faculty.length === 0) {
+        jsonData.faculty = matched.faculty || [];
+      }
+      if (!jsonData.header) {
+        jsonData.header = {
+          college: jsonData.college,
+          university: jsonData.university,
+          course: jsonData.course,
+          semester: sem,
+          subject: jsonData.subject,
+          subjectCode: jsonData.subjectCode,
+          faculty: jsonData.faculty
+        };
+      }
+      if (!jsonData.footer) {
+        jsonData.footer = {
+          college: 'SSASIT',
+          university: 'GTU',
+          course: `BBA Sem-${sem}`,
+          subject: jsonData.subject,
+          subjectCode: jsonData.subjectCode,
+          faculty: jsonData.faculty
+        };
+      }
+
+      const targetPath = path.join(targetDir, finalFilename);
+      fs.writeFileSync(targetPath, JSON.stringify(jsonData, null, 2), 'utf8');
+      console.log(`[SUCCESS] Standardized & Placed -> data/sem-${sem}/${slug}/${finalFilename}`);
 
       updateSubjectsManifest(sem, slug, targetPath, jsonData.faculty);
       moveToProcessed(filePath, filename, 'organized');
@@ -163,16 +204,14 @@ function organizeFile(filename) {
 }
 
 function moveToProcessed(srcPath, filename, category) {
-  if (!fs.existsSync(PROCESSED_DIR)) {
-    fs.mkdirSync(PROCESSED_DIR, { recursive: true });
-  }
-  const dest = path.join(PROCESSED_DIR, `${Date.now()}_${category}_${filename}`);
+  // Remove temporary inbox file once organized to prevent duplicate files
   try {
-    fs.renameSync(srcPath, dest);
-  } catch (err) {
-    try {
+    if (fs.existsSync(srcPath)) {
       fs.unlinkSync(srcPath);
-    } catch (_) {}
+      console.log(`[CLEANUP] Cleaned up inbox file: ${filename}`);
+    }
+  } catch (err) {
+    console.warn(`[WARN] Could not clean up ${filename}:`, err.message);
   }
 }
 

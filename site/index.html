@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>BBA Exam Answer Formatter — GTU / SSASIT Print-Ready Engine</title>
   <meta name="description" content="A static web engine that turns NotebookLM and Gemini-sourced exam answers into print-ready A4 answer sheets with zero page-bleed, strict typography, and GTU/SSASIT house style.">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#1e1b4b">
 
   <!-- Typography & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +22,7 @@
   <link rel="stylesheet" href="css/a4-print.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body data-mobile-view="subjects">
 
   <!-- Top Application Bar (Screen Only) -->
   <header class="app-header no-print" id="mainHeader">
@@ -31,15 +38,20 @@
     </div>
 
     <div class="header-actions">
-      <!-- Direct Print Triggers -->
-      <button class="btn btn-secondary" id="btnPrintQuestion" title="Print currently selected question">
+      <!-- Direct Print Triggers (Desktop) -->
+      <button class="btn btn-secondary desktop-only-action" id="btnPrintQuestion" title="Print currently selected question">
         🖨️ Print Question
       </button>
-      <button class="btn btn-primary" id="btnPrintSubject" title="Print full subject answer sheet consecutively">
+      <button class="btn btn-primary desktop-only-action" id="btnPrintSubject" title="Print full subject answer sheet consecutively">
         📄 Print Subject Sheet
       </button>
 
-      <div style="width: 1px; height: 24px; background: var(--border-subtle); margin: 0 4px;"></div>
+      <!-- Mobile Direct Print Action -->
+      <button class="btn-icon mobile-only-action" id="btnMobilePrint" title="Print Current Document">
+        🖨️
+      </button>
+
+      <div class="header-divider" style="width: 1px; height: 24px; background: var(--border-subtle); margin: 0 4px;"></div>
 
       <!-- Theme & Guides -->
       <button class="btn-icon" id="btnToggleGuides" title="Toggle 20mm/15mm Binding Margin Guides">
@@ -104,9 +116,12 @@
       <!-- Workspace Toolbar -->
       <div class="workspace-toolbar no-print">
         <div class="toolbar-left">
+          <button class="btn-icon mobile-only-action" id="btnMobileBackToQuestions" title="Back to Questions" style="padding: 4px 8px; margin-right: 4px; font-size: 14px;">
+            ←
+          </button>
           <span class="toolbar-label">Active:</span>
           <span style="font-weight: 600; font-size: 13px;" id="activeSubjectTitle">Business Statistics and Logic</span>
-          <span style="color: var(--text-muted); margin: 0 4px;">•</span>
+          <span class="toolbar-divider" style="color: var(--text-muted); margin: 0 4px;">•</span>
           <span style="font-size: 12px; color: var(--text-secondary);" id="currentViewModeLabel">Full Subject Sheet</span>
         </div>
 
@@ -115,7 +130,7 @@
           <button class="btn-icon" id="btnZoomOut" title="Zoom Out (-)">−</button>
           <span class="zoom-badge" id="zoomLevelBadge">100%</span>
           <button class="btn-icon" id="btnZoomIn" title="Zoom In (+)">+</button>
-          <button class="btn-icon" id="btnZoomReset" title="Reset Zoom">1:1</button>
+          <button class="btn-icon desktop-only-action" id="btnZoomReset" title="Reset Zoom">1:1</button>
           <button class="btn btn-secondary" id="btnZoomFit" style="padding: 4px 10px; font-size: 11px;">Fit Width</button>
         </div>
       </div>
@@ -132,6 +147,25 @@
     </section>
 
   </main>
+
+  <!-- Mobile Bottom Navigation Dock (Nothing OS Frosted Glass Design) -->
+  <nav class="mobile-bottom-nav no-print" id="mobileBottomNav" aria-label="Mobile View Switcher">
+    <button class="mobile-nav-item active" id="btnNavSubjects" data-view="subjects">
+      <span class="mobile-nav-icon">📚</span>
+      <span class="mobile-nav-label">Subjects</span>
+      <span class="mobile-nav-indicator"></span>
+    </button>
+    <button class="mobile-nav-item" id="btnNavQuestions" data-view="questions">
+      <span class="mobile-nav-icon">📋</span>
+      <span class="mobile-nav-label">Questions</span>
+      <span class="mobile-nav-indicator"></span>
+    </button>
+    <button class="mobile-nav-item" id="btnNavSheet" data-view="sheet">
+      <span class="mobile-nav-icon">📄</span>
+      <span class="mobile-nav-label">A4 Sheet</span>
+      <span class="mobile-nav-indicator"></span>
+    </button>
+  </nav>
 
   <!-- Hidden File Input for JSON Drop / Upload -->
   <input type="file" id="dropzoneInput" accept=".json,application/json" style="display: none;">

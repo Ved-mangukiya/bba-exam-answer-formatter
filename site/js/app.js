@@ -15,6 +15,7 @@
     zoomLevel: 1.0,
     showMarginGuides: false,
     activeTab: 'subjects', // 'subjects' or 'questions'
+    mobileView: 'subjects', // 'subjects', 'questions', or 'sheet'
     theme: 'dark'
   };
 
@@ -48,7 +49,11 @@
       tabQuestions: document.getElementById('tabQuestions'),
       sidebarSubjectsPanel: document.getElementById('sidebarSubjectsPanel'),
       sidebarQuestionsPanel: document.getElementById('sidebarQuestionsPanel'),
-      toastContainer: document.getElementById('toastContainer')
+      toastContainer: document.getElementById('toastContainer'),
+      mobileBottomNav: document.getElementById('mobileBottomNav'),
+      mobileNavItems: document.querySelectorAll('.mobile-nav-item'),
+      btnMobilePrint: document.getElementById('btnMobilePrint'),
+      btnMobileBackToQuestions: document.getElementById('btnMobileBackToQuestions')
     };
   }
 
@@ -93,7 +98,7 @@
             <p class="subject-desc">${sub.description || 'BBA Semester 1'}</p>
             <div class="subject-meta">
               <span class="status-pill ${statusClass}">${statusText}</span>
-              ${sub.faculty && sub.faculty.length > 0 ? `<span style="color:var(--text-muted);">${sub.faculty[0]}</span>` : ''}
+              ${sub.faculty && sub.faculty.length > 0 ? `<span style="color:var(--text-muted); font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:175px;" title="${sub.faculty.join(', ')}">${sub.faculty.join(', ')}</span>` : ''}
             </div>
           </div>
         </div>
@@ -127,6 +132,11 @@
     renderUnitFilters();
     renderQuestionList();
     renderA4Sheet();
+
+    // Auto-transition to questions list on mobile
+    if (window.innerWidth <= 768) {
+      switchMobileView('questions');
+    }
   }
 
   function renderUnitFilters() {
@@ -221,6 +231,9 @@
         state.activeQuestionId = null;
         renderQuestionList();
         renderA4Sheet();
+        if (window.innerWidth <= 768) {
+          switchMobileView('sheet');
+        }
       });
     }
 
@@ -229,6 +242,9 @@
         state.activeQuestionId = card.getAttribute('data-qid');
         renderQuestionList();
         renderA4Sheet();
+        if (window.innerWidth <= 768) {
+          switchMobileView('sheet');
+        }
       });
     });
   }
@@ -274,7 +290,7 @@
   }
 
   function setZoom(newZoom) {
-    state.zoomLevel = Math.max(0.4, Math.min(2.0, parseFloat(newZoom.toFixed(2))));
+    state.zoomLevel = Math.max(0.25, Math.min(2.5, parseFloat(newZoom.toFixed(2))));
     if (dom.a4Scaler) {
       dom.a4Scaler.style.transform = `scale(${state.zoomLevel})`;
     }
@@ -285,10 +301,13 @@
 
   function fitToWidth() {
     if (!dom.deskCanvas) return;
-    const canvasWidth = dom.deskCanvas.clientWidth - 80;
+    const isMobile = window.innerWidth <= 768;
+    // On mobile, deskCanvas has 6px padding on each side (total 12px)
+    const padding = isMobile ? 16 : 80;
+    const canvasWidth = dom.deskCanvas.clientWidth - padding;
     // Standard A4 width in pixels approx 794px at 96dpi (210mm)
     const a4PxWidth = 794;
-    const targetZoom = canvasWidth / a4PxWidth;
+    const targetZoom = Math.max(0.3, canvasWidth / a4PxWidth);
     setZoom(targetZoom);
   }
 
@@ -452,6 +471,29 @@
       });
     }
 
+    // Mobile Bottom Navigation Switcher
+    if (dom.mobileNavItems) {
+      dom.mobileNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const view = item.getAttribute('data-view');
+          switchMobileView(view);
+        });
+      });
+    }
+
+    // Mobile Toolbar Actions
+    if (dom.btnMobileBackToQuestions) {
+      dom.btnMobileBackToQuestions.addEventListener('click', () => {
+        switchMobileView('questions');
+      });
+    }
+
+    if (dom.btnMobilePrint) {
+      dom.btnMobilePrint.addEventListener('click', () => {
+        printDocument(state.activeQuestionId !== null);
+      });
+    }
+
     // Global file input
     if (dom.dropzoneInput) {
       dom.dropzoneInput.addEventListener('change', (e) => {
@@ -481,8 +523,24 @@
       }
     });
 
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-      if (state.zoomLevel < 0.6) fitToWidth();
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (window.innerWidth <= 768 && state.mobileView === 'sheet') {
+          fitToWidth();
+        } else if (state.zoomLevel < 0.6) {
+          fitToWidth();
+        }
+      }, 100);
+    });
+
+    window.addEventListener('orientationchange', () => {
+      setTimeout(() => {
+        if (window.innerWidth <= 768 && state.mobileView === 'sheet') {
+          fitToWidth();
+        }
+      }, 200);
     });
 
     window.addEventListener('beforeprint', () => {
@@ -498,11 +556,39 @@
     });
   }
 
+  function switchMobileView(viewName) {
+    state.mobileView = viewName;
+    document.body.setAttribute('data-mobile-view', viewName);
+
+    if (dom.mobileNavItems) {
+      dom.mobileNavItems.forEach(item => {
+        item.classList.toggle('active', item.getAttribute('data-view') === viewName);
+      });
+    }
+
+    if (viewName === 'sheet') {
+      requestAnimationFrame(() => {
+        fitToWidth();
+      });
+    } else if (viewName === 'questions') {
+      if (dom.sidebarSubjectsPanel) dom.sidebarSubjectsPanel.style.display = 'none';
+      if (dom.sidebarQuestionsPanel) dom.sidebarQuestionsPanel.style.display = 'flex';
+    } else if (viewName === 'subjects') {
+      if (dom.sidebarSubjectsPanel) dom.sidebarSubjectsPanel.style.display = 'flex';
+      if (dom.sidebarQuestionsPanel) dom.sidebarQuestionsPanel.style.display = 'none';
+    }
+  }
+
   // Application Entry Point
   document.addEventListener('DOMContentLoaded', () => {
     initDomRefs();
     attachEventListeners();
     loadInitialData();
+
+    // Auto-fit on mobile if loaded directly
+    if (window.innerWidth <= 768) {
+      switchMobileView('subjects');
+    }
   });
 
 })();

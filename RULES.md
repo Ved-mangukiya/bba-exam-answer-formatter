@@ -42,6 +42,8 @@ silently change them.
 
 | Element | Font | Size | Weight/Style |
 |---|---|---|---|
+| College name (header) | Times New Roman | 11.5pt | Bold, uppercase, centered |
+| University & course affiliation | Times New Roman | 9.5pt | Italic, centered |
 | Subject title (page header) | Times New Roman | 16pt | Bold, centered |
 | Question number + question text | Times New Roman | 13pt | Bold |
 | Section/Unit heading inside answer | Times New Roman | 13pt | Bold, underlined |
@@ -52,12 +54,25 @@ silently change them.
 | Table text | Times New Roman | 11pt | Regular; header row Bold |
 | Diagram caption | Times New Roman | 10.5pt | Italic, centered under diagram |
 | Marks indicator (e.g. "[7 Marks]") | Times New Roman | 11pt | Bold, right-aligned next to question |
+| Document footer (meta signoff) | Times New Roman | 9pt | Left: Subject, Center: College, Right: Faculty |
 
 - Line spacing: **1.5** for body text, **1.15** for bullet/numbered points, so
   that it visually matches ruled-notebook spacing without wasting page space.
 - Paragraph spacing: leave one blank-line-equivalent (≈6pt) after each answer
   block before the next question starts — mirrors the "leave 2–3 lines after
   each answer" real-exam convention.
+
+### Institutional Header & Footer Standard
+Every question-answer sheet renders a synchronized, uniform header and footer:
+1. **Header**:
+   - **College**: `Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)`
+   - **Affiliation**: `Affiliated to Gujarat Technological University (GTU) | Bachelor of Business Administration (BBA) (Semester 1)`
+   - **Subject**: `<Subject Name> (<Code>)` (e.g. `Principles and Practices of Management (PPM)`)
+   - **Faculty**: `Faculty: <Faculty Names>` (e.g. `Faculty: Prof. Nisha Tollawala, Prof. Karan Kachhadiya`)
+2. **Footer**:
+   - **Left**: `<Subject Name> (<Code>)`
+   - **Center**: `SSASIT • GTU BBA Sem-1`
+   - **Right**: `Faculty: <Faculty Names>`
 
 ## 3. Bold / Italic / Underline — when each is used
 

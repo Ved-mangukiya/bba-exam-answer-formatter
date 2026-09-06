@@ -1,0 +1,2940 @@
+{
+  "semester": 1,
+  "subject": "Indian Knowledge Systems",
+  "faculty": [
+    "Prof. Jyoti Tank"
+  ],
+  "questions": [
+    {
+      "id": "iks-u1-q1",
+      "questionNumber": "Q.1",
+      "questionText": "What is Ancient Knowledge?",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Ancient Knowledge refers to the foundational corpus of scientific, mathematical, medical, linguistic, and philosophical insights developed by classical civilizations that underpins modern human progress.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "It provides the essential cultural identity, values, and traditions that connect individuals to their ancestral roots.",
+              "spans": []
+            },
+            {
+              "text": "It offers practical, time-tested frameworks for environmental sustainability and holistic wellness, such as organic farming and preventative healing.",
+              "spans": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-q2",
+      "questionNumber": "Q.2",
+      "questionText": "List out 4 Vedas with their specialty.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Vedas represent the oldest divine revelations (Shruti) of India, containing a vast body of books on religion, philosophy, science, and rituals.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 9,
+              "style": "underline"
+            },
+            {
+              "start": 51,
+              "end": 57,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Rigveda & Samaveda specialties: The Rigveda consists of 1,028 hymns (Suktas) praising cosmic forces, while the Samaveda specializes in musical melodies (Ganas) set to rhythmic patterns.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 36,
+                  "end": 43,
+                  "style": "underline"
+                },
+                {
+                  "start": 69,
+                  "end": 75,
+                  "style": "underline"
+                },
+                {
+                  "start": 112,
+                  "end": 120,
+                  "style": "underline"
+                },
+                {
+                  "start": 154,
+                  "end": 159,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Yajurveda & Atharvaveda specialties: The Yajurveda provides physical rules and formulas for conducting rituals (Yajnas), whereas the Atharvaveda deals with daily life, health, and healing spells.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 35,
+                  "style": "bold"
+                },
+                {
+                  "start": 41,
+                  "end": 50,
+                  "style": "underline"
+                },
+                {
+                  "start": 112,
+                  "end": 118,
+                  "style": "underline"
+                },
+                {
+                  "start": 134,
+                  "end": 146,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-q3",
+      "questionNumber": "Q.3",
+      "questionText": "Explain: Mahabharat & Leadership.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Mahabharata serves as an interactive sourcebook of worldly wisdom, mapping complex leadership choices through character-driven scenarios and real-life ethical frameworks.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 15,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "It teaches that a true leader, exemplified by Krishna, acts as a guiding mentor who inspires independent moral actions rather than dictating authority.",
+              "spans": [
+                {
+                  "start": 46,
+                  "end": 53,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "It showcases how leadership must prioritize collective well-being (Dharma) over personal ego, jealousy, or rigid bureaucratic vows.",
+              "spans": [
+                {
+                  "start": 67,
+                  "end": 73,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-q4",
+      "questionNumber": "Q.4",
+      "questionText": "List out 18 Puran of Ancient Indian Literature.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The 18 Mahapuranas are encyclopedic, post-Vedic texts designed for the masses that explain Vedic concepts through stories, histories, and genealogies.",
+          "spans": [
+            {
+              "start": 7,
+              "end": 18,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Shiva & Vishnu focus texts: Includes 10 Shaiva Puranas (Shiva, Bhawishya, Markandeya, Linga, Varaha, Skanda, Kurma, Wamana, Matsya, and Brahmanda) and 4 Vaishnava Puranas (Vishnu, Bhagavata, Naradiya, and Garuda).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 40,
+                  "end": 54,
+                  "style": "underline"
+                },
+                {
+                  "start": 154,
+                  "end": 172,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Brahma & other focus texts: Consists of 2 Brahma Puranas (Brahma and Padma) and 2 dedicated to other cosmic forces (Agni and Brahmavaivarta).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 42,
+                  "end": 56,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-q5",
+      "questionNumber": "Q.5",
+      "questionText": "Upanishads.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Upanishads are the concluding, philosophical portions of the Vedas (collectively called Vedanta) composed to explore the ultimate nature of reality and consciousness.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 14,
+              "style": "underline"
+            },
+            {
+              "start": 92,
+              "end": 99,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "They shift human focus away from outward physical rituals toward inward mental contemplation of the Self (Atman) and the Supreme Soul (Brahman).",
+              "spans": [
+                {
+                  "start": 105,
+                  "end": 110,
+                  "style": "underline"
+                },
+                {
+                  "start": 135,
+                  "end": 142,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "They outline the paths of self-realization to attain spiritual liberation (Moksha) from the cycle of rebirth.",
+              "spans": [
+                {
+                  "start": 74,
+                  "end": 80,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-q6",
+      "questionNumber": "Q.6",
+      "questionText": "Natural Language Processing (NLP).",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Natural Language Processing (NLP) is a branch of modern computer science that uses precise linguistic frameworks to enable computers to read, analyze, and translate human languages.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 33,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "It relies heavily on structured syntactic parsing and part-of-speech rules to break sentences down into computable semantic components.",
+              "spans": []
+            },
+            {
+              "text": "It leverages the mathematical, rule-based coding system of Sanskrit grammar to build logical models for artificial intelligence.",
+              "spans": [
+                {
+                  "start": 59,
+                  "end": 67,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-q7",
+      "questionNumber": "Q.7",
+      "questionText": "Name of the Months in the Vikram Samvat.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Vikram Samvat is an ancient Indian lunisolar calendar system used to calculate seasonal shifts, religious festivals, and agricultural cycles.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 17,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Spring and Summer months: The traditional lunisolar calendar begins with Chaitra (March-April), followed sequentially by Vaishakha, Jyeshtha, Ashadha, Shravana, and Bhadrapada (Note: These standard academic names are supplementary as the raw names are not explicitly listed in the slide deck text).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 72,
+                  "end": 79,
+                  "style": "underline"
+                },
+                {
+                  "start": 121,
+                  "end": 130,
+                  "style": "underline"
+                },
+                {
+                  "start": 132,
+                  "end": 140,
+                  "style": "underline"
+                },
+                {
+                  "start": 142,
+                  "end": 149,
+                  "style": "underline"
+                },
+                {
+                  "start": 151,
+                  "end": 159,
+                  "style": "underline"
+                },
+                {
+                  "start": 165,
+                  "end": 175,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Autumn and Winter months: The cycle continues through Ashvina, Kartika, Margashirsha, Pausha, Magha, and concludes with Phalguna (Supplementary academic listing).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 54,
+                  "end": 61,
+                  "style": "underline"
+                },
+                {
+                  "start": 63,
+                  "end": 70,
+                  "style": "underline"
+                },
+                {
+                  "start": 72,
+                  "end": 84,
+                  "style": "underline"
+                },
+                {
+                  "start": 86,
+                  "end": 92,
+                  "style": "underline"
+                },
+                {
+                  "start": 94,
+                  "end": 99,
+                  "style": "underline"
+                },
+                {
+                  "start": 121,
+                  "end": 129,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-q8",
+      "questionNumber": "Q.8",
+      "questionText": "List out Chapters (Kandas) of Ramayana.",
+      "marks": 2,
+      "unit": "Unit 1",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Ramayana is an epic masterpiece composed of 24,000 verses organized into seven distinct narrative stages called Kandas.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 12,
+              "style": "underline"
+            },
+            {
+              "start": 115,
+              "end": 121,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "subheading",
+          "text": "Supporting Core Elements:"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "The early phases: Includes Bala-Kanda (childhood), Ayodhya-Kanda (royal life), Aranya-Kanda (forest exile), and Kishkindha-Kanda (monkey alliance).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 27,
+                  "end": 37,
+                  "style": "underline"
+                },
+                {
+                  "start": 51,
+                  "end": 64,
+                  "style": "underline"
+                },
+                {
+                  "start": 79,
+                  "end": 91,
+                  "style": "underline"
+                },
+                {
+                  "start": 112,
+                  "end": 128,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "The climax and resolution: Consists of Sunder-Kanda (Hanuman's flight), Yuddha-Kanda (battle of Lanka), and Uttara-Kanda (final aftermath).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 39,
+                  "end": 51,
+                  "style": "underline"
+                },
+                {
+                  "start": 72,
+                  "end": 84,
+                  "style": "underline"
+                },
+                {
+                  "start": 109,
+                  "end": 121,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-sn1",
+      "questionNumber": "SN1",
+      "questionText": "Sanskrit Phonetics",
+      "marks": 4,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Sanskrit Phonetics (known as Svara-Vijnana) is the systematic and scientific study of how vocal sounds are generated, pronounced, and heard, serving as the foundational key to preserving the structural purity of the Vedas.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 18,
+              "style": "underline"
+            },
+            {
+              "start": 29,
+              "end": 42,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "PLACES OF PRONUNCIATION (UCHHARANA STHANA)"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Sounds are grouped systematically based on the physical point of contact in the mouth:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Kantha (Throat): Produces guttural sounds, including vowels like अ and consonants like क, ख.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Talu (Palate): Produces palatal sounds, such as the consonants च, ज, श.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 4,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Murdha (Upper Palate): Produces retroflex sounds, such as the consonants ट, ड, ष.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Dantah (Teeth): Produces dental sounds, such as the consonants त, द, स.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Oshthau (Lips): Produces labial sounds, such as the consonants प, ब, म.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 7,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Nasika (Nose): Produces nasal sounds, including consonants like ङ, ञ, न.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "CLASSIFICATION OF SOUND VARIATIONS"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Sanskrit vocal sounds are further divided by duration and breathing dynamics:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Vowels (Svara) by Pitch: Organized by intonation into raised pitch (Udatta), lower pitch (Anudatta), and mixed pitch (Svarita).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "bold"
+                },
+                {
+                  "start": 8,
+                  "end": 13,
+                  "style": "underline"
+                },
+                {
+                  "start": 68,
+                  "end": 74,
+                  "style": "underline"
+                },
+                {
+                  "start": 90,
+                  "end": 98,
+                  "style": "underline"
+                },
+                {
+                  "start": 118,
+                  "end": 125,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Consonants (Vyanjana) by Breath Force: Divided into mild aspiration (Alpa-prana, e.g., क, ग) and strong aspiration (Maha-prana, e.g., ख, घ).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 37,
+                  "style": "bold"
+                },
+                {
+                  "start": 12,
+                  "end": 20,
+                  "style": "underline"
+                },
+                {
+                  "start": 69,
+                  "end": 79,
+                  "style": "underline"
+                },
+                {
+                  "start": 117,
+                  "end": 127,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Concluding Note: This absolute phonetic precision prevents oral corruption, which has allowed centuries of Vedic heritage to be coded perfectly into modern speech-to-text algorithms.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-sn2",
+      "questionNumber": "SN2",
+      "questionText": "Patterns in Sanskrit Language",
+      "marks": 4,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Sanskrit language exhibits a highly mathematical structure where vocabulary and sentences are built using rigorous grammatical rules and predictable patterns rather than arbitrary lexical terms.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 12,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE TWO BASIC WORD CATEGORIES"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Every single word in the Sanskrit language falls strictly into one of two groupings:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Noun Forms (Subanta): Words that represent entities, names, locations, or concepts, such as Rāmaḥ (रामः) or Nadi (नदी).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 12,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Verb Forms (Tinanta): Words that indicate active processes, states of being, or physical tasks, such as pathati (पठति - he reads) or gachhati (गच्छति - he goes).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 12,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE SCIENTIFIC WORD-FORMATION FORMULA"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Words are generated dynamically through a rule-based combination process:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "The Core Base (Dhatu/Pratipadika): The primary root word that carries the fundamental semantic meaning of the concept.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 15,
+                  "end": 20,
+                  "style": "underline"
+                },
+                {
+                  "start": 21,
+                  "end": 32,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "The Grammatical Suffix (Pratyaya): Added to the base to specify case endings (declensions), gender, active tense, and subject number.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 24,
+                  "end": 32,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Syntactic Fusion (Sandhi and Samasa): The logical rules of sound blending (Sandhi) and compounding (Samasa) are applied to create the polished final word.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 36,
+                  "style": "bold"
+                },
+                {
+                  "start": 18,
+                  "end": 24,
+                  "style": "underline"
+                },
+                {
+                  "start": 29,
+                  "end": 35,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Concluding Note: This structured root-and-suffix morphology allows for infinite vocabulary generation, making Sanskrit exceptionally suited for creating unambiguous computer code.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-sn3",
+      "questionNumber": "SN3",
+      "questionText": "Importance of Oral Traditions in Indian Knowledge System",
+      "marks": 4,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Oral Tradition (known as Oral Lore or Guru-Shishya Parampara) is the living practice of preserving and transmitting the cultural, historical, and scientific knowledge of the Indian subcontinent without relying on written text.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 18,
+              "style": "underline"
+            },
+            {
+              "start": 42,
+              "end": 64,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "CRITICAL ROLES OF ORAL TRANSMISSION"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "This system has served several vital societal and academic functions across generations:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Vedic Preservation (Shruti): Sages preserved the vast Vedas purely through precise listening and repeating, ensuring that the musical pitches and pronunciation remained unchanged over millennia.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 20,
+                  "end": 26,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Sustaining Fine Arts and Performance: Complex systems of classical dance (Bharatanatyam, Kathak) and musical ragas were passed down organically through direct watching and practice.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 36,
+                  "style": "bold"
+                },
+                {
+                  "start": 74,
+                  "end": 87,
+                  "style": "underline"
+                },
+                {
+                  "start": 89,
+                  "end": 95,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Securing Local Dialects and Folk Lore: The oral transmission of folk traditions (such as Bhavai in Gujarat and Ramlila in North India) has kept regional identities alive without books.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 37,
+                  "style": "bold"
+                },
+                {
+                  "start": 89,
+                  "end": 95,
+                  "style": "underline"
+                },
+                {
+                  "start": 111,
+                  "end": 118,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Transmitting Practical Ecology: Tribal communities passed down critical knowledge of agricultural patterns, seasonal indicators, and natural medicine through songs and spoken wisdom.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Concluding Note: Recognized globally by UNESCO, India's oral tradition demonstrates the supreme capacity of the human brain to store and retrieve complex databases cleanly without paper.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            },
+            {
+              "start": 40,
+              "end": 46,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-sn4",
+      "questionNumber": "SN4",
+      "questionText": "Vedic Literature",
+      "marks": 4,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Vedic Literature represents a massive, ancient Sanskrit repository of cosmic laws, religious philosophy, astronomy, medicine, and administrative guidance.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE CORE DIVISIONS OF THE VEDIC CORPUS"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Vedic literature is structured into two primary authoritative classes:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Shruti (That which is Heard): Regarded as divine, unchanging cosmic truths revealed to ancient sages. It consists of the four core Vedas.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Smriti (That which is Remembered): Sages composed these flexible, context-dependent texts based on memory, which include supplementary texts like the Vedangas and Puranas.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                },
+                {
+                  "start": 150,
+                  "end": 158,
+                  "style": "underline"
+                },
+                {
+                  "start": 163,
+                  "end": 170,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE FOUR SUBDIVISIONS OF EACH VEDA"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Every Veda is further compartmentalized into four distinct functional sections:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Samhitas: The fundamental collections of sacred mantras and hymns recited during prayers.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Brahmanas: Prose manuals detailing the ritualistic rules and spiritual explanations behind sacrifices (Yajnas).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "underline"
+                },
+                {
+                  "start": 103,
+                  "end": 109,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Aranyakas: Forest treatises explaining the symbolic and meditative values of rituals for ascetics.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Upanishads: High-level philosophical texts focusing on self-realization and non-dual consciousness.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Concluding Note: This tiered literary system allows practitioners to transition smoothly from basic physical rituals to deep, abstract metaphysical philosophy.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-sn5",
+      "questionNumber": "SN5",
+      "questionText": "Short note on the Epic Ramayana and Mahabharata",
+      "marks": 4,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The two great Itihasas (epics), the Ramayana and the Mahabharata, are encyclopedias of ancient Indian life that convey profound philosophical, political, and ethical wisdom.",
+          "spans": [
+            {
+              "start": 14,
+              "end": 22,
+              "style": "underline"
+            },
+            {
+              "start": 36,
+              "end": 44,
+              "style": "underline"
+            },
+            {
+              "start": 53,
+              "end": 64,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE RAMAYANA (THE NORMATIVE EPIC)"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Composed by Maharshi Valmiki, the Ramayana teaches idealistic living through 24,000 verses:",
+          "spans": [
+            {
+              "start": 12,
+              "end": 28,
+              "style": "underline"
+            },
+            {
+              "start": 34,
+              "end": 42,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Focus on Ideal Roles: It provides flawless models for duty, family relationships, and righteous behavior (Dharma) under all circumstances.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 106,
+                  "end": 112,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Key Exemplar: Lord Rama represents the embodiment of righteousness who chooses selfless duty over personal luxury and comfort.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 13,
+                  "style": "bold"
+                },
+                {
+                  "start": 19,
+                  "end": 23,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE MAHABHARATA (THE DESCRIPTIVE EPIC)"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Composed by Veda Vyasa, this massive text of 1,00,000 verses presents a realistic, complex worldview:",
+          "spans": [
+            {
+              "start": 12,
+              "end": 22,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Flawed Reality: Rather than presenting pure ideals, it shows characters with mixed strengths and moral vulnerabilities, mirroring real-world ethical dilemmas.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Source of Wisdom: It houses crucial philosophical treatises, including the Bhagavad Gita, Vidura Niti, and the Yaksha Prashna.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 75,
+                  "end": 88,
+                  "style": "underline"
+                },
+                {
+                  "start": 90,
+                  "end": 101,
+                  "style": "underline"
+                },
+                {
+                  "start": 111,
+                  "end": 125,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Concluding Note: While the Ramayana sets the moral guidelines of how humanity ought to behave, the Mahabharata realistically describes how humanity actually behaves.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-sn6",
+      "questionNumber": "SN6",
+      "questionText": "Give unique aspects of the Sanskrit Language",
+      "marks": 4,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "The Sanskrit language is widely celebrated for its highly mathematical structure, flawless phonetic system, and syntactic versatility, making it a unique marvel in global linguistics.",
+          "spans": [
+            {
+              "start": 4,
+              "end": 12,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "KEY DISTINCTIVE METRICS OF SANSKRIT"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Several architectural features set Sanskrit apart from modern natural languages:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Phonetic Perfection: Written characters correspond strictly to a single, deterministic sound produced at a specific oral site, leaving zero room for silent letters.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Algorithmic Grammar: The language is codified entirely through logical rules by Pāṇini in the Ashtadhyayi, running similarly to an object-oriented programming language.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 80,
+                  "end": 86,
+                  "style": "underline"
+                },
+                {
+                  "start": 94,
+                  "end": 105,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Vocal Pitch Accents: Vedic Sanskrit employs musical pitch tones—such as raised (Udatta), lowered (Anudatta), and mixed (Svarita)—to alter the semantic meaning of a word.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 80,
+                  "end": 86,
+                  "style": "underline"
+                },
+                {
+                  "start": 98,
+                  "end": 106,
+                  "style": "underline"
+                },
+                {
+                  "start": 120,
+                  "end": 127,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Flexible Syntax Order: Because words are declined using case endings (Vibhakti) to lock in their grammatical roles, the word order can be rearranged poetically without changing the sentence's meaning.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 70,
+                  "end": 78,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Concluding Note: These features make Sanskrit highly compatible with modern computer parsing, natural language processing, and neural language modeling.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 16,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-lq1",
+      "questionNumber": "Q.1",
+      "questionText": "Explain Shruti Literature. Characteristics of Shruti Literature. Modern approach for Brahmanas.",
+      "marks": 9,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Introduction: Shruti Literature, meaning \"that which is heard,\" forms the highest authoritative tier of classical Indian scriptures. Regarded as divine, apauruseya (not man-made), and akin to cosmic laws, these texts were revealed directly by God to ancient sages who preserved them through oral transmission. The core of Shruti comprises the four Vedas and their internal subdivisions.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 14,
+              "end": 31,
+              "style": "underline"
+            },
+            {
+              "start": 154,
+              "end": 165,
+              "style": "italic"
+            },
+            {
+              "start": 154,
+              "end": 165,
+              "style": "underline"
+            },
+            {
+              "start": 328,
+              "end": 334,
+              "style": "underline"
+            },
+            {
+              "start": 354,
+              "end": 359,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "CHARACTERISTICS OF SHRUTI LITERATURE"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "The structural and functional attributes of Shruti are defined by the following aspects:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Absolute Unchanging Authority: Shrutis represent eternal cosmic truths and are more authoritative than Smritis, serving as the final court of appeal in philosophical disputes.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 31,
+                  "end": 38,
+                  "style": "underline"
+                },
+                {
+                  "start": 103,
+                  "end": 110,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Sanskrit Rigor & Phonetic Precision: Written in Vedic Sanskrit, these texts use the musical Svara pitch accent system, where any alteration in intonation shifts the meaning.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 36,
+                  "style": "bold"
+                },
+                {
+                  "start": 92,
+                  "end": 97,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Fourfold Functional Divisions: Every Vedic branch contains Samhitas (basic mantras and hymnal invocations), Brahmanas (practical prose explanations of sacrificial rituals), Aranyakas (symbolic, meditative interpretations for ascetics), and Upanishads (ultimate philosophical teachings centered on non-duality and self-realization).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 59,
+                  "end": 67,
+                  "style": "underline"
+                },
+                {
+                  "start": 109,
+                  "end": 118,
+                  "style": "underline"
+                },
+                {
+                  "start": 175,
+                  "end": 184,
+                  "style": "underline"
+                },
+                {
+                  "start": 242,
+                  "end": 252,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE MODERN APPROACH FOR BRAHMANAS"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Rather than looking at Brahmanas as mere ancient manuals for animal sacrifices, modern scholars and leaders take a highly symbolic and structured approach:",
+          "spans": [
+            {
+              "start": 23,
+              "end": 32,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Systematic Process Documentation: Modern academic inquiry views the Brahmanas as the world's earliest attempts at documenting complex, multi-variable operations with extreme procedural control.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 68,
+                  "end": 77,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Ritual as Psychology: The step-by-step methodologies represent cognitive frameworks to establish mental discipline, focus, and alignment of individual work with broader ecological systems.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Modern Relevance: In contemporary project management, the structured, zero-error procedural approach of the Brahmanas serves as an early analogue to ISO quality standards and Lean Six Sigma frameworks.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "bold"
+            },
+            {
+              "start": 109,
+              "end": 118,
+              "style": "underline"
+            },
+            {
+              "start": 150,
+              "end": 153,
+              "style": "underline"
+            },
+            {
+              "start": 176,
+              "end": 191,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-lq2",
+      "questionNumber": "Q.2",
+      "questionText": "Define Indian Knowledge System. Explain importance of IKS in Modern Era.",
+      "marks": 9,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Introduction: The Indian Knowledge System (IKS) is defined as the comprehensive, holistic, and interdisciplinary framework of philosophies, sciences, health systems, arts, and practical traditions developed, preserved, and transmitted over thousands of years within the Indian subcontinent. It represents a highly integrated way of living that connects the body, mind, and spirit to establish collective harmony.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 18,
+              "end": 41,
+              "style": "underline"
+            },
+            {
+              "start": 43,
+              "end": 46,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE MULTIDISCIPLINARY CORE COMPONENTS OF IKS"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "IKS comprises a rich variety of sciences and arts that remain highly functional:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Health & Wellness (Ayurveda): A preventative medical system based on the balance of the three bodily humors (Tridosha) and sustainable lifestyle habits.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 29,
+                  "style": "bold"
+                },
+                {
+                  "start": 19,
+                  "end": 27,
+                  "style": "underline"
+                },
+                {
+                  "start": 108,
+                  "end": 116,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Mathematical and Astronomical Computing: Pioneered zero (0), decimal notation, algebra, and planetary movement systems long before the West.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 40,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Sustainable Architecture (Vastu Shastra): Advanced principles of city planning, materials engineering, and microclimatic design aligned with environmental forces.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 41,
+                  "style": "bold"
+                },
+                {
+                  "start": 26,
+                  "end": 39,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Linguistic Engineering (Sanskrit): A phonetically flawless language operating on algorithmic grammar codes.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 34,
+                  "style": "bold"
+                },
+                {
+                  "start": 24,
+                  "end": 32,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "IMPORTANCE OF IKS IN THE MODERN ERA"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "IKS provides vital solutions to several severe crises faced by the global community today:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Ecological Sustainability: The concept of Panchamahabhutas (five elements) teaches organic agriculture, crop rotation, and sacred forestry to combat modern climate change.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 42,
+                  "end": 58,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Preventative Healthcare: Emphasizing diet and meditation, systems like Ayurveda offer holistic healthcare models to manage stress and chronic lifestyle disorders.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 71,
+                  "end": 79,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Linguistic AI Development: Sanskrit's structural rules provide an optimized syntax foundation for machine learning and programming logic.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 27,
+                  "end": 35,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Modern Relevance: The multidisciplinary depth of IKS guides contemporary business leaders to shift away from profit-only models toward sustainable, ethical, and stakeholder-centric management.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-lq3",
+      "questionNumber": "Q.3",
+      "questionText": "Explain concept of Leadership & Management with Mahabharata.",
+      "marks": 9,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Introduction: The Mahabharata is a monumental epic that serves as an unparalleled sourcebook for worldly wisdom, offering deep case-driven lessons in strategic planning, crisis management, organizational behavior, and administrative ethics. By utilizing a realistic, descriptive framework, it presents leaders in all their strengths and vulnerabilities, showing how decisions ripple through entire ecosystems.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 18,
+              "end": 29,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "CORE LEADERSHIP THEMES IN THE MAHABHARATA"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "The epic outlines several critical guidelines for leading teams and organizations:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Dharma-Centric Decision Making: It teaches that a true leader must uphold ethics (Dharma) above personal gain or emotional attachments, illustrated by Krishna advising Arjuna during his moral dilemma on the battlefield.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 31,
+                  "style": "bold"
+                },
+                {
+                  "start": 82,
+                  "end": 88,
+                  "style": "underline"
+                },
+                {
+                  "start": 152,
+                  "end": 159,
+                  "style": "underline"
+                },
+                {
+                  "start": 169,
+                  "end": 175,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "The Danger of Rigid Vows and Bureaucracy: Exemplified by Bhishma, whose blind loyalty to a rigid, outdated vow (his celibacy and throne protection) forced him to sit silently during the humiliation of Draupadi, proving that rigid rules can cause ethical failures.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 41,
+                  "style": "bold"
+                },
+                {
+                  "start": 57,
+                  "end": 64,
+                  "style": "underline"
+                },
+                {
+                  "start": 204,
+                  "end": 212,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Loyalty Bound to Righteousness: Illustrated by Karna, whose loyalty to his friend Duryodhana is admired, yet serves as a warning that blind loyalty in support of an unethical cause leads to personal and professional ruin.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 31,
+                  "style": "bold"
+                },
+                {
+                  "start": 47,
+                  "end": 52,
+                  "style": "underline"
+                },
+                {
+                  "start": 82,
+                  "end": 92,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Active Workplace Accountability: The silence of the elders during the abuse of Draupadi highlights that leaders who remain passive in the face of injustice create a toxic organizational culture.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 32,
+                  "style": "bold"
+                },
+                {
+                  "start": 79,
+                  "end": 87,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Risk Mitigation and Knowledge Deficits: Abhimanyu entering the complex Chakravyuha military formation with only half-knowledge teaches that undertaking complex projects without a complete exit strategy is disastrous.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 39,
+                  "style": "bold"
+                },
+                {
+                  "start": 40,
+                  "end": 49,
+                  "style": "underline"
+                },
+                {
+                  "start": 71,
+                  "end": 83,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "STRATEGIC LESSONS IN TEAMWORK"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Collaborative Guidance: Krishna proves that the best managers act as coaches who guide and empower their teams rather than micromanaging them.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "bold"
+                },
+                {
+                  "start": 24,
+                  "end": 31,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Inclusive Conflict Resolution: The failed peace negotiations demonstrate that unchecked pride, greed, and refusal to make reasonable compromises will destroy an entire organization.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Modern Relevance: The Mahabharata serves as an essential framework for modern executive education, showing how leaders can navigate complex ethical gray areas in volatile, uncertain, and highly competitive business environments.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "bold"
+            },
+            {
+              "start": 22,
+              "end": 33,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-lq4",
+      "questionNumber": "Q.4",
+      "questionText": "Explain four types of Vedas in detail.",
+      "marks": 9,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Introduction: The four Vedas—Rigveda, Samaveda, Yajurveda, and Atharvaveda—are the oldest and most sacred texts of the Indian Knowledge System, representing the core of Shruti literature. Together, they form an expansive encyclopedia of human knowledge, detailing everything from cosmology and music to ritual procedures and everyday medicine.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 23,
+              "end": 28,
+              "style": "underline"
+            },
+            {
+              "start": 29,
+              "end": 36,
+              "style": "underline"
+            },
+            {
+              "start": 38,
+              "end": 46,
+              "style": "underline"
+            },
+            {
+              "start": 48,
+              "end": 57,
+              "style": "underline"
+            },
+            {
+              "start": 63,
+              "end": 75,
+              "style": "underline"
+            },
+            {
+              "start": 171,
+              "end": 177,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "DETAILED ANALYSIS OF THE FOUR VEDAS"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Each Veda serves a unique spiritual, scientific, and practical purpose:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Rigveda (The Veda of Hymns): Composed around 1500 BCE, it is the oldest text, comprising 1,028 hymns (Suktas) organized into 10 books (Mandalas). It focuses on praising cosmic deities like Agni, Indra, and Varuna, and contains profound cosmological reflections such as the Nasadiya Sukta.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 7,
+                  "style": "underline"
+                },
+                {
+                  "start": 45,
+                  "end": 53,
+                  "style": "underline"
+                },
+                {
+                  "start": 103,
+                  "end": 109,
+                  "style": "underline"
+                },
+                {
+                  "start": 136,
+                  "end": 144,
+                  "style": "underline"
+                },
+                {
+                  "start": 274,
+                  "end": 288,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Samaveda (The Veda of Chants): Often called the \"Veda of Chants,\" it consists of 1,875 verses primarily borrowed from the Rigveda but set to beautiful musical notations (Ganas). It represents the origin of classical Indian music and emphasizes devotion and emotional alignment during rituals.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                },
+                {
+                  "start": 123,
+                  "end": 130,
+                  "style": "underline"
+                },
+                {
+                  "start": 171,
+                  "end": 176,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Yajurveda (The Veda of Rituals): It functions as a practical ritual manual, detailing instructions for setting up sacrificial altars and conducting ceremonies. It is split into Shukla Yajurveda (White, keeping hymns and explanations separate) and Krishna Yajurveda (Black, integrating hymns and explanations together).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 32,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "underline"
+                },
+                {
+                  "start": 178,
+                  "end": 194,
+                  "style": "underline"
+                },
+                {
+                  "start": 251,
+                  "end": 268,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Atharvaveda (The Veda of Daily Life): Written in 20 books (Kandas) containing 731 hymns, it deals with everyday domestic life, politics, and the treatment of 99 specific physical diseases through herbs and spells.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 37,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "underline"
+                },
+                {
+                  "start": 58,
+                  "end": 64,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE ARCHITECTURE OF EACH VEDIC WORK"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Every Veda is systematically organized into four subdivisions matching the stages of human life: the ritualistic Samhitas, the procedural Brahmanas, the meditative Aranyakas, and the philosophical Upanishads.",
+          "spans": [
+            {
+              "start": 114,
+              "end": 122,
+              "style": "underline"
+            },
+            {
+              "start": 139,
+              "end": 148,
+              "style": "underline"
+            },
+            {
+              "start": 165,
+              "end": 174,
+              "style": "underline"
+            },
+            {
+              "start": 199,
+              "end": 209,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Modern Relevance: The Vedas demonstrate how early Indian civilization integrated high physical sciences, mathematics, and environmental sustainability with spiritual values.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "bold"
+            },
+            {
+              "start": 22,
+              "end": 27,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-lq5",
+      "questionNumber": "Q.5",
+      "questionText": "What is Vedic literature? Explain Shruti & Smriti Literature in detail.",
+      "marks": 9,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Introduction: Vedic Literature refers to the massive collection of classical Sanskrit texts that form the basis of the Indian Knowledge System, spanning religion, philosophy, medicine, grammar, and astronomy. This massive corpus is divided into two distinct categories: divine Shruti (the foundational truth) and human Smriti (the applied truth).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 14,
+              "end": 30,
+              "style": "underline"
+            },
+            {
+              "start": 279,
+              "end": 285,
+              "style": "underline"
+            },
+            {
+              "start": 323,
+              "end": 329,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "SHRUTI AND SMRITI COMPARISON"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "To understand Vedic literature, we must distinguish between these two layers:",
+          "spans": []
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Table: Comparison between Shruti Literature and Smriti Literature",
+          "tableHeaders": [
+            "Basis of Distinction",
+            "Shruti Literature",
+            "Smriti Literature"
+          ],
+          "tableRows": [
+            [
+              "Literal Meaning",
+              "Meaning \"that which is heard\".",
+              "Meaning \"that which is remembered\"."
+            ],
+            [
+              "Origin",
+              "Regarded as divine, revealed by God to sages.",
+              "Written by ancient sages based on memory."
+            ],
+            [
+              "Authority Level",
+              "Highest, absolute, and constant authority.",
+              "Supplementary and secondary to Shruti."
+            ],
+            [
+              "Flexibility",
+              "Rigid, eternal, and structurally unchanging.",
+              "Highly flexible; adaptable to time (kala) and place (desa)."
+            ],
+            [
+              "Core Texts",
+              "Consists of the 4 Vedas and Upanishads.",
+              "Includes epics (Itihasas), Puranas, and Vedangas."
+            ],
+            [
+              "Scientific Classification",
+              "Categorized into Samhitas, Brahmanas, etc..",
+              "Divided into 8 categories (e.g., Darshanas, Upavedas)."
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "THE EXPANSIVE SCOPE OF SMRITI"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "While Shruti provides the abstract laws of reality, Smriti acts as the guidebook for daily life:",
+          "spans": [
+            {
+              "start": 6,
+              "end": 12,
+              "style": "underline"
+            },
+            {
+              "start": 52,
+              "end": 58,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Itihasas: The historical epics of the Ramayana and Mahabharata.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                },
+                {
+                  "start": 38,
+                  "end": 46,
+                  "style": "underline"
+                },
+                {
+                  "start": 51,
+                  "end": 62,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Puranas: Encyclopedic stories explaining complex Vedic concepts for the general public.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 7,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 7,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Vedangas: The six structural auxiliary limbs (Shiksha, Kalpa, Vyakarana, Nirukta, Chandas, Jyotisha) used to study the Vedas.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                },
+                {
+                  "start": 46,
+                  "end": 53,
+                  "style": "underline"
+                },
+                {
+                  "start": 55,
+                  "end": 60,
+                  "style": "underline"
+                },
+                {
+                  "start": 62,
+                  "end": 71,
+                  "style": "underline"
+                },
+                {
+                  "start": 73,
+                  "end": 80,
+                  "style": "underline"
+                },
+                {
+                  "start": 82,
+                  "end": 89,
+                  "style": "underline"
+                },
+                {
+                  "start": 91,
+                  "end": 99,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Upavedas: Applied practical knowledge sciences like Ayurveda and Arthashastra.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "style": "underline"
+                },
+                {
+                  "start": 52,
+                  "end": 60,
+                  "style": "underline"
+                },
+                {
+                  "start": 65,
+                  "end": 77,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Modern Relevance: This dual structure allows the foundational values of Indian culture to remain permanent while ensuring that practical laws evolve dynamically to suit modern democratic societies.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-lq6",
+      "questionNumber": "Q.6",
+      "questionText": "Explain importance of Leadership & Management in Indian Knowledge System.",
+      "marks": 9,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Introduction: Leadership and Management in the Indian Knowledge System (IKS) are not viewed as mere commercial skills designed to maximize corporate profits. Instead, IKS approaches leadership as a sacred duty (Dharma) that emphasizes ethical responsibility, personal character, collective well-being, and ecological harmony.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 47,
+              "end": 70,
+              "style": "underline"
+            },
+            {
+              "start": 72,
+              "end": 75,
+              "style": "underline"
+            },
+            {
+              "start": 213,
+              "end": 219,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "KEY PRINCIPLES OF MANAGEMENT IN IKS"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Indian texts outline several profound guidelines for leading and managing teams:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Dharma-Centric Leadership: Decisions must prioritize ethics and the greater good over raw personal gain or shortcut solutions, ensuring long-term institutional stability.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 6,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "The Four Purusharthas as a Life Blueprint: Managers must help employees balance duty (Dharma), wealth creation (Artha), emotional satisfaction (Kama), and ultimate spiritual freedom (Moksha) to prevent severe workplace burnout.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 42,
+                  "style": "bold"
+                },
+                {
+                  "start": 9,
+                  "end": 21,
+                  "style": "underline"
+                },
+                {
+                  "start": 86,
+                  "end": 92,
+                  "style": "underline"
+                },
+                {
+                  "start": 113,
+                  "end": 118,
+                  "style": "underline"
+                },
+                {
+                  "start": 145,
+                  "end": 149,
+                  "style": "underline"
+                },
+                {
+                  "start": 185,
+                  "end": 191,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Action Without Anxiety (Karma Yoga): Based on the Bhagavad Gita, leaders are encouraged to perform duties diligently without being paralyzed by anxiety over future results, improving operational focus.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 36,
+                  "style": "bold"
+                },
+                {
+                  "start": 24,
+                  "end": 34,
+                  "style": "underline"
+                },
+                {
+                  "start": 50,
+                  "end": 63,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Emotional Intelligence and Composure: Illustrated by the character of Rama, who remained calm, composed, and forgiving even when faced with sudden exile, highlighting the necessity of calmness in corporate crisis management.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 37,
+                  "style": "bold"
+                },
+                {
+                  "start": 70,
+                  "end": 74,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "PRACTICAL MANAGEMENT APPLICATIONS"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Inclusive Governance: Leaders are instructed to actively seek advice from diverse stakeholders, just as Rama valued counsel from his allies and Vibhishana.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 105,
+                  "end": 109,
+                  "style": "underline"
+                },
+                {
+                  "start": 146,
+                  "end": 156,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Accountability & Ethics: The fall of Ravana and the Kauravas serves as a stark warning that high academic intelligence or technical skill without moral humility leads to catastrophic organizational failure.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 37,
+                  "end": 43,
+                  "style": "underline"
+                },
+                {
+                  "start": 52,
+                  "end": 60,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Modern Relevance: By integrating values (spirit) with technical learning (mind), IKS provides a complete framework for sustainable, ethical, and stakeholder-centric modern corporate governance.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iks-u1-lq7",
+      "questionNumber": "Q.7",
+      "questionText": "Explain the concept of Itihasa as a source of wisdom. Discuss how the teachings and stories of the Ramayana and Mahabharata provide valuable lessons for personal life, leadership, ethics, and society.",
+      "marks": 9,
+      "unit": "Unit 1",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Introduction: The term Itihasa, which literally denotes \"history,\" refers to the recording of past events viewed through the lens of the four goals of life (Purusharthas). The two great epics, the Ramayana and the Mahabharata, are encyclopedias of ancient Indian wisdom that show how human decisions, ethical choices, and social values shape personal peace and state stability.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 23,
+              "end": 30,
+              "style": "underline"
+            },
+            {
+              "start": 158,
+              "end": 170,
+              "style": "underline"
+            },
+            {
+              "start": 199,
+              "end": 207,
+              "style": "underline"
+            },
+            {
+              "start": 216,
+              "end": 227,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "RAMAYANA VS. MAHABHARATA APPROACHES TO WISDOM"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "The epics use two contrasting literary styles to convey lessons of wisdom:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "The Normative Approach (Ramayana): It presents absolute, idealistic standards of duty (Dharma). Every character acts as an ideal archetype (e.g., Rama as the ideal ruler, Sita as resilient purity, Lakshmana as selfless loyalty).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 34,
+                  "style": "bold"
+                },
+                {
+                  "start": 24,
+                  "end": 32,
+                  "style": "underline"
+                },
+                {
+                  "start": 87,
+                  "end": 93,
+                  "style": "underline"
+                },
+                {
+                  "start": 147,
+                  "end": 151,
+                  "style": "underline"
+                },
+                {
+                  "start": 173,
+                  "end": 177,
+                  "style": "underline"
+                },
+                {
+                  "start": 200,
+                  "end": 209,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "The Descriptive Approach (Mahabharata): It presents a realistic, descriptive mirror of human life. It shows complex scenarios where characters grapple with conflicting duties, and outcomes are determined by actions rather than simple rules.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 39,
+                  "style": "bold"
+                },
+                {
+                  "start": 26,
+                  "end": 37,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "VALUABLE LESSONS FOR PERSONAL LIFE AND LEADERSHIP"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "The teachings of these epics offer deep guidance across multiple dimensions:",
+          "spans": []
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Personal Life (Duty & Endurance): Rama choosing exile to honor his father's vow teaches that honoring ethical promises is superior to personal comfort.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 34,
+                  "end": 38,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Organizational Teamwork: The building of the bridge (Setu Bandh) to Lanka shows how a diverse team of different skills can accomplish massive goals through a shared vision.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 24,
+                  "style": "bold"
+                },
+                {
+                  "start": 53,
+                  "end": 63,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Ethics under Pressure: Arjuna's dilemma on the battlefield and Krishna's teachings in the Bhagavad Gita show that individuals must perform their professional duty to protect justice, overriding personal sentimentality.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 23,
+                  "end": 29,
+                  "style": "underline"
+                },
+                {
+                  "start": 63,
+                  "end": 70,
+                  "style": "underline"
+                },
+                {
+                  "start": 90,
+                  "end": 103,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Social Harm of Arrogance: The downfalls of Ravana and Duryodhana serve as warnings that immense talent or power will be completely destroyed if driven by uncontrolled ego, jealousy, and greed.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 25,
+                  "style": "bold"
+                },
+                {
+                  "start": 43,
+                  "end": 49,
+                  "style": "underline"
+                },
+                {
+                  "start": 54,
+                  "end": 64,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "note",
+          "text": "Modern Relevance: Rather than being treated as simple ancient mythology, Itihasa acts as an interactive simulator of human behavior, preparing modern managers to solve complex leadership challenges with high emotional intelligence and ethical integrity.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 17,
+              "style": "bold"
+            },
+            {
+              "start": 74,
+              "end": 81,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "course": "Bachelor of Business Administration (BBA)",
+  "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+  "university": "Gujarat Technological University (GTU)",
+  "subjectCode": "IKS",
+  "unit": "Unit 1",
+  "header": {
+    "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+    "university": "Gujarat Technological University (GTU)",
+    "course": "Bachelor of Business Administration (BBA)",
+    "semester": 1,
+    "subject": "Indian Knowledge Systems",
+    "subjectCode": "IKS",
+    "faculty": [
+      "Prof. Jyoti Tank"
+    ]
+  },
+  "footer": {
+    "college": "SSASIT",
+    "university": "GTU",
+    "course": "BBA Sem-1",
+    "subject": "Indian Knowledge Systems",
+    "subjectCode": "IKS",
+    "faculty": [
+      "Prof. Jyoti Tank"
+    ]
+  }
+}

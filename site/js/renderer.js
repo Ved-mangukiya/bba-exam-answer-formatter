@@ -232,23 +232,62 @@
   }
 
   /**
-   * Renders the page header block (Subject title 16pt bold centered, meta info)
+   * Renders the page header block (College, University, Course, Subject, Faculty)
    */
   function renderPageHeader(subjectData) {
+    const college = subjectData.college || (subjectData.header && subjectData.header.college) || 'Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)';
+    const university = subjectData.university || (subjectData.header && subjectData.header.university) || 'Gujarat Technological University (GTU)';
+    const course = subjectData.course || (subjectData.header && subjectData.header.course) || 'Bachelor of Business Administration (BBA)';
+    const sem = subjectData.semester ? `Semester ${subjectData.semester}` : 'Semester 1';
     const subjectName = subjectData.subject || 'Subject Answer Sheet';
-    const sem = subjectData.semester ? `Semester ${subjectData.semester}` : 'BBA';
-    const facultyStr = Array.isArray(subjectData.faculty) && subjectData.faculty.length > 0
-      ? subjectData.faculty.join(', ')
+    const code = subjectData.subjectCode || (subjectData.header && subjectData.header.subjectCode) || '';
+    const facultyList = subjectData.faculty || (subjectData.header && subjectData.header.faculty) || [];
+    const facultyStr = Array.isArray(facultyList) && facultyList.length > 0
+      ? facultyList.join(', ')
       : '';
 
     return `
       <header class="gtu-page-header">
-        <h1 class="gtu-subject-title">${escapeHtml(subjectName)}</h1>
+        <div class="gtu-header-institution">
+          <div class="gtu-header-college">${escapeHtml(college)}</div>
+          <div class="gtu-header-affiliation">Affiliated to ${escapeHtml(university)} | ${escapeHtml(course)} (${escapeHtml(sem)})</div>
+        </div>
+        <div class="gtu-header-separator-line"></div>
+        <h1 class="gtu-subject-title">${escapeHtml(subjectName)} ${code ? `<span class="gtu-subject-code">(${escapeHtml(code)})</span>` : ''}</h1>
         <div class="gtu-header-meta">
-          <span>BBA (${escapeHtml(sem)}) — GTU / SSASIT Answer Format</span>
-          ${facultyStr ? `<span>Faculty: ${escapeHtml(facultyStr)}</span>` : ''}
+          <span class="gtu-meta-exam">GTU / SSASIT Answer Sheet Format</span>
+          ${facultyStr ? `<span class="gtu-meta-faculty"><strong>Faculty:</strong> ${escapeHtml(facultyStr)}</span>` : ''}
         </div>
       </header>
+    `;
+  }
+
+  /**
+   * Renders the standardized page footer block
+   */
+  function renderPageFooter(subjectData) {
+    const college = subjectData.college || (subjectData.footer && subjectData.footer.college) || 'SSASIT';
+    const university = subjectData.university || (subjectData.footer && subjectData.footer.university) || 'GTU';
+    const sem = subjectData.semester ? `Sem-${subjectData.semester}` : 'Sem-1';
+    const subjectName = subjectData.subject || '';
+    const code = subjectData.subjectCode || (subjectData.footer && subjectData.footer.subjectCode) || '';
+    const facultyList = subjectData.faculty || (subjectData.footer && subjectData.footer.faculty) || [];
+    const facultyStr = Array.isArray(facultyList) && facultyList.length > 0
+      ? facultyList.join(', ')
+      : '';
+
+    return `
+      <footer class="gtu-page-footer">
+        <div class="gtu-footer-left">
+          <span class="gtu-footer-subject">${escapeHtml(subjectName)} ${code ? `(${escapeHtml(code)})` : ''}</span>
+        </div>
+        <div class="gtu-footer-center">
+          <span class="gtu-footer-college">${escapeHtml(college.includes('SSASIT') ? 'SSASIT' : college)} • ${escapeHtml(university.includes('GTU') ? 'GTU' : university)} BBA ${escapeHtml(sem)}</span>
+        </div>
+        <div class="gtu-footer-right">
+          ${facultyStr ? `<span class="gtu-footer-faculty"><strong>Faculty:</strong> ${escapeHtml(facultyStr)}</span>` : ''}
+        </div>
+      </footer>
     `;
   }
 
@@ -261,6 +300,7 @@
     }
 
     const headerHtml = renderPageHeader(subjectData);
+    const footerHtml = renderPageFooter(subjectData);
     let questionsToRender = subjectData.questions || [];
 
     if (activeQuestionId) {
@@ -277,6 +317,7 @@
           <p class="gtu-paragraph" style="margin-top: 30pt; text-align: center; color: #777;">
             No questions available for this selection.
           </p>
+          ${footerHtml}
         </div>
       `;
     }
@@ -294,6 +335,7 @@
         <div class="gtu-content-flow">
           ${questionsHtml}
         </div>
+        ${footerHtml}
       </div>
     `;
   }
@@ -304,6 +346,7 @@
     renderContentBlock,
     renderQuestion,
     renderPageHeader,
+    renderPageFooter,
     renderDocument
   };
 

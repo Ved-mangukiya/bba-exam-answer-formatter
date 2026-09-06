@@ -1,12 +1,17 @@
 {
   "semester": 1,
+  "course": "Bachelor of Business Administration (BBA)",
+  "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+  "university": "Gujarat Technological University (GTU)",
   "subjects": [
     {
       "slug": "principles-and-practices-of-management",
       "code": "PPM",
       "name": "Principles and Practices of Management",
+      "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
       "faculty": [
-        "SSASIT Management Faculty"
+        "Prof. Nisha Tollawala",
+        "Prof. Karan Kachhadiya"
       ],
       "dataFiles": [
         "../data/sem-1/principles-and-practices-of-management/ppm-sem1.json",
@@ -17,46 +22,76 @@
       "slug": "business-statistics-and-logic",
       "code": "BSL",
       "name": "Business Statistics and Logic",
+      "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
       "faculty": [
-        "SSASIT Statistics Faculty"
+        "Prof. Karan Kachhadiya",
+        "Prof. Birju Patil"
       ],
       "dataFiles": []
     },
     {
       "slug": "financial-accounting",
       "code": "FA",
+      "aliases": ["fa", "financial-accounting", "accounting"],
       "name": "Financial Accounting",
+      "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
       "faculty": [
-        "SSASIT Accounting Faculty"
+        "Dr. Lalit Tank",
+        "Prof. Krishna Gandhi"
       ],
-      "dataFiles": []
+      "dataFiles": [
+        "../data/sem-1/financial-accounting/fa-sem1.json",
+        "data/sem-1/financial-accounting/fa-sem1.json",
+        "../data/sem-1/financial-accounting/fa.json",
+        "data/sem-1/financial-accounting/fa.json"
+      ]
     },
     {
       "slug": "general-communicative-english",
       "code": "GCE",
       "name": "General and Communicative English",
+      "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
       "faculty": [
-        "SSASIT Humanities Faculty"
+        "Prof. Hetal S. Ballar",
+        "Prof. Nisha Tollawala"
       ],
-      "dataFiles": []
+      "dataFiles": [
+        "../data/sem-1/general-communicative-english/gce-sem1.json",
+        "data/sem-1/general-communicative-english/gce-sem1.json"
+      ]
     },
     {
       "slug": "indian-knowledge-systems",
       "code": "IKS",
       "name": "Indian Knowledge Systems",
+      "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
       "faculty": [
-        "SSASIT IKS Faculty"
+        "Prof. Jyoti Tank"
       ],
-      "dataFiles": []
+      "dataFiles": [
+        "../data/sem-1/indian-knowledge-systems/iks-sem1.json",
+        "data/sem-1/indian-knowledge-systems/iks-sem1.json",
+        "../data/sem-1/indian-knowledge-systems/iks.json",
+        "data/sem-1/indian-knowledge-systems/iks.json"
+      ]
     },
     {
-      "slug": "esg-for-sustainability",
-      "code": "ESG",
-      "name": "Fundamentals of ESG for Sustainability",
-      "faculty": [
-        "SSASIT ESG Faculty"
+      "slug": "fundamentals-of-esg-for-sustainability",
+      "code": "FES",
+      "aliases": [
+        "fes",
+        "esg-for-sustainability",
+        "esg"
       ],
-      "dataFiles": []
+      "name": "Fundamentals of ESG for Sustainability",
+      "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+      "faculty": [
+        "Prof. Priya Khoot"
+      ],
+      "dataFiles": [
+        "../data/sem-1/fundamentals-of-esg-for-sustainability/fes-sem1.json",
+        "data/sem-1/fundamentals-of-esg-for-sustainability/fes-sem1.json"
+      ]
     }
   ]
 }

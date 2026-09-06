@@ -1,0 +1,2321 @@
+{
+    "semester": 1,
+    "course": "Bachelor of Business Administration (BBA)",
+    "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+    "university": "Gujarat Technological University (GTU)",
+    "subject": "Fundamentals of ESG for Sustainability",
+    "subjectCode": "FES",
+    "faculty": [
+        "Prof. Priya Khoot"
+    ],
+    "unit": "Unit 1",
+    "header": {
+        "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+        "university": "Gujarat Technological University (GTU)",
+        "course": "Bachelor of Business Administration (BBA)",
+        "semester": 1,
+        "subject": "Fundamentals of ESG for Sustainability",
+        "subjectCode": "FES",
+        "faculty": [
+            "Prof. Priya Khoot"
+        ]
+    },
+    "footer": {
+        "college": "SSASIT",
+        "university": "GTU",
+        "course": "BBA Sem-1",
+        "subject": "Fundamentals of ESG for Sustainability",
+        "subjectCode": "FES",
+        "faculty": [
+            "Prof. Priya Khoot"
+        ]
+    },
+    "questions": [
+        {
+            "id": "fes-u1-q1a",
+            "questionNumber": "Q.1 (a)",
+            "questionText": "What is Sustainability?",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to the United Nations, Sustainability refers to the balanced and responsible management of environmental protection, economic growth, and social development to create a prosperous, equitable, and long-term viable future for humanity.",
+                    "spans": [
+                        {
+                            "start": 33,
+                            "end": 47,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Triple Bottom Line Principle: It coordinates three interlinked dimensions of human activity: ecological health (planet), social equity (people), and economic prosperity (profit).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Intergenerational Justice: It focuses on managing existing natural capitals in a manner that ensures current human needs are met without depriving future generations of their survival resources.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q1b",
+            "questionNumber": "Q.1 (b)",
+            "questionText": "Define Green Ranking.",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to corporate sustainability disclosure protocols, Green Ranking is defined as the systematic process of assessing, scoring, and comparing business enterprises based on their measurable environmental performance and ESG compliance metrics.",
+                    "spans": [
+                        {
+                            "start": 60,
+                            "end": 73,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Multi-Criteria Evaluation: Companies are scored across standardized operational indicators such as carbon emissions, energy efficiency, waste recycling, and water conservation.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Stakeholder Transparency: It provides objective data to institutional investors, credit rating agencies, and consumers, encouraging businesses to adopt green innovations.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q1c",
+            "questionNumber": "Q.1 (c)",
+            "questionText": "What is Carbon Footprint?",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to the Greenhouse Gas (GHG) Protocol, a Carbon Footprint represents the total volume of greenhouse gases (primarily carbon dioxide and methane) emitted directly or indirectly into the atmosphere by an individual, product, process, or business enterprise.",
+                    "spans": [
+                        {
+                            "start": 50,
+                            "end": 66,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Standardized Unit: It is calculated and reported in metric tonnes of carbon dioxide equivalent (CO2e) using the global warming potential of different greenhouse gases.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 96,
+                                    "end": 100,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Boundary Scoping: For commercial enterprises, it is structured into Scope 1 (direct operational emissions), Scope 2 (indirect electricity emissions), and Scope 3 (broader value chain emissions).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 16,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 16,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 68,
+                                    "end": 75,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 108,
+                                    "end": 115,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 155,
+                                    "end": 162,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q1d",
+            "questionNumber": "Q.1 (d)",
+            "questionText": "Define Pollution.",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to the eminent ecologist E. P. Odum, Pollution is an undesirable change in the physical, chemical, or biological characteristics of our air, land, and water that may or will harmfully affect human life, industrial processes, living conditions, and cultural assets.",
+                    "spans": [
+                        {
+                            "start": 47,
+                            "end": 56,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Assimilative Capacity Overload: It occurs when human-made or natural contaminants enter the biosphere at a rate exceeding the environment's capacity to absorb or neutralize them.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 30,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 30,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Ecological Instability: It disrupts biodiversity, degrades natural habitats, lowers agricultural yields, and triggers climate shifts.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q1e",
+            "questionNumber": "Q.1 (e)",
+            "questionText": "Define Sustainable Development.",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to the World Commission on Environment and Development (WCED) in its landmark 1987 Brundtland Report ('Our Common Future'), Sustainable Development is defined as 'development that meets the needs of the present without compromising the ability of future generations to meet their own needs.'",
+                    "spans": [
+                        {
+                            "start": 88,
+                            "end": 92,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 93,
+                            "end": 110,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 136,
+                            "end": 159,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 175,
+                            "end": 298,
+                            "style": "italic"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Integration of Pillars: It emphasizes that long-term economic expansion must be decoupled from ecological destruction and coupled with social inclusion.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Limits of Technology: It acknowledges that the Earth has finite resource thresholds, and technology must be designed to work within natural carrying capacities.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 20,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 20,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q1f",
+            "questionNumber": "Q.1 (f)",
+            "questionText": "What is the Greenhouse Effect?",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to climate science frameworks and the IPCC, the Greenhouse Effect is a natural planetary atmospheric process by which specific gases (greenhouse gases) absorb outgoing long-wave infrared radiation emitted by the Earth's surface and re-emit it in all directions, thereby warming the lower atmosphere.",
+                    "spans": [
+                        {
+                            "start": 58,
+                            "end": 75,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Planetary Thermal Regulation: It acts as a natural insulation blanket, keeping global average temperatures at a habitable -15°C instead of a frozen -18°C.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Anthropogenic Interference: Industrial activities have unnaturally concentrated these heat-trapping gases, leading to global warming.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q1g",
+            "questionNumber": "Q.1 (g)",
+            "questionText": "What is Particulate Matter?",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to the World Health Organization (WHO) air quality guidelines, Particulate Matter (PM) refers to an extremely complex atmospheric suspension of microscopic solid particles and liquid droplets consisting of organic compounds, soot, dust, and heavy metals.",
+                    "spans": [
+                        {
+                            "start": 73,
+                            "end": 96,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Aerodynamic Sizing: It is classified into PM10 (particles under 10 microns in diameter, like pollen and dust) and PM2.5 (fine particles under 2.5 microns, like combustion aerosols).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 42,
+                                    "end": 46,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 114,
+                                    "end": 119,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Cardiovascular & Respiratory Hazards: Due to their extremely small scale, PM2.5 can bypass biological nasal filters and penetrate deep into pulmonary alveoli and blood systems.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 36,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 36,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q1h",
+            "questionNumber": "Q.1 (h)",
+            "questionText": "Define Green Business.",
+            "marks": 2,
+            "unit": "Unit 1",
+            "type": "short",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "According to modern ecological economics, a Green Business is a commercial enterprise that operates in an environmentally responsible manner by integrating eco-friendly processes, clean energies, and circular supply chain mechanics into its core operations and products.",
+                    "spans": [
+                        {
+                            "start": 44,
+                            "end": 58,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Footprint Minimization: It actively reduces resource wastage, eliminates toxic inputs, and targets net-zero operational carbon emissions.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Sustainable Value Creation: It delivers eco-certified products to consumers, generating financial profits while protecting biodiversity and human health.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q2a",
+            "questionNumber": "Q.2 (a)",
+            "questionText": "Explain Types of Ecosystems.",
+            "marks": 4,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "An ecosystem is a dynamic, self-regulating biological system where living (biotic) communities interact with their physical (abiotic) environments, enabling nutrient cycling and unidirectional energy flow.",
+                    "spans": [
+                        {
+                            "start": 3,
+                            "end": 12,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "I. Classification Based on Habitational Medium"
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "i. Terrestrial Ecosystems (Land-Based)"
+                },
+                {
+                    "blockType": "paragraph",
+                    "text": "Natural land habitats that are heavily influenced by climate and soil types. These are subdivided into:",
+                    "spans": []
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Forest Ecosystems: Dominated by woody vegetation and dense canopies (e.g., tropical rainforests, deciduous woodlands).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Grassland Ecosystems: Dominated by non-woody, herbaceous grasses in semi-arid zones (e.g., savannahs).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Desert Ecosystems: Found in hyper-arid zones, requiring specialized xerophytic adaptations (e.g., cacti storing water).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "ii. Aquatic Ecosystems (Water-Based)"
+                },
+                {
+                    "blockType": "paragraph",
+                    "text": "Marine and freshwater zones supporting diverse trophic chains, further subdivided into:",
+                    "spans": []
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Freshwater Ecosystems: Systems with very low salinity levels, comprising lentic (still water like lakes/ponds), lotic (flowing water like rivers), and wetlands.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Marine Ecosystems: High-salinity oceanic zones, comprising deep oceans, coastal estuaries, and highly biodiverse coral reefs.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "II. Classification Based on Energy and Matter Exchange"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Open Ecosystems: Allow the free exchange of both energy and physical matter with the surrounding environment (e.g., natural forests and open rivers).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 15,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 15,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Closed Ecosystems: Restrict the exchange of matter, while allowing thermal and solar energy to cross boundaries (extremely rare in nature, primarily artificial research bio-domes).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q2b",
+            "questionNumber": "Q.2 (b)",
+            "questionText": "Explain Climate Change.",
+            "marks": 4,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "Climate change refers to a statistically significant, long-term shift in the global or regional average weather patterns (including temperatures, precipitation, and storm frequencies) spanning decades to millions of years.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 14,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Major Anthropogenic (Human-Induced) Drivers"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Fossil Fuel Combustion: Coal, oil, and gas burning for electricity generation and transportation is the largest source of carbon emissions.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Deforestation: Clearing forests releases stored carbon into the atmosphere and destroys nature's carbon sinks.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 14,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 14,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Industrial Manufacturing: High-temperature production of cement, iron, steel, and synthetic chemicals contributes heavily to global GHG emissions.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Severe Global Environmental Impacts"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Hotter Temperatures and Heat Waves: Accelerates soil evaporation and aggravates heat-related human illnesses.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 35,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 35,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Extreme Meteorological Storms: Warmer ocean surfaces fuel more powerful cyclones, hurricanes, and typhoons, causing devastating flood disasters.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 30,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 30,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Agricultural Drought and Desertification: Shrinks arable soil, reducing crop yields and threatening food security.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 41,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 41,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "A Warming, Rising Ocean: Thermal expansion and glacier melt cause global sea levels to rise, directly threatening coastal cities.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 23,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 23,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "note",
+                    "text": "Concluding Note: Corporate climate response is driven by international accords like the Paris Agreement and Indian statutory compliance like SEBI'S BRSR.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 16,
+                            "style": "bold"
+                        },
+                        {
+                            "start": 88,
+                            "end": 103,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 142,
+                            "end": 153,
+                            "style": "underline"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q2c",
+            "questionNumber": "Q.2 (c)",
+            "questionText": "Write a short note on Green Ranking and its significance for business enterprises.",
+            "marks": 4,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "Green Ranking represents a structured, third-party performance evaluation system that audits, grades, and benchmarks corporate environmental performance against established ecological indicators.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Core Criteria Evaluated in Green Rankings"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Carbon Intensity & Mitigation: Annual greenhouse gas emissions audited under the GHG Protocol.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 29,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 29,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 81,
+                                    "end": 93,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Circular Material Management: Quantification of solid waste recycling rates and water recycle loops.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Compliance & Policy Systems: Implementation of formal Environmental Management Systems verified by certifications like ISO 14001.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 119,
+                                    "end": 128,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Business Significance for Enterprises"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Access to Sustainable Capital: Top-tier rankings on global indices like the Dow Jones Sustainability Index (DJSI) or MSCI ESG Ratings attract massive institutional green investments.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 29,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 29,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 76,
+                                    "end": 113,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 117,
+                                    "end": 133,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Reputation and Competitive Differentiation: Helps organizations avoid accusations of 'greenwashing' and builds strong brand loyalty among eco-conscious consumers.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 42,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 42,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Resource Cost Reductions: Implementing ranking criteria drives operational efficiency, lowering utility and material costs.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "note",
+                    "text": "Concluding Note: Indian listed firms benchmark green metrics to meet compliance under SEBI's Business Responsibility and Sustainability Report (BRSR).",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 16,
+                            "style": "bold"
+                        },
+                        {
+                            "start": 86,
+                            "end": 150,
+                            "style": "underline"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q2d",
+            "questionNumber": "Q.2 (d)",
+            "questionText": "Component of Ecosystem.",
+            "marks": 4,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "An ecosystem operates as a cohesive functional unit of nature through continuous interactions between its living biological entities and its non-living physical and chemical environment.",
+                    "spans": []
+                },
+                {
+                    "blockType": "heading",
+                    "text": "i. Abiotic Components (Non-Living Environmental Factors)"
+                },
+                {
+                    "blockType": "paragraph",
+                    "text": "These are physical and chemical conditions that determine the survival, growth, and distribution of biotic organisms:",
+                    "spans": []
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Physical Conditions: Sunlight (the primary source of energy), atmospheric temperature, wind patterns, and humidity levels.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 20,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 20,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Chemical Inputs: Water, soil minerals, organic carbon, and atmospheric gases (Oxygen, Nitrogen, and Carbon Dioxide).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 16,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 16,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "ii. Biotic Components (Living Communities)"
+                },
+                {
+                    "blockType": "paragraph",
+                    "text": "These are organized based on their trophic (nutritional) roles in food webs:",
+                    "spans": []
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Producers (Autotrophs): Green plants, phytoplankton, and cyanobacteria that synthesize organic nutrients from solar energy via photosynthesis.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Consumers (Heterotrophs): Organisms that must ingest other living matter. They are classified into Primary Consumers (herbivores), Secondary Consumers (carnivores), and Tertiary/Quaternary Consumers (apex predators).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Decomposers (Saprotrophs): Fungi and bacteria that saprophytically break down dead organic matter, recycling vital mineral nutrients back into the soil for producers.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q2e",
+            "questionNumber": "Q.2 (e)",
+            "questionText": "Explain the necessity of Environmental Reporting Standards and Certifications for modern businesses.",
+            "marks": 4,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "Environmental Reporting Standards and Certifications are structured, independent disclosure frameworks and management protocols used by modern enterprises to measure, report, and verify their ecological impact.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 52,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Crucial Corporate Drivers of Adoption"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Attracting Global Investment: Standardized disclosures under the Global Reporting Initiative (GRI) and the Sustainability Accounting Standards Board (SASB) are essential for satisfying institutional investors evaluating ESG risks.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 64,
+                                    "end": 98,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 107,
+                                    "end": 154,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Enhancing Brand Trust: Holding certified audits like ISO 14001 (Environmental Management System) or LEED (for green buildings) provides verified, non-greenwashed proof of environmental responsibility.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 53,
+                                    "end": 62,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 100,
+                                    "end": 104,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Regulatory and Statutory Compliance: Prepares corporations to seamlessly comply with tightening local and global regulations, preventing costly penalties.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 36,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 36,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Operational Efficiency & Cost Savings: Following Energy Management Certifications like ISO 50001 reduces total electricity consumption, directly dropping overhead expenses.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 38,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 38,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 87,
+                                    "end": 96,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "note",
+                    "text": "Concluding Note: Indian listed firms execute these frameworks to comply with SEBI's mandatory Business Responsibility and Sustainability Reporting (BRSR) requirements.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 16,
+                            "style": "bold"
+                        },
+                        {
+                            "start": 95,
+                            "end": 153,
+                            "style": "underline"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q2f",
+            "questionNumber": "Q.2 (f)",
+            "questionText": "Differentiate between Global Warming and Climate Change, highlighting their impacts.",
+            "marks": 4,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "To clarify these distinct yet interlinked phenomena, the table below outlines the key structural differences between Global Warming and Climate Change.",
+                    "spans": [
+                        {
+                            "start": 117,
+                            "end": 131,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 136,
+                            "end": 150,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "table",
+                    "tableCaption": "Table: Differences between Global Warming and Climate Change",
+                    "tableHeaders": [
+                        "Basis of Distinction",
+                        "Global Warming",
+                        "Climate Change"
+                    ],
+                    "tableRows": [
+                        [
+                            "Definition & Meaning",
+                            "The gradual, long-term increase in the average temperature near the Earth's surface.",
+                            "The broader, long-term shift in global or regional weather patterns, including temperature, rain, and wind."
+                        ],
+                        [
+                            "Scope of Phenomenon",
+                            "A single-indicator aspect of environmental change, focusing purely on planetary temperature.",
+                            "A multi-indicator, comprehensive system change covering temperature, precipitation, and air currents."
+                        ],
+                        [
+                            "Primary Driving Force",
+                            "Uncontrolled accumulation of greenhouse gases in the troposphere trapping heat radiation.",
+                            "Driven by global warming, which triggers shifts in atmospheric circulation, ocean currents, and ice covers."
+                        ],
+                        [
+                            "Primary Indicators",
+                            "A documented average surface temperature increase of approximately 1.0°C since the year 1880.",
+                            "Increased frequency of severe cyclones, prolonged droughts, shifting monsoon seasons, and expanding deserts."
+                        ],
+                        [
+                            "Direct Impacts",
+                            "Accelerates the melting of glaciers and polar ice sheets; increases thermal expansion of ocean water.",
+                            "Disrupts natural ecosystems, causing species extinction, crop failures, habitat loss, and human displacement."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q3a",
+            "questionNumber": "Q.3 (a)",
+            "questionText": "Explain steps of Start Green Business.",
+            "marks": 7,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "Starting a Green Business is a multi-stage strategic process that embeds environmental sustainability directly into a commercial venture's lifecycle. Rather than treating ecological protection as an after-thought, a green business integrates resource efficiency and pollution reduction into its fundamental business model.",
+                    "spans": [
+                        {
+                            "start": 11,
+                            "end": 25,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Sequential Process to Establish a Green Business Enterprise"
+                },
+                {
+                    "blockType": "diagram",
+                    "diagramTitle": "Process Flow: Steps to Start a Green Business",
+                    "diagramCaption": "Sequential steps of establishing a green business.",
+                    "diagramSvgOrUrl": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 380\" width=\"100%\" height=\"100%\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"8\"/><g transform=\"translate(20, 20)\" font-family=\"system-ui, -apple-system, sans-serif\" font-size=\"12\" font-weight=\"600\" text-anchor=\"middle\"><rect x=\"0\" y=\"0\" width=\"150\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0f766e\" stroke-width=\"1.5\"/><text x=\"75\" y=\"25\" fill=\"#0f172a\">1. Conduct EIA</text><text x=\"75\" y=\"40\" fill=\"#64748b\" font-size=\"10\">Impact Assessment</text><path d=\"M 150 25 L 185 25\" stroke=\"#0f766e\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arrow)\"/><rect x=\"190\" y=\"0\" width=\"165\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0f766e\" stroke-width=\"1.5\"/><text x=\"272\" y=\"25\" fill=\"#0f172a\">2. Sustainable Inputs</text><text x=\"272\" y=\"40\" fill=\"#64748b\" font-size=\"10\">Biodegradable Sourcing</text><path d=\"M 355 25 L 390 25\" stroke=\"#0f766e\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arrow)\"/><rect x=\"395\" y=\"0\" width=\"160\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0f766e\" stroke-width=\"1.5\"/><text x=\"475\" y=\"25\" fill=\"#0f172a\">3. Efficient Infra</text><text x=\"475\" y=\"40\" fill=\"#64748b\" font-size=\"10\">Clean Energy / Solar</text><path d=\"M 555 25 L 590 25\" stroke=\"#0f766e\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arrow)\"/><rect x=\"595\" y=\"0\" width=\"125\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0f766e\" stroke-width=\"1.5\"/><text x=\"657\" y=\"30\" fill=\"#0f172a\">4. Green SCM</text><path d=\"M 657 50 L 657 100\" stroke=\"#0f766e\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arrow)\"/><rect x=\"495\" y=\"100\" width=\"225\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0f766e\" stroke-width=\"1.5\"/><text x=\"607\" y=\"125\" fill=\"#0f172a\">5. 5Rs Waste Management</text><text x=\"607\" y=\"140\" fill=\"#64748b\" font-size=\"10\">Refuse, Reduce, Reuse, Recycle, Recover</text><path d=\"M 495 125 L 460 125\" stroke=\"#0f766e\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arrow)\"/><rect x=\"260\" y=\"100\" width=\"195\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0f766e\" stroke-width=\"1.5\"/><text x=\"357\" y=\"125\" fill=\"#0f172a\">6. Secure Certifications</text><text x=\"357\" y=\"140\" fill=\"#64748b\" font-size=\"10\">ISO 14001 / LEED</text><path d=\"M 260 125 L 225 125\" stroke=\"#0f766e\" stroke-width=\"1.5\" fill=\"none\" marker-end=\"url(#arrow)\"/><rect x=\"20\" y=\"100\" width=\"200\" height=\"50\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0f766e\" stroke-width=\"1.5\"/><text x=\"120\" y=\"125\" fill=\"#0f172a\">7. Sustainability Reporting</text><text x=\"120\" y=\"140\" fill=\"#64748b\" font-size=\"10\">GRI / SEBI BRSR Metrics</text></g><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 9 5 L 0 9 z\" fill=\"#0f766e\"/></marker></defs></svg>"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "decimal",
+                    "items": [
+                        {
+                            "text": "Conduct an Environmental Impact Assessment (EIA): Before launch, map out the potential resource footprints, waste generations, and emission zones of the business to design mitigation plans.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 49,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 49,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Select Sustainable & Biodegradable Input Materials: Source raw materials that are organic, non-toxic, post-consumer recycled, or made from sustainable biomass (e.g., agricultural residue packaging instead of styrofoam).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 50,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 50,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Install Resource-Efficient Infrastructure: Build eco-friendly facilities using LED lighting, high-efficiency appliances (Energy Star), solar panel systems, and water conservation loops (rainwater harvesting and graywater reuse).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 42,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 42,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Establish Green Supply Chain Management (GSCM): Select suppliers with verified eco-certifications. Partner with carbon-neutral logistics operators utilizing electric or hybrid vehicles, and minimize plastic packaging.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 47,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 47,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Implement the 5Rs Waste Management Framework: Structure operational waste around the 5Rs hierarchy: Refuse unnecessary packaging, Reduce output scrap, Reuse processing components, Recycle waste materials, and Recover processing energy.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 45,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 45,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 84,
+                                    "end": 87,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Secure Recognized Environmental Certifications: Undergo independent third-party audits to obtain official certifications like ISO 14001 for EMS, LEED for sustainable workspace buildings, or standard organic ecolabels.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 47,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 47,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 126,
+                                    "end": 135,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 148,
+                                    "end": 152,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Set Up Structured Sustainability Reporting: Establish transparent ESG metrics aligned with the GRI Standards or SEBI's BRSR guidelines to communicate performance to investors, consumers, and regulators.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 43,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 43,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 95,
+                                    "end": 108,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 112,
+                                    "end": 123,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Real-World Business Application:"
+                },
+                {
+                    "blockType": "paragraph",
+                    "text": "Companies like Patagonia use 100% recycled input fibers, offer repair programs, and utilize certified green logistics to execute a highly profitable, environment-first green business strategy.",
+                    "spans": [
+                        {
+                            "start": 15,
+                            "end": 24,
+                            "style": "underline"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q3b",
+            "questionNumber": "Q.3 (b)",
+            "questionText": "Discuss the effort to Combat Climate Change.",
+            "marks": 7,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "The modern global effort to combat climate change consists of a coordinated multi-tier framework uniting international treaties, national regulatory policies, and corporate ESG initiatives to drastically limit greenhouse gas emissions and foster global climate resilience.",
+                    "spans": []
+                },
+                {
+                    "blockType": "heading",
+                    "text": "I. Landmark International Climatic Treaties"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "UNFCCC (1992): The United Nations Framework Convention on Climate Change was adopted at the Rio Earth Summit. It acts as the foundational global treaty aimed at stabilizing atmospheric GHG levels.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 14,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 14,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 8,
+                                    "end": 12,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Kyoto Protocol (1997): The first treaty to legally mandate developed nations to reduce emissions. It established market mechanisms like the carbon credit trading system.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 16,
+                                    "end": 20,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Paris Climate Agreement (2016): A milestone treaty where nearly all nations pledged to work collectively to limit the rise in global temperatures to well below 2.0°C, aiming for a safer 1.5°C ceiling above pre-industrial levels.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 25,
+                                    "end": 29,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "II. Strategic Business Climate Mitigation Efforts"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Transition to Renewable Power: Modern businesses are replacing fossil-fuel electricity by investing in and setting up on-site solar panels, wind turbine arrays, and biomass thermal plants.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 29,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 29,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Carbon Footprint Management: Firms are actively tracking carbon inventories under the GHG Protocol, purchasing verified carbon offsets, and targeting Net-Zero operational footprints.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 86,
+                                    "end": 98,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 150,
+                                    "end": 158,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Circular Supply Integration: Eliminating carbon-intensive waste by keeping materials and components in active circulation.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Real-World Business Application:"
+                },
+                {
+                    "blockType": "paragraph",
+                    "text": "Technology major Infosys became carbon neutral thirty years ahead of the Paris Agreement's 2050 target by heavily investing in green building designs, installing off-grid solar power plants, and funding carbon-offsetting community projects.",
+                    "spans": [
+                        {
+                            "start": 17,
+                            "end": 24,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 74,
+                            "end": 89,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 92,
+                            "end": 96,
+                            "style": "underline"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q3c",
+            "questionNumber": "Q.3 (c)",
+            "questionText": "Define Ecology. Explain the scope and importance of ecology in today's world.",
+            "marks": 7,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "Coined by the biologist Ernst Haeckel in 1869, Ecology is the scientific study of the interactions between living biological organisms and their surrounding physical and chemical environment. The term is derived from the Greek words Oikos (house or habitat) and Logos (the study of).",
+                    "spans": [
+                        {
+                            "start": 24,
+                            "end": 37,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 41,
+                            "end": 45,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 47,
+                            "end": 54,
+                            "style": "underline"
+                        },
+                        {
+                            "start": 236,
+                            "end": 241,
+                            "style": "italic"
+                        },
+                        {
+                            "start": 265,
+                            "end": 270,
+                            "style": "italic"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "Supporting Core Elements of Ecology:"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Biotic-Abiotic Integration: It examines how living communities (producers, consumers, decomposers) interact with non-living environmental matrices (water, air, temperature, soil).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Ecological Balance: It studies the unidirectional flow of solar energy and the cycling of biogenetic minerals to maintain stable ecosystem carrying capacities.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "The Scope of Ecological Levels (Organism to Biosphere)"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Organismal Ecology (Autecology): Focuses on individual adaptation (e.g., desert cacti storing water).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Population Ecology: Studies groups of a single species in an area, tracking birth, death, and migration rates.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Community Ecology: Examines interspecies interactions like competition, predation, and mutualism.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Ecosystem Ecology: Audits energy flows, food webs, and nutrient mineral cycles across regions.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 17,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Global Ecology (Biosphere): Analyzes planet-scale patterns like the global carbon cycle and climate change.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 26,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Vast Importance of Ecology in Today's World"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "bullet",
+                    "items": [
+                        {
+                            "text": "Biodiversity Conservation: Ecology provides the scientific framework to identify threatened species and establish wildlife reserves and national parks.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 25,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Sustainable Resource Management: It guides selective timber logging and sustainable fisheries, protecting finite natural capitals.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Pollution Auditing & Management: Helps track how hazardous chemical pollutants biomagnify in trophic lines.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 31,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Eco-Based Agriculture: Ecology improves crop yield and soil quality through organic rotation and biological pest controls (e.g., ladybird beetles preying on crop aphids).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q3d",
+            "questionNumber": "Q.3 (d)",
+            "questionText": "Discuss the concept of green ranking.",
+            "marks": 7,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "Green Ranking represents a structured, quantitative benchmarking framework designed to evaluate, score, and compare corporations based on their environmental management systems, carbon emission reductions, and overall sustainability governance.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 13,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Core Pillars of Corporate Evaluation"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Carbon & Emission Intensity: Standardized audit of operational carbon output relative to total financial revenue, ensuring companies are reducing Scope 1 and 2 emissions.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 27,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Water and Circular Materials: Measures the volume of wastewater recycled and the circularity of solid waste, highlighting companies striving for zero-waste-to-landfill status.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Environmental Governance and Certifications: Checks if the enterprise has deployed certified Environmental Management Systems (such as ISO 14001) and established clear sustainability policies.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 43,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 43,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 136,
+                                    "end": 145,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Supply Chain Ecological Responsibility: Audits whether upstream suppliers adhere to environmental and labor standards, preventing externalized pollution.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 38,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 38,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Prominent Global Green Ranking Systems"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "CDP (formerly Carbon Disclosure Project): An international system rating corporate climate, forest, and water management transparency.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 41,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 41,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Dow Jones Sustainability Indices (DJSI): Benmarks companies based on financially-material ESG factors.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 39,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 39,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "MSCI ESG Ratings: Grades companies on a scale from AAA to CCC according to their industry-specific ESG risks and management capabilities.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 16,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 16,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "CRISIL ESG Assessment: The prominent local credit agency evaluating and ranking the environmental and social performance of Indian corporates.",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 21,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "note",
+                    "text": "Concluding Note: High-ranking green performance is a key differentiator for companies reporting under SEBI's BRSR guidelines in India.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 16,
+                            "style": "bold"
+                        },
+                        {
+                            "start": 103,
+                            "end": 114,
+                            "style": "underline"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fes-u1-q3e",
+            "questionNumber": "Q.3 (e)",
+            "questionText": "Types of environmental pollutants.",
+            "marks": 7,
+            "unit": "Unit 1",
+            "type": "detail",
+            "answer": [
+                {
+                    "blockType": "paragraph",
+                    "text": "Environmental Pollutants are solid, liquid, or gaseous substances, as well as forms of energy (such as heat and noise), introduced into the biosphere through human activities or natural events that degrade the quality of air, water, and soil, posing hazards to ecosystems.",
+                    "spans": [
+                        {
+                            "start": 0,
+                            "end": 24,
+                            "style": "underline"
+                        }
+                    ]
+                },
+                {
+                    "blockType": "heading",
+                    "text": "Classification of Pollutants Based on Key Ecological Parameters"
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "I. On the Basis of Existence in Nature"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Quantitative Pollutants: Substances that naturally exist in the environment, but become harmful pollutants when human or natural activities push their concentration beyond permissible thresholds (e.g., Carbon Dioxide CO2, Carbon Monoxide CO, and Nitrogen Oxides NOx).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 23,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 23,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 218,
+                                    "end": 221,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Qualitative Pollutants: Synthetic, human-made substances that do not naturally exist in the biosphere. They are hazardous even in trace concentrations (e.g., plastics, DDT, PCBs, and Chlorofluorocarbons CFCs).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 22,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "II. On the Basis of Form and Origin"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Primary Pollutants: Emitted directly into the atmosphere in their original chemical state from a specific source (e.g., smoke from factory chimneys, volcanic ash, dust particles, and Sulfur Dioxide SO2).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 18,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 198,
+                                    "end": 201,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Secondary Pollutants: Formed through chemical or photochemical reactions in the atmosphere between primary pollutants and natural compounds like water vapor and sunlight (e.g., ground-level Ozone O3, Peroxyacetyl Nitrate PAN, and acid rain).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 20,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 20,
+                                    "style": "underline"
+                                },
+                                {
+                                    "start": 197,
+                                    "end": 199,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "blockType": "subheading",
+                    "text": "III. On the Basis of Natural Disposal"
+                },
+                {
+                    "blockType": "list",
+                    "listStyle": "roman",
+                    "items": [
+                        {
+                            "text": "Biodegradable Pollutants: Organic waste materials that can be successfully broken down and recycled by microbial activity or engineered sewage treatment systems (e.g., domestic municipal sewage).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 24,
+                                    "style": "underline"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Non-biodegradable Pollutants: Persistent substances that cannot be natural decomposed. They accumulate in the environment and undergo harmful biomagnification as they travel up food chains (e.g., heavy metals like mercury and lead, and plastic wastes).",
+                            "spans": [
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "bold"
+                                },
+                                {
+                                    "start": 0,
+                                    "end": 28,
+                                    "style": "underline"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
