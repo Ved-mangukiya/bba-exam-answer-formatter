@@ -19,8 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Stylesheets: Print Physics + Modern Desk Workspace -->
-  <link rel="stylesheet" href="css/a4-print.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/a4-print.css?v=2.2">
+  <link rel="stylesheet" href="css/app.css?v=2.2">
 </head>
 <body data-mobile-view="subjects">
 
@@ -232,13 +232,31 @@
           <div class="progress-spinner"></div>
           <div class="progress-status" id="pdfProgressStatus">Compiling high-resolution A4 pages...</div>
         </div>
+
+        <!-- Success / Ready Box (Shown when PDF compilation succeeds) -->
+        <div class="pdf-ready-box" id="pdfReadyBox" style="display: none;">
+          <div class="pdf-ready-header">
+            <span class="pdf-ready-icon">✅</span>
+            <div style="flex: 1; min-width: 0;">
+              <div class="pdf-ready-filename" id="pdfReadyFilename">Document.pdf</div>
+              <div class="pdf-ready-meta" id="pdfReadyMeta">Ready to Save • A4 Vector Print Document</div>
+            </div>
+          </div>
+          <p class="pdf-ready-note">
+            Download started automatically! If your browser saved it without <code>.pdf</code> or couldn't open it, click the green <strong>Save</strong> button below to save directly to your files.
+          </p>
+        </div>
       </div>
 
-      <div class="modal-footer">
+      <div class="modal-footer" id="pdfModalFooter">
         <button class="btn btn-secondary" id="btnPdfModalCancel">Cancel</button>
+        <button class="btn btn-secondary" id="btnPdfOpenTab" style="display: none;" title="Open and view PDF in a new browser tab">
+          <span>👁️</span>
+          <span>Open in Tab</span>
+        </button>
         <button class="btn btn-primary" id="btnPdfModalDownload">
           <span id="btnDownloadIcon">⬇️</span>
-          <span id="btnDownloadLabel">Download PDF</span>
+          <span id="btnDownloadLabel">Generate & Download PDF</span>
         </button>
       </div>
     </div>
@@ -247,10 +265,10 @@
   <!-- Toast Notifications -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- Application Logic Scripts -->
+  <!-- Application Logic Scripts (v2.2 Cache-Busted) -->
   <script src="js/vendor/html2pdf.bundle.min.js"></script>
-  <script src="js/renderer.js"></script>
-  <script src="js/data-loader.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/renderer.js?v=2.2"></script>
+  <script src="js/data-loader.js?v=2.2"></script>
+  <script src="js/app.js?v=2.2"></script>
 </body>
 </html>

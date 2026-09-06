@@ -16,7 +16,10 @@
     showMarginGuides: false,
     activeTab: 'subjects', // 'subjects' or 'questions'
     mobileView: 'subjects', // 'subjects', 'questions', or 'sheet'
-    theme: 'dark'
+    theme: 'dark',
+    compiledPdfBlob: null,
+    compiledPdfUrl: null,
+    compiledFilename: null
   };
 
   // DOM Elements
@@ -57,6 +60,7 @@
       btnPdfModalClose: document.getElementById('btnPdfModalClose'),
       btnPdfModalCancel: document.getElementById('btnPdfModalCancel'),
       btnPdfModalDownload: document.getElementById('btnPdfModalDownload'),
+      btnPdfOpenTab: document.getElementById('btnPdfOpenTab'),
       pdfFileNameInput: document.getElementById('pdfFileNameInput'),
       radioScopeFull: document.getElementById('radioScopeFull'),
       radioScopeSingle: document.getElementById('radioScopeSingle'),
@@ -65,6 +69,9 @@
       pdfEstimatedPages: document.getElementById('pdfEstimatedPages'),
       pdfProgressBar: document.getElementById('pdfProgressBar'),
       pdfProgressStatus: document.getElementById('pdfProgressStatus'),
+      pdfReadyBox: document.getElementById('pdfReadyBox'),
+      pdfReadyFilename: document.getElementById('pdfReadyFilename'),
+      pdfReadyMeta: document.getElementById('pdfReadyMeta'),
       btnDownloadIcon: document.getElementById('btnDownloadIcon'),
       btnDownloadLabel: document.getElementById('btnDownloadLabel')
     };
@@ -349,6 +356,14 @@
       return;
     }
 
+    // Reset compiled cache for a fresh session
+    state.compiledPdfBlob = null;
+    if (state.compiledPdfUrl) {
+      try { URL.revokeObjectURL(state.compiledPdfUrl); } catch (e) {}
+      state.compiledPdfUrl = null;
+    }
+    state.compiledFilename = null;
+
     // Default Sanitized Filename
     const rawSubject = state.activeSubjectData.subject || state.activeSubjectSlug || 'BBA_Exam';
     const cleanName = rawSubject.replace(/[^a-zA-Z0-9_-]/g, '_').replace(/_+/g, '_');
@@ -357,6 +372,7 @@
 
     if (dom.pdfFileNameInput) {
       dom.pdfFileNameInput.value = defaultName;
+      dom.pdfFileNameInput.disabled = false;
     }
 
     const qCount = state.activeSubjectData.questions ? state.activeSubjectData.questions.length : 0;
@@ -381,16 +397,27 @@
 
     updateEstimatedPageCount();
 
+    // Reset UI elements
+    if (dom.pdfReadyBox) dom.pdfReadyBox.style.display = 'none';
     if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
-    if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = false;
-    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Download PDF';
+    if (dom.btnPdfOpenTab) dom.btnPdfOpenTab.style.display = 'none';
+
+    if (dom.btnPdfModalDownload) {
+      dom.btnPdfModalDownload.disabled = false;
+      dom.btnPdfModalDownload.className = 'btn btn-primary';
+    }
+    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Generate & Download PDF';
     if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
+    if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Cancel';
 
     if (dom.pdfModalBackdrop) {
       dom.pdfModalBackdrop.style.display = 'flex';
       setTimeout(() => {
-        if (dom.pdfFileNameInput) dom.pdfFileNameInput.focus();
-      }, 50);
+        if (dom.pdfFileNameInput) {
+          dom.pdfFileNameInput.focus();
+          dom.pdfFileNameInput.select();
+        }
+      }, 60);
     }
   }
 
@@ -412,66 +439,153 @@
     }
   }
 
+  /**
+   * Saves the compiled PDF to disk using a fresh, active user gesture.
+   * On Windows Chrome/Edge, leverages showSaveFilePicker to guarantee the exact filename and .pdf association.
+   * On other platforms, uses an in-DOM layout anchor tag with active user gesture.
+   */
+  async function saveCompiledPdfToDisk() {
+    if (!state.compiledPdfBlob || !state.compiledFilename) return;
+
+    const finalFilename = state.compiledFilename;
+    const pdfBlob = state.compiledPdfBlob;
+
+    // 1. If File System Access API is supported (Desktop Edge & Chrome on Windows)
+    if (typeof window.showSaveFilePicker === 'function') {
+      try {
+        const fileHandle = await window.showSaveFilePicker({
+          suggestedName: finalFilename,
+          types: [{
+            description: 'PDF Document (*.pdf)',
+            accept: { 'application/pdf': ['.pdf'] }
+          }]
+        });
+        const writable = await fileHandle.createWritable();
+        await writable.write(pdfBlob);
+        await writable.close();
+        showToast(`Saved: ${finalFilename}`);
+        closePdfModal();
+        return;
+      } catch (err) {
+        if (err.name === 'AbortError') {
+          // User closed the file picker dialog
+          return;
+        }
+        console.warn('showSaveFilePicker error, falling back to anchor:', err);
+      }
+    }
+
+    // 2. Reliable Anchor Trigger with DOM Layout Object
+    // CRITICAL: NEVER use style.display = 'none'! In Chromium, elements without layout drop the download attribute!
+    const downloadLink = document.createElement('a');
+    downloadLink.href = state.compiledPdfUrl;
+    downloadLink.download = finalFilename;
+    downloadLink.rel = 'noopener';
+    downloadLink.setAttribute('download', finalFilename);
+    downloadLink.style.position = 'fixed';
+    downloadLink.style.top = '0';
+    downloadLink.style.left = '0';
+    downloadLink.style.width = '2px';
+    downloadLink.style.height = '2px';
+    downloadLink.style.opacity = '0.01';
+    downloadLink.style.pointerEvents = 'none';
+    downloadLink.style.zIndex = '-99999';
+    document.body.appendChild(downloadLink);
+
+    try {
+      const clickEvt = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
+      downloadLink.dispatchEvent(clickEvt);
+    } catch (e) {
+      downloadLink.click();
+    }
+
+    showToast(`Downloaded: ${finalFilename}`);
+
+    setTimeout(() => {
+      if (downloadLink.parentNode) downloadLink.parentNode.removeChild(downloadLink);
+    }, 20000);
+  }
+
   async function downloadDirectPdf() {
     if (!state.activeSubjectData) {
       showToast('No document loaded to export', 'error');
       return;
     }
 
-    if (typeof html2pdf === 'undefined') {
-      showToast('PDF generator library loading, please try again in a moment', 'error');
+    // If already compiled, this click is the user pressing the green "Save [filename].pdf" button!
+    // This gives us a 100% active user gesture (0ms delay) that Chromium security will never revoke.
+    if (state.compiledPdfBlob && state.compiledFilename) {
+      await saveCompiledPdfToDisk();
       return;
     }
 
-    let filename = dom.pdfFileNameInput ? dom.pdfFileNameInput.value.trim() : '';
-    if (!filename) filename = 'BBA_Exam_Answers';
-    if (!filename.toLowerCase().endsWith('.pdf')) {
-      filename += '.pdf';
+    if (typeof html2pdf === 'undefined') {
+      showToast('PDF engine loading, please try again in a moment', 'error');
+      return;
     }
 
+    // 1. Get and strictly sanitize the custom filename entered by the user
+    let rawName = dom.pdfFileNameInput ? dom.pdfFileNameInput.value.trim() : '';
+    if (!rawName) {
+      const subj = state.activeSubjectData.subject || state.activeSubjectSlug || 'BBA_Exam';
+      rawName = `${subj}_Answers`;
+    }
+
+    // Remove illegal Windows & Android filesystem characters (<>:"/\|?*)
+    let cleanFilename = rawName.replace(/[<>:"/\\|?*\x00-\x1F]/g, '_').trim();
+    // Strip any trailing .pdf if user typed it, then re-append exactly one .pdf
+    cleanFilename = cleanFilename.replace(/\.pdf$/i, '');
+    if (!cleanFilename) cleanFilename = 'BBA_Exam_Answers';
+    const finalFilename = `${cleanFilename}.pdf`;
+
+    // 2. Scope determination
     const isSingle = dom.radioScopeSingle && dom.radioScopeSingle.checked;
     const targetQId = isSingle ? state.activeQuestionId : null;
 
+    // 3. UI feedback
     if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = true;
-    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Compiling PDF...';
+    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Compiling Vector Pages...';
     if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⏳';
     if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'flex';
-    if (dom.pdfProgressStatus) dom.pdfProgressStatus.textContent = 'Rendering vector A4 pages...';
+    if (dom.pdfProgressStatus) dom.pdfProgressStatus.textContent = 'Rendering vector A4 pages with strict GTU rules...';
+    if (dom.pdfFileNameInput) dom.pdfFileNameInput.disabled = true;
 
+    // 4. Generate clean, unscaled A4 HTML content
     const cleanHtml = window.GTURenderer.renderDocument(state.activeSubjectData, targetQId);
 
-    const printStage = document.createElement('div');
-    printStage.className = 'gtu-sheet-container';
-    printStage.style.position = 'fixed';
-    printStage.style.left = '-9999px';
-    printStage.style.top = '0';
-    printStage.style.width = '210mm';
-    printStage.style.background = '#ffffff';
-    printStage.style.color = '#000000';
-    printStage.style.fontFamily = '"Times New Roman", Times, serif';
-    printStage.style.zIndex = '-9999';
-    printStage.innerHTML = cleanHtml;
+    // 5. Create container with standard in-flow styling (NOT offscreen negative coordinates)
+    const contentWrapper = document.createElement('div');
+    contentWrapper.className = 'gtu-sheet-container gtu-pdf-export-root';
+    contentWrapper.style.width = '210mm';
+    contentWrapper.style.background = '#ffffff';
+    contentWrapper.style.color = '#000000';
+    contentWrapper.style.fontFamily = '"Times New Roman", Times, "Tinos", serif';
+    contentWrapper.style.margin = '0';
+    contentWrapper.style.padding = '0';
+    contentWrapper.innerHTML = cleanHtml;
 
-    printStage.querySelectorAll('.gtu-a4-sheet').forEach(sheet => {
+    // Strip desk shadows or browser borders
+    contentWrapper.querySelectorAll('.gtu-a4-sheet').forEach(sheet => {
       sheet.style.boxShadow = 'none';
       sheet.style.margin = '0 auto';
       sheet.style.borderRadius = '0';
       sheet.style.border = 'none';
+      sheet.style.width = '210mm';
+      sheet.style.background = '#ffffff';
+      sheet.style.color = '#000000';
     });
 
-    document.body.appendChild(printStage);
-
     const opt = {
-      margin: 0,
-      filename: filename,
+      margin: [0, 0, 0, 0],
+      filename: finalFilename,
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: {
-        scale: 2,
+        scale: 2, // Crisp 2x retina rendering
         useCORS: true,
         letterRendering: true,
         backgroundColor: '#ffffff',
-        scrollY: 0,
-        scrollX: 0
+        scrollX: 0,
+        scrollY: 0
       },
       jsPDF: {
         unit: 'mm',
@@ -480,14 +594,83 @@
       },
       pagebreak: {
         mode: ['css', 'legacy'],
-        avoid: ['.gtu-answer-block', '.gtu-table-wrapper', '.gtu-page-header', '.gtu-question-title-bar']
+        avoid: ['.gtu-answer-block', '.gtu-table-wrapper', '.gtu-page-header', '.gtu-page-footer', '.gtu-question-title-bar']
       }
     };
 
     try {
-      await html2pdf().set(opt).from(printStage).save();
-      showToast(`Downloaded: ${filename}`);
-      closePdfModal();
+      // 6. Generate PDF via html2pdf worker
+      let pdfBlob = null;
+      try {
+        const worker = html2pdf().set(opt).from(contentWrapper);
+        const pdf = await worker.toPdf().get('pdf');
+        if (pdf && typeof pdf.output === 'function') {
+          pdfBlob = pdf.output('blob');
+        }
+      } catch (e1) {
+        console.warn('Worker toPdf failed, trying outputPdf:', e1);
+      }
+
+      if (!pdfBlob) {
+        pdfBlob = await html2pdf().set(opt).from(contentWrapper).outputPdf('blob');
+      }
+
+      if (!pdfBlob || pdfBlob.size < 2000) {
+        throw new Error('Generated PDF was empty or unrendered.');
+      }
+
+      // 7. Store compiled blob and create File object with exact name
+      state.compiledPdfBlob = pdfBlob;
+      state.compiledFilename = finalFilename;
+      const pdfFile = new File([pdfBlob], finalFilename, { type: 'application/pdf' });
+      state.compiledPdfUrl = URL.createObjectURL(pdfFile);
+
+      const sizeMb = (pdfBlob.size / (1024 * 1024)).toFixed(1);
+
+      // 8. Auto-trigger initial download using layout-visible anchor
+      const autoLink = document.createElement('a');
+      autoLink.href = state.compiledPdfUrl;
+      autoLink.download = finalFilename;
+      autoLink.rel = 'noopener';
+      autoLink.setAttribute('download', finalFilename);
+      autoLink.style.position = 'fixed';
+      autoLink.style.top = '0';
+      autoLink.style.left = '0';
+      autoLink.style.width = '2px';
+      autoLink.style.height = '2px';
+      autoLink.style.opacity = '0.01';
+      autoLink.style.pointerEvents = 'none';
+      autoLink.style.zIndex = '-99999';
+      document.body.appendChild(autoLink);
+
+      try {
+        autoLink.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+      } catch (e) {
+        autoLink.click();
+      }
+
+      setTimeout(() => {
+        if (autoLink.parentNode) autoLink.parentNode.removeChild(autoLink);
+      }, 20000);
+
+      // 9. Update modal to high-visibility ready state
+      if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
+      if (dom.pdfReadyBox) dom.pdfReadyBox.style.display = 'flex';
+      if (dom.pdfReadyFilename) dom.pdfReadyFilename.textContent = finalFilename;
+      if (dom.pdfReadyMeta) dom.pdfReadyMeta.textContent = `A4 Vector Print Document • ${sizeMb} MB • GTU / SSASIT`;
+
+      // Update button to green 1-click Save
+      if (dom.btnPdfModalDownload) {
+        dom.btnPdfModalDownload.disabled = false;
+        dom.btnPdfModalDownload.className = 'btn btn-success';
+      }
+      if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '💾';
+      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = `Save ${finalFilename}`;
+
+      if (dom.btnPdfOpenTab) dom.btnPdfOpenTab.style.display = 'inline-flex';
+      if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Done / Close';
+
+      showToast(`PDF compiled (${sizeMb} MB). Download started!`);
     } catch (err) {
       console.error('PDF export error:', err);
       showToast(`Download error: ${err.message}`, 'error');
@@ -495,10 +678,7 @@
       if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Retry Download';
       if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
       if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
-    } finally {
-      if (printStage.parentNode) {
-        printStage.parentNode.removeChild(printStage);
-      }
+      if (dom.pdfFileNameInput) dom.pdfFileNameInput.disabled = false;
     }
   }
 
@@ -637,6 +817,13 @@
     }
     if (dom.btnPdfModalDownload) {
       dom.btnPdfModalDownload.addEventListener('click', downloadDirectPdf);
+    }
+    if (dom.btnPdfOpenTab) {
+      dom.btnPdfOpenTab.addEventListener('click', () => {
+        if (state.compiledPdfUrl) {
+          window.open(state.compiledPdfUrl, '_blank');
+        }
+      });
     }
     if (dom.radioScopeFull) {
       dom.radioScopeFull.addEventListener('change', updateEstimatedPageCount);
