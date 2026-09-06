@@ -54,24 +54,37 @@
   --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Light Theme Variables */
+/* ==========================================================================
+   Light Theme: Warm Ivory, Burnished Champagne Gold & Soft Pastels
+   ========================================================================== */
 body.theme-light {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-surface: #ffffff;
-  --bg-surface-elevated: #ffffff;
-  --bg-input: #f1f5f9;
+  --bg-primary: #faf6ee;           /* Warm Ivory Canvas */
+  --bg-secondary: #f2ebd9;         /* Soft Cream Parchment (Header, Sidebar, Dock) */
+  --bg-surface: #fdfbf7;           /* Pale Silk Ivory Cards */
+  --bg-surface-elevated: #ffffff;  /* Pure Pearl Ivory for active / hover */
+  --bg-input: #f5eedf;             /* Soft Chamois Input */
 
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-active: rgba(99, 102, 241, 0.6);
+  --border-subtle: rgba(184, 148, 88, 0.22); /* Warm Sandstone-Gold Border */
+  --border-active: #c59b27;                   /* Gilded Gold Focus */
 
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-primary: #282117;        /* Deep Warm Espresso Bronze */
+  --text-secondary: #5c4f3b;      /* Warm Walnut Bronze */
+  --text-muted: #8d7e67;          /* Soft Sandstone Muted */
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+  /* Golden & Warm Pastel Accents */
+  --accent-gold: #c59b27;
+  --accent-gold-light: #e2be6c;
+  --accent-gold-pastel: #fbf5e7;
+  --accent-blue: #3b82f6;
+  --accent-indigo: #b8860b;       /* Gilded Gold replaces cold indigo */
+  --accent-purple: #c59b27;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+  --accent-rose: #e11d48;
+
+  --shadow-sm: 0 2px 8px rgba(160, 125, 65, 0.08);
+  --shadow-md: 0 8px 24px rgba(160, 125, 65, 0.12);
+  --shadow-lg: 0 16px 44px rgba(140, 105, 45, 0.18);
 }
 
 /* Global Reset */
@@ -953,28 +966,32 @@ body.theme-light .modal-backdrop {
 .pdf-ready-box {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 14px 16px;
+  align-items: center;     /* Centralized layout */
+  text-align: center;      /* Centralized text */
+  gap: 12px;
+  padding: 18px 20px;
   background: rgba(16, 185, 129, 0.12);
   border: 1px solid rgba(16, 185, 129, 0.35);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   animation: modalFadeIn 0.2s ease-out;
 }
 
 .pdf-ready-header {
   display: flex;
+  flex-direction: column;  /* Stack icon & title centered */
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  text-align: center;
 }
 
 .pdf-ready-icon {
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1;
 }
 
 .pdf-ready-filename {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: #34d399;
   word-break: break-all;
@@ -987,13 +1004,14 @@ body.theme-light .modal-backdrop {
 }
 
 .pdf-ready-note {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--text-secondary);
-  line-height: 1.45;
+  line-height: 1.5;
   margin: 0;
   background: rgba(0, 0, 0, 0.18);
-  padding: 8px 10px;
+  padding: 10px 14px;
   border-radius: var(--radius-sm);
+  max-width: 420px;
 }
 
 .pdf-ready-note code {
@@ -1008,11 +1026,304 @@ body.theme-light .modal-backdrop {
 .modal-footer {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
-  padding: 14px 20px;
+  justify-content: center; /* CENTRALIZED SAVE & ACTION BUTTONS! */
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 24px;
   border-top: 1px solid var(--border-subtle);
   background: var(--bg-secondary);
+}
+
+#btnPdfModalDownload {
+  min-width: 240px;
+  justify-content: center;
+  padding: 11px 24px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Ivory, Golden & Pastel Light Theme Component Styling
+   ========================================================================== */
+body.theme-light .app-header {
+  background: linear-gradient(180deg, #f7f1e4 0%, #f0e7d6 100%);
+  border-bottom: 1px solid rgba(184, 148, 88, 0.25);
+  box-shadow: 0 2px 10px rgba(160, 125, 65, 0.06);
+}
+
+body.theme-light .brand-logo {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  box-shadow: 0 4px 14px rgba(184, 134, 11, 0.35);
+  color: #ffffff;
+}
+
+body.theme-light .brand-badge {
+  background: #fbf5e7;
+  color: #8c600b;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+}
+
+body.theme-light .btn-primary {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(184, 134, 11, 0.28);
+}
+
+body.theme-light .btn-primary:hover {
+  background: linear-gradient(135deg, #e2be6c, #c59b27);
+  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.42);
+}
+
+body.theme-light .btn-secondary {
+  background-color: #fdfbf7;
+  color: #3b3122;
+  border-color: rgba(184, 148, 88, 0.28);
+}
+
+body.theme-light .btn-secondary:hover {
+  background-color: #ffffff;
+  border-color: #c59b27;
+  box-shadow: 0 2px 10px rgba(184, 148, 88, 0.15);
+}
+
+body.theme-light .btn-icon {
+  background: #fdfbf7;
+  color: #5c4f3b;
+  border-color: rgba(184, 148, 88, 0.22);
+}
+
+body.theme-light .btn-icon:hover {
+  background: #ffffff;
+  color: #282117;
+  border-color: #c59b27;
+}
+
+body.theme-light .btn-icon.active {
+  background: #fbf5e7;
+  color: #8c600b;
+  border-color: #c59b27;
+}
+
+body.theme-light .app-sidebar {
+  background-color: #f3ecd9;
+  border-right: 1px solid rgba(184, 148, 88, 0.25);
+}
+
+body.theme-light .sidebar-tabs {
+  border-bottom: 1px solid rgba(184, 148, 88, 0.22);
+}
+
+body.theme-light .sidebar-tab {
+  color: #72624a;
+}
+
+body.theme-light .sidebar-tab.active {
+  color: #8c600b;
+  border-bottom-color: #c59b27;
+}
+
+body.theme-light .subject-card {
+  background-color: #fdfbf7;
+  border-color: rgba(184, 148, 88, 0.22);
+  box-shadow: 0 2px 6px rgba(160, 125, 65, 0.04);
+}
+
+body.theme-light .subject-card:hover {
+  background-color: #ffffff;
+  border-color: rgba(197, 155, 39, 0.45);
+  box-shadow: 0 6px 18px rgba(160, 125, 65, 0.12);
+}
+
+body.theme-light .subject-card.active {
+  background-color: #ffffff;
+  border-color: #c59b27;
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.2);
+}
+
+body.theme-light .subject-card.active::before {
+  background: #c59b27;
+}
+
+body.theme-light .subject-icon-box {
+  background: #fbf5e7;
+  border-color: rgba(197, 155, 39, 0.3);
+}
+
+body.theme-light .subject-faculty-tag {
+  background: #f5eedf;
+  color: #785a1a;
+  border: 1px solid rgba(184, 148, 88, 0.2);
+}
+
+body.theme-light .unit-pill {
+  background: #fdfbf7;
+  color: #5c4f3b;
+  border-color: rgba(184, 148, 88, 0.25);
+}
+
+body.theme-light .unit-pill:hover {
+  background: #fbf8f0;
+  border-color: #c59b27;
+}
+
+body.theme-light .unit-pill.active {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: #ffffff;
+  border-color: #aa7c11;
+  box-shadow: 0 3px 10px rgba(184, 134, 11, 0.25);
+}
+
+body.theme-light .question-item-card {
+  background-color: #fdfbf7;
+  border-color: rgba(184, 148, 88, 0.2);
+}
+
+body.theme-light .question-item-card:hover {
+  background-color: #ffffff;
+  border-color: rgba(197, 155, 39, 0.4);
+}
+
+body.theme-light .question-item-card.active {
+  background-color: #ffffff;
+  border-color: #c59b27;
+  box-shadow: 0 4px 16px rgba(197, 155, 39, 0.15);
+}
+
+body.theme-light .q-num-badge {
+  color: #8c600b;
+}
+
+body.theme-light .q-marks-pill {
+  background: #fbf5e7;
+  color: #8c600b;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+}
+
+body.theme-light .workspace-container {
+  background-color: #faf6ee;
+}
+
+body.theme-light .workspace-toolbar {
+  background-color: #f3ecde;
+  border-bottom: 1px solid rgba(184, 148, 88, 0.25);
+}
+
+body.theme-light .zoom-badge {
+  background: #fbf5e7;
+  color: #282117;
+  border: 1px solid rgba(184, 148, 88, 0.25);
+}
+
+/* Warm Architectural Ivory Drafting Desk */
+body.theme-light .desk-canvas {
+  background: radial-gradient(circle at 50% 20%, #f5efe3 0%, #e8decb 85%);
+}
+
+body.theme-light .gtu-a4-sheet {
+  box-shadow: 0 12px 36px rgba(140, 105, 45, 0.18), 0 2px 8px rgba(140, 105, 45, 0.08);
+}
+
+/* Modal in Ivory & Gold */
+body.theme-light .modal-backdrop {
+  background: rgba(36, 28, 16, 0.55);
+  backdrop-filter: blur(14px);
+}
+
+body.theme-light .modal-dialog {
+  background: #fdfbf7;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  box-shadow: 0 24px 60px rgba(120, 85, 30, 0.22);
+}
+
+body.theme-light .modal-header {
+  background: #f5eedf;
+  border-bottom: 1px solid rgba(184, 148, 88, 0.22);
+}
+
+body.theme-light .modal-footer {
+  background: #f5eedf;
+  border-top: 1px solid rgba(184, 148, 88, 0.22);
+}
+
+body.theme-light .input-with-extension {
+  background: #ffffff;
+  border-color: rgba(184, 148, 88, 0.3);
+}
+
+body.theme-light .input-extension-badge {
+  background: #fbf5e7;
+  color: #785a1a;
+  border-left: 1px solid rgba(184, 148, 88, 0.25);
+}
+
+body.theme-light .radio-card {
+  background: #ffffff;
+  border-color: rgba(184, 148, 88, 0.22);
+}
+
+body.theme-light .radio-card:hover {
+  background: #fbf8f0;
+  border-color: rgba(197, 155, 39, 0.45);
+}
+
+body.theme-light .radio-card input[type="radio"] {
+  accent-color: #c59b27;
+}
+
+body.theme-light .pdf-info-card {
+  background: #f7f0e2;
+  border-color: rgba(184, 148, 88, 0.22);
+}
+
+body.theme-light .info-card-value {
+  color: #8c600b;
+}
+
+body.theme-light .pdf-ready-box {
+  background: #fbf5e7;
+  border: 1px solid rgba(197, 155, 39, 0.45);
+  box-shadow: 0 4px 18px rgba(197, 155, 39, 0.12);
+}
+
+body.theme-light .pdf-ready-filename {
+  color: #855b08;
+}
+
+body.theme-light .pdf-ready-meta {
+  color: #615340;
+}
+
+body.theme-light .pdf-ready-note {
+  background: #ffffff;
+  color: #5c4f3b;
+  border: 1px solid rgba(184, 148, 88, 0.25);
+}
+
+body.theme-light .pdf-ready-note code {
+  background: #f5eedf;
+  color: #855b08;
+}
+
+/* Mobile Bottom Nav in Ivory & Gold */
+body.theme-light .mobile-bottom-nav {
+  background: rgba(248, 243, 234, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(184, 148, 88, 0.25);
+  box-shadow: 0 -8px 24px rgba(160, 125, 65, 0.12);
+}
+
+body.theme-light .mobile-nav-item {
+  color: #7d6e58;
+}
+
+body.theme-light .mobile-nav-item.active {
+  color: #8c600b;
+}
+
+body.theme-light .mobile-nav-item.active .mobile-nav-indicator {
+  background: #c59b27;
+  box-shadow: 0 0 12px rgba(197, 155, 39, 0.7);
 }
 
 /* ==========================================================================

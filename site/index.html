@@ -19,10 +19,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Stylesheets: Print Physics + Modern Desk Workspace -->
-  <link rel="stylesheet" href="css/a4-print.css?v=2.3">
-  <link rel="stylesheet" href="css/app.css?v=2.3">
+  <link rel="stylesheet" href="css/a4-print.css?v=2.4">
+  <link rel="stylesheet" href="css/app.css?v=2.4">
 </head>
-<body data-mobile-view="subjects">
+<body class="theme-light" data-mobile-view="subjects">
 
   <!-- Top Application Bar (Screen Only) -->
   <header class="app-header no-print" id="mainHeader">
@@ -250,13 +250,13 @@
 
       <div class="modal-footer" id="pdfModalFooter">
         <button class="btn btn-secondary" id="btnPdfModalCancel">Cancel</button>
-        <button class="btn btn-secondary" id="btnPdfOpenTab" style="display: none;" title="Open and view PDF in a new browser tab">
-          <span>👁️</span>
-          <span>Open in Tab</span>
-        </button>
         <button class="btn btn-primary" id="btnPdfModalDownload">
           <span id="btnDownloadIcon">⬇️</span>
           <span id="btnDownloadLabel">Generate & Download PDF</span>
+        </button>
+        <button class="btn btn-secondary" id="btnPdfOpenTab" style="display: none;" title="Open and view PDF in a new browser tab">
+          <span>👁️</span>
+          <span>Open in Tab</span>
         </button>
       </div>
     </div>
@@ -265,10 +265,10 @@
   <!-- Toast Notifications -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- Application Logic Scripts (v2.3 Cache-Busted) -->
+  <!-- Application Logic Scripts (v2.4 Cache-Busted) -->
   <script src="js/vendor/html2pdf.bundle.min.js"></script>
-  <script src="js/renderer.js?v=2.3"></script>
-  <script src="js/data-loader.js?v=2.3"></script>
-  <script src="js/app.js?v=2.3"></script>
+  <script src="js/renderer.js?v=2.4"></script>
+  <script src="js/data-loader.js?v=2.4"></script>
+  <script src="js/app.js?v=2.4"></script>
 </body>
 </html>

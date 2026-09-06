@@ -16,7 +16,13 @@
     showMarginGuides: false,
     activeTab: 'subjects', // 'subjects' or 'questions'
     mobileView: 'subjects', // 'subjects', 'questions', or 'sheet'
-    theme: 'dark',
+    theme: (function() {
+      try {
+        return localStorage.getItem('gtu_theme') || 'light';
+      } catch (e) {
+        return 'light';
+      }
+    })(),
     compiledPdfBlob: null,
     compiledPdfUrl: null,
     compiledFilename: null
@@ -342,12 +348,22 @@
     showToast(state.showMarginGuides ? 'Margin guides enabled' : 'Margin guides hidden');
   }
 
+  function applyTheme() {
+    const isLight = state.theme === 'light';
+    document.body.classList.toggle('theme-light', isLight);
+    if (dom.btnThemeToggle) {
+      dom.btnThemeToggle.textContent = isLight ? '🌙' : '☀️';
+      dom.btnThemeToggle.title = isLight ? 'Switch to Midnight Dark Theme' : 'Switch to Ivory Golden Theme';
+    }
+  }
+
   function toggleTheme() {
     state.theme = state.theme === 'dark' ? 'light' : 'dark';
-    document.body.classList.toggle('theme-light', state.theme === 'light');
-    if (dom.btnThemeToggle) {
-      dom.btnThemeToggle.textContent = state.theme === 'dark' ? '🌙' : '☀️';
-    }
+    applyTheme();
+    try {
+      localStorage.setItem('gtu_theme', state.theme);
+    } catch (e) {}
+    showToast(state.theme === 'light' ? 'Ivory & Gold theme enabled' : 'Midnight Dark theme enabled');
   }
 
   function openPdfModal(forceSingle = false) {
@@ -897,6 +913,7 @@
   // Application Entry Point
   document.addEventListener('DOMContentLoaded', () => {
     initDomRefs();
+    applyTheme();
     attachEventListeners();
     loadInitialData();
 
