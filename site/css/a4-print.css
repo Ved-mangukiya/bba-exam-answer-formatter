@@ -642,3 +642,24 @@
     print-color-adjust: exact;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Developer Credit Strip — appears at the bottom of every page (screen & PDF)
+   -------------------------------------------------------------------------- */
+.gtu-dev-credit {
+  text-align: center;
+  font-size: 7.5pt;
+  font-family: var(--gtu-font);
+  color: #9ca3af;
+  margin-top: 6pt;
+  padding-top: 4pt;
+  letter-spacing: 0.3px;
+  border-top: 0.4pt solid #e5e7eb;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.gtu-dev-credit strong {
+  color: #6b7280;
+  font-weight: 600;
+}

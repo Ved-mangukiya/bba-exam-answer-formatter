@@ -79,7 +79,11 @@
       pdfReadyFilename: document.getElementById('pdfReadyFilename'),
       pdfReadyMeta: document.getElementById('pdfReadyMeta'),
       btnDownloadIcon: document.getElementById('btnDownloadIcon'),
-      btnDownloadLabel: document.getElementById('btnDownloadLabel')
+      btnDownloadLabel: document.getElementById('btnDownloadLabel'),
+      // Developer Info modal
+      btnDevInfo: document.getElementById('btnDevInfo'),
+      devInfoBackdrop: document.getElementById('devInfoBackdrop'),
+      btnDevInfoClose: document.getElementById('btnDevInfoClose')
     };
   }
 
@@ -320,35 +324,47 @@
     }
   }
 
-  function applyZoomToScaler() {
+  function applyZoomToScaler(instant = false) {
     if (!dom.a4Scaler || !dom.a4Container) return;
 
     const zoomVal = state.zoomLevel;
 
-    // Use native CSS zoom when supported (Chromium / Chrome / Edge, Safari 16.4+, Firefox 126+)
-    // CSS zoom directly recalculates layout dimensions, eliminating ghost scrollbars and blank voids!
-    if (CSS.supports && CSS.supports('zoom', '1')) {
-      dom.a4Scaler.style.zoom = zoomVal;
-      dom.a4Scaler.style.transform = 'none';
-      dom.a4Scaler.style.width = 'auto';
-      dom.a4Scaler.style.height = 'auto';
-      dom.a4Scaler.style.margin = '0 auto';
+    // Always use transform:scale so CSS transition works (CSS zoom is not animatable).
+    // We compensate the layout footprint via an explicit height on the scaler wrapper
+    // so the desk-canvas scroll area stays accurate.
+    if (instant) {
+      dom.a4Scaler.classList.add('zoom-instant');
     } else {
-      // Fallback for older engines: scale + explicitly clamp layout footprint
-      dom.a4Scaler.style.transform = `scale(${zoomVal})`;
-      dom.a4Scaler.style.transformOrigin = 'top center';
+      dom.a4Scaler.classList.remove('zoom-instant');
+    }
 
-      const unscaledH = dom.a4Container.offsetHeight || dom.a4Container.scrollHeight;
-      const unscaledW = dom.a4Container.offsetWidth || 794;
+    // Clear any residual CSS zoom from old code
+    dom.a4Scaler.style.zoom = '';
 
-      dom.a4Scaler.style.height = `${Math.ceil(unscaledH * zoomVal)}px`;
-      dom.a4Scaler.style.width = `${Math.ceil(unscaledW * zoomVal)}px`;
+    dom.a4Scaler.style.transform = `scale(${zoomVal})`;
+    dom.a4Scaler.style.transformOrigin = 'top center';
+
+    // Compensate layout footprint so the scrollable desk area reflects actual size
+    const unscaledH = dom.a4Container.offsetHeight || dom.a4Container.scrollHeight;
+    const unscaledW = dom.a4Container.offsetWidth || 794;
+    dom.a4Scaler.style.height = `${Math.ceil(unscaledH * zoomVal)}px`;
+    dom.a4Scaler.style.width  = `${Math.ceil(unscaledW * zoomVal)}px`;
+
+    // After the transition, re-sync the height exactly (transition may have been skipped)
+    if (!instant) {
+      clearTimeout(dom.a4Scaler._zoomSyncTimer);
+      dom.a4Scaler._zoomSyncTimer = setTimeout(() => {
+        const h = dom.a4Container.offsetHeight || dom.a4Container.scrollHeight;
+        const w = dom.a4Container.offsetWidth || 794;
+        dom.a4Scaler.style.height = `${Math.ceil(h * zoomVal)}px`;
+        dom.a4Scaler.style.width  = `${Math.ceil(w * zoomVal)}px`;
+      }, 260);
     }
   }
 
-  function setZoom(newZoom) {
+  function setZoom(newZoom, instant = false) {
     state.zoomLevel = Math.max(0.25, Math.min(2.5, parseFloat(newZoom.toFixed(2))));
-    applyZoomToScaler();
+    applyZoomToScaler(instant);
     if (dom.zoomLevelBadge) {
       dom.zoomLevelBadge.textContent = `${Math.round(state.zoomLevel * 100)}%`;
     }
@@ -357,13 +373,11 @@
   function fitToWidth() {
     if (!dom.deskCanvas) return;
     const isMobile = window.innerWidth <= 768;
-    // On mobile, deskCanvas has 6px padding on each side (total 12px)
     const padding = isMobile ? 16 : 80;
     const canvasWidth = dom.deskCanvas.clientWidth - padding;
-    // Standard A4 width in pixels approx 794px at 96dpi (210mm)
     const a4PxWidth = 794;
     const targetZoom = Math.max(0.3, canvasWidth / a4PxWidth);
-    setZoom(targetZoom);
+    setZoom(targetZoom); // animated — same smooth ease as +/-
   }
 
   function toggleMarginGuides() {
@@ -543,7 +557,6 @@
     } catch (e) {
       downloadLink.click();
     }
-
     showToast(`Downloaded: ${finalFilename}`);
     closePdfModal();
 
@@ -552,250 +565,205 @@
     }, 20000);
   }
 
+  /**
+   * PDF Generation — one html2canvas capture per .gtu-a4-sheet → jsPDF assembly.
+   * Each sheet is briefly mounted at position (0,0) z-index:1, hidden behind the
+   * modal backdrop (z-index ~1000). This guarantees getBoundingClientRect() returns
+   * positive coords so html2canvas captures actual content, not off-screen whitespace.
+   */
   async function downloadDirectPdf() {
     if (!state.activeSubjectData) {
       showToast('No document loaded to export', 'error');
       return;
     }
 
-    // If already compiled, this click is the user pressing the green "Save [filename].pdf" button!
-    // This gives us a 100% active user gesture (0ms delay) that Chromium security will never revoke.
+    // Already compiled → second click saves to disk
     if (state.compiledPdfBlob && state.compiledFilename) {
       await saveCompiledPdfToDisk();
       return;
     }
 
-    if (typeof html2pdf === 'undefined') {
+    if (typeof html2canvas === 'undefined' || typeof window.jspdf === 'undefined') {
       showToast('PDF engine loading, please try again in a moment', 'error');
       return;
     }
 
-    // 1. Get and strictly sanitize the custom filename entered by the user
+    // 1. Sanitize filename
     let rawName = dom.pdfFileNameInput ? dom.pdfFileNameInput.value.trim() : '';
     if (!rawName) {
       const subj = state.activeSubjectData.subject || state.activeSubjectSlug || 'BBA_Exam';
       rawName = `${subj}_Answers`;
     }
-
-    // Remove illegal Windows & Android filesystem characters (<>:"/\|?*)
     let cleanFilename = rawName.replace(/[<>:"/\\|?*\x00-\x1F]/g, '_').trim();
-    // Strip any trailing .pdf if user typed it, then re-append exactly one .pdf
     cleanFilename = cleanFilename.replace(/\.pdf$/i, '');
     if (!cleanFilename) cleanFilename = 'BBA_Exam_Answers';
     const finalFilename = `${cleanFilename}.pdf`;
 
-    // 2. Scope determination
+    // 2. Scope
     const isSingle = dom.radioScopeSingle && dom.radioScopeSingle.checked;
     const targetQId = isSingle ? state.activeQuestionId : null;
 
     // 3. UI feedback
     if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = true;
-    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Compiling Vector Pages...';
+    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Rendering Pages...';
     if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⏳';
     if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'flex';
-    if (dom.pdfProgressStatus) dom.pdfProgressStatus.textContent = 'Rendering vector A4 pages with strict GTU rules...';
+    if (dom.pdfProgressStatus) dom.pdfProgressStatus.textContent = 'Preparing A4 sheets...';
     if (dom.pdfFileNameInput) dom.pdfFileNameInput.disabled = true;
 
-    // 4. Generate clean, unscaled A4 HTML content
+    // 4. Render document HTML via the GTU engine
     const cleanHtml = window.GTURenderer.renderDocument(state.activeSubjectData, targetQId);
 
-    // 5. Create container attached to DOM with active layout flow
-    // CRITICAL FOR ZERO SLICED TEXT:
-    // Elements must be attached to the DOM at top:0, left:0 so getBoundingClientRect()
-    // and stylesheets can compute real physical pixel coordinates.
-    const contentWrapper = document.createElement('div');
-    contentWrapper.className = 'gtu-sheet-container gtu-pdf-export-root';
-    contentWrapper.style.position = 'fixed';
-    contentWrapper.style.left = '0px';
-    contentWrapper.style.top = '0px';
-    contentWrapper.style.width = '210mm';
-    contentWrapper.style.minHeight = '297mm';
-    contentWrapper.style.background = '#ffffff';
-    contentWrapper.style.color = '#000000';
-    contentWrapper.style.fontFamily = '"Times New Roman", Times, "Tinos", serif';
-    contentWrapper.style.margin = '0';
-    contentWrapper.style.padding = '0';
-    contentWrapper.style.zIndex = '-99999';
-    contentWrapper.style.pointerEvents = 'none';
-    contentWrapper.innerHTML = cleanHtml;
+    // Parse into a detached div to extract individual sheets
+    const parseDiv = document.createElement('div');
+    parseDiv.innerHTML = cleanHtml;
+    const rawSheets = Array.from(parseDiv.querySelectorAll('.gtu-a4-sheet'));
 
-    // Reset sheet margins and shadows
-    contentWrapper.querySelectorAll('.gtu-a4-sheet').forEach(sheet => {
-      sheet.style.boxShadow = 'none';
-      sheet.style.margin = '0';
-      sheet.style.borderRadius = '0';
-      sheet.style.border = 'none';
-      sheet.style.width = '210mm';
-      sheet.style.background = '#ffffff';
-      sheet.style.color = '#000000';
-    });
-
-    // Enforce break-inside avoid on all content blocks
-    contentWrapper.querySelectorAll('p, li, tr, .gtu-paragraph, .gtu-list-item, .gtu-heading, .gtu-subheading, .gtu-note, .gtu-table-container, .gtu-diagram-container, .gtu-question-header, .gtu-page-header, .gtu-page-footer').forEach(el => {
-      el.style.breakInside = 'avoid';
-      el.style.pageBreakInside = 'avoid';
-    });
-
-    document.body.appendChild(contentWrapper);
-
-    // 6. Deterministic Pre-Pass Pagination Engine
-    // Guarantees zero sliced lines of text, list items, paragraphs, or table rows across A4 boundaries
-    const A4_HEIGHT_PX = 1122.52; // 297mm * 96 / 25.4
-    const MARGIN_TOP_PX = 75.6;    // 20mm * 96 / 25.4
-    const MARGIN_BOTTOM_PX = 75.6; // 20mm * 96 / 25.4
-    const PAGE_CONTENT_LIMIT = A4_HEIGHT_PX - MARGIN_BOTTOM_PX; // 1046.92px
-
-    const breakAvoidSelectors = [
-      '.gtu-question-header',
-      '.gtu-heading',
-      '.gtu-subheading',
-      '.gtu-paragraph',
-      '.gtu-list-item',
-      '.gtu-note',
-      'tr',
-      '.gtu-table-container',
-      '.gtu-diagram-container',
-      '.gtu-page-footer',
-      '.gtu-page-end-mark'
-    ];
-
-    const elementsToProtect = Array.from(contentWrapper.querySelectorAll(breakAvoidSelectors.join(',')));
-    const wrapperTop = contentWrapper.getBoundingClientRect().top;
-
-    elementsToProtect.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const topOffset = rect.top - wrapperTop;
-      const bottomOffset = rect.bottom - wrapperTop;
-      const elHeight = bottomOffset - topOffset;
-
-      if (elHeight > 0 && elHeight < PAGE_CONTENT_LIMIT - MARGIN_TOP_PX) {
-        const currentPage = Math.floor(topOffset / A4_HEIGHT_PX);
-        const pageLimit = (currentPage * A4_HEIGHT_PX) + PAGE_CONTENT_LIMIT;
-
-        // Headings get an extra buffer so they don't become orphan titles at page bottom
-        const isHeader = el.classList.contains('gtu-heading') || el.classList.contains('gtu-subheading') || el.classList.contains('gtu-question-header');
-        const effectiveBottom = isHeader ? bottomOffset + 50 : bottomOffset;
-
-        if (effectiveBottom > pageLimit) {
-          // Push element to the top of the next page with a clean 20mm margin
-          const nextPageContentTop = ((currentPage + 1) * A4_HEIGHT_PX) + MARGIN_TOP_PX;
-          const clearance = Math.ceil(nextPageContentTop - topOffset);
-
-          if (clearance > 0 && clearance < A4_HEIGHT_PX) {
-            const spacer = document.createElement('div');
-            spacer.className = 'gtu-pagebreak-spacer';
-            spacer.style.display = 'block';
-            spacer.style.height = `${clearance}px`;
-            spacer.style.width = '100%';
-            spacer.style.margin = '0';
-            spacer.style.padding = '0';
-            spacer.style.border = 'none';
-            spacer.style.background = 'transparent';
-            el.parentNode.insertBefore(spacer, el);
-          }
-        }
-      }
-    });
-
-    const opt = {
-      margin: [0, 0, 0, 0],
-      filename: finalFilename,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: {
-        scale: 2, // Crisp 2x retina rendering
-        useCORS: true,
-        letterRendering: true,
-        backgroundColor: '#ffffff',
-        scrollX: 0,
-        scrollY: 0
-      },
-      jsPDF: {
-        unit: 'mm',
-        format: 'a4',
-        orientation: 'portrait'
-      },
-      pagebreak: {
-        mode: ['avoid-all', 'css', 'legacy'],
-        avoid: [
-          '.gtu-question-header',
-          '.gtu-heading',
-          '.gtu-subheading',
-          '.gtu-paragraph',
-          '.gtu-list-item',
-          'li',
-          'p',
-          'tr',
-          '.gtu-note',
-          '.gtu-table-container',
-          '.gtu-diagram-container',
-          '.gtu-page-header',
-          '.gtu-page-footer',
-          '.gtu-page-end-mark'
-        ]
-      }
-    };
-
+    let activeFrame = null; // track the current capture frame for cleanup on error
     try {
-      // 7. Generate PDF via html2pdf worker
-      let pdfBlob = null;
-      try {
-        const worker = html2pdf().set(opt).from(contentWrapper);
-        const pdf = await worker.toPdf().get('pdf');
-        if (pdf && typeof pdf.output === 'function') {
-          pdfBlob = pdf.output('blob');
+      if (rawSheets.length === 0) throw new Error('No A4 sheets found — document may be empty.');
+
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true });
+
+      // Capture each .gtu-a4-sheet (usually one tall sheet with all questions),
+      // then SLICE the resulting canvas into 297mm-height segments.
+      // Each segment becomes one A4 page in the PDF.
+      // This is the core fix: the renderer makes one big tall div; we split it here.
+      let totalPdfPages = 0;
+
+      for (let i = 0; i < rawSheets.length; i++) {
+        if (dom.pdfProgressStatus) {
+          dom.pdfProgressStatus.textContent = `Rendering content... (sheet ${i + 1}/${rawSheets.length})`;
         }
-      } catch (e1) {
-        console.warn('Worker toPdf failed, trying outputPdf:', e1);
+
+        // Mount at (0,0) so getBoundingClientRect gives positive coords for html2canvas
+        activeFrame = document.createElement('div');
+        activeFrame.style.cssText = [
+          'position:fixed', 'top:0', 'left:0',
+          'width:210mm', 'height:auto',
+          'overflow:visible',
+          'pointer-events:none',
+          'z-index:1',
+          'background:#ffffff',
+          'margin:0', 'padding:0'
+        ].join(';');
+
+        const sheetClone = rawSheets[i].cloneNode(true);
+        // NO min-height — let the sheet be exactly as tall as its content
+        sheetClone.style.cssText = [
+          'width:210mm',
+          'padding:20mm 15mm 20mm 20mm',
+          'box-sizing:border-box',
+          'background:#ffffff', 'color:#000000',
+          'font-family:"Times New Roman",Times,serif',
+          'margin:0', 'border:none',
+          'box-shadow:none', 'border-radius:0',
+          'overflow:visible', 'display:block'
+        ].join(';');
+
+        activeFrame.appendChild(sheetClone);
+        document.body.appendChild(activeFrame);
+
+        // Let browser fully lay out before measuring
+        await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+        const sheetW = sheetClone.offsetWidth  || 794;
+        const sheetH = sheetClone.offsetHeight || 1123;
+
+        // Capture full height of the sheet at 2x scale
+        const canvas = await html2canvas(sheetClone, {
+          scale: 2,
+          useCORS: true,
+          allowTaint: false,
+          backgroundColor: '#ffffff',
+          width: sheetW,
+          height: sheetH,
+          windowWidth: sheetW,
+          windowHeight: sheetH,
+          scrollX: 0,
+          scrollY: 0,
+          logging: false
+        });
+
+        document.body.removeChild(activeFrame);
+        activeFrame = null;
+
+        // --- PAGE SLICING ---
+        // 210mm wide at actual pixels → pixPerMm gives us 297mm in pixels
+        const pixPerMm   = sheetW / 210;          // e.g. 794 / 210 ≈ 3.78 px/mm
+        const onePagePx  = 297 * pixPerMm;        // physical px for one A4 page height
+        const canvPageH  = Math.round(onePagePx * 2); // canvas height per page (scale:2)
+        const numSlices  = Math.ceil(canvas.height / canvPageH);
+
+        for (let p = 0; p < numSlices; p++) {
+          if (dom.pdfProgressStatus) {
+            dom.pdfProgressStatus.textContent =
+              `Building page ${totalPdfPages + 1} (sheet ${i + 1}, slice ${p + 1}/${numSlices})...`;
+          }
+
+          const srcY = p * canvPageH;
+          const srcH = Math.min(canvPageH, canvas.height - srcY);
+
+          // Create a blank A4-canvas page and draw the slice into it
+          const pageCanvas = document.createElement('canvas');
+          pageCanvas.width  = canvas.width;
+          pageCanvas.height = canvPageH; // always full A4 height (last page padded with white)
+          const ctx = pageCanvas.getContext('2d');
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
+          // drawImage 9-arg: crop srcY..srcY+srcH from canvas, draw at (0,0) in pageCanvas
+          ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
+
+          if (totalPdfPages > 0) pdf.addPage();
+          pdf.addImage(pageCanvas.toDataURL('image/jpeg', 0.92), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+          totalPdfPages++;
+        }
       }
 
-      if (!pdfBlob) {
-        pdfBlob = await html2pdf().set(opt).from(contentWrapper).outputPdf('blob');
+      const pdfBlob = pdf.output('blob');
+      if (!pdfBlob || pdfBlob.size < 5000) {
+        throw new Error('PDF appears empty — content was not captured.');
       }
 
-      if (!pdfBlob || pdfBlob.size < 2000) {
-        throw new Error('Generated PDF was empty or unrendered.');
-      }
-
-      // 8. Store compiled blob and create File object with exact name
       state.compiledPdfBlob = pdfBlob;
       state.compiledFilename = finalFilename;
-      const pdfFile = new File([pdfBlob], finalFilename, { type: 'application/pdf' });
-      state.compiledPdfUrl = URL.createObjectURL(pdfFile);
+      state.compiledPdfUrl = URL.createObjectURL(new File([pdfBlob], finalFilename, { type: 'application/pdf' }));
 
       const sizeMb = (pdfBlob.size / (1024 * 1024)).toFixed(1);
 
-      // 8. Update modal to high-visibility ready state (User clicks Save to download the real PDF)
       if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
       if (dom.pdfReadyBox) dom.pdfReadyBox.style.display = 'flex';
       if (dom.pdfReadyFilename) dom.pdfReadyFilename.textContent = finalFilename;
-      if (dom.pdfReadyMeta) dom.pdfReadyMeta.textContent = `A4 Vector Print Document • ${sizeMb} MB • GTU / SSASIT`;
+      if (dom.pdfReadyMeta) dom.pdfReadyMeta.textContent =
+        `A4 PDF • ${totalPdfPages} page${totalPdfPages > 1 ? 's' : ''} • ${sizeMb} MB • GTU / SSASIT`;
 
-      // Update button to green 1-click Save with active user gesture
       if (dom.btnPdfModalDownload) {
         dom.btnPdfModalDownload.disabled = false;
         dom.btnPdfModalDownload.className = 'btn btn-success btn-save-action';
       }
       if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '💾';
       if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Save PDF Document';
-
       if (dom.btnPdfOpenTab) dom.btnPdfOpenTab.style.display = 'inline-flex';
-      if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Cancel';
+      if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Close';
 
-      showToast(`PDF compiled (${sizeMb} MB)! Click Save to download.`);
+      showToast(`PDF ready — ${totalPdfPages} page${totalPdfPages > 1 ? 's' : ''}, ${sizeMb} MB. Click Save.`);
+
     } catch (err) {
       console.error('PDF export error:', err);
-      showToast(`Download error: ${err.message}`, 'error');
+      showToast(`PDF Error: ${err.message}`, 'error');
       if (dom.btnPdfModalDownload) {
         dom.btnPdfModalDownload.disabled = false;
         dom.btnPdfModalDownload.className = 'btn btn-primary btn-save-action';
       }
-      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Retry Generation';
+      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Retry';
       if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
       if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
       if (dom.pdfFileNameInput) dom.pdfFileNameInput.disabled = false;
     } finally {
-      if (contentWrapper && contentWrapper.parentNode) {
-        contentWrapper.parentNode.removeChild(contentWrapper);
+      // Safety cleanup — remove any frame that may still be attached on error
+      if (activeFrame && activeFrame.parentNode) {
+        activeFrame.parentNode.removeChild(activeFrame);
       }
     }
   }
@@ -861,11 +829,11 @@
   }
 
   function attachEventListeners() {
-    // Zoom controls
-    if (dom.btnZoomIn) dom.btnZoomIn.addEventListener('click', () => setZoom(state.zoomLevel + 0.1));
-    if (dom.btnZoomOut) dom.btnZoomOut.addEventListener('click', () => setZoom(state.zoomLevel - 0.1));
+    // Zoom controls — all buttons animate smoothly; only initial load is instant
+    if (dom.btnZoomIn)    dom.btnZoomIn.addEventListener('click',  () => setZoom(state.zoomLevel + 0.1));
+    if (dom.btnZoomOut)   dom.btnZoomOut.addEventListener('click', () => setZoom(state.zoomLevel - 0.1));
     if (dom.btnZoomReset) dom.btnZoomReset.addEventListener('click', () => setZoom(1.0));
-    if (dom.btnZoomFit) dom.btnZoomFit.addEventListener('click', fitToWidth);
+    if (dom.btnZoomFit)   dom.btnZoomFit.addEventListener('click', fitToWidth);
 
     // Margin Guides & Theme
     if (dom.btnToggleGuides) dom.btnToggleGuides.addEventListener('click', toggleMarginGuides);
@@ -950,6 +918,21 @@
       dom.radioScopeSingle.addEventListener('change', updateEstimatedPageCount);
     }
 
+    // Developer Info modal
+    function openDevInfo() {
+      if (dom.devInfoBackdrop) dom.devInfoBackdrop.style.display = 'flex';
+    }
+    function closeDevInfo() {
+      if (dom.devInfoBackdrop) dom.devInfoBackdrop.style.display = 'none';
+    }
+    if (dom.btnDevInfo) dom.btnDevInfo.addEventListener('click', openDevInfo);
+    if (dom.btnDevInfoClose) dom.btnDevInfoClose.addEventListener('click', closeDevInfo);
+    if (dom.devInfoBackdrop) {
+      dom.devInfoBackdrop.addEventListener('click', (e) => {
+        if (e.target === dom.devInfoBackdrop) closeDevInfo();
+      });
+    }
+
     // Global file input
     if (dom.dropzoneInput) {
       dom.dropzoneInput.addEventListener('change', (e) => {
@@ -971,13 +954,14 @@
       }
     });
 
-    // Keyboard shortcuts (Ctrl+P opens PDF confirmation modal, Escape closes it)
+    // Keyboard shortcuts
     window.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
         e.preventDefault();
         openPdfModal();
       } else if (e.key === 'Escape') {
         closePdfModal();
+        if (dom.devInfoBackdrop) dom.devInfoBackdrop.style.display = 'none';
       }
     });
 

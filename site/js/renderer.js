@@ -288,6 +288,7 @@
           ${facultyStr ? `<span class="gtu-footer-faculty"><strong>Faculty:</strong> ${escapeHtml(facultyStr)}</span>` : ''}
         </div>
       </footer>
+      <div class="gtu-dev-credit">Made with ❤️ by <strong>Ved Mangukiya</strong>'s BBA Answer Formatter &nbsp;•&nbsp; GTU / SSASIT &nbsp;•&nbsp; Semester 1</div>
     `;
   }
 
