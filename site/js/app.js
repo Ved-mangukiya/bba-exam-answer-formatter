@@ -420,9 +420,9 @@
 
     if (dom.btnPdfModalDownload) {
       dom.btnPdfModalDownload.disabled = false;
-      dom.btnPdfModalDownload.className = 'btn btn-primary';
+      dom.btnPdfModalDownload.className = 'btn btn-primary btn-save-action';
     }
-    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Generate & Download PDF';
+    if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Generate A4 PDF';
     if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
     if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Cancel';
 
@@ -653,10 +653,10 @@
       // Update button to green 1-click Save with active user gesture
       if (dom.btnPdfModalDownload) {
         dom.btnPdfModalDownload.disabled = false;
-        dom.btnPdfModalDownload.className = 'btn btn-success';
+        dom.btnPdfModalDownload.className = 'btn btn-success btn-save-action';
       }
       if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '💾';
-      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = `Save ${finalFilename}`;
+      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Save PDF Document';
 
       if (dom.btnPdfOpenTab) dom.btnPdfOpenTab.style.display = 'inline-flex';
       if (dom.btnPdfModalCancel) dom.btnPdfModalCancel.textContent = 'Cancel';
@@ -665,8 +665,11 @@
     } catch (err) {
       console.error('PDF export error:', err);
       showToast(`Download error: ${err.message}`, 'error');
-      if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = false;
-      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Retry Download';
+      if (dom.btnPdfModalDownload) {
+        dom.btnPdfModalDownload.disabled = false;
+        dom.btnPdfModalDownload.className = 'btn btn-primary btn-save-action';
+      }
+      if (dom.btnDownloadLabel) dom.btnDownloadLabel.textContent = 'Retry Generation';
       if (dom.btnDownloadIcon) dom.btnDownloadIcon.textContent = '⬇️';
       if (dom.pdfProgressBar) dom.pdfProgressBar.style.display = 'none';
       if (dom.pdfFileNameInput) dom.pdfFileNameInput.disabled = false;

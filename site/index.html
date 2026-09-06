@@ -19,8 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Stylesheets: Print Physics + Modern Desk Workspace -->
-  <link rel="stylesheet" href="css/a4-print.css?v=2.4">
-  <link rel="stylesheet" href="css/app.css?v=2.4">
+  <link rel="stylesheet" href="css/a4-print.css?v=2.5">
+  <link rel="stylesheet" href="css/app.css?v=2.5">
 </head>
 <body class="theme-light" data-mobile-view="subjects">
 
@@ -235,29 +235,37 @@
 
         <!-- Success / Ready Box (Shown when PDF compilation succeeds) -->
         <div class="pdf-ready-box" id="pdfReadyBox" style="display: none;">
-          <div class="pdf-ready-header">
-            <span class="pdf-ready-icon">✅</span>
-            <div style="flex: 1; min-width: 0;">
-              <div class="pdf-ready-filename" id="pdfReadyFilename">Document.pdf</div>
-              <div class="pdf-ready-meta" id="pdfReadyMeta">Ready to Save • A4 Vector Print Document</div>
+          <div class="pdf-ready-icon-ring">
+            <span class="pdf-ready-icon">✓</span>
+          </div>
+          <div class="pdf-ready-title">A4 Document Ready</div>
+          <div class="pdf-ready-card">
+            <span class="file-icon">📄</span>
+            <div class="pdf-ready-fileinfo">
+              <span class="pdf-ready-filename" id="pdfReadyFilename">Document.pdf</span>
+              <span class="pdf-ready-meta" id="pdfReadyMeta">Ready to Save • A4 Vector Document</span>
             </div>
           </div>
           <p class="pdf-ready-note">
-            Your print-ready A4 document is compiled. Click the green <strong>Save</strong> button below to save it directly as a <code>.pdf</code> file.
+            Your answers are compiled into verified A4 pages. Click below to save directly to your device.
           </p>
         </div>
       </div>
 
       <div class="modal-footer" id="pdfModalFooter">
-        <button class="btn btn-secondary" id="btnPdfModalCancel">Cancel</button>
-        <button class="btn btn-primary" id="btnPdfModalDownload">
-          <span id="btnDownloadIcon">⬇️</span>
-          <span id="btnDownloadLabel">Generate & Download PDF</span>
-        </button>
-        <button class="btn btn-secondary" id="btnPdfOpenTab" style="display: none;" title="Open and view PDF in a new browser tab">
-          <span>👁️</span>
-          <span>Open in Tab</span>
-        </button>
+        <div class="modal-footer-main">
+          <button class="btn btn-primary btn-save-action" id="btnPdfModalDownload">
+            <span id="btnDownloadIcon">⬇️</span>
+            <span id="btnDownloadLabel">Generate A4 PDF</span>
+          </button>
+        </div>
+        <div class="modal-footer-sub">
+          <button class="btn-subtle" id="btnPdfModalCancel">Cancel</button>
+          <button class="btn-subtle" id="btnPdfOpenTab" style="display: none;" title="Open and view PDF in a new browser tab">
+            <span>👁️</span>
+            <span>Preview in Browser</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -265,10 +273,10 @@
   <!-- Toast Notifications -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- Application Logic Scripts (v2.4 Cache-Busted) -->
+  <!-- Application Logic Scripts (v2.5 Cache-Busted) -->
   <script src="js/vendor/html2pdf.bundle.min.js"></script>
-  <script src="js/renderer.js?v=2.4"></script>
-  <script src="js/data-loader.js?v=2.4"></script>
-  <script src="js/app.js?v=2.4"></script>
+  <script src="js/renderer.js?v=2.5"></script>
+  <script src="js/data-loader.js?v=2.5"></script>
+  <script src="js/app.js?v=2.5"></script>
 </body>
 </html>
