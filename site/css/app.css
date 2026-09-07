@@ -2473,6 +2473,26 @@ body.theme-light .mobile-nav-item.active .mobile-nav-indicator {
   margin-bottom: 8px;
 }
 
+.schedule-evening-plan {
+  font-size: 11px;
+  padding: 6px 8px;
+  background: rgba(99, 102, 241, 0.07);
+  border-radius: 4px;
+  border: 1px dashed rgba(99, 102, 241, 0.35);
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
+.schedule-celebration {
+  font-size: 11px;
+  padding: 6px 8px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 4px;
+  color: #818cf8;
+  font-weight: 500;
+}
+
 .schedule-day-actions {
   display: flex;
   justify-content: space-between;

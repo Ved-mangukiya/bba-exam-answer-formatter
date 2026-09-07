@@ -288,19 +288,11 @@
       const isChecked = state.checkedQuestions.has(q.id);
       return `
         <div class="question-item-card ${isSel ? 'active' : ''} ${isChecked ? 'is-checked' : ''}" data-qid="${q.id}">
-          <div class="question-item-head">
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <label class="question-check-box" title="${isChecked ? 'Marked as read' : 'Mark as read'}" onclick="event.stopPropagation();">
-                <input type="checkbox" class="q-target-check" data-qid="${q.id}" ${isChecked ? 'checked' : ''}>
-              </label>
-              <span class="q-num-badge">${q.questionNumber || 'Q.'}</span>
-            </div>
-            <span class="q-marks-pill">[${q.marks || 0} Marks]</span>
-          </div>
           <div class="question-item-text">${q.questionText}</div>
         </div>
       `;
     }).join('');
+
 
     dom.questionList.innerHTML = html;
 
@@ -537,12 +529,12 @@
               Exam Code: <strong>${item.code}</strong> • ${item.timing}
             </div>
             ${reviewItem && reviewItem.eveningSubject !== 'Celebration & Review' ? `
-              <div style="font-size: 11px; padding: 6px 8px; background: rgba(16,185,129,0.06); border-radius: 4px; border: 1px dashed rgba(16,185,129,0.3); color: var(--text-secondary);">
+              <div class="schedule-evening-plan">
                 🌙 <strong>Post-Exam Evening Plan (4.0 hrs):</strong><br>
                 ${reviewItem.task}
               </div>
             ` : `
-              <div style="font-size: 11px; padding: 6px 8px; background: rgba(245,158,11,0.1); border-radius: 4px; color: #b45309;">
+              <div class="schedule-celebration">
                 🎉 <strong>Semester-1 Complete!</strong> Target 10 SPI Achieved!
               </div>
             `}
