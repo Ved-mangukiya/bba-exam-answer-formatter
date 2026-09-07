@@ -49,7 +49,7 @@
       slug: "general-communicative-english",
       code: "GCE",
       name: "General and Communicative English",
-      faculty: ["Prof. Hetal S. Ballar", "Prof. Nisha Tollawala"],
+      faculty: ["Ms. Nisha Tollawala", "Prof. Hetal S. Ballar"],
       icon: "✍️",
       description: "Business communication, grammar, vocabulary, report writing, and presentations.",
       dataFiles: [
