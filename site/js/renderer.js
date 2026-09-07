@@ -305,9 +305,14 @@
     let questionsToRender = subjectData.questions || [];
 
     if (activeQuestionId) {
-      const single = questionsToRender.find(q => q.id === activeQuestionId);
-      if (single) {
-        questionsToRender = [single];
+      if (Array.isArray(activeQuestionId)) {
+        const idSet = new Set(activeQuestionId);
+        questionsToRender = questionsToRender.filter(q => idSet.has(q.id));
+      } else {
+        const single = questionsToRender.find(q => q.id === activeQuestionId);
+        if (single) {
+          questionsToRender = [single];
+        }
       }
     }
 
@@ -330,7 +335,7 @@
       return qHtml + separator;
     }).join('');
 
-    const isSingle = Boolean(activeQuestionId);
+    const isSingle = typeof activeQuestionId === 'string' && Boolean(activeQuestionId);
     const sheetClass = isSingle ? 'gtu-a4-sheet gtu-single-question-sheet' : 'gtu-a4-sheet';
     const endMarkHtml = `
       <div class="gtu-page-end-mark" title="End of Examination Answers">

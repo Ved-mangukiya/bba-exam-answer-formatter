@@ -187,6 +187,72 @@ body {
   gap: 12px;
 }
 
+/* Cloud Sync Status Indicator */
+.cloud-sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  user-select: none;
+  transition: all var(--transition-fast);
+}
+
+.cloud-sync-badge .sync-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #94a3b8;
+  display: inline-block;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cloud-sync-badge.status-synced {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.cloud-sync-badge.status-synced .sync-dot {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+}
+
+.cloud-sync-badge.status-connecting .sync-dot,
+.cloud-sync-badge.status-saving .sync-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.7);
+  animation: pulse-sync 1s infinite alternate;
+}
+
+.cloud-sync-badge.status-offline {
+  color: var(--text-tertiary);
+  border-color: var(--border-subtle);
+}
+
+.cloud-sync-badge.status-offline .sync-dot {
+  background: #94a3b8;
+}
+
+.cloud-sync-badge.status-error {
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.cloud-sync-badge.status-error .sync-dot {
+  background: #ef4444;
+}
+
+@keyframes pulse-sync {
+  0% { opacity: 0.4; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1.25); }
+}
+
 /* Buttons */
 .btn {
   font-family: var(--font-sans);
@@ -2047,3 +2113,315 @@ body.theme-light .mobile-nav-item.active .mobile-nav-indicator {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   10 CGPA / 10 SPI Study Plan & Schedule Styles
+   ========================================================================== */
+
+.schedule-tab-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-emerald, #10b981);
+  margin-left: 4px;
+  vertical-align: middle;
+  box-shadow: 0 0 6px var(--accent-emerald, #10b981);
+}
+
+.schedule-panel-header {
+  padding: 12px 14px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(16, 185, 129, 0.06));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-md, 8px);
+  margin-bottom: 12px;
+}
+
+.schedule-goal-pill {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--accent-indigo, #6366f1);
+  margin-bottom: 8px;
+}
+
+.schedule-progress-bar-wrapper {
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.theme-dark .schedule-progress-bar-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.schedule-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #10b981);
+  border-radius: 999px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-secondary, #64748b);
+  font-family: var(--font-mono);
+}
+
+.schedule-filter-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-surface, #f1f5f9);
+  padding: 3px;
+  border-radius: var(--radius-sm, 6px);
+  margin-bottom: 12px;
+}
+
+.theme-dark .schedule-filter-tabs {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.schedule-filter-btn {
+  flex: 1;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.schedule-filter-btn.active {
+  background: var(--bg-card, #ffffff);
+  color: var(--accent-indigo, #6366f1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.theme-dark .schedule-filter-btn.active {
+  background: #1e293b;
+  color: #a5b4fc;
+}
+
+.schedule-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+  padding-right: 2px;
+}
+
+.schedule-day-card {
+  padding: 12px 14px;
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.schedule-day-card:hover {
+  border-color: var(--accent-indigo, #6366f1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+}
+
+.schedule-day-card.active-target {
+  border-color: #6366f1;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(16, 185, 129, 0.03));
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.schedule-day-card.is-completed {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: rgba(16, 185, 129, 0.03);
+}
+
+.schedule-day-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.schedule-date-chip {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.schedule-hours-pill {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.schedule-day-subject {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.schedule-sub-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+}
+
+.schedule-sub-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.schedule-day-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.schedule-day-target-info {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.schedule-day-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.schedule-check-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.schedule-check-input {
+  width: 14px;
+  height: 14px;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.btn-schedule-view {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6366f1;
+  background: transparent;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-schedule-view:hover {
+  background: #6366f1;
+  color: #ffffff;
+  border-color: #6366f1;
+}
+
+/* Schedule Target Active Banner in Workspace */
+.schedule-active-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.12), rgba(16, 185, 129, 0.1));
+  border-bottom: 1px solid rgba(99, 102, 241, 0.25);
+  animation: bannerSlideDown 0.25s ease-out;
+}
+
+@keyframes bannerSlideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.schedule-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.schedule-banner-icon {
+  font-size: 20px;
+}
+
+.schedule-banner-text strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.schedule-banner-text span {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.schedule-banner-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Question Checklist Tracking */
+.question-check-box {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.question-check-box input {
+  width: 15px;
+  height: 15px;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.question-item-card.is-checked {
+  border-left: 3px solid #10b981;
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.question-item-card.is-checked .question-item-text {
+  color: var(--text-muted);
+}
+

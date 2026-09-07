@@ -1,0 +1,369 @@
+{
+  "semester": 1,
+  "course": "Bachelor of Business Administration (BBA)",
+  "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+  "university": "Gujarat Technological University (GTU)",
+  "targetGoal": "10 CGPA / 10 SPI",
+  "prepStartDate": "2026-09-08",
+  "prepEndDate": "2026-09-20",
+  "examStartDate": "2026-09-21",
+  "examEndDate": "2026-09-26",
+  "timetable": [
+    {
+      "code": "BB01001011",
+      "subject": "Principles and Practices of Management",
+      "shortCode": "PPM",
+      "slug": "principles-and-practices-of-management",
+      "date": "2026-09-21",
+      "dayName": "Monday",
+      "timing": "Morning Session"
+    },
+    {
+      "code": "BB01001021",
+      "subject": "Financial Accounting",
+      "shortCode": "FA",
+      "slug": "financial-accounting",
+      "date": "2026-09-22",
+      "dayName": "Tuesday",
+      "timing": "Morning Session"
+    },
+    {
+      "code": "BB01001031",
+      "subject": "Business Statistics and Logic",
+      "shortCode": "BSL",
+      "slug": "business-statistics-and-logic",
+      "date": "2026-09-23",
+      "dayName": "Wednesday",
+      "timing": "Morning Session"
+    },
+    {
+      "code": "BB01001041",
+      "subject": "General and Communicative English",
+      "shortCode": "GCE",
+      "slug": "general-communicative-english",
+      "date": "2026-09-24",
+      "dayName": "Thursday",
+      "timing": "Morning Session"
+    },
+    {
+      "code": "BB01001051",
+      "subject": "Indian Knowledge Systems",
+      "shortCode": "IKS",
+      "slug": "indian-knowledge-systems",
+      "date": "2026-09-25",
+      "dayName": "Friday",
+      "timing": "Morning Session"
+    },
+    {
+      "code": "BB01001061",
+      "subject": "Fundamentals of ESG for Sustainability",
+      "shortCode": "FES",
+      "slug": "fundamentals-of-esg-for-sustainability",
+      "date": "2026-09-26",
+      "dayName": "Saturday",
+      "timing": "Morning Session"
+    }
+  ],
+  "days": [
+    {
+      "id": "day-1",
+      "dayNumber": 1,
+      "date": "2026-09-08",
+      "displayDate": "Sept 8 (Tue)",
+      "subjectSlug": "general-communicative-english",
+      "subjectCode": "GCE",
+      "subjectName": "General and Communicative English",
+      "examCode": "BB01001041",
+      "examDate": "2026-09-24",
+      "title": "GCE Part 1: Grammar, Tenses & Core Definitions",
+      "targetSummary": "Q.1 to Q.19 (19 Questions)",
+      "estHours": 6.0,
+      "tips": "Focus on high-scoring 2-mark definitions. Commit 'Hearing = Receiving sounds | Listening = Understanding the meaning of those sounds' to memory.",
+      "questionIds": [
+        "eng-u1-q1", "eng-u1-q2", "eng-u1-q3", "eng-u1-q4", "eng-u1-q5",
+        "eng-u1-q6", "eng-u1-q7", "eng-u1-q8", "eng-u1-q9", "eng-u1-q10",
+        "eng-u1-q11", "eng-u1-q12", "eng-u1-q13", "eng-u2-q14", "eng-u2-q15",
+        "eng-u2-q16", "eng-u2-q17", "eng-u2-q18", "eng-u2-q19"
+      ]
+    },
+    {
+      "id": "day-2",
+      "dayNumber": 2,
+      "date": "2026-09-09",
+      "displayDate": "Sept 9 (Wed)",
+      "subjectSlug": "general-communicative-english",
+      "subjectCode": "GCE",
+      "subjectName": "General and Communicative English",
+      "examCode": "BB01001041",
+      "examDate": "2026-09-24",
+      "title": "GCE Part 2: Detailed 7-Mark Qs, 4 Reading Types & 3 Writing Types",
+      "targetSummary": "Q.20 to Q.33 (14 Questions)",
+      "estHours": 6.5,
+      "tips": "Practice drawing the 5-stage listening diagram by hand. Master the comparison tables for Hearing vs Listening and Speech vs Lecture.",
+      "questionIds": [
+        "eng-u2-q20", "eng-u2-q21", "eng-u2-q22", "eng-u2-q23", "eng-u2-q24",
+        "eng-u2-q25", "eng-u2-q26", "eng-u2-q27", "eng-u2-q28", "eng-u3-q29",
+        "eng-u3-q30", "eng-u3-q31", "eng-u3-q32", "eng-u3-q33"
+      ]
+    },
+    {
+      "id": "day-3",
+      "dayNumber": 3,
+      "date": "2026-09-10",
+      "displayDate": "Sept 10 (Thu)",
+      "subjectSlug": "financial-accounting",
+      "subjectCode": "FA",
+      "subjectName": "Financial Accounting",
+      "examCode": "BB01001021",
+      "examDate": "2026-09-22",
+      "title": "FA Part 1: Accounting Foundations, Ledger & Depreciation",
+      "targetSummary": "Q.1 to Q.14 (14 Questions)",
+      "estHours": 7.0,
+      "tips": "Underline accounting conventions (Conservatism, Matching). Practice journal entry formats and straight-line vs WDV depreciation sums.",
+      "questionIds": [
+        "fa-u1-q1", "fa-u1-q2", "fa-u1-q3", "fa-u1-q4", "fa-u1-q5",
+        "fa-u1-q6", "fa-u1-q7", "fa-u1-q8", "fa-u1-q9", "fa-u1-q10",
+        "fa-u1-p1", "fa-u1-p2", "fa-u1-p3", "fa-u1-p4"
+      ]
+    },
+    {
+      "id": "day-4",
+      "dayNumber": 4,
+      "date": "2026-09-11",
+      "displayDate": "Sept 11 (Fri)",
+      "subjectSlug": "financial-accounting",
+      "subjectCode": "FA",
+      "subjectName": "Financial Accounting",
+      "examCode": "BB01001021",
+      "examDate": "2026-09-22",
+      "title": "FA Part 2: Final Accounts, Balance Sheet & Financial Ratios",
+      "targetSummary": "Q.15 to Q.28 (14 Questions)",
+      "estHours": 7.0,
+      "tips": "Practice vertical Balance Sheet format per Companies Act. Memorize Current, Quick, and Debt-Equity ratio formulas.",
+      "questionIds": [
+        "fa-u2-q1", "fa-u2-q2", "fa-u2-q3", "fa-u2-q4", "fa-u2-q5",
+        "fa-u2-q6", "fa-u2-q7", "fa-u2-q8", "fa-u2-q9", "fa-u2-p1",
+        "fa-u2-p2", "fa-u2-p3", "fa-u2-p4", "fa-u2-p5"
+      ]
+    },
+    {
+      "id": "day-5",
+      "dayNumber": 5,
+      "date": "2026-09-12",
+      "displayDate": "Sept 12 (Sat)",
+      "subjectSlug": "fundamentals-of-esg-for-sustainability",
+      "subjectCode": "FES",
+      "subjectName": "Fundamentals of ESG for Sustainability",
+      "examCode": "BB01001061",
+      "examDate": "2026-09-26",
+      "title": "FES Part 1: Environmental Pillar, Climate Risks & Carbon Footprint",
+      "targetSummary": "Q.1 to Q.10 (10 Questions)",
+      "estHours": 5.5,
+      "tips": "Differentiate Scope 1, 2, and 3 emissions clearly. Quote Kyoto Protocol and Paris Agreement milestones for 7-mark answers.",
+      "questionIds": [
+        "fes-u1-q1a", "fes-u1-q1b", "fes-u1-q1c", "fes-u1-q1d", "fes-u1-q1e",
+        "fes-u1-q1f", "fes-u1-q1g", "fes-u1-q1h", "fes-u1-q2a", "fes-u1-q2b"
+      ]
+    },
+    {
+      "id": "day-6",
+      "dayNumber": 6,
+      "date": "2026-09-13",
+      "displayDate": "Sept 13 (Sun)",
+      "subjectSlug": "fundamentals-of-esg-for-sustainability",
+      "subjectCode": "FES",
+      "subjectName": "Fundamentals of ESG for Sustainability",
+      "examCode": "BB01001061",
+      "examDate": "2026-09-26",
+      "title": "FES Part 2: Social Pillar, Corporate Governance & BRSR",
+      "targetSummary": "Q.11 to Q.19 (9 Questions)",
+      "estHours": 5.5,
+      "tips": "Highlight SEBI's BRSR (Business Responsibility and Sustainability Reporting) framework and circular economy closed-loop models.",
+      "questionIds": [
+        "fes-u1-q2c", "fes-u1-q2d", "fes-u1-q2e", "fes-u1-q2f", "fes-u1-q3a",
+        "fes-u1-q3b", "fes-u1-q3c", "fes-u1-q3d", "fes-u1-q3e"
+      ]
+    },
+    {
+      "id": "day-7",
+      "dayNumber": 7,
+      "date": "2026-09-14",
+      "displayDate": "Sept 14 (Mon)",
+      "subjectSlug": "business-statistics-and-logic",
+      "subjectCode": "BSL",
+      "subjectName": "Business Statistics and Logic",
+      "examCode": "BB01001031",
+      "examDate": "2026-09-23",
+      "title": "BSL Part 1: Central Tendency, Dispersion, Correlation & Regression",
+      "targetSummary": "BSL Statistics Module (Formulas & Numerical Practice)",
+      "estHours": 7.0,
+      "tips": "Practice Karl Pearson's and Spearman's Rank correlation steps. Memorize regression line equations (Y on X, X on Y).",
+      "questionIds": [],
+      "isExternalOrPending": true,
+      "pendingMessage": "Business Statistics & Logic questions will load automatically when BSL JSON is imported. Dedicate today to statistical formula sheets and numerical drills."
+    },
+    {
+      "id": "day-8",
+      "dayNumber": 8,
+      "date": "2026-09-15",
+      "displayDate": "Sept 15 (Tue)",
+      "subjectSlug": "business-statistics-and-logic",
+      "subjectCode": "BSL",
+      "subjectName": "Business Statistics and Logic",
+      "examCode": "BB01001031",
+      "examDate": "2026-09-23",
+      "title": "BSL Part 2: Logic, Syllogisms, Probability & Distributions",
+      "targetSummary": "BSL Logic & Probability Module",
+      "estHours": 7.0,
+      "tips": "Draw Venn diagrams for syllogism proofs. Solve conditional probability and binomial distribution sample problems.",
+      "questionIds": [],
+      "isExternalOrPending": true,
+      "pendingMessage": "Dedicate today to propositional logic truth tables, Venn diagrams, and probability problem sets."
+    },
+    {
+      "id": "day-9",
+      "dayNumber": 9,
+      "date": "2026-09-16",
+      "displayDate": "Sept 16 (Wed)",
+      "subjectSlug": "indian-knowledge-systems",
+      "subjectCode": "IKS",
+      "subjectName": "Indian Knowledge Systems",
+      "examCode": "BB01001051",
+      "examDate": "2026-09-25",
+      "title": "IKS Part 1: Vedic Science, Ancient Mathematics & Astronomy",
+      "targetSummary": "Q.1 to Q.10 (10 Questions)",
+      "estHours": 6.0,
+      "tips": "Cite ancient texts (Sulba Sutras, Aryabhatiya, Surya Siddhanta) and specific scholars (Aryabhata, Brahmagupta, Bhaskara II).",
+      "questionIds": [
+        "iks-u1-q1", "iks-u1-q2", "iks-u1-q3", "iks-u1-q4", "iks-u1-q5",
+        "iks-u1-q6", "iks-u1-q7", "iks-u1-q8", "iks-u1-sn1", "iks-u1-sn2"
+      ]
+    },
+    {
+      "id": "day-10",
+      "dayNumber": 10,
+      "date": "2026-09-17",
+      "displayDate": "Sept 17 (Thu)",
+      "subjectSlug": "indian-knowledge-systems",
+      "subjectCode": "IKS",
+      "subjectName": "Indian Knowledge Systems",
+      "examCode": "BB01001051",
+      "examDate": "2026-09-25",
+      "title": "IKS Part 2: Arthashastra, Traditional Governance, Metallurgy & Ethics",
+      "targetSummary": "Q.11 to Q.21 (11 Questions)",
+      "estHours": 6.0,
+      "tips": "Detail Kautilya's Saptanga theory of state and ancient Indian ecological water harvesting systems.",
+      "questionIds": [
+        "iks-u1-sn3", "iks-u1-sn4", "iks-u1-sn5", "iks-u1-sn6", "iks-u1-lq1",
+        "iks-u1-lq2", "iks-u1-lq3", "iks-u1-lq4", "iks-u1-lq5", "iks-u1-lq6",
+        "iks-u1-lq7"
+      ]
+    },
+    {
+      "id": "day-11",
+      "dayNumber": 11,
+      "date": "2026-09-18",
+      "displayDate": "Sept 18 (Fri)",
+      "subjectSlug": "principles-and-practices-of-management",
+      "subjectCode": "PPM",
+      "subjectName": "Principles and Practices of Management",
+      "examCode": "BB01001011",
+      "examDate": "2026-09-21",
+      "title": "PPM Part 1: Management Principles, Planning & Organizing",
+      "targetSummary": "Q.1 to Q.12 (12 Questions)",
+      "estHours": 6.5,
+      "tips": "Memorize Henry Fayol's 14 principles and Taylor's scientific management. Draw organization chart diagrams cleanly.",
+      "questionIds": [
+        "ppm-u1-q1", "ppm-u1-q2", "ppm-u1-q3", "ppm-u1-q4", "ppm-u1-q5",
+        "ppm-u1-q6", "ppm-u1-q7", "ppm-u1-q8", "ppm-u1-q9", "ppm-u1-q10",
+        "ppm-u1-q11", "ppm-u1-q12"
+      ]
+    },
+    {
+      "id": "day-12",
+      "dayNumber": 12,
+      "date": "2026-09-19",
+      "displayDate": "Sept 19 (Sat)",
+      "subjectSlug": "principles-and-practices-of-management",
+      "subjectCode": "PPM",
+      "subjectName": "Principles and Practices of Management",
+      "examCode": "BB01001011",
+      "examDate": "2026-09-21",
+      "title": "PPM Part 2: Staffing, Leadership, Motivation & Controlling",
+      "targetSummary": "Q.13 to Q.24 (12 Questions)",
+      "estHours": 6.5,
+      "tips": "Compare Maslow's Need Hierarchy vs Herzberg's Two-Factor theory. Draw the control loop diagram.",
+      "questionIds": [
+        "ppm-u2-q1", "ppm-u2-q2", "ppm-u2-q3", "ppm-u2-q4", "ppm-u2-q5",
+        "ppm-u2-q6", "ppm-u2-q7", "ppm-u2-q8", "ppm-u2-q9", "ppm-u2-q10",
+        "ppm-u2-q11", "ppm-u2-q12"
+      ]
+    },
+    {
+      "id": "day-13",
+      "dayNumber": 13,
+      "date": "2026-09-20",
+      "displayDate": "Sept 20 (Sun)",
+      "subjectSlug": "principles-and-practices-of-management",
+      "subjectCode": "PPM",
+      "subjectName": "Principles and Practices of Management",
+      "examCode": "BB01001011",
+      "examDate": "2026-09-21",
+      "title": "Pre-Exam PPM Mega Mock: 100% Full-Syllabus Rapid Recall",
+      "targetSummary": "Full 24 PPM Questions (High-Yield Diagrams & Speed Drill)",
+      "estHours": 6.0,
+      "tips": "Tomorrow morning is Paper 1 (PPM)! Practice rapid diagram sketching and writing 7-mark structures under exam time. Rest early by 10:30 PM.",
+      "questionIds": [
+        "ppm-u1-q1", "ppm-u1-q2", "ppm-u1-q3", "ppm-u1-q4", "ppm-u1-q5",
+        "ppm-u1-q6", "ppm-u1-q7", "ppm-u1-q8", "ppm-u1-q9", "ppm-u1-q10",
+        "ppm-u1-q11", "ppm-u1-q12", "ppm-u2-q1", "ppm-u2-q2", "ppm-u2-q3",
+        "ppm-u2-q4", "ppm-u2-q5", "ppm-u2-q6", "ppm-u2-q7", "ppm-u2-q8",
+        "ppm-u2-q9", "ppm-u2-q10", "ppm-u2-q11", "ppm-u2-q12"
+      ]
+    }
+  ],
+  "examWeekReview": [
+    {
+      "examDate": "2026-09-21",
+      "morningExam": "PPM (BB01001011)",
+      "eveningSubject": "Financial Accounting (FA)",
+      "hours": 4.0,
+      "task": "Review 28 FA questions, focusing on journal entries, trial balance, and final accounts adjustments for tomorrow."
+    },
+    {
+      "examDate": "2026-09-22",
+      "morningExam": "FA (BB01001021)",
+      "eveningSubject": "Business Statistics and Logic (BSL)",
+      "hours": 4.0,
+      "task": "Review statistical formulas, correlation/regression formulas, and logic truth tables for tomorrow."
+    },
+    {
+      "examDate": "2026-09-23",
+      "morningExam": "BSL (BB01001031)",
+      "eveningSubject": "General and Communicative English (GCE)",
+      "hours": 4.0,
+      "task": "Review 33 GCE questions, loud reading points, extempore elements, 4 reading types, and 3 writing types."
+    },
+    {
+      "examDate": "2026-09-24",
+      "morningExam": "GCE (BB01001041)",
+      "eveningSubject": "Indian Knowledge Systems (IKS)",
+      "hours": 4.0,
+      "task": "Review 21 IKS questions, key Sanskrit terminology, and scholar contributions for tomorrow."
+    },
+    {
+      "examDate": "2026-09-25",
+      "morningExam": "IKS (BB01001051)",
+      "eveningSubject": "Fundamentals of ESG for Sustainability (FES)",
+      "hours": 4.0,
+      "task": "Review 19 FES questions, SEBI BRSR guidelines, and ESG disclosure pillars."
+    },
+    {
+      "examDate": "2026-09-26",
+      "morningExam": "FES (BB01001061)",
+      "eveningSubject": "Celebration & Review",
+      "hours": 0,
+      "task": "Sem-1 Exams Completed with 10 CGPA / 10 SPI preparation!"
+    }
+  ]
+}

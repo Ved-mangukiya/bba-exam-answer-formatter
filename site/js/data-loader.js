@@ -176,10 +176,30 @@
     return { slug, data: jsonData };
   }
 
+  let scheduleCache = null;
+
+  async function getStudySchedule() {
+    if (scheduleCache) return scheduleCache;
+    const paths = [
+      '../data/study-schedule.json',
+      'data/study-schedule.json'
+    ];
+    for (const p of paths) {
+      const data = await fetchJson(p);
+      if (data) {
+        scheduleCache = data;
+        return data;
+      }
+    }
+    return null;
+  }
+
   window.GTUDataLoader = {
     getSubjects,
     getSubjectData,
-    registerCustomData
+    registerCustomData,
+    getStudySchedule
   };
 
 })(window);
+

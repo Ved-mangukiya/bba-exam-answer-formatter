@@ -25,7 +25,27 @@
     })(),
     compiledPdfBlob: null,
     compiledPdfUrl: null,
-    compiledFilename: null
+    compiledFilename: null,
+    // 10 SPI Study Schedule State
+    scheduleData: null,
+    activeScheduleDayId: null,
+    scheduleFilter: 'all',
+    checkedQuestions: (function() {
+      try {
+        const raw = localStorage.getItem('gtu_checked_questions');
+        return raw ? new Set(JSON.parse(raw)) : new Set();
+      } catch (e) {
+        return new Set();
+      }
+    })(),
+    completedDays: (function() {
+      try {
+        const raw = localStorage.getItem('gtu_completed_days');
+        return raw ? new Set(JSON.parse(raw)) : new Set();
+      } catch (e) {
+        return new Set();
+      }
+    })()
   };
 
   // DOM Elements
@@ -56,8 +76,19 @@
       btnUploadJson: document.getElementById('btnUploadJson'),
       tabSubjects: document.getElementById('tabSubjects'),
       tabQuestions: document.getElementById('tabQuestions'),
+      tabSchedule: document.getElementById('tabSchedule'),
       sidebarSubjectsPanel: document.getElementById('sidebarSubjectsPanel'),
       sidebarQuestionsPanel: document.getElementById('sidebarQuestionsPanel'),
+      sidebarSchedulePanel: document.getElementById('sidebarSchedulePanel'),
+      btnHeaderSchedule: document.getElementById('btnHeaderSchedule'),
+      scheduleOverallProgressBar: document.getElementById('scheduleOverallProgressBar'),
+      scheduleProgressDaysLabel: document.getElementById('scheduleProgressDaysLabel'),
+      scheduleProgressPercentLabel: document.getElementById('scheduleProgressPercentLabel'),
+      scheduleTimelineList: document.getElementById('scheduleTimelineList'),
+      scheduleTargetBanner: document.getElementById('scheduleTargetBanner'),
+      scheduleBannerTitle: document.getElementById('scheduleBannerTitle'),
+      scheduleBannerSubtitle: document.getElementById('scheduleBannerSubtitle'),
+      btnExitScheduleFilter: document.getElementById('btnExitScheduleFilter'),
       toastContainer: document.getElementById('toastContainer'),
       mobileBottomNav: document.getElementById('mobileBottomNav'),
       mobileNavItems: document.querySelectorAll('.mobile-nav-item'),
@@ -103,7 +134,9 @@
 
   async function loadInitialData() {
     state.subjects = await window.GTUDataLoader.getSubjects();
+    state.scheduleData = await window.GTUDataLoader.getStudySchedule();
     renderSubjectList();
+    renderSchedulePanel();
     await selectSubject(state.activeSubjectSlug);
   }
 
@@ -221,7 +254,16 @@
     }
 
     let questions = state.activeSubjectData.questions;
-    if (state.activeUnitFilter !== 'ALL') {
+    let isFilteredBySchedule = false;
+
+    if (state.activeScheduleDayId && state.scheduleData) {
+      const activeDay = state.scheduleData.days.find(d => d.id === state.activeScheduleDayId);
+      if (activeDay && activeDay.questionIds && activeDay.questionIds.length > 0) {
+        const idSet = new Set(activeDay.questionIds);
+        questions = questions.filter(q => idSet.has(q.id));
+        isFilteredBySchedule = true;
+      }
+    } else if (state.activeUnitFilter !== 'ALL') {
       questions = questions.filter(q => q.unit === state.activeUnitFilter);
     }
 
@@ -230,21 +272,29 @@
     let html = `
       <div class="question-item-card ${fullSheetActive ? 'active' : ''}" id="cardFullSheet">
         <div class="question-item-head">
-          <span class="q-num-badge" style="color: #38bdf8;">📄 Full Subject Sheet</span>
-          <span class="q-marks-pill">${state.activeSubjectData.questions.length} Questions</span>
+          <span class="q-num-badge" style="color: ${isFilteredBySchedule ? '#10b981' : '#38bdf8'};">
+            ${isFilteredBySchedule ? '🎯 Daily Target Sheet' : '📄 Full Subject Sheet'}
+          </span>
+          <span class="q-marks-pill">${questions.length} Questions</span>
         </div>
         <div class="question-item-text">
-          View and print all questions consecutively in one complete A4 document.
+          ${isFilteredBySchedule ? "View and print only today's scheduled questions consecutively in A4 format." : 'View and print all questions consecutively in one complete A4 document.'}
         </div>
       </div>
     `;
 
     html += questions.map(q => {
       const isSel = state.activeQuestionId === q.id;
+      const isChecked = state.checkedQuestions.has(q.id);
       return `
-        <div class="question-item-card ${isSel ? 'active' : ''}" data-qid="${q.id}">
+        <div class="question-item-card ${isSel ? 'active' : ''} ${isChecked ? 'is-checked' : ''}" data-qid="${q.id}">
           <div class="question-item-head">
-            <span class="q-num-badge">${q.questionNumber || 'Q.'}</span>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <label class="question-check-box" title="${isChecked ? 'Marked as read' : 'Mark as read'}" onclick="event.stopPropagation();">
+                <input type="checkbox" class="q-target-check" data-qid="${q.id}" ${isChecked ? 'checked' : ''}>
+              </label>
+              <span class="q-num-badge">${q.questionNumber || 'Q.'}</span>
+            </div>
             <span class="q-marks-pill">[${q.marks || 0} Marks]</span>
           </div>
           <div class="question-item-text">${q.questionText}</div>
@@ -277,6 +327,49 @@
         }
       });
     });
+
+    dom.questionList.querySelectorAll('.q-target-check').forEach(chk => {
+      chk.addEventListener('change', (e) => {
+        e.stopPropagation();
+        const qid = chk.getAttribute('data-qid');
+        toggleQuestionCheck(qid);
+      });
+    });
+  }
+
+  function toggleQuestionCheck(qid) {
+    if (state.checkedQuestions.has(qid)) {
+      state.checkedQuestions.delete(qid);
+    } else {
+      state.checkedQuestions.add(qid);
+      showToast('Question marked as studied! 🎯');
+    }
+    try {
+      localStorage.setItem('gtu_checked_questions', JSON.stringify(Array.from(state.checkedQuestions)));
+    } catch (e) {}
+    renderQuestionList();
+    renderSchedulePanel();
+
+    if (window.FirebaseSync && typeof window.FirebaseSync.saveProgress === 'function') {
+      window.FirebaseSync.saveProgress(state.checkedQuestions, state.completedDays);
+    }
+  }
+
+  function toggleDayCompletion(dayId, isChecked) {
+    if (isChecked) {
+      state.completedDays.add(dayId);
+      showToast('Day completed! Keep up the 10 SPI pace! 🚀');
+    } else {
+      state.completedDays.delete(dayId);
+    }
+    try {
+      localStorage.setItem('gtu_completed_days', JSON.stringify(Array.from(state.completedDays)));
+    } catch (e) {}
+    renderSchedulePanel();
+
+    if (window.FirebaseSync && typeof window.FirebaseSync.saveProgress === 'function') {
+      window.FirebaseSync.saveProgress(state.checkedQuestions, state.completedDays);
+    }
   }
 
   function renderA4Sheet() {
@@ -291,7 +384,7 @@
             <div class="dropzone-subtext">Matches schema/question-answer.schema.json</div>
           </div>
           <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px;">
-            Or select <strong>Business Statistics and Logic</strong> from the sidebar to view the reference sample.
+            Or select <strong>General and Communicative English</strong> or <strong>Principles of Management</strong> from the sidebar.
           </p>
         </div>
       `;
@@ -300,7 +393,15 @@
       return;
     }
 
-    const html = window.GTURenderer.renderDocument(state.activeSubjectData, state.activeQuestionId);
+    let targetQuestionScope = state.activeQuestionId;
+    if (targetQuestionScope === null && state.activeScheduleDayId && state.scheduleData) {
+      const activeDay = state.scheduleData.days.find(d => d.id === state.activeScheduleDayId);
+      if (activeDay && activeDay.questionIds && activeDay.questionIds.length > 0) {
+        targetQuestionScope = activeDay.questionIds;
+      }
+    }
+
+    const html = window.GTURenderer.renderDocument(state.activeSubjectData, targetQuestionScope);
     dom.a4Container.innerHTML = html;
 
     if (dom.deskCanvas) {
@@ -318,10 +419,220 @@
       } else if (state.activeQuestionId) {
         const q = state.activeSubjectData.questions.find(x => x.id === state.activeQuestionId);
         dom.currentViewModeLabel.textContent = q ? `${q.questionNumber} (${q.marks} Marks)` : 'Single Question View';
+      } else if (state.activeScheduleDayId && state.scheduleData) {
+        const activeDay = state.scheduleData.days.find(d => d.id === state.activeScheduleDayId);
+        const count = activeDay && activeDay.questionIds ? activeDay.questionIds.length : 0;
+        dom.currentViewModeLabel.textContent = `${activeDay ? activeDay.displayDate : 'Day'} Target (${count} Questions)`;
       } else {
         dom.currentViewModeLabel.textContent = `Full Subject (${state.activeSubjectData.questions ? state.activeSubjectData.questions.length : 0} Questions)`;
       }
     }
+  }
+
+  function switchSidebarTab(tabName) {
+    state.activeTab = tabName;
+    if (dom.tabSubjects) dom.tabSubjects.classList.toggle('active', tabName === 'subjects');
+    if (dom.tabQuestions) dom.tabQuestions.classList.toggle('active', tabName === 'questions');
+    if (dom.tabSchedule) dom.tabSchedule.classList.toggle('active', tabName === 'schedule');
+
+    if (dom.sidebarSubjectsPanel) dom.sidebarSubjectsPanel.style.display = (tabName === 'subjects') ? 'flex' : 'none';
+    if (dom.sidebarQuestionsPanel) dom.sidebarQuestionsPanel.style.display = (tabName === 'questions') ? 'flex' : 'none';
+    if (dom.sidebarSchedulePanel) dom.sidebarSchedulePanel.style.display = (tabName === 'schedule') ? 'flex' : 'none';
+  }
+
+  async function selectScheduleDay(dayId) {
+    if (!state.scheduleData) return;
+    const day = state.scheduleData.days.find(d => d.id === dayId);
+    if (!day) return;
+
+    state.activeScheduleDayId = dayId;
+
+    if (day.isExternalOrPending) {
+      showToast(`${day.subjectName} is scheduled for ${day.displayDate}`, 'info');
+      await selectSubject(day.subjectSlug);
+      if (dom.scheduleTargetBanner) {
+        dom.scheduleTargetBanner.style.display = 'flex';
+        if (dom.scheduleBannerTitle) dom.scheduleBannerTitle.textContent = `${day.displayDate}: ${day.title}`;
+        if (dom.scheduleBannerSubtitle) dom.scheduleBannerSubtitle.textContent = day.pendingMessage || day.targetSummary;
+      }
+      switchSidebarTab('schedule');
+      renderSchedulePanel();
+      return;
+    }
+
+    if (state.activeSubjectSlug !== day.subjectSlug) {
+      await selectSubject(day.subjectSlug);
+    }
+
+    state.activeUnitFilter = 'ALL';
+    state.activeQuestionId = null;
+
+    if (dom.scheduleTargetBanner) {
+      dom.scheduleTargetBanner.style.display = 'flex';
+      if (dom.scheduleBannerTitle) dom.scheduleBannerTitle.textContent = `${day.displayDate}: ${day.title}`;
+      if (dom.scheduleBannerSubtitle) dom.scheduleBannerSubtitle.textContent = `Target: ${day.targetSummary} • Est: ${day.estHours} hrs`;
+    }
+
+    renderUnitFilters();
+    renderQuestionList();
+    renderA4Sheet();
+
+    switchSidebarTab('questions');
+    if (window.innerWidth <= 768) {
+      switchMobileView('questions');
+    }
+    showToast(`Loaded ${day.displayDate} target questions!`);
+  }
+
+  function exitScheduleFilter() {
+    state.activeScheduleDayId = null;
+    if (dom.scheduleTargetBanner) {
+      dom.scheduleTargetBanner.style.display = 'none';
+    }
+    renderUnitFilters();
+    renderQuestionList();
+    renderA4Sheet();
+    showToast('Showing all questions for ' + (state.activeSubjectData ? state.activeSubjectData.subject : 'subject'));
+  }
+
+  function renderSchedulePanel() {
+    if (!dom.sidebarSchedulePanel || !state.scheduleData) return;
+
+    const data = state.scheduleData;
+    const totalDays = data.days.length;
+    const completedCount = state.completedDays.size;
+    const pct = Math.round((completedCount / totalDays) * 100);
+
+    if (dom.scheduleOverallProgressBar) {
+      dom.scheduleOverallProgressBar.style.width = `${pct}%`;
+    }
+    if (dom.scheduleProgressDaysLabel) {
+      dom.scheduleProgressDaysLabel.textContent = `${completedCount} of ${totalDays} Days Done`;
+    }
+    if (dom.scheduleProgressPercentLabel) {
+      dom.scheduleProgressPercentLabel.textContent = `${pct}%`;
+    }
+
+    if (!dom.scheduleTimelineList) return;
+
+    if (state.scheduleFilter === 'exams') {
+      let html = `
+        <div style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 8px; line-height: 1.4;">
+          <strong>GTU Semester 1 Examination Schedule</strong> (Morning Papers • 10:30 AM to 1:00 PM)
+        </div>
+      `;
+      html += data.timetable.map((item, idx) => {
+        const reviewItem = data.examWeekReview ? data.examWeekReview.find(r => r.examDate === item.date) : null;
+        return `
+          <div class="schedule-day-card" style="border-left: 3px solid #6366f1;">
+            <div class="schedule-day-head">
+              <span class="schedule-date-chip" style="background: rgba(99,102,241,0.15); color: #6366f1;">${item.date} (${item.dayName.slice(0,3)})</span>
+              <span class="schedule-hours-pill" style="color: #6366f1; font-weight: 700;">Paper ${idx + 1}</span>
+            </div>
+            <div class="schedule-day-subject">
+              <span class="schedule-sub-badge">${item.shortCode}</span>
+              <span class="schedule-sub-name">${item.subject}</span>
+            </div>
+            <div class="schedule-day-target-info" style="font-family: var(--font-mono); color: var(--text-secondary); margin-bottom: 6px;">
+              Exam Code: <strong>${item.code}</strong> • ${item.timing}
+            </div>
+            ${reviewItem && reviewItem.eveningSubject !== 'Celebration & Review' ? `
+              <div style="font-size: 11px; padding: 6px 8px; background: rgba(16,185,129,0.06); border-radius: 4px; border: 1px dashed rgba(16,185,129,0.3); color: var(--text-secondary);">
+                🌙 <strong>Post-Exam Evening Plan (4.0 hrs):</strong><br>
+                ${reviewItem.task}
+              </div>
+            ` : `
+              <div style="font-size: 11px; padding: 6px 8px; background: rgba(245,158,11,0.1); border-radius: 4px; color: #b45309;">
+                🎉 <strong>Semester-1 Complete!</strong> Target 10 SPI Achieved!
+              </div>
+            `}
+          </div>
+        `;
+      }).join('');
+      dom.scheduleTimelineList.innerHTML = html;
+      return;
+    }
+
+    let daysToRender = data.days;
+    if (state.scheduleFilter === 'pending') {
+      daysToRender = daysToRender.filter(d => !state.completedDays.has(d.id));
+    }
+
+    if (daysToRender.length === 0) {
+      dom.scheduleTimelineList.innerHTML = `
+        <div style="text-align: center; padding: 24px; color: var(--text-secondary); font-size: 12px;">
+          🎉 All scheduled days completed! You are ready for a 10 CGPA / 10 SPI!
+        </div>
+      `;
+      return;
+    }
+
+    dom.scheduleTimelineList.innerHTML = daysToRender.map(day => {
+      const isCompleted = state.completedDays.has(day.id);
+      const isActiveDay = state.activeScheduleDayId === day.id;
+      const qCount = day.questionIds ? day.questionIds.length : 0;
+      const checkedInDay = (day.questionIds || []).filter(qid => state.checkedQuestions.has(qid)).length;
+
+      return `
+        <div class="schedule-day-card ${isActiveDay ? 'active-target' : ''} ${isCompleted ? 'is-completed' : ''}" data-day-id="${day.id}">
+          <div class="schedule-day-head">
+            <span class="schedule-date-chip">${day.displayDate}</span>
+            <span class="schedule-hours-pill">⏱ ${day.estHours} hrs</span>
+          </div>
+
+          <div class="schedule-day-subject">
+            <span class="schedule-sub-badge">${day.subjectCode}</span>
+            <span class="schedule-sub-name">${day.subjectName}</span>
+          </div>
+
+          <div class="schedule-day-title">${day.title}</div>
+          <div class="schedule-day-target-info">
+            🎯 Target: <strong>${day.targetSummary}</strong>
+            ${qCount > 0 ? ` • <span style="color:${checkedInDay === qCount ? '#10b981' : 'inherit'};">${checkedInDay}/${qCount} read</span>` : ''}
+          </div>
+
+          ${day.tips ? `
+            <div style="font-size: 11px; color: var(--text-muted); font-style: italic; margin-bottom: 8px; line-height: 1.35; padding-left: 6px; border-left: 2px solid rgba(99,102,241,0.3);">
+              💡 <strong>10 SPI Tip:</strong> ${day.tips}
+            </div>
+          ` : ''}
+
+          <div class="schedule-day-actions">
+            <label class="schedule-check-label" onclick="event.stopPropagation();">
+              <input type="checkbox" class="schedule-check-input" data-day-id="${day.id}" ${isCompleted ? 'checked' : ''}>
+              <span>${isCompleted ? 'Completed ✓' : 'Mark Done'}</span>
+            </label>
+
+            <button class="btn-schedule-view" data-day-id="${day.id}">
+              ${day.isExternalOrPending ? 'View Details →' : '📖 Read Target →'}
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    dom.scheduleTimelineList.querySelectorAll('.schedule-day-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const dayId = card.getAttribute('data-day-id');
+        selectScheduleDay(dayId);
+      });
+    });
+
+    dom.scheduleTimelineList.querySelectorAll('.btn-schedule-view').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const dayId = btn.getAttribute('data-day-id');
+        selectScheduleDay(dayId);
+      });
+    });
+
+    dom.scheduleTimelineList.querySelectorAll('.schedule-check-input').forEach(chk => {
+      chk.addEventListener('change', (e) => {
+        e.stopPropagation();
+        const dayId = chk.getAttribute('data-day-id');
+        toggleDayCompletion(dayId, chk.checked);
+      });
+    });
   }
 
   function applyZoomToScaler(instant = false) {
@@ -601,7 +912,13 @@
 
     // 2. Scope
     const isSingle = dom.radioScopeSingle && dom.radioScopeSingle.checked;
-    const targetQId = isSingle ? state.activeQuestionId : null;
+    let targetQId = isSingle ? state.activeQuestionId : null;
+    if (!isSingle && targetQId === null && state.activeScheduleDayId && state.scheduleData) {
+      const activeDay = state.scheduleData.days.find(d => d.id === state.activeScheduleDayId);
+      if (activeDay && activeDay.questionIds && activeDay.questionIds.length > 0) {
+        targetQId = activeDay.questionIds;
+      }
+    }
 
     // 3. UI feedback
     if (dom.btnPdfModalDownload) dom.btnPdfModalDownload.disabled = true;
@@ -848,23 +1165,40 @@
     }
 
     // Sidebar tab switcher
-    if (dom.tabSubjects && dom.tabQuestions) {
-      dom.tabSubjects.addEventListener('click', () => {
-        state.activeTab = 'subjects';
-        dom.tabSubjects.classList.add('active');
-        dom.tabQuestions.classList.remove('active');
-        dom.sidebarSubjectsPanel.style.display = 'flex';
-        dom.sidebarQuestionsPanel.style.display = 'none';
-      });
-
-      dom.tabQuestions.addEventListener('click', () => {
-        state.activeTab = 'questions';
-        dom.tabQuestions.classList.add('active');
-        dom.tabSubjects.classList.remove('active');
-        dom.sidebarSubjectsPanel.style.display = 'none';
-        dom.sidebarQuestionsPanel.style.display = 'flex';
+    if (dom.tabSubjects) dom.tabSubjects.addEventListener('click', () => switchSidebarTab('subjects'));
+    if (dom.tabQuestions) dom.tabQuestions.addEventListener('click', () => switchSidebarTab('questions'));
+    if (dom.tabSchedule) {
+      dom.tabSchedule.addEventListener('click', () => {
+        switchSidebarTab('schedule');
+        renderSchedulePanel();
       });
     }
+
+    // Header 10 SPI Schedule button
+    if (dom.btnHeaderSchedule) {
+      dom.btnHeaderSchedule.addEventListener('click', () => {
+        switchSidebarTab('schedule');
+        renderSchedulePanel();
+        if (window.innerWidth <= 768) {
+          switchMobileView('schedule');
+        }
+      });
+    }
+
+    // Exit Schedule Filter button on banner
+    if (dom.btnExitScheduleFilter) {
+      dom.btnExitScheduleFilter.addEventListener('click', exitScheduleFilter);
+    }
+
+    // Schedule Filter Tabs (All 13 Days / Pending / Exams)
+    document.querySelectorAll('.schedule-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.schedule-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.scheduleFilter = btn.getAttribute('data-filter');
+        renderSchedulePanel();
+      });
+    });
 
     // Mobile Bottom Navigation Switcher
     if (dom.mobileNavItems) {
@@ -1026,10 +1360,62 @@
     } else if (viewName === 'questions') {
       if (dom.sidebarSubjectsPanel) dom.sidebarSubjectsPanel.style.display = 'none';
       if (dom.sidebarQuestionsPanel) dom.sidebarQuestionsPanel.style.display = 'flex';
+      if (dom.sidebarSchedulePanel) dom.sidebarSchedulePanel.style.display = 'none';
     } else if (viewName === 'subjects') {
       if (dom.sidebarSubjectsPanel) dom.sidebarSubjectsPanel.style.display = 'flex';
       if (dom.sidebarQuestionsPanel) dom.sidebarQuestionsPanel.style.display = 'none';
+      if (dom.sidebarSchedulePanel) dom.sidebarSchedulePanel.style.display = 'none';
+    } else if (viewName === 'schedule') {
+      if (dom.sidebarSubjectsPanel) dom.sidebarSubjectsPanel.style.display = 'none';
+      if (dom.sidebarQuestionsPanel) dom.sidebarQuestionsPanel.style.display = 'none';
+      if (dom.sidebarSchedulePanel) dom.sidebarSchedulePanel.style.display = 'flex';
     }
+  }
+
+  // Cloud Sync Integration (Firebase RTDB)
+  function updateSyncBadge(status, label) {
+    const badge = document.getElementById('cloudSyncBadge');
+    if (!badge) return;
+    badge.className = `cloud-sync-badge status-${status}`;
+    const textEl = badge.querySelector('.sync-text');
+    if (textEl) textEl.textContent = label;
+  }
+
+  function initFirebaseSync() {
+    if (!window.FirebaseSync) return;
+
+    window.FirebaseSync.init({
+      getLocalData: function() {
+        return {
+          checkedQuestions: Array.from(state.checkedQuestions),
+          completedDays: Array.from(state.completedDays)
+        };
+      },
+      onData: function(cloudData) {
+        let changed = false;
+        if (cloudData.checkedQuestions) {
+          state.checkedQuestions = new Set(cloudData.checkedQuestions);
+          try {
+            localStorage.setItem('gtu_checked_questions', JSON.stringify(cloudData.checkedQuestions));
+          } catch (e) {}
+          changed = true;
+        }
+        if (cloudData.completedDays) {
+          state.completedDays = new Set(cloudData.completedDays);
+          try {
+            localStorage.setItem('gtu_completed_days', JSON.stringify(cloudData.completedDays));
+          } catch (e) {}
+          changed = true;
+        }
+        if (changed) {
+          renderQuestionList();
+          renderSchedulePanel();
+        }
+      },
+      onStatus: function(status, label) {
+        updateSyncBadge(status, label);
+      }
+    });
   }
 
   // Application Entry Point
@@ -1039,6 +1425,7 @@
     attachEventListeners();
     initScalerObserver();
     loadInitialData();
+    initFirebaseSync();
 
     // Auto-fit on mobile if loaded directly
     if (window.innerWidth <= 768) {

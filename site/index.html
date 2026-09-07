@@ -38,6 +38,17 @@
     </div>
 
     <div class="header-actions">
+      <!-- Cloud Sync Status Badge -->
+      <div class="cloud-sync-badge status-connecting" id="cloudSyncBadge" title="Real-time multi-device cloud sync (Firebase RTDB)">
+        <span class="sync-dot"></span>
+        <span class="sync-text">Connecting...</span>
+      </div>
+
+      <!-- 10 SPI Study Schedule Action -->
+      <button class="btn btn-secondary desktop-only-action" id="btnHeaderSchedule" title="10 CGPA / 10 SPI Daily Study Schedule">
+        📅 10 SPI Plan
+      </button>
+
       <!-- One-Click Direct PDF Download (Desktop) -->
       <button class="btn btn-primary desktop-only-action" id="btnOpenPdfModal" title="Download Print-Ready A4 PDF">
         📥 Download A4 PDF
@@ -76,6 +87,7 @@
       <div class="sidebar-tabs">
         <button class="sidebar-tab active" id="tabSubjects">Subjects (6)</button>
         <button class="sidebar-tab" id="tabQuestions">Questions</button>
+        <button class="sidebar-tab" id="tabSchedule">📅 Schedule</button>
       </div>
 
       <!-- Subjects Panel -->
@@ -113,10 +125,50 @@
           <!-- Populated dynamically via app.js -->
         </div>
       </div>
+
+      <!-- 10 SPI Schedule Panel -->
+      <div class="sidebar-content" id="sidebarSchedulePanel" style="display: none;">
+        <div class="schedule-panel-header">
+          <div class="schedule-goal-pill">🎯 Goal: 10 CGPA / 10 SPI</div>
+          <div class="schedule-progress-bar-wrapper">
+            <div class="schedule-progress-bar" id="scheduleOverallProgressBar" style="width: 0%;"></div>
+          </div>
+          <div class="schedule-progress-meta">
+            <span id="scheduleProgressDaysLabel">0 of 13 Days Done</span>
+            <span id="scheduleProgressPercentLabel">0%</span>
+          </div>
+        </div>
+
+        <div class="schedule-filter-tabs">
+          <button class="schedule-filter-btn active" data-filter="all">All 13 Days</button>
+          <button class="schedule-filter-btn" data-filter="pending">Pending</button>
+          <button class="schedule-filter-btn" data-filter="exams">Exams (Sept 21-26)</button>
+        </div>
+
+        <div class="schedule-timeline" id="scheduleTimelineList">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
     </aside>
 
     <!-- Center Main Workspace & Desk Canvas -->
     <section class="workspace-container" id="workspaceContainer">
+      <!-- Active Schedule Target Alert Banner -->
+      <div class="schedule-active-banner no-print" id="scheduleTargetBanner" style="display: none;">
+        <div class="schedule-banner-content">
+          <span class="schedule-banner-icon">🎯</span>
+          <div class="schedule-banner-text">
+            <strong id="scheduleBannerTitle">Today's Target: Day 1 (Sept 8)</strong>
+            <span id="scheduleBannerSubtitle">Showing 19 of 33 Questions</span>
+          </div>
+        </div>
+        <div class="schedule-banner-actions">
+          <button class="btn btn-sm btn-secondary" id="btnExitScheduleFilter" title="Exit day filter and view full subject">
+            ✕ Show Full Subject
+          </button>
+        </div>
+      </div>
+
       <!-- Workspace Toolbar -->
       <div class="workspace-toolbar no-print">
         <div class="toolbar-left">
@@ -162,6 +214,11 @@
     <button class="mobile-nav-item" id="btnNavQuestions" data-view="questions">
       <span class="mobile-nav-icon">📋</span>
       <span class="mobile-nav-label">Questions</span>
+      <span class="mobile-nav-indicator"></span>
+    </button>
+    <button class="mobile-nav-item" id="btnNavSchedule" data-view="schedule">
+      <span class="mobile-nav-icon">📅</span>
+      <span class="mobile-nav-label">Schedule</span>
       <span class="mobile-nav-indicator"></span>
     </button>
     <button class="mobile-nav-item" id="btnNavSheet" data-view="sheet">
@@ -388,6 +445,10 @@
   <!-- PDF Engine: html2canvas (page capture) + jsPDF (assembly) -->
   <script src="js/vendor/html2canvas.min.js"></script>
   <script src="js/vendor/jspdf.umd.min.js"></script>
+  <!-- Firebase RTDB Cloud Sync (v10 compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+  <script src="js/firebase-sync.js?v=3.0"></script>
   <script src="js/renderer.js?v=3.0"></script>
   <script src="js/data-loader.js?v=3.0"></script>
   <script src="js/app.js?v=3.0"></script>
