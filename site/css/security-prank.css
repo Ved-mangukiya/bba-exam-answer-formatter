@@ -1,0 +1,414 @@
+/* ==========================================================================
+   Ved Mangukiya Security & Prank Engine Styles
+   Anti-Copy, Anti-Screenshot Shield, & 5-Minute Troll Paywall
+   ========================================================================== */
+
+/* 1. Universal Anti-Copy & Anti-Selection */
+*, *::before, *::after {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+/* Allow normal typing in actual input fields if any */
+input, textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* 2. Anti-Screenshot & Screen Capture Blur Shield */
+body.screenshot-shield-active .a4-workspace,
+body.screenshot-shield-active .app-sidebar,
+body.screenshot-shield-active .app-header {
+  filter: blur(50px) grayscale(90%) brightness(0.2) !important;
+  pointer-events: none !important;
+  transition: filter 0.1s ease;
+}
+
+#vedCaptureShield {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483640;
+  background: rgba(11, 15, 23, 0.95);
+  backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  color: #f43f5e;
+  font-family: 'Outfit', sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+#vedCaptureShield.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.capture-shield-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.5);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: pulseShield 1.5s infinite;
+}
+
+.capture-shield-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(244, 63, 94, 0.5);
+}
+
+.capture-shield-sub {
+  font-size: 18px;
+  color: #cbd5e1;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.capture-shield-quote {
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fbbf24;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@keyframes pulseShield {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* 3. Hard-Encoded 5-Minute Troll Paywall Modal */
+#vedPaywallBackdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483646 !important;
+  background: rgba(7, 10, 19, 0.94) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px !important;
+  animation: paywallFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes paywallFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.ved-paywall-modal {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 580px !important;
+  background: linear-gradient(145deg, #131b2e, #0b0f19) !important;
+  border: 2px solid #f43f5e !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 60px rgba(244, 63, 94, 0.35), 0 25px 50px -12px rgba(0, 0, 0, 0.9) !important;
+  color: #f1f5f9 !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  z-index: 2147483647 !important;
+}
+
+.ved-paywall-header {
+  background: linear-gradient(90deg, #e11d48, #be123c, #881337) !important;
+  padding: 18px 24px !important;
+  color: #ffffff !important;
+  position: relative !important;
+}
+
+.ved-paywall-badge {
+  display: inline-block !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 9999px !important;
+  padding: 4px 14px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+}
+
+.ved-paywall-title {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  margin: 0 !important;
+  letter-spacing: -0.5px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+.ved-paywall-body {
+  padding: 28px 30px !important;
+}
+
+.ved-paywall-quote-box {
+  background: rgba(244, 63, 94, 0.08) !important;
+  border: 1px dashed rgba(244, 63, 94, 0.45) !important;
+  border-radius: 12px !important;
+  padding: 16px 20px !important;
+  margin-bottom: 22px !important;
+}
+
+.ved-paywall-gujarati {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: #fb7185 !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 6px !important;
+  text-shadow: 0 0 15px rgba(251, 113, 133, 0.4) !important;
+}
+
+.ved-paywall-author {
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.ved-paywall-author strong {
+  color: #38bdf8 !important;
+}
+
+.ved-paywall-desc {
+  font-size: 15px !important;
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 22px !important;
+}
+
+/* Fake QR Card */
+.ved-paywall-qr-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 14px !important;
+  padding: 16px !important;
+  margin-bottom: 24px !important;
+}
+
+.ved-fake-qr {
+  width: 110px !important;
+  height: 110px !important;
+  background: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+.ved-fake-qr svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ved-paywall-pricing {
+  text-align: left !important;
+}
+
+.ved-paywall-price {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: #34d399 !important;
+  font-family: 'Outfit', sans-serif !important;
+  line-height: 1 !important;
+  margin-bottom: 4px !important;
+}
+
+.ved-paywall-plan {
+  font-size: 12px !important;
+  color: #94a3b8 !important;
+  margin-bottom: 8px !important;
+}
+
+.ved-upi-id {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 12px !important;
+  background: rgba(99, 102, 241, 0.15) !important;
+  border: 1px solid rgba(99, 102, 241, 0.4) !important;
+  color: #a5b4fc !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  display: inline-block !important;
+}
+
+/* Timer and Actions */
+.ved-paywall-timer-box {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  margin-bottom: 20px !important;
+  font-size: 13px !important;
+  color: #fcd34d !important;
+  font-weight: 600 !important;
+}
+
+.ved-paywall-actions {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  position: relative !important;
+  min-height: 105px !important;
+}
+
+.ved-btn-pay {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 13px 20px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4) !important;
+  transition: all 0.2s ease !important;
+}
+
+.ved-btn-pay:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6) !important;
+}
+
+.ved-btn-mercy {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #e2e8f0 !important;
+  border-radius: 10px !important;
+  padding: 12px 18px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.ved-btn-mercy:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ved-btn-mercy:not(:disabled):hover {
+  background: rgba(99, 102, 241, 0.2) !important;
+  border-color: #818cf8 !important;
+  color: #ffffff !important;
+}
+
+.ved-runaway-btn {
+  position: absolute !important;
+  bottom: -5px !important;
+  right: 0 !important;
+  font-size: 11px !important;
+  color: #64748b !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: top 0.15s ease, left 0.15s ease, transform 0.15s ease !important;
+}
+
+/* Shake Animation when trying to close or escape */
+.ved-shake {
+  animation: vedShakeAnim 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both !important;
+}
+
+@keyframes vedShakeAnim {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(4px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+  40%, 60% { transform: translate3d(6px, 0, 0); }
+}
+
+/* 4. Security Toasts */
+#vedToastContainer {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  pointer-events: none !important;
+}
+
+.ved-toast {
+  background: rgba(15, 23, 42, 0.96) !important;
+  border: 1px solid #f43f5e !important;
+  border-left: 5px solid #f43f5e !important;
+  border-radius: 10px !important;
+  padding: 12px 18px !important;
+  color: #f1f5f9 !important;
+  font-size: 13px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  pointer-events: auto !important;
+  animation: toastSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  max-width: 420px !important;
+}
+
+.ved-toast.toast-warning {
+  border-color: #f59e0b !important;
+  border-left-color: #f59e0b !important;
+}
+
+.ved-toast-icon {
+  font-size: 20px !important;
+  line-height: 1 !important;
+}
+
+.ved-toast-content {
+  flex: 1 !important;
+}
+
+.ved-toast-title {
+  font-weight: 700 !important;
+  margin-bottom: 2px !important;
+  color: #fff !important;
+}
+
+.ved-toast-sub {
+  color: #cbd5e1 !important;
+  font-size: 12px !important;
+}
+
+@keyframes toastSlideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
