@@ -28,7 +28,10 @@
       faculty: ["Prof. Karan Kachhadiya", "Prof. Birju Patil"],
       icon: "📊",
       description: "Descriptive statistics, probability, hypothesis testing, and quantitative reasoning.",
-      dataFiles: []
+      dataFiles: [
+        "../data/sem-1/business-statistics-and-logic/bsl-sem1.json",
+        "data/sem-1/business-statistics-and-logic/bsl-sem1.json"
+      ]
     },
     {
       slug: "financial-accounting",

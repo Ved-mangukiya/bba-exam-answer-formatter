@@ -21,13 +21,17 @@
     {
       "slug": "business-statistics-and-logic",
       "code": "BSL",
+      "aliases": ["bsl", "business-statistics", "bstat", "statistics"],
       "name": "Business Statistics and Logic",
       "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
       "faculty": [
         "Prof. Karan Kachhadiya",
         "Prof. Birju Patil"
       ],
-      "dataFiles": []
+      "dataFiles": [
+        "../data/sem-1/business-statistics-and-logic/bsl-sem1.json",
+        "data/sem-1/business-statistics-and-logic/bsl-sem1.json"
+      ]
     },
     {
       "slug": "financial-accounting",

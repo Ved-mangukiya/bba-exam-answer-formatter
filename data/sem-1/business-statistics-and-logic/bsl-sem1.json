@@ -1,0 +1,2308 @@
+{
+  "semester": 1,
+  "course": "Bachelor of Business Administration (BBA)",
+  "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+  "university": "Gujarat Technological University (GTU)",
+  "subject": "Business Statistics and Logic",
+  "subjectCode": "BSL",
+  "faculty": [
+    "Prof. Karan Kachhadiya",
+    "Prof. Birju Patil"
+  ],
+  "unit": "Unit 1, Unit 2 & Unit 3",
+  "header": {
+    "college": "Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)",
+    "university": "Gujarat Technological University (GTU)",
+    "course": "Bachelor of Business Administration (BBA)",
+    "semester": 1,
+    "subject": "Business Statistics and Logic",
+    "subjectCode": "BSL",
+    "faculty": [
+      "Prof. Karan Kachhadiya",
+      "Prof. Birju Patil"
+    ]
+  },
+  "footer": {
+    "college": "SSASIT",
+    "university": "GTU",
+    "course": "BBA Sem-1",
+    "subject": "Business Statistics and Logic",
+    "subjectCode": "BSL",
+    "faculty": [
+      "Prof. Karan Kachhadiya",
+      "Prof. Birju Patil"
+    ]
+  },
+  "questions": [
+    {
+      "id": "bsl-u1-parta-q1",
+      "questionNumber": "Unit 1 - Part A - Q.1",
+      "questionText": "Define Statistics.",
+      "marks": 2,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Definitions of Statistics"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Croxton & Cowden: \"Statistics may be defined as the collection, presentation, analysis and interpretation of numerical data.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 18,
+                  "end": 124,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Horace Secrist: \"By statistics we mean aggregates of facts affected to a marked extent by multiplicity of causes, numerically expressed, enumerated or estimated according to reasonable standards of accuracy, collected in a systematic manner for a predetermined purpose and placed in relation to each other.\"",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 16,
+                  "end": 303,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-parta-q2",
+      "questionNumber": "Unit 1 - Part A - Q.2",
+      "questionText": "State any two functions of Statistics.",
+      "marks": 2,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Simplification of Mass Data: Condenses complex, unorganized, and bulky raw figures into clear, understandable summaries (such as averages, tables, and graphs).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Facilitating Comparison: Provides scientific tools to compare different sets of data, establish relationships among variables, and identify trends.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-parta-q3",
+      "questionNumber": "Unit 1 - Part A - Q.3",
+      "questionText": "What is primary data?",
+      "marks": 2,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Primary Data: Statistical data collected afresh and for the first time directly from original units of inquiry by the researcher/investigator. It is original in character and raw in form (e.g., population census, customer survey).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 12,
+              "style": "bold"
+            },
+            {
+              "start": 14,
+              "end": 139,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-parta-q4",
+      "questionNumber": "Unit 1 - Part A - Q.4",
+      "questionText": "What is secondary data?",
+      "marks": 2,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Secondary Data: Data that has already been collected, compiled, and statistically processed by another agency or individual for a different purpose and is reused for the current study (e.g., RBI Bulletins, CSO reports, industry journals).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 14,
+              "style": "bold"
+            },
+            {
+              "start": 16,
+              "end": 184,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-parta-q5",
+      "questionNumber": "Unit 1 - Part A - Q.5",
+      "questionText": "What is meant by classification of data?",
+      "marks": 2,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Classification of Data: The systematic process of arranging raw observations into different homogeneous groups, classes, or categories based on predefined qualitative attributes or quantitative characteristics.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 22,
+              "style": "bold"
+            },
+            {
+              "start": 24,
+              "end": 210,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-parta-q6",
+      "questionNumber": "Unit 1 - Part A - Q.6",
+      "questionText": "What is a frequency table?",
+      "marks": 2,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Frequency Table: A tabular arrangement that lists distinct data values or class intervals alongside their corresponding frequencies (number of times each value occurs), providing a structured summary of the dataset.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 15,
+              "style": "bold"
+            },
+            {
+              "start": 17,
+              "end": 215,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-parta-q7",
+      "questionNumber": "Unit 1 - Part A - Q.7",
+      "questionText": "What is a frequency distribution?",
+      "marks": 2,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Frequency Distribution: A systematic display—either discrete or continuous—showing how total observations (N) are distributed across non-overlapping classes or categories.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 22,
+              "style": "bold"
+            },
+            {
+              "start": 24,
+              "end": 171,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-partb-q1",
+      "questionNumber": "Unit 1 - Part B - Q.1",
+      "questionText": "Explain the meaning and definition of Statistics.",
+      "marks": 5,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Etymological Origin & Conceptual Meaning"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "The word \"Statistics\" originates from the Latin status, Italian statista, or German Statistik, meaning a political state. Historically used for state record-keeping (births, deaths, military strength), statistics today is a scientific mathematical discipline concerned with gathering, organizing, summarizing, presenting, analyzing, and interpreting numerical data to make rational decisions.",
+          "spans": [
+            {
+              "start": 10,
+              "end": 20,
+              "style": "bold"
+            },
+            {
+              "start": 42,
+              "end": 48,
+              "style": "underline"
+            },
+            {
+              "start": 58,
+              "end": 66,
+              "style": "underline"
+            },
+            {
+              "start": 78,
+              "end": 87,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Statistics in Two Distinct Senses"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Plural Sense: Refers to numerical facts or raw data itself (e.g., statistics of sales, population, or inflation figures).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 12,
+                  "style": "bold"
+                },
+                {
+                  "start": 14,
+                  "end": 57,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Singular Sense: Refers to the entire body of statistical methods and scientific techniques used to collect, organize, analyze, and interpret data.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 16,
+                  "end": 80,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-partb-q2",
+      "questionNumber": "Unit 1 - Part B - Q.2",
+      "questionText": "Explain the functions and scope of Statistics.",
+      "marks": 5,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Major Functions of Statistics"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Condensation: Reduces vast numerical data into meaningful single summary measures (such as averages and measures of dispersion).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 12,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Comparison: Evaluates relative performance across time periods, geographical regions, or industrial categories.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 10,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Forecasting: Predicts future demand, production volume, sales patterns, and economic trends using time-series and correlation analysis.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Policy Framing: Provides quantitative empirical foundations to assist governments and corporate boards in formulating policies.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Quality Control: Implements statistical process control, control charts, and acceptance sampling plans in manufacturing.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Scope of Statistics in Modern Domains"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "The scope of statistics spans Business & Management (market research, production planning, financial budgeting), Economics (national income estimation, econometrics), Banking & Finance (credit scoring, investment risk evaluation), and Insurance (actuarial life tables and risk premiums).",
+          "spans": [
+            {
+              "start": 29,
+              "end": 50,
+              "style": "underline"
+            },
+            {
+              "start": 113,
+              "end": 122,
+              "style": "underline"
+            },
+            {
+              "start": 169,
+              "end": 186,
+              "style": "underline"
+            },
+            {
+              "start": 235,
+              "end": 244,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-partb-q3",
+      "questionNumber": "Unit 1 - Part B - Q.3",
+      "questionText": "Explain the limitations of Statistics.",
+      "marks": 5,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Key Limitations of Statistics"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Ignores Qualitative Attributes: Deals strictly with quantitative data; qualitative phenomena (such as honesty, goodwill, intelligence, and morale) cannot be examined unless converted into numerical indices.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Does Not Study Individual Data: Focuses exclusively on aggregates of facts; an isolated single observation has no statistical significance.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 30,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Laws Are True Only on Average: Unlike physical sciences, statistical conclusions are probabilistic and express broad tendencies rather than deterministic laws.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 29,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 29,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Liable to Misuse: Without proper statistical knowledge, data can be manipulated, misrepresented, or taken out of context to produce misleading conclusions.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 16,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-partb-q4",
+      "questionNumber": "Unit 1 - Part B - Q.4",
+      "questionText": "Differentiate between primary data and secondary data.",
+      "marks": 5,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "table",
+          "tableCaption": "Comparative Analysis: Primary Data vs. Secondary Data",
+          "tableHeaders": [
+            "Basis of Comparison",
+            "Primary Data",
+            "Secondary Data"
+          ],
+          "tableRows": [
+            [
+              "Originality & Source",
+              "Collected afresh directly from field units for the first time; original in character.",
+              "Pre-existing data collected and compiled by other agencies; lacks original collection."
+            ],
+            [
+              "Form of Data",
+              "Raw, unorganized, and extensive form.",
+              "Finished, organized, and ready-to-use tabular form."
+            ],
+            [
+              "Time, Cost & Labor",
+              "Requires substantial financial expenditure, time, and trained field investigators.",
+              "Highly economical, fast, and convenient to obtain from existing records."
+            ],
+            [
+              "Reliability & Accuracy",
+              "High degree of reliability and tailored directly to current research objectives.",
+              "Lower reliability; requires thorough verification of suitability and bias before use."
+            ],
+            [
+              "Collection Tools",
+              "Direct personal interviews, mailed questionnaires, observation schedules.",
+              "Government publications, RBI bulletins, CSO reports, financial trade journals."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u1-partb-q5",
+      "questionNumber": "Unit 1 - Part B - Q.5",
+      "questionText": "Explain the organization of data and frequency distribution with a suitable example.",
+      "marks": 5,
+      "unit": "Unit 1: Introduction to Business Statistics",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Organization of data condenses chaotic raw observations into a structured format through classification, tally marks, and cumulative frequencies, revealing the pattern and concentration of values.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 20,
+              "style": "bold"
+            },
+            {
+              "start": 0,
+              "end": 20,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Illustration: Number of defective components produced over 20 working days:\nRaw Data: 2, 1, 0, 3, 2, 1, 4, 2, 3, 1, 0, 2, 5, 3, 2, 1, 4, 2, 3, 1",
+          "spans": [
+            {
+              "start": 0,
+              "end": 12,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Frequency Distribution Table of Defective Components",
+          "tableHeaders": [
+            "Defective Units (x)",
+            "Tally Marks",
+            "Frequency (f)",
+            "Cumulative Frequency (cf)"
+          ],
+          "tableRows": [
+            [
+              "0",
+              "||",
+              "2",
+              "2"
+            ],
+            [
+              "1",
+              "||||",
+              "5",
+              "7"
+            ],
+            [
+              "2",
+              "|||| /",
+              "6",
+              "13"
+            ],
+            [
+              "3",
+              "||||",
+              "4",
+              "17"
+            ],
+            [
+              "4",
+              "||",
+              "2",
+              "19"
+            ],
+            [
+              "5",
+              "|",
+              "1",
+              "20"
+            ],
+            [
+              "Total",
+              "-",
+              "N = 20",
+              "-"
+            ]
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result: The frequency distribution systematically groups 20 raw observations, indicating that the modal frequency is 6 at x = 2 defective units.",
+          "spans": [
+            {
+              "start": 14,
+              "end": 36,
+              "style": "underline"
+            },
+            {
+              "start": 122,
+              "end": 148,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-parta-q1",
+      "questionNumber": "Unit 2 - Part A - Q.1",
+      "questionText": "Define Mean. Write its formula for ungrouped data.",
+      "marks": 2,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Arithmetic Mean (x̄) is the quotient obtained by dividing the sum of all individual observations by the total number of observations.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 20,
+              "style": "bold"
+            },
+            {
+              "start": 0,
+              "end": 20,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Formula for Ungrouped Data: x̄ = (Σx) / n",
+          "spans": [
+            {
+              "start": 0,
+              "end": 26,
+              "style": "bold"
+            },
+            {
+              "start": 28,
+              "end": 40,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-parta-q2",
+      "questionNumber": "Unit 2 - Part A - Q.2",
+      "questionText": "Define Skewness and Kurtosis. What does a positively skewed distribution indicate?",
+      "marks": 2,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Skewness: Measures the asymmetry or departure from symmetry of a frequency distribution curve around its central position.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "bold"
+                },
+                {
+                  "start": 11,
+                  "end": 74,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Kurtosis: Measures the degree of peakedness or tailedness of a distribution curve relative to the normal distribution.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "bold"
+                },
+                {
+                  "start": 11,
+                  "end": 64,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "A positively skewed distribution indicates a longer tail pulled to the right side by extreme high values, satisfying the condition: Mean > Median > Mode.",
+          "spans": [
+            {
+              "start": 2,
+              "end": 32,
+              "style": "bold"
+            },
+            {
+              "start": 133,
+              "end": 153,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-parta-q3",
+      "questionNumber": "Unit 2 - Part A - Q.3",
+      "questionText": "Differentiate between Absolute and Relative Measures of Dispersion.",
+      "marks": 2,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Absolute Measures: Expressed in the exact same physical measurement units as the original dataset (e.g., rupees, kilograms, centimeters). They evaluate the actual magnitude of spread (e.g., Range, Standard Deviation).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Relative Measures: Expressed as unit-free ratios, proportions, or percentages. They permit direct comparison of dispersion across datasets with different units or different means (e.g., Coefficient of Variation).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-parta-q4",
+      "questionNumber": "Unit 2 - Part A - Q.4",
+      "questionText": "What is Median? How is the median determined for an odd number of observations?",
+      "marks": 2,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Median (M) is the middlemost positional measure of a series arranged in either ascending or descending order of magnitude, dividing the series into two equal halves (50% below and 50% above).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "style": "bold"
+            },
+            {
+              "start": 18,
+              "end": 51,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "For an odd number of observations (n), Median position = ((n + 1) / 2)th item in the ordered array.",
+          "spans": [
+            {
+              "start": 41,
+              "end": 99,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-parta-q5",
+      "questionNumber": "Unit 2 - Part A - Q.5",
+      "questionText": "Define Quartile. What do Q₁ and Q₃ represent?",
+      "marks": 2,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Quartiles are three partition values (Q₁, Q₂, Q₃) that divide an ordered dataset into four equal parts, each containing 25% of total observations.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 9,
+              "style": "bold"
+            },
+            {
+              "start": 14,
+              "end": 37,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Q₁ (First / Lower Quartile): Represents the 25th percentile (P₂₅); exactly 25% of observations fall below Q₁.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 44,
+                  "end": 64,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Q₃ (Third / Upper Quartile): Represents the 75th percentile (P₇₅); exactly 75% of observations fall below Q₃.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 26,
+                  "style": "bold"
+                },
+                {
+                  "start": 44,
+                  "end": 64,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-parta-q6",
+      "questionNumber": "Unit 2 - Part A - Q.6",
+      "questionText": "Define Variance and Standard Deviation. How are they related?",
+      "marks": 2,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Variance (σ²) is the arithmetic mean of the squared deviations of values taken from their arithmetic mean. Standard Deviation (σ) is the positive square root of the variance.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 13,
+              "style": "bold"
+            },
+            {
+              "start": 17,
+              "end": 84,
+              "style": "underline"
+            },
+            {
+              "start": 107,
+              "end": 130,
+              "style": "bold"
+            },
+            {
+              "start": 138,
+              "end": 174,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Mathematical Relationship: Standard Deviation (σ) = √(Variance) ↔ Variance (σ²) = σ²",
+          "spans": [
+            {
+              "start": 0,
+              "end": 26,
+              "style": "bold"
+            },
+            {
+              "start": 27,
+              "end": 84,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-parta-q7",
+      "questionNumber": "Unit 2 - Part A - Q.7",
+      "questionText": "What is the Coefficient of Variation (CV)? Why is it useful for comparing two data sets?",
+      "marks": 2,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Coefficient of Variation (CV) is a relative measure of dispersion that expresses standard deviation as a percentage of arithmetic mean: CV = (σ / x̄) × 100",
+          "spans": [
+            {
+              "start": 0,
+              "end": 29,
+              "style": "bold"
+            },
+            {
+              "start": 136,
+              "end": 155,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Comparative Usefulness: Because it is dimensionless (percentage), CV enables direct comparison of stability, uniformity, and consistency between series having different units or varied averages. A lower CV indicates higher consistency.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 23,
+              "style": "bold"
+            },
+            {
+              "start": 204,
+              "end": 235,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-partb-q1",
+      "questionNumber": "Unit 2 - Part B - Q.1",
+      "questionText": "Calculate Arithmetic Mean, Median, and Mode for the following grouped distribution of weekly sales orders:\nClass: 10-20, 20-30, 30-40, 40-50, 50-60\nFrequency: 5, 12, 20, 10, 3",
+      "marks": 7,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Standard Formulas:\nMean: x̄ = (Σfx) / N\nMedian: M = L + [((N/2) - cf) / f] × c\nMode: Z = L + [(f₁ - f₀) / (2f₁ - f₀ - f₂)] × c",
+          "spans": [
+            {
+              "start": 25,
+              "end": 39,
+              "style": "underline"
+            },
+            {
+              "start": 48,
+              "end": 82,
+              "style": "underline"
+            },
+            {
+              "start": 89,
+              "end": 126,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Comprehensive Calculation Table for Central Tendency",
+          "tableHeaders": [
+            "Class Interval",
+            "Mid-Point (x)",
+            "Frequency (f)",
+            "f · x",
+            "Cumulative Frequency (cf)"
+          ],
+          "tableRows": [
+            [
+              "10 - 20",
+              "15",
+              "5",
+              "75",
+              "5"
+            ],
+            [
+              "20 - 30",
+              "25",
+              "12",
+              "300",
+              "17"
+            ],
+            [
+              "30 - 40",
+              "35",
+              "20",
+              "700",
+              "37"
+            ],
+            [
+              "40 - 50",
+              "45",
+              "10",
+              "450",
+              "47"
+            ],
+            [
+              "50 - 60",
+              "55",
+              "3",
+              "165",
+              "50"
+            ],
+            [
+              "Total",
+              "-",
+              "N = Σf = 50",
+              "Σfx = 1690",
+              "-"
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Step-by-Step Numerical Calculations"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Arithmetic Mean (x̄):\nx̄ = (Σfx) / N = 1690 / 50 = 33.80 orders",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 22,
+                  "end": 62,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Median (M):\nMedian Class Position = N / 2 = 50 / 2 = 25th observation.\nFrom the cf column, cf ≥ 25 corresponds to class 30 - 40.\nHere: L = 30, cf = 17, f = 20, c = 10.\nM = 30 + [((25 - 17) / 20)] × 10 = 30 + [8 / 20] × 10 = 30 + 4.00 = 34.00 orders",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 11,
+                  "style": "bold"
+                },
+                {
+                  "start": 139,
+                  "end": 218,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Mode (Z):\nHighest frequency is f₁ = 20, therefore Modal Class = 30 - 40.\nHere: L = 30, f₁ = 20, f₀ = 12, f₂ = 10, c = 10.\nZ = 30 + [(20 - 12) / (2(20) - 12 - 10)] × 10 = 30 + [8 / (40 - 22)] × 10 = 30 + (8 / 18) × 10 = 30 + 4.44 = 34.44 orders",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 9,
+                  "style": "bold"
+                },
+                {
+                  "start": 112,
+                  "end": 234,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result: Mean x̄ = 33.80 orders, Median M = 34.00 orders, Mode Z = 34.44 orders. Since x̄ < M < Z (33.80 < 34.00 < 34.44), the sales distribution displays slight negative skewness.",
+          "spans": [
+            {
+              "start": 14,
+              "end": 35,
+              "style": "underline"
+            },
+            {
+              "start": 37,
+              "end": 60,
+              "style": "underline"
+            },
+            {
+              "start": 62,
+              "end": 83,
+              "style": "underline"
+            },
+            {
+              "start": 91,
+              "end": 133,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-partb-q2",
+      "questionNumber": "Unit 2 - Part B - Q.2",
+      "questionText": "Compute Q₁, Q₃, 4th Decile (D₄), and 70th Percentile (P₇₀) for the following grouped dataset:\nClass: 0-10, 10-20, 20-30, 30-40, 40-50\nFrequency: 8, 12, 20, 14, 6",
+      "marks": 7,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Partition Interpolation Formula: Value = L + [(Position - cf) / f] × c",
+          "spans": [
+            {
+              "start": 33,
+              "end": 69,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Cumulative Frequency Table for Partition Values (N = 60, c = 10)",
+          "tableHeaders": [
+            "Class Interval",
+            "Frequency (f)",
+            "Cumulative Frequency (cf)",
+            "Target Partition Position"
+          ],
+          "tableRows": [
+            [
+              "0 - 10",
+              "8",
+              "8",
+              "-"
+            ],
+            [
+              "10 - 20",
+              "12",
+              "20",
+              "Q₁ pos = 15"
+            ],
+            [
+              "20 - 30",
+              "20",
+              "40",
+              "D₄ pos = 24"
+            ],
+            [
+              "30 - 40",
+              "14",
+              "54",
+              "P₇₀ pos = 42, Q₃ pos = 45"
+            ],
+            [
+              "40 - 50",
+              "6",
+              "60",
+              "-"
+            ],
+            [
+              "Total",
+              "N = Σf = 60",
+              "-",
+              "-"
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Partition Calculations"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "First Quartile (Q₁):\nPosition = N / 4 = 60 / 4 = 15th item → Class 10 - 20.\nL = 10, cf = 8, f = 12, c = 10.\nQ₁ = 10 + [((15 - 8) / 12)] × 10 = 10 + 5.83 = 15.83 units",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 105,
+                  "end": 162,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Third Quartile (Q₃):\nPosition = 3N / 4 = 3(60) / 4 = 45th item → Class 30 - 40.\nL = 30, cf = 40, f = 14, c = 10.\nQ₃ = 30 + [((45 - 40) / 14)] × 10 = 30 + 3.57 = 33.57 units",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 107,
+                  "end": 165,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Fourth Decile (D₄):\nPosition = 4N / 10 = 4(60) / 10 = 24th item → Class 20 - 30.\nL = 20, cf = 20, f = 20, c = 10.\nD₄ = 20 + [((24 - 20) / 20)] × 10 = 20 + 2.00 = 22.00 units",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 108,
+                  "end": 166,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Seventieth Percentile (P₇₀):\nPosition = 70N / 100 = 70(60) / 100 = 42nd item → Class 30 - 40.\nL = 30, cf = 40, f = 14, c = 10.\nP₇₀ = 30 + [((42 - 40) / 14)] × 10 = 30 + 1.43 = 31.43 units",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 27,
+                  "style": "bold"
+                },
+                {
+                  "start": 117,
+                  "end": 177,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result: Q₁ = 15.83 units, Q₃ = 33.57 units, D₄ = 22.00 units, P₇₀ = 31.43 units.",
+          "spans": [
+            {
+              "start": 14,
+              "end": 30,
+              "style": "underline"
+            },
+            {
+              "start": 32,
+              "end": 48,
+              "style": "underline"
+            },
+            {
+              "start": 50,
+              "end": 66,
+              "style": "underline"
+            },
+            {
+              "start": 68,
+              "end": 85,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-partb-q3",
+      "questionNumber": "Unit 2 - Part B - Q.3",
+      "questionText": "Calculate the Mean Deviation from Mean, Variance, and Standard Deviation for the following individual observations:\nData: 10, 15, 20, 25, 30",
+      "marks": 7,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Arithmetic Mean Calculation: x̄ = (Σx) / n = 100 / 5 = 20.00 units",
+          "spans": [
+            {
+              "start": 29,
+              "end": 66,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Deviations and Squared Deviations from Mean (x̄ = 20)",
+          "tableHeaders": [
+            "Observation (x)",
+            "Deviation (x - x̄)",
+            "Absolute Deviation |x - x̄|",
+            "Squared Deviation (x - x̄)²"
+          ],
+          "tableRows": [
+            [
+              "10",
+              "-10",
+              "10",
+              "100"
+            ],
+            [
+              "15",
+              "-5",
+              "5",
+              "25"
+            ],
+            [
+              "20",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "25",
+              "+5",
+              "5",
+              "25"
+            ],
+            [
+              "30",
+              "+10",
+              "10",
+              "100"
+            ],
+            [
+              "Total (n = 5)",
+              "Σ(x - x̄) = 0",
+              "Σ|x - x̄| = 30",
+              "Σ(x - x̄)² = 250"
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Formulas and Step-by-Step Solutions"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Mean Deviation from Mean (MD_x̄):\nMD_x̄ = (Σ|x - x̄|) / n = 30 / 5 = 6.00 units",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 33,
+                  "style": "bold"
+                },
+                {
+                  "start": 35,
+                  "end": 74,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Variance (σ²):\nσ² = (Σ(x - x̄)²) / n = 250 / 5 = 50.00 sq units",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "style": "bold"
+                },
+                {
+                  "start": 16,
+                  "end": 61,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Standard Deviation (σ):\nσ = √(Variance) = √(50.00) = 7.07 units",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 23,
+                  "style": "bold"
+                },
+                {
+                  "start": 25,
+                  "end": 62,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result: MD_x̄ = 6.00 units, Variance σ² = 50.00 sq units, Standard Deviation σ = 7.07 units.",
+          "spans": [
+            {
+              "start": 14,
+              "end": 31,
+              "style": "underline"
+            },
+            {
+              "start": 33,
+              "end": 60,
+              "style": "underline"
+            },
+            {
+              "start": 62,
+              "end": 96,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-partb-q4",
+      "questionNumber": "Unit 2 - Part B - Q.4",
+      "questionText": "Monthly output targets achieved by two branches show:\nBranch A: Mean = 50 units, SD = 5 units\nBranch B: Mean = 80 units, SD = 12 units\nCompute Coefficient of Variation (CV) for both branches and determine which branch is more consistent.",
+      "marks": 5,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Formula for Coefficient of Variation: CV = (σ / x̄) × 100",
+          "spans": [
+            {
+              "start": 38,
+              "end": 56,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Branch A Consistency: CV_A = (σ_A / x̄_A) × 100 = (5 / 50) × 100 = 10.00%",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 23,
+                  "end": 72,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Branch B Consistency: CV_B = (σ_B / x̄_B) × 100 = (12 / 80) × 100 = 15.00%",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 23,
+                  "end": 73,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result & Comparative Decision: Since CV_A (10.00%) < CV_B (15.00%), Branch A exhibits a lower coefficient of variation and is therefore more consistent and stable in its performance.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 35,
+              "style": "bold"
+            },
+            {
+              "start": 43,
+              "end": 71,
+              "style": "underline"
+            },
+            {
+              "start": 74,
+              "end": 187,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u2-partb-q5",
+      "questionNumber": "Unit 2 - Part B - Q.5",
+      "questionText": "Explain Basic Concept of Skewness & Kurtosis in detail.",
+      "marks": 7,
+      "unit": "Unit 2: Measurement of Central Tendency & Dispersion",
+      "type": "detail",
+      "answer": [
+        {
+          "blockType": "heading",
+          "text": "Concept of Skewness (Asymmetry)"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Skewness refers to the lack of symmetry in a distribution. In a symmetrical normal distribution, Mean = Median = Mode, and the distribution curve is a perfect mirror image around the center.",
+          "spans": [
+            {
+              "start": 98,
+              "end": 118,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Positive Skewness: Distribution has a long tail extended to the right side; extreme large values pull the mean upward such that Mean > Median > Mode.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 128,
+                  "end": 149,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Negative Skewness: Distribution has a long tail extended to the left side; extreme small values pull the mean downward such that Mean < Median < Mode.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 129,
+                  "end": 150,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Karl Pearson's Coefficient of Skewness: Sk = (Mean - Mode) / σ  OR  Sk = [3(Mean - Median)] / σ",
+          "spans": [
+            {
+              "start": 0,
+              "end": 39,
+              "style": "bold"
+            },
+            {
+              "start": 41,
+              "end": 95,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Concept of Kurtosis (Peakedness)"
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Kurtosis measures the degree of peakedness or flatness of a frequency distribution relative to a standard normal curve.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 8,
+              "style": "bold"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Mesokurtic Curve: Normal bell-shaped peak where β₂ = 3 (or γ₂ = 0).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 17,
+                  "style": "bold"
+                },
+                {
+                  "start": 48,
+                  "end": 66,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Leptokurtic Curve: Sharply peaked curve with heavy tails where β₂ > 3 (or γ₂ > 0).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 62,
+                  "end": 81,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Platykurtic Curve: Broad, flat-topped curve with thin tails where β₂ < 3 (or γ₂ < 0).",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 66,
+                  "end": 84,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u3-parta-q1",
+      "questionNumber": "Unit 3 - Part A - Q.1",
+      "questionText": "Define correlation. State any two types of correlation.",
+      "marks": 2,
+      "unit": "Unit 3: Linear Correlation",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Correlation is a bivariate statistical method that measures and analyzes the degree, strength, and direction of linear association between two quantitative variables, where r lies between -1 and +1.",
+          "spans": [
+            {
+              "start": 0,
+              "end": 11,
+              "style": "bold"
+            },
+            {
+              "start": 169,
+              "end": 198,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Positive Correlation: Both variables move in the identical direction.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                }
+              ]
+            },
+            {
+              "text": "Negative Correlation: Variables change in mutually opposite directions.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u3-parta-q2",
+      "questionNumber": "Unit 3 - Part A - Q.2",
+      "questionText": "Differentiate between positive correlation and negative correlation with one example each.",
+      "marks": 2,
+      "unit": "Unit 3: Linear Correlation",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Positive Correlation: An increase in one variable leads to a corresponding increase in the other (or decrease leads to decrease). Example: Number of study hours and exam marks obtained.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Negative Correlation: An increase in one variable leads to a proportionate decrease in the other variable. Example: Unit price of a commodity and market demand.",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u3-parta-q3",
+      "questionNumber": "Unit 3 - Part A - Q.3",
+      "questionText": "Write the formula for Karl Pearson's Coefficient of Correlation and explain the meaning of its value when r = 0.",
+      "marks": 2,
+      "unit": "Unit 3: Linear Correlation",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Karl Pearson's Formula: r = [nΣXY - (ΣX)(ΣY)] / √{[nΣX² - (ΣX)²] · [nΣY² - (ΣY)²]}",
+          "spans": [
+            {
+              "start": 0,
+              "end": 22,
+              "style": "bold"
+            },
+            {
+              "start": 24,
+              "end": 82,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Interpretation when r = 0: Indicates absence of linear correlation; there is zero linear relationship between X and Y (though a non-linear or curvilinear relationship might still exist).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 25,
+              "style": "bold"
+            },
+            {
+              "start": 27,
+              "end": 66,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u3-parta-q4",
+      "questionNumber": "Unit 3 - Part A - Q.4",
+      "questionText": "What is Spearman's Rank Correlation Coefficient? Mention one situation where it is used.",
+      "marks": 2,
+      "unit": "Unit 3: Linear Correlation",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Spearman's Rank Correlation (ρ) is a non-parametric technique evaluating the degree of agreement between paired ranks: ρ = 1 - [(6Σd²) / (n(n² - 1))]",
+          "spans": [
+            {
+              "start": 0,
+              "end": 31,
+              "style": "bold"
+            },
+            {
+              "start": 119,
+              "end": 149,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Practical Application Situation: Applied when characteristics are qualitative and cannot be measured on a metric scale but can be assigned ordinal ranks (e.g., judging personality, honesty, beauty contests, leadership ranking).",
+          "spans": [
+            {
+              "start": 0,
+              "end": 32,
+              "style": "bold"
+            },
+            {
+              "start": 47,
+              "end": 154,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u3-parta-q5",
+      "questionNumber": "Unit 3 - Part A - Q.5",
+      "questionText": "What is Fisher's Ideal Index Number? Why is it called an \"Ideal\" index?",
+      "marks": 2,
+      "unit": "Unit 3: Linear Correlation",
+      "type": "short",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Fisher's Ideal Index Number is the geometric mean of Laspeyres' (L) and Paasche's (P) price index numbers: P₀₁^F = √(P₀₁^L × P₀₁^P) = √{[(Σp₁q₀) / (Σp₀q₀)] × [(Σp₁q₁) / (Σp₀q₁)]} × 100",
+          "spans": [
+            {
+              "start": 0,
+              "end": 26,
+              "style": "bold"
+            },
+            {
+              "start": 106,
+              "end": 184,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "list",
+          "listStyle": "roman",
+          "items": [
+            {
+              "text": "Uses geometric mean, which is mathematically the ideal average for ratios.",
+              "spans": [
+                {
+                  "start": 5,
+                  "end": 19,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Considers both base year quantities (q₀) and current year quantities (q₁) as weights.",
+              "spans": [
+                {
+                  "start": 16,
+                  "end": 73,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Satisfies both Time Reversal Test (P₀₁ × P₁₀ = 1) and Factor Reversal Test (P₀₁ × Q₀₁ = V₀₁).",
+              "spans": [
+                {
+                  "start": 15,
+                  "end": 92,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u3-partb-q1",
+      "questionNumber": "Unit 3 - Part B - Q.1",
+      "questionText": "Calculate Karl Pearson's Correlation Coefficient (r) between advertising expenditure (X) and sales revenue (Y) for n = 5 months:\nX: 2, 4, 6, 8, 10\nY: 5, 8, 12, 15, 20",
+      "marks": 7,
+      "unit": "Unit 3: Linear Correlation",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Pearson's Correlation Coefficient Formula: r = [nΣXY - (ΣX)(ΣY)] / √{[nΣX² - (ΣX)²] · [nΣY² - (ΣY)²]}",
+          "spans": [
+            {
+              "start": 43,
+              "end": 101,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Direct Calculation Table for Karl Pearson's Correlation (n = 5)",
+          "tableHeaders": [
+            "Month",
+            "Adv. Exp (X)",
+            "Sales (Y)",
+            "X²",
+            "Y²",
+            "X · Y"
+          ],
+          "tableRows": [
+            [
+              "1",
+              "2",
+              "5",
+              "4",
+              "25",
+              "10"
+            ],
+            [
+              "2",
+              "4",
+              "8",
+              "16",
+              "64",
+              "32"
+            ],
+            [
+              "3",
+              "6",
+              "12",
+              "36",
+              "144",
+              "72"
+            ],
+            [
+              "4",
+              "8",
+              "15",
+              "64",
+              "225",
+              "120"
+            ],
+            [
+              "5",
+              "10",
+              "20",
+              "100",
+              "400",
+              "200"
+            ],
+            [
+              "Total",
+              "ΣX = 30",
+              "ΣY = 60",
+              "ΣX² = 220",
+              "ΣY² = 858",
+              "ΣXY = 434"
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Step-by-Step Substitution and Evaluation"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Numerator Calculation: nΣXY - (ΣX)(ΣY) = 5(434) - (30)(60) = 2170 - 1800 = 370",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 22,
+                  "style": "bold"
+                },
+                {
+                  "start": 75,
+                  "end": 78,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Denominator Term 1: [nΣX² - (ΣX)²] = [5(220) - (30)²] = 1100 - 900 = 200",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 69,
+                  "end": 72,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Denominator Term 2: [nΣY² - (ΣY)²] = [5(858) - (60)²] = 4290 - 3600 = 690",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 19,
+                  "style": "bold"
+                },
+                {
+                  "start": 70,
+                  "end": 73,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Combined Denominator: √(200 × 690) = √(138000) = 371.4835",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 21,
+                  "style": "bold"
+                },
+                {
+                  "start": 49,
+                  "end": 57,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Final Quotient: r = 370 / 371.4835 = +0.996",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 15,
+                  "style": "bold"
+                },
+                {
+                  "start": 16,
+                  "end": 43,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result: r = +0.996. Interpretation: There is an almost perfect positive linear correlation between advertising expenditure and sales revenue.",
+          "spans": [
+            {
+              "start": 14,
+              "end": 24,
+              "style": "underline"
+            },
+            {
+              "start": 42,
+              "end": 88,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bsl-u3-partb-q2",
+      "questionNumber": "Unit 3 - Part B - Q.2",
+      "questionText": "Two judges ranked n = 5 candidates in an interview. Compute Spearman's Rank Correlation Coefficient (ρ):\nJudge 1 (Rx): 1, 2, 3, 4, 5\nJudge 2 (Ry): 2, 1, 3, 5, 4",
+      "marks": 7,
+      "unit": "Unit 3: Linear Correlation",
+      "type": "practical",
+      "answer": [
+        {
+          "blockType": "paragraph",
+          "text": "Spearman's Rank Correlation Formula: ρ = 1 - [(6Σd²) / (n(n² - 1))]",
+          "spans": [
+            {
+              "start": 37,
+              "end": 67,
+              "style": "underline"
+            }
+          ]
+        },
+        {
+          "blockType": "table",
+          "tableCaption": "Rank Difference Calculation Table (n = 5)",
+          "tableHeaders": [
+            "Candidate",
+            "Rank by Judge 1 (Rx)",
+            "Rank by Judge 2 (Ry)",
+            "d = (Rx - Ry)",
+            "d²"
+          ],
+          "tableRows": [
+            [
+              "A",
+              "1",
+              "2",
+              "-1",
+              "1"
+            ],
+            [
+              "B",
+              "2",
+              "1",
+              "+1",
+              "1"
+            ],
+            [
+              "C",
+              "3",
+              "3",
+              "0",
+              "0"
+            ],
+            [
+              "D",
+              "4",
+              "5",
+              "-1",
+              "1"
+            ],
+            [
+              "E",
+              "5",
+              "4",
+              "+1",
+              "1"
+            ],
+            [
+              "Total",
+              "-",
+              "-",
+              "Σd = 0",
+              "Σd² = 4"
+            ]
+          ]
+        },
+        {
+          "blockType": "heading",
+          "text": "Step-by-Step Numerical Working"
+        },
+        {
+          "blockType": "list",
+          "listStyle": "decimal",
+          "items": [
+            {
+              "text": "Numerator Working: 6Σd² = 6(4) = 24",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 33,
+                  "end": 35,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Denominator Working: n(n² - 1) = 5(5² - 1) = 5(25 - 1) = 5(24) = 120",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 65,
+                  "end": 68,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Fraction Evaluation: 24 / 120 = 0.20",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "style": "bold"
+                },
+                {
+                  "start": 32,
+                  "end": 36,
+                  "style": "underline"
+                }
+              ]
+            },
+            {
+              "text": "Final Computation: ρ = 1 - 0.20 = +0.80",
+              "spans": [
+                {
+                  "start": 0,
+                  "end": 18,
+                  "style": "bold"
+                },
+                {
+                  "start": 19,
+                  "end": 39,
+                  "style": "underline"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result: Spearman's Rank Correlation Coefficient ρ = +0.80. Interpretation: There is a high degree of positive agreement between the judging criteria of the two judges.",
+          "spans": [
+            {
+              "start": 54,
+              "end": 63,
+              "style": "underline"
+            },
+            {
+              "start": 81,
+              "end": 125,
+              "style": "underline"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
