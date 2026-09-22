@@ -983,7 +983,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Standard Formulas:\nMean:  x̄  =  \\frac{Σfx}{N}\nMedian:  M  =  L + [ \\frac{\\frac{N}{2} - cf}{f} ] × c\nMode:  Z  =  L + [ \\frac{f₁ - f₀}{2f₁ - f₀ - f₂} ] × c"
+          "text": "Standard Formulas:\nMean:  x̄  =  \\frac{Σfx}{N}\n\nMedian:  M  =  L + [ \\frac{\\frac{N}{2} - cf}{f} ] × c\n\nMode:  Z  =  L + [ \\frac{f₁ - f₀}{2f₁ - f₀ - f₂} ] × c"
         },
         {
           "blockType": "table",
@@ -1048,42 +1048,16 @@
               "text": "Arithmetic Mean (x̄):\nx̄  =  \\frac{Σfx}{N}  =  \\frac{1690}{50}  =  \\boxed{33.80 orders}"
             },
             {
-              "text": "Median (M):\nMedian Class Position  =  \\frac{N}{2}  =  \\frac{50}{2}  =  \\boxed{25\\text{th observation}}  →  \\text{Class 30 - 40 (where } L = 30, cf = 17, f = 20, c = 10\\text{)}\nM  =  L + [ \\frac{\\frac{N}{2} - cf}{f} ] × c  =  30 + [ \\frac{25 - 17}{20} ] × 10  =  30 + \\frac{80}{20}  =  30 + 4  =  \\boxed{34.00 orders}"
+              "text": "Median (M):\nMedian Class Position  =  \\frac{N}{2}  =  \\frac{50}{2}  =  \\boxed{25\\text{th observation}}\nClass: Class 30 - 40 (where L = 30, cf = 17, f = 20, c = 10)\nM  =  L + [ \\frac{\\frac{N}{2} - cf}{f} ] × c  =  30 + [ \\frac{25 - 17}{20} ] × 10  =  30 + \\frac{80}{20}  =  30 + 4  =  \\boxed{34.00 orders}"
             },
             {
-              "text": "Mode (Z):\nModal Class  =  \\text{Class 30 - 40 (Highest frequency } f₁ = 20, f₀ = 12, f₂ = 10, L = 30, c = 10\\text{)}\nZ  =  L + [ \\frac{f₁ - f₀}{2f₁ - f₀ - f₂} ] × c  =  30 + [ \\frac{20 - 12}{2(20) - 12 - 10} ] × 10  =  30 + [ \\frac{8}{18} ] × 10  =  30 + 4.44  =  \\boxed{34.44 orders}"
+              "text": "Mode (Z):\nModal Class: Class 30 - 40 (Highest frequency f₁ = 20, f₀ = 12, f₂ = 10, L = 30, c = 10)\nZ  =  L + [ \\frac{f₁ - f₀}{2f₁ - f₀ - f₂} ] × c  =  30 + [ \\frac{20 - 12}{2(20) - 12 - 10} ] × 10  =  30 + [ \\frac{8}{18} ] × 10  =  30 + 4.44  =  \\boxed{34.44 orders}"
             }
           ]
         },
         {
           "blockType": "paragraph",
           "text": "Final Result:  Mean x̄ = \\boxed{33.80 orders}  |  Median M = \\boxed{34.00 orders}  |  Mode Z = \\boxed{34.44 orders}\nSkewness Verification: Since x̄ (33.80) < M (34.00) < Z (34.44), the distribution is Negatively Skewed."
-        },
-        {
-          "blockType": "paragraph",
-          "text": "Final Result: Mean x̄ = 33.80 orders, Median M = 34.00 orders, Mode Z = 34.44 orders. Since x̄ < M < Z (33.80 < 34.00 < 34.44), the sales distribution displays slight negative skewness.",
-          "spans": [
-            {
-              "start": 14,
-              "end": 35,
-              "style": "underline"
-            },
-            {
-              "start": 37,
-              "end": 60,
-              "style": "underline"
-            },
-            {
-              "start": 62,
-              "end": 83,
-              "style": "underline"
-            },
-            {
-              "start": 91,
-              "end": 133,
-              "style": "underline"
-            }
-          ]
         }
       ]
     },
@@ -1152,48 +1126,22 @@
           "listStyle": "decimal",
           "items": [
             {
-              "text": "First Quartile (Q₁):\nPosition  =  \\frac{N}{4}  =  \\frac{60}{4}  =  \\boxed{15\\text{th item}}  →  \\text{Class 10 - 20 (where } L = 10, cf = 8, f = 12, c = 10\\text{)}\nQ₁  =  L + [ \\frac{\\frac{N}{4} - cf}{f} ] × c  =  10 + [ \\frac{15 - 8}{12} ] × 10  =  10 + \\frac{70}{12}  =  10 + 5.83  =  \\boxed{15.83 units}"
+              "text": "First Quartile (Q₁):\nPosition  =  \\frac{N}{4}  =  \\frac{60}{4}  =  \\boxed{15\\text{th item}}\nClass: Class 10 - 20 (where L = 10, cf = 8, f = 12, c = 10)\nQ₁  =  L + [ \\frac{\\frac{N}{4} - cf}{f} ] × c  =  10 + [ \\frac{15 - 8}{12} ] × 10  =  10 + \\frac{70}{12}  =  10 + 5.83  =  \\boxed{15.83 units}"
             },
             {
-              "text": "Third Quartile (Q₃):\nPosition  =  \\frac{3N}{4}  =  \\frac{3(60)}{4}  =  \\boxed{45\\text{th item}}  →  \\text{Class 30 - 40 (where } L = 30, cf = 40, f = 14, c = 10\\text{)}\nQ₃  =  L + [ \\frac{\\frac{3N}{4} - cf}{f} ] × c  =  30 + [ \\frac{45 - 40}{14} ] × 10  =  30 + \\frac{50}{14}  =  30 + 3.57  =  \\boxed{33.57 units}"
+              "text": "Third Quartile (Q₃):\nPosition  =  \\frac{3N}{4}  =  \\frac{3(60)}{4}  =  \\boxed{45\\text{th item}}\nClass: Class 30 - 40 (where L = 30, cf = 40, f = 14, c = 10)\nQ₃  =  L + [ \\frac{\\frac{3N}{4} - cf}{f} ] × c  =  30 + [ \\frac{45 - 40}{14} ] × 10  =  30 + \\frac{50}{14}  =  30 + 3.57  =  \\boxed{33.57 units}"
             },
             {
-              "text": "Fourth Decile (D₄):\nPosition  =  \\frac{4N}{10}  =  \\frac{4(60)}{10}  =  \\boxed{24\\text{th item}}  →  \\text{Class 20 - 30 (where } L = 20, cf = 20, f = 20, c = 10\\text{)}\nD₄  =  L + [ \\frac{\\frac{4N}{10} - cf}{f} ] × c  =  20 + [ \\frac{24 - 20}{20} ] × 10  =  20 + \\frac{40}{20}  =  20 + 2  =  \\boxed{22.00 units}"
+              "text": "Fourth Decile (D₄):\nPosition  =  \\frac{4N}{10}  =  \\frac{4(60)}{10}  =  \\boxed{24\\text{th item}}\nClass: Class 20 - 30 (where L = 20, cf = 20, f = 20, c = 10)\nD₄  =  L + [ \\frac{\\frac{4N}{10} - cf}{f} ] × c  =  20 + [ \\frac{24 - 20}{20} ] × 10  =  20 + \\frac{40}{20}  =  20 + 2  =  \\boxed{22.00 units}"
             },
             {
-              "text": "Seventieth Percentile (P₇₀):\nPosition  =  \\frac{70N}{100}  =  \\frac{70(60)}{100}  =  \\boxed{42\\text{nd item}}  →  \\text{Class 30 - 40 (where } L = 30, cf = 40, f = 14, c = 10\\text{)}\nP₇₀  =  L + [ \\frac{\\frac{70N}{100} - cf}{f} ] × c  =  30 + [ \\frac{42 - 40}{14} ] × 10  =  30 + \\frac{20}{14}  =  30 + 1.43  =  \\boxed{31.43 units}"
+              "text": "Seventieth Percentile (P₇₀):\nPosition  =  \\frac{70N}{100}  =  \\frac{70(60)}{100}  =  \\boxed{42\\text{nd item}}\nClass: Class 30 - 40 (where L = 30, cf = 40, f = 14, c = 10)\nP₇₀  =  L + [ \\frac{\\frac{70N}{100} - cf}{f} ] × c  =  30 + [ \\frac{42 - 40}{14} ] × 10  =  30 + \\frac{20}{14}  =  30 + 1.43  =  \\boxed{31.43 units}"
             }
           ]
         },
         {
           "blockType": "paragraph",
           "text": "Final Result:  Q₁ = \\boxed{15.83 units}  |  Q₃ = \\boxed{33.57 units}  |  D₄ = \\boxed{22.00 units}  |  P₇₀ = \\boxed{31.43 units}"
-        },
-        {
-          "blockType": "paragraph",
-          "text": "Final Result: Q₁ = 15.83 units, Q₃ = 33.57 units, D₄ = 22.00 units, P₇₀ = 31.43 units.",
-          "spans": [
-            {
-              "start": 14,
-              "end": 30,
-              "style": "underline"
-            },
-            {
-              "start": 32,
-              "end": 48,
-              "style": "underline"
-            },
-            {
-              "start": 50,
-              "end": 66,
-              "style": "underline"
-            },
-            {
-              "start": 68,
-              "end": 85,
-              "style": "underline"
-            }
-          ]
         }
       ]
     },
@@ -1275,27 +1223,6 @@
         {
           "blockType": "paragraph",
           "text": "Final Result:  MD_{x̄} = \\boxed{6.00 units}  |  Variance σ² = \\boxed{50.00 sq units}  |  Standard Deviation σ = \\boxed{7.07 units}"
-        },
-        {
-          "blockType": "paragraph",
-          "text": "Final Result: MD_x̄ = 6.00 units, Variance σ² = 50.00 sq units, Standard Deviation σ = 7.07 units.",
-          "spans": [
-            {
-              "start": 14,
-              "end": 31,
-              "style": "underline"
-            },
-            {
-              "start": 33,
-              "end": 60,
-              "style": "underline"
-            },
-            {
-              "start": 62,
-              "end": 96,
-              "style": "underline"
-            }
-          ]
         }
       ]
     },
@@ -1390,19 +1317,7 @@
         },
         {
           "blockType": "paragraph",
-          "text": "Karl Pearson's Coefficient of Skewness: Sk = (Mean - Mode) / σ  OR  Sk = [3(Mean - Median)] / σ",
-          "spans": [
-            {
-              "start": 0,
-              "end": 39,
-              "style": "bold"
-            },
-            {
-              "start": 41,
-              "end": 95,
-              "style": "underline"
-            }
-          ]
+          "text": "Karl Pearson's Coefficient of Skewness:\nSk  =  \\frac{\\text{Mean} - \\text{Mode}}{σ}\n\\text{OR}\nSk  =  \\frac{3(\\text{Mean} - \\text{Median})}{σ}"
         },
         {
           "blockType": "heading",
@@ -1778,22 +1693,6 @@
         {
           "blockType": "paragraph",
           "text": "Final Result:  Correlation Coefficient r = \\boxed{+0.996}  |  Interpretation: There is an almost perfect positive linear correlation between Aptitude Score and Sales Performance."
-        },
-        {
-          "blockType": "paragraph",
-          "text": "Final Result: r = +0.996. Interpretation: There is an almost perfect positive linear correlation between advertising expenditure and sales revenue.",
-          "spans": [
-            {
-              "start": 14,
-              "end": 24,
-              "style": "underline"
-            },
-            {
-              "start": 42,
-              "end": 88,
-              "style": "underline"
-            }
-          ]
         }
       ]
     },
@@ -1885,22 +1784,6 @@
         {
           "blockType": "paragraph",
           "text": "Final Result:  Spearman's Rank Correlation Coefficient ρ = \\boxed{+0.80}  |  Interpretation: There is a high degree of positive agreement between Judge 1 and Judge 2 in their evaluation of the candidates."
-        },
-        {
-          "blockType": "paragraph",
-          "text": "Final Result: Spearman's Rank Correlation Coefficient ρ = +0.80. Interpretation: There is a high degree of positive agreement between the judging criteria of the two judges.",
-          "spans": [
-            {
-              "start": 54,
-              "end": 63,
-              "style": "underline"
-            },
-            {
-              "start": 81,
-              "end": 125,
-              "style": "underline"
-            }
-          ]
         }
       ]
     }

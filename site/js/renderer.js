@@ -82,34 +82,147 @@
     return resultHtml;
   }
 
+  // Helper to extract balanced braces starting at pos (where str[pos] === '{')
+  function extractBalancedBraces(str, pos) {
+    if (str[pos] !== '{') return null;
+    let depth = 0;
+    const start = pos;
+    for (let i = pos; i < str.length; i++) {
+      if (str[i] === '{') depth++;
+      else if (str[i] === '}') {
+        depth--;
+        if (depth === 0) {
+          return {
+            content: str.substring(start + 1, i),
+            end: i
+          };
+        }
+      }
+    }
+    return null;
+  }
+
+  function parseLaTeXFrac(str) {
+    let idx = 0;
+    let result = '';
+    while (idx < str.length) {
+      const fracIdx = str.indexOf('\\frac', idx);
+      if (fracIdx === -1) {
+        result += str.substring(idx);
+        break;
+      }
+      result += str.substring(idx, fracIdx);
+      let cur = fracIdx + 5; // length of '\frac'
+      while (cur < str.length && /\s/.test(str[cur])) cur++;
+
+      const numMatch = extractBalancedBraces(str, cur);
+      if (!numMatch) {
+        result += '\\frac';
+        idx = fracIdx + 5;
+        continue;
+      }
+      cur = numMatch.end + 1;
+      while (cur < str.length && /\s/.test(str[cur])) cur++;
+
+      const denomMatch = extractBalancedBraces(str, cur);
+      if (!denomMatch) {
+        result += '\\frac{' + numMatch.content + '}';
+        idx = numMatch.end + 1;
+        continue;
+      }
+
+      const numHtml = parseLaTeXFrac(numMatch.content);
+      const denomHtml = parseLaTeXFrac(denomMatch.content);
+      result += `<span class="gtu-math-frac"><span class="frac-num">${numHtml}</span><span class="frac-denom">${denomHtml}</span></span>`;
+      idx = denomMatch.end + 1;
+    }
+    return result;
+  }
+
+  function parseLatexSqrt(str) {
+    let idx = 0;
+    let result = '';
+    while (idx < str.length) {
+      const sqrtIdx = str.indexOf('\\sqrt', idx);
+      if (sqrtIdx === -1) {
+        result += str.substring(idx);
+        break;
+      }
+      result += str.substring(idx, sqrtIdx);
+      let cur = sqrtIdx + 5;
+      while (cur < str.length && /\s/.test(str[cur])) cur++;
+      const match = extractBalancedBraces(str, cur);
+      if (!match) {
+        result += '\\sqrt';
+        idx = sqrtIdx + 5;
+        continue;
+      }
+      const bodyHtml = parseLatexSqrt(parseLaTeXFrac(match.content));
+      result += `<span class="gtu-math-sqrt"><span class="sqrt-sym">√</span><span class="sqrt-body">${bodyHtml}</span></span>`;
+      idx = match.end + 1;
+    }
+    return result;
+  }
+
+  function convertSlashesToFractions(text) {
+    // 1. Parenthesized or bracketed numerator divided by denominator:
+    // e.g. (Mean - Mode) / σ  or [3(Mean - Median)] / σ or (n + 1) / 2
+    text = text.replace(/(?:\[([^[\]]+)\]|\(([^()]+)\))\s*\/\s*(\([^\)]+\)|\[[^\]]+\]|[A-Za-z0-9_Σσρµx̄\.\-]+)/g, (match, p1, p2, denom) => {
+      let num = (p1 || p2).trim();
+      let d = denom.replace(/^[(\[]|[)\]]$/g, '').trim();
+      if (/^[a-zA-Z\s]{15,}$/.test(num)) return match;
+      return `\\frac{${num}}{${d}}`;
+    });
+
+    // 2. Pure numbers with slash: e.g. 1690 / 50 or 370 / 371.4835 or 24 / 120
+    text = text.replace(/(?<=\s|=|^)([0-9]+(?:\.[0-9]+)?)\s*\/\s*([0-9]+(?:\.[0-9]+)?)(?=\s|$|[×,;\.])/g, (match, num, denom) => {
+      return `\\frac{${num}}{${denom}}`;
+    });
+
+    // 3. Known math variables with slash: e.g. Σx / n, σ / x̄, Σfx / N
+    text = text.replace(/(?<=\s|=|^)([Σσρµx̄Nn][A-Za-z0-9_Σσρµx̄]*)\s*\/\s*([A-Za-z0-9_Σσρµx̄]+)(?=\s|$|[×,;\.])/g, (match, num, denom) => {
+      return `\\frac{${num}}{${denom}}`;
+    });
+
+    return text;
+  }
+
   /**
-   * Real Formula Typer & Answer Box Formatter
-   * Converts \frac{A}{B} to vertical stacked fractions, \boxed{...} to exam answer boxes,
-   * \sqrt{...} to radical overbars, and ensures generous spacing around equal signs.
+   * Real Formula Typer & Traditional Academic Mathematics Formatter
+   * Converts \frac{A}{B} and slash divisions to vertical stacked fractions with horizontal divide lines,
+   * \boxed{...} to exam answer boxes, \sqrt{...} to radical overbars,
+   * scales brackets around tall fractions, and formats multi-line steps with generous spacing.
    */
   function formatMathAndBoxes(html) {
     if (!html) return '';
 
-    // Clean LaTeX bracket wrappers
+    // Clean LaTeX bracket wrappers & text annotations
     html = html.replace(/\\left\s*\[/g, '[').replace(/\\right\s*\]/g, ']');
     html = html.replace(/\\left\s*\(/g, '(').replace(/\\right\s*\)/g, ')');
     html = html.replace(/\\text\{([^{}]+)\}/g, '$1');
 
-    // Space out mathematical equal signs nicely (before inserting HTML tags)
-    if (html.includes('\\frac') || html.includes('\\boxed') || html.includes('\\sqrt') || /([x̄σρµMLZQDP]\w*)\s*=/.test(html)) {
-      html = html.replace(/(?<=\s)=(?=\s)/g, '<span class="gtu-math-eq">=</span>');
-    }
+    // Automatically convert computer-style division slashes to traditional fractions
+    html = convertSlashesToFractions(html);
+
+    // Recursively parse square roots and stacked vertical fractions
+    html = parseLatexSqrt(html);
+    html = parseLaTeXFrac(html);
 
     // Replace \boxed{...} or [boxed: ...]
     html = html.replace(/\\boxed\{([^{}]+)\}/g, '<span class="gtu-answer-box">$1</span>');
     html = html.replace(/\[(?:box|boxed):\s*([^\]]+)\]/gi, '<span class="gtu-answer-box">$1</span>');
 
-    // Replace \sqrt{...}
-    html = html.replace(/\\sqrt\{([^{}]+)\}/g, '<span class="gtu-math-sqrt"><span class="sqrt-sym">√</span><span class="sqrt-body">$1</span></span>');
+    // Scale brackets around tall fractions
+    html = html.replace(/\[\s*(<span class="gtu-math-frac">[\s\S]*?<\/span>)\s*\]/g, '<span class="gtu-math-bracket">[</span>$1<span class="gtu-math-bracket">]</span>');
 
-    // Replace nested or single \frac{num}{denom} (up to 4 levels of nesting)
-    for (let i = 0; i < 4; i++) {
-      html = html.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '<span class="gtu-math-frac"><span class="frac-num">$1</span><span class="frac-denom">$2</span></span>');
+    // Space out mathematical equal signs nicely (before inserting HTML tags)
+    if (html.includes('gtu-math-frac') || html.includes('gtu-answer-box') || html.includes('gtu-math-sqrt') || /([x̄σρµMLZQDP]\w*)\s*=/.test(html)) {
+      html = html.replace(/(?<=\s)=(?=\s)/g, '<span class="gtu-math-eq">=</span>');
+    }
+
+    // Preserve newlines as traditional formula step breaks
+    if (html.includes('\n')) {
+      html = html.split('\n').map(line => line.trim()).filter(Boolean).join('<span class="gtu-math-break"></span>');
     }
 
     return html;

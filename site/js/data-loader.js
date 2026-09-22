@@ -94,11 +94,20 @@
 
   async function fetchJson(path) {
     try {
-      const resp = await fetch(path);
+      // Append cache buster to prevent stale caching on GitHub Pages & CDN
+      const sep = path.includes('?') ? '&' : '?';
+      const bustUrl = `${path}${sep}_cb=${Date.now()}`;
+      const resp = await fetch(bustUrl, { cache: 'no-store' });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       return await resp.json();
     } catch (err) {
-      return null;
+      try {
+        const resp2 = await fetch(path, { cache: 'no-store' });
+        if (!resp2.ok) return null;
+        return await resp2.json();
+      } catch (e) {
+        return null;
+      }
     }
   }
 
