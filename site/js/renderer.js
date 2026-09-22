@@ -83,6 +83,39 @@
   }
 
   /**
+   * Real Formula Typer & Answer Box Formatter
+   * Converts \frac{A}{B} to vertical stacked fractions, \boxed{...} to exam answer boxes,
+   * \sqrt{...} to radical overbars, and ensures generous spacing around equal signs.
+   */
+  function formatMathAndBoxes(html) {
+    if (!html) return '';
+
+    // Clean LaTeX bracket wrappers
+    html = html.replace(/\\left\s*\[/g, '[').replace(/\\right\s*\]/g, ']');
+    html = html.replace(/\\left\s*\(/g, '(').replace(/\\right\s*\)/g, ')');
+    html = html.replace(/\\text\{([^{}]+)\}/g, '$1');
+
+    // Space out mathematical equal signs nicely (before inserting HTML tags)
+    if (html.includes('\\frac') || html.includes('\\boxed') || html.includes('\\sqrt') || /([x̄σρµMLZQDP]\w*)\s*=/.test(html)) {
+      html = html.replace(/(?<=\s)=(?=\s)/g, '<span class="gtu-math-eq">=</span>');
+    }
+
+    // Replace \boxed{...} or [boxed: ...]
+    html = html.replace(/\\boxed\{([^{}]+)\}/g, '<span class="gtu-answer-box">$1</span>');
+    html = html.replace(/\[(?:box|boxed):\s*([^\]]+)\]/gi, '<span class="gtu-answer-box">$1</span>');
+
+    // Replace \sqrt{...}
+    html = html.replace(/\\sqrt\{([^{}]+)\}/g, '<span class="gtu-math-sqrt"><span class="sqrt-sym">√</span><span class="sqrt-body">$1</span></span>');
+
+    // Replace nested or single \frac{num}{denom} (up to 4 levels of nesting)
+    for (let i = 0; i < 4; i++) {
+      html = html.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '<span class="gtu-math-frac"><span class="frac-num">$1</span><span class="frac-denom">$2</span></span>');
+    }
+
+    return html;
+  }
+
+  /**
    * Renders a single contentBlock per question-answer.schema.json
    */
   function renderContentBlock(block) {
@@ -91,19 +124,33 @@
     switch (block.blockType) {
       case 'heading':
         // RULES.md §2: Section/Unit heading inside answer -> 13pt, Bold, Underlined
-        return `<div class="gtu-heading">${applySpans(block.text, block.spans)}</div>`;
+        return `<div class="gtu-heading">${formatMathAndBoxes(applySpans(block.text, block.spans))}</div>`;
 
       case 'subheading':
         // RULES.md §2: Sub-heading inside an answer -> 12pt, Bold
-        return `<div class="gtu-subheading">${applySpans(block.text, block.spans)}</div>`;
+        return `<div class="gtu-subheading">${formatMathAndBoxes(applySpans(block.text, block.spans))}</div>`;
 
-      case 'paragraph':
+      case 'paragraph': {
         // RULES.md §2: Body text -> 12pt, Regular, line-height 1.5
-        return `<p class="gtu-paragraph">${applySpans(block.text, block.spans)}</p>`;
+        const rawText = block.text || '';
+        const formatted = formatMathAndBoxes(applySpans(rawText, block.spans));
+
+        // Format Final Result / Decision summary into a dedicated highlight card
+        if (/^\s*(?:Final Result|Final Answer|Result & Decision|Final Decision)/i.test(rawText)) {
+          return `
+            <div class="gtu-final-result-card keep-together">
+              <div class="gtu-final-result-badge">❖ Official Result & Decision Summary</div>
+              <p class="gtu-paragraph">${formatted}</p>
+            </div>
+          `;
+        }
+
+        return `<p class="gtu-paragraph">${formatted}</p>`;
+      }
 
       case 'note':
         // RULES.md §3: The word "Note:" in bold
-        return `<div class="gtu-note"><strong class="gtu-note-label">Note:</strong> ${applySpans(block.text, block.spans)}</div>`;
+        return `<div class="gtu-note keep-together"><strong class="gtu-note-label">Note:</strong> ${formatMathAndBoxes(applySpans(block.text, block.spans))}</div>`;
 
       case 'list': {
         // RULES.md §4:
@@ -125,7 +172,8 @@
         const itemsHtml = (block.items || []).map(item => {
           const itemText = typeof item === 'string' ? item : item.text;
           const itemSpans = item.spans || [];
-          return `<li class="gtu-list-item">${applySpans(itemText, itemSpans)}</li>`;
+          const formattedItem = formatMathAndBoxes(applySpans(itemText, itemSpans));
+          return `<li class="gtu-list-item">${formattedItem}</li>`;
         }).join('');
 
         return `<${tag} class="${listClass}">${itemsHtml}</${tag}>`;
@@ -151,7 +199,7 @@
         }
 
         return `
-          <div class="gtu-table-container">
+          <div class="gtu-table-container keep-together">
             ${captionHtml}
             <table class="gtu-table">
               ${theadHtml}
@@ -187,7 +235,7 @@
           : '';
 
         return `
-          <div class="gtu-diagram-container">
+          <div class="gtu-diagram-container keep-together">
             ${titleHtml}
             <div class="gtu-diagram-box">
               ${graphicContent}
@@ -198,7 +246,7 @@
       }
 
       default:
-        return '';
+        return `<div class="gtu-paragraph">${formatMathAndBoxes(applySpans(block.text, block.spans))}</div>`;
     }
   }
 
@@ -216,7 +264,7 @@
     const answerHtml = answerBlocks.map(renderContentBlock).join('');
 
     return `
-      <section class="gtu-question-wrapper" id="${escapeHtml(question.id || '')}">
+      <section class="gtu-question-wrapper keep-together" id="${escapeHtml(question.id || '')}">
         <div class="gtu-question-header">
           <h2 class="gtu-question-title">
             <span class="gtu-question-number">${escapeHtml(qNum)}</span>
@@ -233,6 +281,7 @@
 
   /**
    * Renders the page header block (College, University, Course, Subject, Faculty)
+   * Designed with high simplicity: clean frame, subject banner, and 3-column metadata.
    */
   function renderPageHeader(subjectData) {
     const college = subjectData.college || (subjectData.header && subjectData.header.college) || 'Shree Swami Atmanand Saraswati Institute of Technology (SSASIT)';
@@ -245,18 +294,37 @@
     const facultyStr = Array.isArray(facultyList) && facultyList.length > 0
       ? facultyList.join(', ')
       : '';
+    const unitTitle = subjectData.unit || 'Model Question Bank';
 
     return `
       <header class="gtu-page-header">
-        <div class="gtu-header-institution">
-          <div class="gtu-header-college">${escapeHtml(college)}</div>
-          <div class="gtu-header-affiliation">Affiliated to ${escapeHtml(university)} | ${escapeHtml(course)} (${escapeHtml(sem)})</div>
-        </div>
-        <div class="gtu-header-separator-line"></div>
-        <h1 class="gtu-subject-title">${escapeHtml(subjectName)} ${code ? `<span class="gtu-subject-code">(${escapeHtml(code)})</span>` : ''}</h1>
-        <div class="gtu-header-meta">
-          <span class="gtu-meta-exam">GTU / SSASIT Answer Sheet Format</span>
-          ${facultyStr ? `<span class="gtu-meta-faculty"><strong>Faculty:</strong> ${escapeHtml(facultyStr)}</span>` : ''}
+        <div class="gtu-header-frame">
+          <!-- Institutional Header -->
+          <div class="gtu-header-institution">
+            <div class="gtu-header-college">${escapeHtml(college.toUpperCase())}</div>
+            <div class="gtu-header-affiliation">Affiliated to ${escapeHtml(university)} &nbsp;|&nbsp; ${escapeHtml(course)}</div>
+          </div>
+
+          <!-- Subject Title Banner -->
+          <div class="gtu-subject-banner">
+            <h1 class="gtu-subject-title">${escapeHtml(subjectName)} ${code ? `<span class="gtu-subject-code">(${escapeHtml(code)})</span>` : ''}</h1>
+          </div>
+
+          <!-- Clean 3-Column Metadata Row -->
+          <div class="gtu-header-meta-grid">
+            <div class="gtu-meta-cell">
+              <span class="meta-label">SEMESTER</span>
+              <span class="meta-val">${escapeHtml(sem)}</span>
+            </div>
+            <div class="gtu-meta-cell gtu-meta-cell-center">
+              <span class="meta-label">SYLLABUS / UNIT</span>
+              <span class="meta-val">${escapeHtml(unitTitle)}</span>
+            </div>
+            <div class="gtu-meta-cell gtu-meta-cell-right">
+              <span class="meta-label">FACULTY</span>
+              <span class="meta-val">${facultyStr ? escapeHtml(facultyStr) : 'SSASIT Faculty'}</span>
+            </div>
+          </div>
         </div>
       </header>
     `;
@@ -277,7 +345,7 @@
       : '';
 
     return `
-      <footer class="gtu-page-footer">
+      <footer class="gtu-page-footer keep-together">
         <div class="gtu-footer-left">
           <span class="gtu-footer-subject">${escapeHtml(subjectName)} ${code ? `(${escapeHtml(code)})` : ''}</span>
         </div>
@@ -288,7 +356,7 @@
           ${facultyStr ? `<span class="gtu-footer-faculty"><strong>Faculty:</strong> ${escapeHtml(facultyStr)}</span>` : ''}
         </div>
       </footer>
-      <div class="gtu-dev-credit">Made with ❤️ by <strong>Ved Mangukiya</strong>'s BBA Answer Formatter &nbsp;•&nbsp; GTU / SSASIT &nbsp;•&nbsp; Semester 1</div>
+      <div class="gtu-dev-credit keep-together">Made with ❤️ by <strong>Ved Mangukiya</strong>'s BBA Answer Formatter &nbsp;•&nbsp; GTU / SSASIT &nbsp;•&nbsp; Semester 1</div>
     `;
   }
 
@@ -323,7 +391,9 @@
           <p class="gtu-paragraph" style="margin-top: 30pt; text-align: center; color: #777;">
             No questions available for this selection.
           </p>
-          ${footerHtml}
+          <div class="gtu-footer-wrapper keep-together">
+            ${footerHtml}
+          </div>
         </div>
       `;
     }
@@ -338,7 +408,7 @@
     const isSingle = typeof activeQuestionId === 'string' && Boolean(activeQuestionId);
     const sheetClass = isSingle ? 'gtu-a4-sheet gtu-single-question-sheet' : 'gtu-a4-sheet';
     const endMarkHtml = `
-      <div class="gtu-page-end-mark" title="End of Examination Answers">
+      <div class="gtu-page-end-mark keep-together" title="End of Examination Answers">
         <span class="page-end-line"></span>
         <span class="page-end-text">✦ End of Document ✦</span>
         <span class="page-end-line"></span>
@@ -351,8 +421,10 @@
         <div class="gtu-content-flow">
           ${questionsHtml}
         </div>
-        ${footerHtml}
-        ${endMarkHtml}
+        <div class="gtu-footer-wrapper keep-together">
+          ${footerHtml}
+          ${endMarkHtml}
+        </div>
       </div>
     `;
   }

@@ -699,19 +699,7 @@
         },
         {
           "blockType": "paragraph",
-          "text": "Formula for Ungrouped Data: x̄ = (Σx) / n",
-          "spans": [
-            {
-              "start": 0,
-              "end": 26,
-              "style": "bold"
-            },
-            {
-              "start": 28,
-              "end": 40,
-              "style": "underline"
-            }
-          ]
+          "text": "Formula for Ungrouped Data:  x̄  =  \\frac{Σx}{n}"
         }
       ]
     },
@@ -849,14 +837,7 @@
         },
         {
           "blockType": "paragraph",
-          "text": "For an odd number of observations (n), Median position = ((n + 1) / 2)th item in the ordered array.",
-          "spans": [
-            {
-              "start": 41,
-              "end": 99,
-              "style": "underline"
-            }
-          ]
+          "text": "For an odd number of observations (n), Median position  =  \\frac{n + 1}{2}\\text{th item in the ordered array.}"
         }
       ]
     },
@@ -958,19 +939,7 @@
         },
         {
           "blockType": "paragraph",
-          "text": "Mathematical Relationship: Standard Deviation (σ) = √(Variance) ↔ Variance (σ²) = σ²",
-          "spans": [
-            {
-              "start": 0,
-              "end": 26,
-              "style": "bold"
-            },
-            {
-              "start": 27,
-              "end": 84,
-              "style": "underline"
-            }
-          ]
+          "text": "Mathematical Relationship:  Standard Deviation (σ)  =  \\sqrt{\\text{Variance}}  =  \\sqrt{σ²}"
         }
       ]
     },
@@ -984,19 +953,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Coefficient of Variation (CV) is a relative measure of dispersion that expresses standard deviation as a percentage of arithmetic mean: CV = (σ / x̄) × 100",
-          "spans": [
-            {
-              "start": 0,
-              "end": 29,
-              "style": "bold"
-            },
-            {
-              "start": 136,
-              "end": 155,
-              "style": "underline"
-            }
-          ]
+          "text": "Coefficient of Variation (CV) is a relative measure of dispersion that expresses standard deviation as a percentage of arithmetic mean:  CV  =  [ \\frac{σ}{x̄} ] × 100"
         },
         {
           "blockType": "paragraph",
@@ -1026,24 +983,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Standard Formulas:\nMean: x̄ = (Σfx) / N\nMedian: M = L + [((N/2) - cf) / f] × c\nMode: Z = L + [(f₁ - f₀) / (2f₁ - f₀ - f₂)] × c",
-          "spans": [
-            {
-              "start": 25,
-              "end": 39,
-              "style": "underline"
-            },
-            {
-              "start": 48,
-              "end": 82,
-              "style": "underline"
-            },
-            {
-              "start": 89,
-              "end": 126,
-              "style": "underline"
-            }
-          ]
+          "text": "Standard Formulas:\nMean:  x̄  =  \\frac{Σfx}{N}\nMedian:  M  =  L + [ \\frac{\\frac{N}{2} - cf}{f} ] × c\nMode:  Z  =  L + [ \\frac{f₁ - f₀}{2f₁ - f₀ - f₂} ] × c"
         },
         {
           "blockType": "table",
@@ -1101,59 +1041,23 @@
           ]
         },
         {
-          "blockType": "heading",
-          "text": "Step-by-Step Numerical Calculations"
-        },
-        {
           "blockType": "list",
           "listStyle": "decimal",
           "items": [
             {
-              "text": "Arithmetic Mean (x̄):\nx̄ = (Σfx) / N = 1690 / 50 = 33.80 orders",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 20,
-                  "style": "bold"
-                },
-                {
-                  "start": 22,
-                  "end": 62,
-                  "style": "underline"
-                }
-              ]
+              "text": "Arithmetic Mean (x̄):\nx̄  =  \\frac{Σfx}{N}  =  \\frac{1690}{50}  =  \\boxed{33.80 orders}"
             },
             {
-              "text": "Median (M):\nMedian Class Position = N / 2 = 50 / 2 = 25th observation.\nFrom the cf column, cf ≥ 25 corresponds to class 30 - 40.\nHere: L = 30, cf = 17, f = 20, c = 10.\nM = 30 + [((25 - 17) / 20)] × 10 = 30 + [8 / 20] × 10 = 30 + 4.00 = 34.00 orders",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 11,
-                  "style": "bold"
-                },
-                {
-                  "start": 139,
-                  "end": 218,
-                  "style": "underline"
-                }
-              ]
+              "text": "Median (M):\nMedian Class Position  =  \\frac{N}{2}  =  \\frac{50}{2}  =  \\boxed{25\\text{th observation}}  →  \\text{Class 30 - 40 (where } L = 30, cf = 17, f = 20, c = 10\\text{)}\nM  =  L + [ \\frac{\\frac{N}{2} - cf}{f} ] × c  =  30 + [ \\frac{25 - 17}{20} ] × 10  =  30 + \\frac{80}{20}  =  30 + 4  =  \\boxed{34.00 orders}"
             },
             {
-              "text": "Mode (Z):\nHighest frequency is f₁ = 20, therefore Modal Class = 30 - 40.\nHere: L = 30, f₁ = 20, f₀ = 12, f₂ = 10, c = 10.\nZ = 30 + [(20 - 12) / (2(20) - 12 - 10)] × 10 = 30 + [8 / (40 - 22)] × 10 = 30 + (8 / 18) × 10 = 30 + 4.44 = 34.44 orders",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 9,
-                  "style": "bold"
-                },
-                {
-                  "start": 112,
-                  "end": 234,
-                  "style": "underline"
-                }
-              ]
+              "text": "Mode (Z):\nModal Class  =  \\text{Class 30 - 40 (Highest frequency } f₁ = 20, f₀ = 12, f₂ = 10, L = 30, c = 10\\text{)}\nZ  =  L + [ \\frac{f₁ - f₀}{2f₁ - f₀ - f₂} ] × c  =  30 + [ \\frac{20 - 12}{2(20) - 12 - 10} ] × 10  =  30 + [ \\frac{8}{18} ] × 10  =  30 + 4.44  =  \\boxed{34.44 orders}"
             }
           ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result:  Mean x̄ = \\boxed{33.80 orders}  |  Median M = \\boxed{34.00 orders}  |  Mode Z = \\boxed{34.44 orders}\nSkewness Verification: Since x̄ (33.80) < M (34.00) < Z (34.44), the distribution is Negatively Skewed."
         },
         {
           "blockType": "paragraph",
@@ -1193,14 +1097,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Partition Interpolation Formula: Value = L + [(Position - cf) / f] × c",
-          "spans": [
-            {
-              "start": 33,
-              "end": 69,
-              "style": "underline"
-            }
-          ]
+          "text": "Partition Interpolation Formula:  \\text{Value}  =  L + [ \\frac{\\text{Position} - cf}{f} ] × c"
         },
         {
           "blockType": "table",
@@ -1251,74 +1148,26 @@
           ]
         },
         {
-          "blockType": "heading",
-          "text": "Partition Calculations"
-        },
-        {
           "blockType": "list",
           "listStyle": "decimal",
           "items": [
             {
-              "text": "First Quartile (Q₁):\nPosition = N / 4 = 60 / 4 = 15th item → Class 10 - 20.\nL = 10, cf = 8, f = 12, c = 10.\nQ₁ = 10 + [((15 - 8) / 12)] × 10 = 10 + 5.83 = 15.83 units",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 20,
-                  "style": "bold"
-                },
-                {
-                  "start": 105,
-                  "end": 162,
-                  "style": "underline"
-                }
-              ]
+              "text": "First Quartile (Q₁):\nPosition  =  \\frac{N}{4}  =  \\frac{60}{4}  =  \\boxed{15\\text{th item}}  →  \\text{Class 10 - 20 (where } L = 10, cf = 8, f = 12, c = 10\\text{)}\nQ₁  =  L + [ \\frac{\\frac{N}{4} - cf}{f} ] × c  =  10 + [ \\frac{15 - 8}{12} ] × 10  =  10 + \\frac{70}{12}  =  10 + 5.83  =  \\boxed{15.83 units}"
             },
             {
-              "text": "Third Quartile (Q₃):\nPosition = 3N / 4 = 3(60) / 4 = 45th item → Class 30 - 40.\nL = 30, cf = 40, f = 14, c = 10.\nQ₃ = 30 + [((45 - 40) / 14)] × 10 = 30 + 3.57 = 33.57 units",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 20,
-                  "style": "bold"
-                },
-                {
-                  "start": 107,
-                  "end": 165,
-                  "style": "underline"
-                }
-              ]
+              "text": "Third Quartile (Q₃):\nPosition  =  \\frac{3N}{4}  =  \\frac{3(60)}{4}  =  \\boxed{45\\text{th item}}  →  \\text{Class 30 - 40 (where } L = 30, cf = 40, f = 14, c = 10\\text{)}\nQ₃  =  L + [ \\frac{\\frac{3N}{4} - cf}{f} ] × c  =  30 + [ \\frac{45 - 40}{14} ] × 10  =  30 + \\frac{50}{14}  =  30 + 3.57  =  \\boxed{33.57 units}"
             },
             {
-              "text": "Fourth Decile (D₄):\nPosition = 4N / 10 = 4(60) / 10 = 24th item → Class 20 - 30.\nL = 20, cf = 20, f = 20, c = 10.\nD₄ = 20 + [((24 - 20) / 20)] × 10 = 20 + 2.00 = 22.00 units",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 19,
-                  "style": "bold"
-                },
-                {
-                  "start": 108,
-                  "end": 166,
-                  "style": "underline"
-                }
-              ]
+              "text": "Fourth Decile (D₄):\nPosition  =  \\frac{4N}{10}  =  \\frac{4(60)}{10}  =  \\boxed{24\\text{th item}}  →  \\text{Class 20 - 30 (where } L = 20, cf = 20, f = 20, c = 10\\text{)}\nD₄  =  L + [ \\frac{\\frac{4N}{10} - cf}{f} ] × c  =  20 + [ \\frac{24 - 20}{20} ] × 10  =  20 + \\frac{40}{20}  =  20 + 2  =  \\boxed{22.00 units}"
             },
             {
-              "text": "Seventieth Percentile (P₇₀):\nPosition = 70N / 100 = 70(60) / 100 = 42nd item → Class 30 - 40.\nL = 30, cf = 40, f = 14, c = 10.\nP₇₀ = 30 + [((42 - 40) / 14)] × 10 = 30 + 1.43 = 31.43 units",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 27,
-                  "style": "bold"
-                },
-                {
-                  "start": 117,
-                  "end": 177,
-                  "style": "underline"
-                }
-              ]
+              "text": "Seventieth Percentile (P₇₀):\nPosition  =  \\frac{70N}{100}  =  \\frac{70(60)}{100}  =  \\boxed{42\\text{nd item}}  →  \\text{Class 30 - 40 (where } L = 30, cf = 40, f = 14, c = 10\\text{)}\nP₇₀  =  L + [ \\frac{\\frac{70N}{100} - cf}{f} ] × c  =  30 + [ \\frac{42 - 40}{14} ] × 10  =  30 + \\frac{20}{14}  =  30 + 1.43  =  \\boxed{31.43 units}"
             }
           ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result:  Q₁ = \\boxed{15.83 units}  |  Q₃ = \\boxed{33.57 units}  |  D₄ = \\boxed{22.00 units}  |  P₇₀ = \\boxed{31.43 units}"
         },
         {
           "blockType": "paragraph",
@@ -1358,14 +1207,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Arithmetic Mean Calculation: x̄ = (Σx) / n = 100 / 5 = 20.00 units",
-          "spans": [
-            {
-              "start": 29,
-              "end": 66,
-              "style": "underline"
-            }
-          ]
+          "text": "Arithmetic Mean Calculation:  x̄  =  \\frac{Σx}{n}  =  \\frac{100}{5}  =  \\boxed{20.00 units}"
         },
         {
           "blockType": "table",
@@ -1416,59 +1258,23 @@
           ]
         },
         {
-          "blockType": "heading",
-          "text": "Formulas and Step-by-Step Solutions"
-        },
-        {
           "blockType": "list",
           "listStyle": "decimal",
           "items": [
             {
-              "text": "Mean Deviation from Mean (MD_x̄):\nMD_x̄ = (Σ|x - x̄|) / n = 30 / 5 = 6.00 units",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 33,
-                  "style": "bold"
-                },
-                {
-                  "start": 35,
-                  "end": 74,
-                  "style": "underline"
-                }
-              ]
+              "text": "Mean Deviation from Mean (MD_{x̄}):\nMD_{x̄}  =  \\frac{Σ|x - x̄|}{n}  =  \\frac{30}{5}  =  \\boxed{6.00 units}"
             },
             {
-              "text": "Variance (σ²):\nσ² = (Σ(x - x̄)²) / n = 250 / 5 = 50.00 sq units",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 14,
-                  "style": "bold"
-                },
-                {
-                  "start": 16,
-                  "end": 61,
-                  "style": "underline"
-                }
-              ]
+              "text": "Variance (σ²):\nσ²  =  \\frac{Σ(x - x̄)²}{n}  =  \\frac{250}{5}  =  \\boxed{50.00 sq units}"
             },
             {
-              "text": "Standard Deviation (σ):\nσ = √(Variance) = √(50.00) = 7.07 units",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 23,
-                  "style": "bold"
-                },
-                {
-                  "start": 25,
-                  "end": 62,
-                  "style": "underline"
-                }
-              ]
+              "text": "Standard Deviation (σ):\nσ  =  \\sqrt{\\text{Variance}}  =  \\sqrt{50.00}  =  \\boxed{7.07 units}"
             }
           ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result:  MD_{x̄} = \\boxed{6.00 units}  |  Variance σ² = \\boxed{50.00 sq units}  |  Standard Deviation σ = \\boxed{7.07 units}"
         },
         {
           "blockType": "paragraph",
@@ -1503,71 +1309,23 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Formula for Coefficient of Variation: CV = (σ / x̄) × 100",
-          "spans": [
-            {
-              "start": 38,
-              "end": 56,
-              "style": "underline"
-            }
-          ]
+          "text": "Formula for Coefficient of Variation:  CV  =  [ \\frac{σ}{x̄} ] × 100"
         },
         {
           "blockType": "list",
           "listStyle": "decimal",
           "items": [
             {
-              "text": "Branch A Consistency: CV_A = (σ_A / x̄_A) × 100 = (5 / 50) × 100 = 10.00%",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 21,
-                  "style": "bold"
-                },
-                {
-                  "start": 23,
-                  "end": 72,
-                  "style": "underline"
-                }
-              ]
+              "text": "Branch A Consistency:  CV_A  =  [ \\frac{σ_A}{x̄_A} ] × 100  =  [ \\frac{5}{50} ] × 100  =  0.10 × 100  =  \\boxed{10.00\\%}"
             },
             {
-              "text": "Branch B Consistency: CV_B = (σ_B / x̄_B) × 100 = (12 / 80) × 100 = 15.00%",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 21,
-                  "style": "bold"
-                },
-                {
-                  "start": 23,
-                  "end": 73,
-                  "style": "underline"
-                }
-              ]
+              "text": "Branch B Consistency:  CV_B  =  [ \\frac{σ_B}{x̄_B} ] × 100  =  [ \\frac{12}{80} ] × 100  =  0.15 × 100  =  \\boxed{15.00\\%}"
             }
           ]
         },
         {
           "blockType": "paragraph",
-          "text": "Final Result & Comparative Decision: Since CV_A (10.00%) < CV_B (15.00%), Branch A exhibits a lower coefficient of variation and is therefore more consistent and stable in its performance.",
-          "spans": [
-            {
-              "start": 0,
-              "end": 35,
-              "style": "bold"
-            },
-            {
-              "start": 43,
-              "end": 71,
-              "style": "underline"
-            },
-            {
-              "start": 74,
-              "end": 187,
-              "style": "underline"
-            }
-          ]
+          "text": "Final Result & Comparative Decision: Since CV_A ( \\boxed{10.00\\%} ) < CV_B ( \\boxed{15.00\\%} ), \\boxed{\\text{Branch A}} exhibits a lower relative dispersion, proving significantly higher consistency and stability in achieving production targets."
         }
       ]
     },
@@ -1822,19 +1580,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Karl Pearson's Formula: r = [nΣXY - (ΣX)(ΣY)] / √{[nΣX² - (ΣX)²] · [nΣY² - (ΣY)²]}",
-          "spans": [
-            {
-              "start": 0,
-              "end": 22,
-              "style": "bold"
-            },
-            {
-              "start": 24,
-              "end": 82,
-              "style": "underline"
-            }
-          ]
+          "text": "Karl Pearson's Formula:  r  =  \\frac{nΣXY - (ΣX)(ΣY)}{\\sqrt{[nΣX² - (ΣX)²] · [nΣY² - (ΣY)²]}}"
         },
         {
           "blockType": "paragraph",
@@ -1864,19 +1610,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Spearman's Rank Correlation (ρ) is a non-parametric technique evaluating the degree of agreement between paired ranks: ρ = 1 - [(6Σd²) / (n(n² - 1))]",
-          "spans": [
-            {
-              "start": 0,
-              "end": 31,
-              "style": "bold"
-            },
-            {
-              "start": 119,
-              "end": 149,
-              "style": "underline"
-            }
-          ]
+          "text": "Spearman's Rank Correlation Formula:  ρ  =  1 - \\frac{6Σd²}{n(n² - 1)}"
         },
         {
           "blockType": "paragraph",
@@ -1906,19 +1640,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Fisher's Ideal Index Number is the geometric mean of Laspeyres' (L) and Paasche's (P) price index numbers: P₀₁^F = √(P₀₁^L × P₀₁^P) = √{[(Σp₁q₀) / (Σp₀q₀)] × [(Σp₁q₁) / (Σp₀q₁)]} × 100",
-          "spans": [
-            {
-              "start": 0,
-              "end": 26,
-              "style": "bold"
-            },
-            {
-              "start": 106,
-              "end": 184,
-              "style": "underline"
-            }
-          ]
+          "text": "Fisher's Ideal Index Number is the geometric mean of Laspeyres' (L) and Paasche's (P) price index numbers:  I_{01}^F  =  \\sqrt{L × P}  =  \\sqrt{\\frac{Σp_1 q_0}{Σp_0 q_0} × \\frac{Σp_1 q_1}{Σp_0 q_1}} × 100"
         },
         {
           "blockType": "list",
@@ -1968,14 +1690,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Pearson's Correlation Coefficient Formula: r = [nΣXY - (ΣX)(ΣY)] / √{[nΣX² - (ΣX)²] · [nΣY² - (ΣY)²]}",
-          "spans": [
-            {
-              "start": 43,
-              "end": 101,
-              "style": "underline"
-            }
-          ]
+          "text": "Pearson's Correlation Coefficient Formula:  r  =  \\frac{nΣXY - (ΣX)(ΣY)}{\\sqrt{[nΣX² - (ΣX)²] · [nΣY² - (ΣY)²]}}"
         },
         {
           "blockType": "table",
@@ -2040,89 +1755,29 @@
           ]
         },
         {
-          "blockType": "heading",
-          "text": "Step-by-Step Substitution and Evaluation"
-        },
-        {
           "blockType": "list",
           "listStyle": "decimal",
           "items": [
             {
-              "text": "Numerator Calculation: nΣXY - (ΣX)(ΣY) = 5(434) - (30)(60) = 2170 - 1800 = 370",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 22,
-                  "style": "bold"
-                },
-                {
-                  "start": 75,
-                  "end": 78,
-                  "style": "underline"
-                }
-              ]
+              "text": "Numerator Calculation:  nΣXY - (ΣX)(ΣY)  =  5(434) - (30)(60)  =  2170 - 1800  =  \\boxed{370}"
             },
             {
-              "text": "Denominator Term 1: [nΣX² - (ΣX)²] = [5(220) - (30)²] = 1100 - 900 = 200",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 19,
-                  "style": "bold"
-                },
-                {
-                  "start": 69,
-                  "end": 72,
-                  "style": "underline"
-                }
-              ]
+              "text": "Denominator Term 1:  [nΣX² - (ΣX)²]  =  [5(220) - 30²]  =  1100 - 900  =  \\boxed{200}"
             },
             {
-              "text": "Denominator Term 2: [nΣY² - (ΣY)²] = [5(858) - (60)²] = 4290 - 3600 = 690",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 19,
-                  "style": "bold"
-                },
-                {
-                  "start": 70,
-                  "end": 73,
-                  "style": "underline"
-                }
-              ]
+              "text": "Denominator Term 2:  [nΣY² - (ΣY)²]  =  [5(858) - 60²]  =  4290 - 3600  =  \\boxed{690}"
             },
             {
-              "text": "Combined Denominator: √(200 × 690) = √(138000) = 371.4835",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 21,
-                  "style": "bold"
-                },
-                {
-                  "start": 49,
-                  "end": 57,
-                  "style": "underline"
-                }
-              ]
+              "text": "Combined Denominator:  \\sqrt{200 × 690}  =  \\sqrt{138000}  =  \\boxed{371.4835}"
             },
             {
-              "text": "Final Quotient: r = 370 / 371.4835 = +0.996",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 15,
-                  "style": "bold"
-                },
-                {
-                  "start": 16,
-                  "end": 43,
-                  "style": "underline"
-                }
-              ]
+              "text": "Final Quotient:  r  =  \\frac{370}{371.4835}  =  \\boxed{+0.996}"
             }
           ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result:  Correlation Coefficient r = \\boxed{+0.996}  |  Interpretation: There is an almost perfect positive linear correlation between Aptitude Score and Sales Performance."
         },
         {
           "blockType": "paragraph",
@@ -2152,14 +1807,7 @@
       "answer": [
         {
           "blockType": "paragraph",
-          "text": "Spearman's Rank Correlation Formula: ρ = 1 - [(6Σd²) / (n(n² - 1))]",
-          "spans": [
-            {
-              "start": 37,
-              "end": 67,
-              "style": "underline"
-            }
-          ]
+          "text": "Spearman's Rank Correlation Formula:  ρ  =  1 - \\frac{6Σd²}{n(n² - 1)}"
         },
         {
           "blockType": "table",
@@ -2217,74 +1865,26 @@
           ]
         },
         {
-          "blockType": "heading",
-          "text": "Step-by-Step Numerical Working"
-        },
-        {
           "blockType": "list",
           "listStyle": "decimal",
           "items": [
             {
-              "text": "Numerator Working: 6Σd² = 6(4) = 24",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 18,
-                  "style": "bold"
-                },
-                {
-                  "start": 33,
-                  "end": 35,
-                  "style": "underline"
-                }
-              ]
+              "text": "Numerator Working:  6Σd²  =  6(4)  =  \\boxed{24}"
             },
             {
-              "text": "Denominator Working: n(n² - 1) = 5(5² - 1) = 5(25 - 1) = 5(24) = 120",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 20,
-                  "style": "bold"
-                },
-                {
-                  "start": 65,
-                  "end": 68,
-                  "style": "underline"
-                }
-              ]
+              "text": "Denominator Working:  n(n² - 1)  =  5(5² - 1)  =  5(25 - 1)  =  5(24)  =  \\boxed{120}"
             },
             {
-              "text": "Fraction Evaluation: 24 / 120 = 0.20",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 20,
-                  "style": "bold"
-                },
-                {
-                  "start": 32,
-                  "end": 36,
-                  "style": "underline"
-                }
-              ]
+              "text": "Fraction Evaluation:  \\frac{6Σd²}{n(n² - 1)}  =  \\frac{24}{120}  =  \\boxed{0.20}"
             },
             {
-              "text": "Final Computation: ρ = 1 - 0.20 = +0.80",
-              "spans": [
-                {
-                  "start": 0,
-                  "end": 18,
-                  "style": "bold"
-                },
-                {
-                  "start": 19,
-                  "end": 39,
-                  "style": "underline"
-                }
-              ]
+              "text": "Final Computation:  ρ  =  1 - 0.20  =  \\boxed{+0.80}"
             }
           ]
+        },
+        {
+          "blockType": "paragraph",
+          "text": "Final Result:  Spearman's Rank Correlation Coefficient ρ = \\boxed{+0.80}  |  Interpretation: There is a high degree of positive agreement between Judge 1 and Judge 2 in their evaluation of the candidates."
         },
         {
           "blockType": "paragraph",

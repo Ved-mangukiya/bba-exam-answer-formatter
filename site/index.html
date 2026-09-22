@@ -318,10 +318,14 @@
       </div>
 
       <div class="modal-footer" id="pdfModalFooter">
-        <div class="modal-footer-main">
+        <div class="modal-footer-main" style="display: flex; gap: 8px; flex-wrap: wrap;">
           <button class="btn btn-primary btn-save-action" id="btnPdfModalDownload">
             <span id="btnDownloadIcon">⬇️</span>
             <span id="btnDownloadLabel">Generate A4 PDF</span>
+          </button>
+          <button class="btn btn-secondary" id="btnDirectPrint" title="Trigger native browser print dialog (Ctrl+P)">
+            <span>🖨️</span>
+            <span>Print (Ctrl+P)</span>
           </button>
         </div>
         <div class="modal-footer-sub">
@@ -443,9 +447,10 @@
   </div>
 
   <!-- Application Logic Scripts (v3.0) -->
-  <!-- PDF Engine: html2canvas (page capture) + jsPDF (assembly) -->
+  <!-- PDF Engine: html2pdf (smart page breaks) + html2canvas + jsPDF -->
   <script src="js/vendor/html2canvas.min.js"></script>
   <script src="js/vendor/jspdf.umd.min.js"></script>
+  <script src="js/vendor/html2pdf.bundle.min.js"></script>
   <!-- Firebase RTDB Cloud Sync (v10 compat) -->
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>

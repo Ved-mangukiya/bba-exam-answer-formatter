@@ -97,6 +97,7 @@
       btnPdfModalClose: document.getElementById('btnPdfModalClose'),
       btnPdfModalCancel: document.getElementById('btnPdfModalCancel'),
       btnPdfModalDownload: document.getElementById('btnPdfModalDownload'),
+      btnDirectPrint: document.getElementById('btnDirectPrint'),
       btnPdfOpenTab: document.getElementById('btnPdfOpenTab'),
       pdfFileNameInput: document.getElementById('pdfFileNameInput'),
       radioScopeFull: document.getElementById('radioScopeFull'),
@@ -869,6 +870,100 @@
   }
 
   /**
+   * Smart Safe-Cut Algorithm for A4 Page Slicing:
+   * Scans upwards from targetCutY looking for a continuous band of blank white pixels
+   * (background margins between text lines, tables, cards, or above footer).
+   * Guarantees NO line of text, table row, card, or footer is ever sliced horizontally in half.
+   */
+  function findSafeCut(canvas, currentY, canvPageH) {
+    const targetCutY = currentY + canvPageH;
+    if (targetCutY >= canvas.height) {
+      return canvas.height;
+    }
+
+    // Look back up to 22% of page height (~450px at 2x scale)
+    const maxLookback = Math.min(Math.round(canvPageH * 0.22), targetCutY - currentY - 80);
+    const minCutY = Math.max(currentY + 60, targetCutY - maxLookback);
+    const scanHeight = targetCutY - minCutY;
+
+    if (scanHeight <= 10) {
+      return targetCutY;
+    }
+
+    const ctx = canvas.getContext('2d');
+    // Sample inner 90% horizontal width to ignore outer margin edges
+    const sampleX = Math.round(canvas.width * 0.05);
+    const sampleW = Math.round(canvas.width * 0.90);
+
+    let imgData;
+    try {
+      imgData = ctx.getImageData(sampleX, minCutY, sampleW, scanHeight);
+    } catch (e) {
+      return targetCutY;
+    }
+
+    const data = imgData.data;
+    let bestWhitespaceBand = null;
+    let currentBandStart = -1;
+
+    // Scan from bottom of scan zone upwards to minCutY
+    for (let relY = scanHeight - 1; relY >= 0; relY--) {
+      let isRowBlank = true;
+      const rowOffset = relY * sampleW * 4;
+
+      // Sample every 4th pixel for speed & thorough coverage
+      for (let x = 0; x < sampleW; x += 4) {
+        const idx = rowOffset + (x * 4);
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        const a = data[idx + 3];
+
+        // Dark ink detected (text line, border, icon)
+        if (a > 25 && (r < 235 || g < 235 || b < 235)) {
+          isRowBlank = false;
+          break;
+        }
+      }
+
+      if (isRowBlank) {
+        if (currentBandStart === -1) {
+          currentBandStart = relY;
+        }
+      } else {
+        if (currentBandStart !== -1) {
+          const bandHeight = currentBandStart - relY;
+          if (!bestWhitespaceBand || bandHeight > bestWhitespaceBand.height) {
+            bestWhitespaceBand = {
+              centerRelY: Math.round((currentBandStart + relY + 1) / 2),
+              height: bandHeight
+            };
+            // If band is at least 10px tall (a standard line break), cut here!
+            if (bandHeight >= 10) break;
+          }
+          currentBandStart = -1;
+        }
+      }
+    }
+
+    if (currentBandStart !== -1) {
+      const bandHeight = currentBandStart;
+      if (!bestWhitespaceBand || bandHeight > bestWhitespaceBand.height) {
+        bestWhitespaceBand = {
+          centerRelY: Math.round(currentBandStart / 2),
+          height: bandHeight
+        };
+      }
+    }
+
+    if (bestWhitespaceBand && bestWhitespaceBand.height >= 4) {
+      return minCutY + bestWhitespaceBand.centerRelY;
+    }
+
+    return targetCutY;
+  }
+
+  /**
    * PDF Generation — one html2canvas capture per .gtu-a4-sheet → jsPDF assembly.
    * Each sheet is briefly mounted at position (0,0) z-index:1, hidden behind the
    * modal backdrop (z-index ~1000). This guarantees getBoundingClientRect() returns
@@ -998,21 +1093,31 @@
         document.body.removeChild(activeFrame);
         activeFrame = null;
 
-        // --- PAGE SLICING ---
+        // --- SMART SAFE-CUT PAGE SLICING ---
         // 210mm wide at actual pixels → pixPerMm gives us 297mm in pixels
         const pixPerMm   = sheetW / 210;          // e.g. 794 / 210 ≈ 3.78 px/mm
         const onePagePx  = 297 * pixPerMm;        // physical px for one A4 page height
         const canvPageH  = Math.round(onePagePx * 2); // canvas height per page (scale:2)
-        const numSlices  = Math.ceil(canvas.height / canvPageH);
 
-        for (let p = 0; p < numSlices; p++) {
+        let currentY = 0;
+        let sliceIndex = 0;
+
+        while (currentY < canvas.height) {
+          sliceIndex++;
           if (dom.pdfProgressStatus) {
             dom.pdfProgressStatus.textContent =
-              `Building page ${totalPdfPages + 1} (sheet ${i + 1}, slice ${p + 1}/${numSlices})...`;
+              `Building page ${totalPdfPages + 1} (sheet ${i + 1}, slice ${sliceIndex})...`;
           }
 
-          const srcY = p * canvPageH;
-          const srcH = Math.min(canvPageH, canvas.height - srcY);
+          const remainingH = canvas.height - currentY;
+          let sliceH;
+
+          if (remainingH <= canvPageH) {
+            sliceH = remainingH;
+          } else {
+            const safeCutY = findSafeCut(canvas, currentY, canvPageH);
+            sliceH = Math.max(120, safeCutY - currentY);
+          }
 
           // Create a blank A4-canvas page and draw the slice into it
           const pageCanvas = document.createElement('canvas');
@@ -1021,12 +1126,14 @@
           const ctx = pageCanvas.getContext('2d');
           ctx.fillStyle = '#ffffff';
           ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
-          // drawImage 9-arg: crop srcY..srcY+srcH from canvas, draw at (0,0) in pageCanvas
-          ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
+          // drawImage: crop currentY..currentY+sliceH from canvas, draw at (0,0) in pageCanvas
+          ctx.drawImage(canvas, 0, currentY, canvas.width, sliceH, 0, 0, canvas.width, sliceH);
 
           if (totalPdfPages > 0) pdf.addPage();
-          pdf.addImage(pageCanvas.toDataURL('image/jpeg', 0.92), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+          pdf.addImage(pageCanvas.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
           totalPdfPages++;
+
+          currentY += sliceH;
         }
       }
 
@@ -1230,6 +1337,12 @@
     if (dom.btnPdfModalDownload) {
       dom.btnPdfModalDownload.addEventListener('click', downloadDirectPdf);
     }
+    if (dom.btnDirectPrint) {
+      dom.btnDirectPrint.addEventListener('click', () => {
+        closePdfModal();
+        window.print();
+      });
+    }
     if (dom.btnPdfOpenTab) {
       dom.btnPdfOpenTab.addEventListener('click', () => {
         if (state.compiledPdfUrl) {
@@ -1237,6 +1350,15 @@
         }
       });
     }
+
+    // Ctrl + P keyboard trigger
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 'P')) {
+        if (dom.pdfModalBackdrop && dom.pdfModalBackdrop.style.display !== 'none') {
+          closePdfModal();
+        }
+      }
+    });
     if (dom.radioScopeFull) {
       dom.radioScopeFull.addEventListener('change', updateEstimatedPageCount);
     }
